@@ -1,12 +1,12 @@
 ---
-title: Lab 3 - Agent Desktop
-author: Gorka Antona Santamaria & Neha Wuthoo
+title: Lab 2 - Agent and Supervisor Experience
+author: Arunabh Bhattacharjee
 date: 2022-03-03
 layout: post
 ---
 
 ```
-Last modified: Mon, 9 Aug 2023
+Last modified: Mon, 11 Sep 2023
 ```
 
 <script>
@@ -67,11 +67,12 @@ At the end of the lab, you should be able to handle calls as an agent, perform s
    - Webex Calling extensions are assigned to a WxCC users (agent and supervisor).
 
 3. You also must complete the **Lab 2: IVR Contact Routing:**
+
    - Simple flow configured and making a call tested
    - Global variables created as Agent Editable
 
 4. For Part 3 - Custom Desktop Layour, you should have a Webex Contact Center Analyzer Report. You can use the Stock Reports created by default or use your own custom Reports
-	> [How to create Analyzer Report on Webex Contact Center Analyzer](https://github.com/CiscoDevNet/webex-contact-center-api-samples/tree/main/iframe-widget-sample)
+   > [How to create Analyzer Report on Webex Contact Center Analyzer](https://github.com/CiscoDevNet/webex-contact-center-api-samples/tree/main/iframe-widget-sample)
 
 ### Quick Links
 
@@ -84,9 +85,8 @@ At the end of the lab, you should be able to handle calls as an agent, perform s
 
 ## Lab Section
 
-> 
 > Please submit the form with your Attendee ID. All configuration items in the lab guide will be renamed with that prefix.
-{: .block-tip }
+> {: .block-tip }
 
 <div class="alert"></div>
 <form id="attendee-form">
@@ -111,14 +111,16 @@ update()
 - Once you're in the login page, enter the agent credentials (username and password)
 
 - Agents will need to input the number where they need to receive incoming and outdial calls
+
   - If your administrator configures the default Dial Number (DN), the default DN is prepopulated in the Dial Number and Extension fields.
   - If your administrator restricts the DN to the default DN, you cannot edit the prepopulated DN when signing in to the Agent Desktop.
 
 - They can choose between Dial Number or Extension
-	- Extension: Just in case the agent is using Webex Calling or some other softphone as calling endpoint
+
+  - Extension: Just in case the agent is using Webex Calling or some other softphone as calling endpoint
 
     - Dial Number: E.164 format phone number
-    	- If you check the __International Dialing Format__ box, you can choose the country code based on your geographical location from the drop-down list. You can also enter a country code or country name to filter the list. Dial numbers are validated based on the country code
+      - If you check the **International Dialing Format** box, you can choose the country code based on your geographical location from the drop-down list. You can also enter a country code or country name to filter the list. Dial numbers are validated based on the country code
 
 - Select one of the possible teams from the list. Agents can belong to multiple teams, but they can only receive calls of 1 specific teams
 
@@ -127,7 +129,7 @@ update()
 - Be aware that agents cannot access the Agent Desktop from multiple browsers or multiple tabs of the same browser window. In that case, a warning message will be displayed
 
 > The video below shows a demo about the agent login process and the available options:
-{: .block-tip }
+> {: .block-tip }
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/e4b450ff-9d3f-424d-96bb-2f0988b81743" width="100%" height="100%" title="Station Login" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
@@ -136,20 +138,18 @@ update()
 ## Agent Desktop Interface
 
 > The Desktop UI language is based on the language preference settings on your browser. Currently, it supports 29 languages:
-> 	Bulgarian, Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish, Dutch, English (UK), English (US), Finnish, French, German, Hungarian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Serbian, Slovak, Slovenian, Spanish, Swedish, and Turkish.
-{: .block-tip }
-<br>
-<br>
+> Bulgarian, Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish, Dutch, English (UK), English (US), Finnish, French, German, Hungarian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Serbian, Slovak, Slovenian, Spanish, Swedish, and Turkish.
+> {: .block-tip }
+> <br> > <br>
 
 > Watch the following video, where each of the sections and their main options are explained. You will get a better idea of how the Agent Desktop look like and how to use it:
-{: .block-tip }
+> {: .block-tip }
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/dc341488-94ab-4659-8951-4b4ba1412373" width="100%" height="100%" title="Agent Desktop Interface" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 <br>
 ![Image1](/assets/images/AgentDesktopOverview.png)
-
 
 The Agent Desktop is divided in **6 sections**. In the image above you can see a general view of the Agent Desktop and where each section is located. We explain them all shortly:
 
@@ -168,7 +168,7 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 ## Calls Handling
 
 > In the following video you will see how to handle incoming calls and what are the different agent states:
-{: .block-tip }
+> {: .block-tip }
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/f5a79811-eb60-4925-b11a-a8586760a3d3" width="100%" height="100%" title="Calls Handling" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
@@ -214,7 +214,7 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 | -------------------- | ---------------------------------------------------------------------- |
 | Agent 1              | <w class = "attendee-class">attendeeID</w>_agent1@mailinator.com       |
 | Supervisor 1         | <w class = "attendee-class">attendeeID</w>\_supervisor1@mailinator.com |
-| Desktop Profile        | <w class = "attendee-class">attendeeID</w>\_desktopProfile               |
+| Desktop Profile      | <w class = "attendee-class">attendeeID</w>\_desktopProfile             |
 | Entry Point          | <w class = "attendee-class">attendeeID</w>\_EP                         |
 | Queue                | <w class = "attendee-class">attendeeID</w>\_Q                          |
 | Team 1               | <w class = "attendee-class">attendeeID</w>\_team1                      |
@@ -226,17 +226,15 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 | Multimedia Profile   | <w class = "attendee-class">attendeeID</w>\_MMP                        |
 
 > **NOTE:** Please create all the tenant entities following the naming convention mentioned specified in the table above. Your attendeeID is provided in the email in the **"Attendee ID"** line.
-{: .block-warning }
+> {: .block-warning }
 
 > Be aware that all entities that don't match with attendee IDs will be deleted
-{: .block-warning }
-
-
+> {: .block-warning }
 
 ## Testing Incoming call
 
 > In this section, you will will interact as an agent and test an Incoming call. Review the video of the lab section above to understand the different call handling options.
-{: .block-tip }
+> {: .block-tip }
 
 - In order to test properly an incoming call, first we need to make sure that we have all the call handling options enabled
 
@@ -279,8 +277,9 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
   - **End** the call (this can be done from customer or agent perspective) and select any **Wrap-up code**
 
 > For this part, you will need a third calling device for interacting as aSupervisor
-{: .block-warning }
-<br>
+> {: .block-warning }
+> <br>
+
 - Now, using a different browser, login in the **Agent Desktop** with _your Supervisor_ user and move to **`Available`** status
   - In a separate device (you mobile phone for example), login in Webex App with your _Supervisor_ user
   - Place the call from the third calling endpoint (your personal phone for example)
@@ -289,7 +288,7 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 ## Exploring User Profile
 
 > In this section, we will explore what are the available options and settings under the User Profile.
-{: .block-tip }
+> {: .block-tip }
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/149fe8d1-c27e-4c7e-a0b9-af072487c543" width="100%" height="100%" title="User Profile" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
@@ -326,7 +325,7 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 ## Outdial
 
 > In this section, we will test Outdial calls using different Outdial ANIs and Address Books.
-{: .block-tip }
+> {: .block-tip }
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/df20ad39-55db-4c8c-a268-bcd4818fe1f3" width="100%" height="100%" title="Outdial Call" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
@@ -358,7 +357,7 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 	- See the number of the **Default Outdial ANI**
 
 > **This is a required setting at tenant level, so PLEASE DON'T EDIT IT**
-{: .block-danger }
+> {: .block-danger }
 
 <br>
 - Now, login in the **Agent Desktop** with _your Agent1_ with the Webex Extension of the Agent
@@ -377,32 +376,28 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
   - You can search by entry name or DN
   - Try to call any of the numbers in the list
 
-
-
 # Custom Desktop Layout
 
 ## Basic JSON elements
 
 The following are the top-level and most important properties to know for JSON layout:
 
--  **`appTitle`**: To specify a title on the horizontal header of the Desktop. The default title is `Webex Contact Center`. 
+- **`appTitle`**: To specify a title on the horizontal header of the Desktop. The default title is `Webex Contact Center`.
 
 - **`logo`**: To specify a URL for the company logo. If you do not provide a URL, then the Webex Contact Center logo appears by default.
 
 - **`taskPageIllustration`**: To specify a custom illustration for the task page based on organization preferences and brand alignment. When an agent signs in, the task page displays the configured illustration as a background. By default, the task page appears without illustration.
-   
-- **`stopNavigateOnAcceptTask`**: To determine whether to shift the focus to a newly accepted task, when the agent accepts the new task while working on a previous task. The default value is `false`.  
+- **`stopNavigateOnAcceptTask`**: To determine whether to shift the focus to a newly accepted task, when the agent accepts the new task while working on a previous task. The default value is `false`.
 
 - **`dragDropEnabled`**: To enable the drag-and-drop and resizing of the widgets on the custom pages, set the value to `true`. The default value is `false`.
 
 - **`notificationTimer`**: To set the duration (in seconds) after which the desktop notifications on the Desktop are automatically dismissed. The notification appears at the top-right corner of the Desktop. The default timeout value is 8 seconds. The valid range for timeout values is 1-10 seconds. For the timeout changes to take effect, the browser must be refreshed after the changes are made.
 
-- **`maximumNotificationCount`**: To set the number of desktop notifications to be displayed at a time on the Desktop. The default value is 3. The range for desktop notifications is 1-10. The desktop notifications are stacked. If there are many notifications, they appear with a slight delay depending on the `notificationTimer` settings.    
+- **`maximumNotificationCount`**: To set the number of desktop notifications to be displayed at a time on the Desktop. The default value is 3. The range for desktop notifications is 1-10. The desktop notifications are stacked. If there are many notifications, they appear with a slight delay depending on the `notificationTimer` settings.
 
 - **`browserNotificationTimer`**: To set the duration (in seconds) after which the browser toaster notifications on the Desktop are automatically dismissed. Toaster is a native browser notification that appears only if the Desktop is not the active browser window or tab. The Desktop browser window or tab is inactive when
 
 - **`wxmConfigured`**: (Optional) To configure Webex Experience Management, set the value to `true`. The default value is `false`.
-  
 - **`desktopChatApp`**: To configure multiple Cisco-offered chat applications such as Webex App.
 
 - **`webexConfigured`**: Webex App along with its messaging, calling, and meeting functionalities, can be configured within the Desktop. This configuration allows agents to collaborate with other agents, supervisors, and subject matter experts (SMEs) in their organization without navigating away from the Desktop.
@@ -416,15 +411,13 @@ The following are the top-level and most important properties to know for JSON l
 ## Personalize the title and logo
 
 > In this video, you will learn the desktop layout customization process. After watching this, you will be able to customize the Agent Desktop with a custom logo, custom title. You will also learn how to enable/disbale standard widgets:
-{: .block-tip }
-
+> {: .block-tip }
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/de0e97f2-d0bc-447a-b326-93ccbf190203" width="100%" height="100%" title="Create a Custom Desktop Layout" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
 <br>
-
 
 - Login to **[https://portal.wxcc-us1.cisco.com](https://portal.wxcc-us1.cisco.com){:target="\_blank"}** with admin credentials.
 
@@ -443,8 +436,7 @@ The following are the top-level and most important properties to know for JSON l
 - Modify the wxmConfigured and webexConfigured key values to **_true_** to enable the standard (out of box) widgets.
 
 - **_Save As_** JSON file with a distinguishable name.
-<br>
-
+  <br>
 
 - Login as admin to **_Desktop Layout_** module in the **[Webex Contact Center Management Portal](https://portal.wxcc-us1.cisco.com){:target="\_blank"}**.
 
@@ -457,8 +449,7 @@ The following are the top-level and most important properties to know for JSON l
 - Click **_Upload_** button to upload the modified JSON file.
 
 - Click **_Save_** button to apply the layout.
-<br>
-
+  <br>
 
 - Login to the **[Agent Desktop](https://desktop.wxcc-us1.cisco.com/){:target="\_blank"}**.
 
@@ -473,12 +464,12 @@ The following are the top-level and most important properties to know for JSON l
 - Wait for few seconds to see the results.
 
 - Now you should be able to see the new logo, new title and will be able to access the out of box widgets i.e Webex & Custom Experience Analytics.
-<br>
+  <br>
+
 ## Reorder components of Horizontal Header
 
 > In this section, you will learn how to reorder components of Horizontal Header.
-{: .block-tip }
-
+> {: .block-tip }
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/41edcf4e-25c5-45b6-8315-4a922ee615e3" width="100%" height="100%" title="Reorder components of Horizontal Header" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
@@ -497,18 +488,15 @@ The following are the top-level and most important properties to know for JSON l
 - Now login to the **[Agent Desktop](https://desktop.wxcc-us1.cisco.com/){:target="\_blank"}** or refresh the browser if you are already logged in.
 
 - You should be able to see the order of components in the Horizontal header as per your configuration.
-<br>
+  <br>
 
 ## Create iFrame Widget & change default landing page
 
 > The iFrame widget is a special widget that can be used to embed a different application. The iFrame widget creates an HTML iFrame and renders your application.
-{: .block-warning}
-
+> {: .block-warning}
 
 > In this section, you will learn how to create a iFrame widget and how to change the default landing page in the Agent Desktop. For this example, we are using Webex Contact Center Analyzer Report as a iFrame widget.
-{: .block-tip }
-
-
+> {: .block-tip }
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/d6e4883a-282e-4376-8b3e-b5bf67fc6b43" width="100%" height="100%" title="Create custom widget & change default landing page" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
@@ -519,6 +507,7 @@ The following are the top-level and most important properties to know for JSON l
 - Open the desktop layout file with any text editor (e.g. Notepad, Sublime text).
 
 - Create another section under **_navigation_** similar to that of existing Customer Experience Analytics.
+
   > Check out this sample [Analyzer_iFrame_Widget.json](https://github.com/CiscoDevNet/webex-contact-center-api-samples/blob/main/widget-samples/iframe-widget-sample/Analyzer_iFrame_Widget_Layout.json)
 
 - In the new section, add the **_label_** key value with your choice.
@@ -537,15 +526,13 @@ The following are the top-level and most important properties to know for JSON l
 
 <br>
 
-
 ## Populate Custom Widget with desktop parameters
 
 > A Custom Widget is a component with some specific encapsulated functionality, exported as a custom HTML element that is placed within the desktop.
-{: .block-warning}
+> {: .block-warning}
 
-
-> Watch the demo below to understand the ability to pass default Desktop parameters into your Custom widget. This will help developers understand how data is handled in the Desktop STORE and injected into widgets inside of Webex Contact Center desktop. 
-{: .block-tip }
+> Watch the demo below to understand the ability to pass default Desktop parameters into your Custom widget. This will help developers understand how data is handled in the Desktop STORE and injected into widgets inside of Webex Contact Center desktop.
+> {: .block-tip }
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/7ca5247d-462b-4b49-859c-62bee86477a3" width="100%" height="100%" title="Part 1 of 2: Sample Widget 101 & passing parameters" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
@@ -569,9 +556,9 @@ Below, you will find a breakdown of all possible data and type definitions that 
 > Check the **[Developer guide](https://developer.webex-cx.com/documentation/guides/desktop/#custom-widgets)** for more details about Custom Widgets.
 {: .block-warning}
 
-> If you want to explore and play around with the possible types of custom widgets you can create, check the below **Git repository with some samples: 
+> If you want to explore and play around with the possible types of custom widgets you can create, check the below **Git repository with some samples:
 > [https://github.com/CiscoDevNet/webex-contact-center-widget-starter/tree/master/Examples](https://github.com/CiscoDevNet/webex-contact-center-widget-starter/tree/master/Examples)**
-{: .block-warning}
+> {: .block-warning}
 
 <br>
 ## JavaScript SDK and Modules
@@ -583,6 +570,7 @@ Below, you will find a breakdown of all possible data and type definitions that 
 - Once you have installed the package in your project, include it in the appropriate component file following the ES6 import pattern: `import {Desktop} from "@wxcc-desktop/sdk";`.
 
 - `Desktop` is the root module of the JavaScript SDK. The root module provides a reference to the following sub-modules:
+
   - Configuration Module
   - Localization Module
   - Actions Module
@@ -595,7 +583,6 @@ Below, you will find a breakdown of all possible data and type definitions that 
   - Call Monitoring Module
 
 - Check the [Developer Guide](https://developer.webex-cx.com/documentation/guides/desktop#javascript-sdk-and-modules) for more details about each module.
-
 
 <br>
 <br>
