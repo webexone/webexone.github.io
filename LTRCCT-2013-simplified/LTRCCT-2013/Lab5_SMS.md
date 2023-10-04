@@ -31,15 +31,15 @@ In this lab you will be configuring **SMS** number settings, SMS Assets, Entry P
 
 ### Pre-requisite
 
-1. You recived an admin credentials to configure in Managment Portal and Webex Connect.
-2. You recived the SMS number associated with your tenat.
+1. You recieved an admin credentials to configure in Management Portal and Webex Connect.
+2. You received the SMS number associated with your tenant.
 3. You have successfully completed the previous Lab **Preconfiguration**
 
 # Lab Section
 
 ## Step 1. Verify SMS Number Assignment
 
-- Login to your respective Webex Connect UI using the provided URL https://cl1pod**X**.imiconnect.io/ (where **X** is your POD number).
+- Login to your respective Webex Connect UI using the provided URL https://labtenant.us.webexconnect.io 
 
 - Navigate to Assets > Numbers and verify that the tenant you are using has a SMS number assigned 
 
@@ -80,7 +80,7 @@ In this lab you will be configuring **SMS** number settings, SMS Assets, Entry P
 
 ## Step 3. SMS Entry Point and Queue creation
 
-### 1. Create Entry Point in Managment Portal 
+### 1. Create Entry Point in Management Portal 
 
 - Login to Webex Contact Centre administration portal 
 
@@ -92,7 +92,7 @@ In this lab you will be configuring **SMS** number settings, SMS Assets, Entry P
 <br/>
 <br/>
 
-- Input **_Name_** as `SMS_EP`.
+- Input **_Name_** as `SMS_EP_0XX` where <0XX> is your 3-digit lab ID
 
 - Select `Social Channel` in the **_Channel Type_** section.
 
@@ -116,7 +116,7 @@ In this lab you will be configuring **SMS** number settings, SMS Assets, Entry P
 <br/>
 <br/>
 
-- Input **_Name_** as `SMS_Queue`.
+- Input **_Name_** as `SMS_Queue_0XX` where <0XX> is your 3-digit lab ID
 
 - Select `Social Channel` in the **_Channel Type_** section.
 
@@ -155,7 +155,7 @@ In this lab you will be configuring **SMS** number settings, SMS Assets, Entry P
 
 - Unzip the downloaded file.
 
-- Go to Webex Connect, click on **Services** and select the service in which the Asset is created in step 2. It should be **My First Service**
+- Go to Webex Connect, click on **Services** and select the service in which the Asset is created in step 2. It should be **My First Service 0xx**
 
 - In the service click on **FLOWS** -> **CREATE FLOW** 
 
@@ -177,7 +177,7 @@ In this lab you will be configuring **SMS** number settings, SMS Assets, Entry P
   
 - Once the **Success** message is displayed, click on **Save**
 
-- In the created workflow find the **Queue Task**, click twice, select the **QUEUE NAME** as **SMS_Queue** and click on **SAVE**.
+- In the created workflow find the **Queue Task**, click twice, select the **QUEUE NAME** as **SMS_Queue_0XX** and click on **SAVE**.
 
 <img align="middle" src="images/Lab5_15.jpg" width="1000" />
 <br/>

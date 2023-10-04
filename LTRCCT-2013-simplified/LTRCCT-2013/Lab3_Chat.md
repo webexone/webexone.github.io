@@ -53,13 +53,13 @@ In this lab you will be configuring the Service, Chat Assets, Entry Point, Queue
 > Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal){:target="_blank"}**\
 > Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="_blank"}**\
 > Workflows: **[GitHub page]( https://github.com/CiscoDevNet/webexcc-digital-channels/tree/imi_flow_simplification/Webex%20Connect%20Flows) {:target="_blank"}**\
-> Connect: https://cl1pod**\<ID\>**.imiconnect.io/ (where **\<ID\>** is your POD number)
+> Connect: **[https://labtenant.us.webexconnect.io](https://labtenant.us.webexconnect.io) {:target="_blank"}**\
 
 # Lab Section
 
 ## Step 1. Live Chat Asset creation & register to Webex Engage
 
-- Login to your respective Webex Connect UI using the provided URL https://cl1pod**X**.imiconnect.io/ (where **X** is your POD number).
+- Login to your respective Webex Connect UI using the provided URL https://labtenant.us.webexconnect.io 
 
 - Navigate to `Assets` > `Apps` > `Configure New App` > `Mobile / Web`
 
@@ -67,7 +67,7 @@ In this lab you will be configuring the Service, Chat Assets, Entry Point, Queue
 <br/>
 <br/>
 
-- Provide a `Name`
+- Name your asset `LiveChatAsset_0XX` where 0XX is your 3-digit Lab ID 
 
 - Toggle/Enable `Live Chat / In-AppMessaging` to "ON" and choose `PRIMARY TRANSPORT PROTOCOL` as  MQTT" & `SECONDARY TRANSPORT PROTOCOL` as Web Socket" and enable `Use Secured Port` and `SAVE`.
 
@@ -81,7 +81,7 @@ In this lab you will be configuring the Service, Chat Assets, Entry Point, Queue
 <br/>
 <br/>
 
-- In the resulting window, select a service under which this asset would be managed
+- In the resulting window, select a service under which this asset would be managed. This service will be Service_0XX you created in the prior steps
 
 <img align="middle" src="new_images\Lab3_chat\lab3_2_register_app_to_service_png" width="600" />
 <br/>
@@ -103,7 +103,7 @@ In this lab you will be configuring the Service, Chat Assets, Entry Point, Queue
 
 ## Step 2. Chat Template creation for website integration
 
-- A Creating a chat template allows you to configure a pre-defined chat form that will presented to the customer. Data points can be collected from the customer in a chat-like interface.
+- Creating a chat template allows you to configure a pre-defined chat form that will presented to the customer. Data points can be collected from the customer in a chat-like interface.
 
 - From Webex Connect interface, go to `TOOLS` > `Templates` then click on `Add New Template`
 
@@ -111,7 +111,7 @@ In this lab you will be configuring the Service, Chat Assets, Entry Point, Queue
 <br/>
 <br/>
 
-- Provide a Name and choose Channel as `Live Chat / In-APP Messaging`
+- Name your template ChatTemplate_0XX where <0XX> is your 3 digit Lab ID. Choose Channel as `Live Chat / In-App Messaging`
 
 - Message Type as `Form`
 
@@ -158,7 +158,7 @@ Here is a screenshot of the Dropdown configuration with 2 options, one for **Sal
 
 - Click on `New Entry Point`.
 
-- Input **_Name_** as `Chat_EP`.
+- Input **_Name_** as `Chat_EP_0XX` where <0XX> is your 3-digit lab ID
 
 - Select `Chat` in the **_Channel Type_** section.
 
@@ -180,7 +180,7 @@ Here is a screenshot of the Dropdown configuration with 2 options, one for **Sal
 
 - Click on `New Queue`.
 
-- Input **_Name_** as `Chat_Q_SBR`.
+- Input **_Name_** as `Chat_Q_SBR_0XX` where <0XX> is your 3-digit lab ID
 
 - Select `Chat` in the **_Channel Type_** section.
 
@@ -208,7 +208,7 @@ Here is a screenshot of the Dropdown configuration with 2 options, one for **Sal
 
 - Click on `New Skill Definition`
 
-- Set **_Name_** as `Sales`
+- Set **_Name_** as `Sales_0XX` where 0XX is your 3-digit lab ID
 
 - Set **_Service Level Threshold_** as `60` seconds.
 
@@ -220,7 +220,7 @@ Here is a screenshot of the Dropdown configuration with 2 options, one for **Sal
 <br/>
 <br/>
 
-- Create another Skill definition of same type `Boolean` with **_Name_** as `Support`
+- Create another Skill definition of same type `Boolean` with **_Name_** as `Support_0XX`
 
 <img align="middle" src="images/Lab3_28.jpg" width="600" />
 <br/>
@@ -230,11 +230,11 @@ Here is a screenshot of the Dropdown configuration with 2 options, one for **Sal
 
 - Click on `New Skill Profile`
 
-- Set **_Name_** as `Sales`
+- Set **_Name_** as `Sales_0XX` where <0XX> is your 3-digit lab ID
 
-- Select the `Sales` Skill and set the **_Skill Value_** to `True`
+- Select the `Sales_0XX` Skill and set the **_Skill Value_** to `True`
 
-- Select the `Support` Skill and set the **_Skill Value_** to `False`
+- Select the `Support_0XX` Skill and set the **_Skill Value_** to `False`
 
 - Click on **Save**
 
@@ -242,7 +242,7 @@ Here is a screenshot of the Dropdown configuration with 2 options, one for **Sal
 <br/>
 <br/>
 
-- Create another Skill Profile with Name `Support` with Sales skill value to False and Support skill value to True
+- Create another Skill Profile with Name `Support_0XX` with `Sales_0XX` skill value to False and Support skill value to True
 
 <img align="middle" src="images/Lab3_30.jpg" width="600" />
 <br/>
@@ -256,7 +256,7 @@ Here is a screenshot of the Dropdown configuration with 2 options, one for **Sal
 <br/>
 <br/>
 
-- In the agent settings, Select `Skill Profile` as `Sales` and click **Save**
+- In the agent settings, Select `Skill Profile_0XX` as `Sales_0XX` and click **Save**
 
 <img align="middle" src="new_images\Lab3_chat\lab3_4_assign_agent_skill_profile_png" width="600" />
 <br/>
@@ -279,7 +279,7 @@ Here is a screenshot of the Dropdown configuration with 2 options, one for **Sal
 <br/>
 <br/>
 
-- Scroll down and choose `Save Changes`
+- Scroll down and click the pencil icon under the Action menu
 
 <img align="middle" src="images/Lab3_15.jpg" width="1000" />
 <br/>
@@ -346,7 +346,7 @@ Here is a screenshot of the Dropdown configuration with 2 options, one for **Sal
 <br/>
 <br/>
 
-- In the Group Name field, enter the template group name and click `Add`
+- In the Group Name field, enter `TemplateGroup_00X` as the template group name and click `Add`
 
 <img align="middle" src="images/Lab3_48.jpg" width="600" />
 <br/>
@@ -393,7 +393,7 @@ Here is a screenshot of the Dropdown configuration with 2 options, one for **Sal
 
 - Unzip the downloaded file.
 
-- Go to Webex Connect, click on **Services** and select the service in which the Asset is created in step 2. It should be **My First Service**
+- Go to Webex Connect, click on **Services** and select `Service_0XX` in which your asset `Asset_0XX`` is created in step 2. It should be **My First Service**
 
 - In the service click on **FLOWS** -> **CREATE FLOW** .
 
@@ -453,13 +453,13 @@ Here is a screenshot of the Dropdown configuration with 2 options, one for **Sal
 
 ### 4. Edit Queue Task node
 
-- In the created workflow find the **Queue Task**, click twice, select the **QUEUE NAME** as **Chat_Q_SBR** and add Skill requirement for Sales to be True and click on **SAVE**.
+- In the created workflow find the **Queue Task**, click twice, select the **QUEUE NAME** as **Chat_Q_SBR_0XX** and add Skill requirement for Sales_0XX to be True and click on **SAVE**.
 
 <img align="middle" src="images/Lab3_36.jpg" width="1000" />
 <br/>
 <br/>
 
-- Finally click on Make Live on top right corner -> Select the Application/Asset that we have created and click `Make Live`.
+- Finally click on Make Live on top right corner -> Under Application select LiveChatAsset_0XX that corresponds to your Lab ID and click  `Make Live`.
 
 <img align="middle" src="new_images\Lab3_chat\lab3_92_chat_flow_make_live_png" width="1000" />
 <br/>
