@@ -1,13 +1,9 @@
 ---
-title: Lab 2 - Agent and Supervisor Experience
+title: Agent Experience
 author: Arunabh Bhattacharjee
-date: 2022-03-03
+date: 2023-10-04
 layout: post
 ---
-
-```
-Last modified: Mon, 11 Sep 2023
-```
 
 <script>
     function update(){them = Array.from(document.querySelectorAll("input")).reduce((acc, input) => ({...acc, [input.id + "_out"] : input.value}),{});
@@ -25,23 +21,31 @@ Last modified: Mon, 11 Sep 2023
   }
 </script>
 
-## Overview of the lab:
+## Overview
 
-In this lab, we will go through the Agents Desktop portal use in their daily basis. We will review how to complete some of the most common tasks and some more advance features will be introduced.
+In this lab, we will go through the Agents Desktop experience for Webex Contact Center.
 
-At the end of the lab, you should be able to handle calls as an agent, perform some useful agent tasks and create your cutomized Agent Desktop.
+We will review the overall Agent Experience and associated Administrative toggles associated with tailoring the Agent Experience on the Webex Contact Center:
+
+- Sign-In Experience using WebRTC Endpoints.
+- Alternate Telephony Options to take calls.
+- Profile Settings for the Desktop settings and behavior.
+- Profile settings for Channel Capacity.
+- Advanced Use cases.
+
+At the end of this lab, you should be able to handle calls as an agent, understand how to add onto the functionality of the Agent Desktop out of box and explore advanced extensibility available.
 
 ## Table of Contents
 
-| Topic                                             | Lab Type      | Dificulty Level | Estimated length |
-| ------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Agent Desktop Overview](#agent-desktop-overview) | Demo          | EASY            | 10 min           |
-| [Basic Features](#basic-features)                 | Practical Lab | EASY            | 15 min           |
-| [Custom Desktop Layouts](#custom-desktop-layout)  | Practical Lab | MEDIUM          | 30 min           |
+| Section                                               | Lab Type      | Dificulty Level | Estimated length |
+| ----------------------------------------------------- | ------------- | --------------- | ---------------- |
+| [Agent Desktop Experience](#agent-desktop-overview)   | Demo          | EASY            | 20 min           |
+| [Desktop Administration](#desktop-administration)     | Practical Lab | EASY            | 15 min           |
+| [Bonus: Customizations & Extensions](#custom-desktop) | Practical Lab | MEDIUM          | 15 min           |
 
 ## Introduction
 
-### Lab Objective
+### Lab Objectives
 
 - The objective of this lab is to get an idea about the Agents user journey, to familiarize with the platform they use and to explore some of the most useful new features they offer.
 
@@ -51,33 +55,28 @@ At the end of the lab, you should be able to handle calls as an agent, perform s
 
 - In the third part of the lab we will customize Horizontal header of the platform and also add some custom widget in the Navigarion bar section.
 
-### Pre-requisite
+### Pre-Requisites
 
-1. You need **2 devices** where you can install **Webex App** (example: your laptop and mobile phone).
+1. You need **1 extra device** (your personal phone for example) to test inbound calls to Webex Contact Center.
 
-   - You will need an extra device (your personal phone for example) to test Consult and Conference functionalities
+> Note: For completing the first section of the lab, all the Desktop Administration configurations have already been done for you to experience the fully loaded desktop.
 
-2. For doing this lab, you must first complete the **Lab 1: Control Hub and Admin Portal:**
+> We will explore each of the Administration elements in the Administration section.
 
-   - You have the administrator's access to the Tenant Management Portal.
-   - Agent and Supervisor users created and configured
-   - You have agent's access to the Agent Desktop
-   - You have the supervisor's access to the Tenant Management Portal.
-   - Agent is part of 2 Teams.
-   - Webex Calling extensions are assigned to a WxCC users (agent and supervisor).
+- You should have a copy of the administrator's credentials to Control Hub.
 
-3. You also must complete the **Lab 2: IVR Contact Routing:**
+2. The following items are already pre-configured:
 
-   - Simple flow configured and making a call tested
-   - Global variables created as Agent Editable
-
-4. For Part 3 - Custom Desktop Layour, you should have a Webex Contact Center Analyzer Report. You can use the Stock Reports created by default or use your own custom Reports
-   > [How to create Analyzer Report on Webex Contact Center Analyzer](https://github.com/CiscoDevNet/webex-contact-center-api-samples/tree/main/iframe-widget-sample)
+- Agent and Supervisor users are created and configured for logins.
+- You have agent's access to the Agent Desktop URL: https://desktop.wxcc-us1.cisco.com
+- Agent is part of 2 Teams.
+- Webex Calling extensions are assigned to a WxCC users (agent and supervisor) to experience alternative login options.
+- Simple inbound Voice flow is configured for test calls.
 
 ### Quick Links
 
 > Control Hub: **[https://admin.webex.com](https://admin.webex.com){:target="\_blank"}**\
-> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal){:target="\_blank"}**\
+> Administration Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal){:target="\_blank"}**\
 > Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="\_blank"}**\
 > Developer Portal: **[https://developer.webex-cx.com](https://developer.webex-cx.com/){:target="\_blank"}**\
 > API Samples Git Repository: **[https://github.com/CiscoDevNet/webex-contact-center-api-samples](https://github.com/CiscoDevNet/webex-contact-center-api-samples){:target="\_blank"}**\
@@ -104,29 +103,51 @@ update()
 
 # Agent Desktop Overview
 
-## Station Login
+## Login Process
 
-- In order to access to the Agent Desktop you can do it either via the Management Portal (Desktop module) or navigating to the direct URL: https://desktop.wxcc-<DC\>.cisco.com/
+- Login using the URL: https://desktop.wxcc-us1.cisco.com/
+
+> Tip: You can also find this link under Control Hub: [admin.webex.com](https://admin.webex.com) > Contact Center > Settings
 
 - Once you're in the login page, enter the agent credentials (username and password)
 
-- Agents will need to input the number where they need to receive incoming and outdial calls
+> In this example, please use the specific login for your attendee ID
 
-  - If your administrator configures the default Dial Number (DN), the default DN is prepopulated in the Dial Number and Extension fields.
-  - If your administrator restricts the DN to the default DN, you cannot edit the prepopulated DN when signing in to the Agent Desktop.
+![agent-desktop](/assets/images/Agent/01-image.png)
 
-- They can choose between Dial Number or Extension
+![agent-desktop](/assets/images/Agent/01-image.png)
+
+- This is the station Login Screen. Agents may input the number where they need to receive incoming and outdial calls.
+
+> We will use the new feature of Desktop telephony that uses the browser as a device to directly receive calls.
+
+- Click on the Radio button that says "Desktop".
+
+- Select one of the possible teams from the list. Agents can belong to multiple teams, but they can only receive calls of 1 specific teams
+
+- Check the **Remember My Credentials** box to save your station credential decision for future sign-ins.
+
+- Click Sign in to be connected to telephony and complete the login process.
+
+![agent-desktop](/assets/images/Agent/01-image.png)
+
+> NOTE: Agents cannot access the Agent Desktop from multiple browsers or multiple tabs of the same browser window. In that case, a warning message will be displayed
+
+![agent-desktop](/assets/images/Agent/01-image.png)
+
+**NOTE:**
+
+> The login device and DN can be enforced on the Desktop Profile as follows
+
+- If your administrator configures the default Dial Number (DN), the default DN is prepopulated in the Dial Number and Extension fields.
+- If your administrator restricts the DN to the default DN, you cannot edit the prepopulated DN when signing in to the Agent Desktop.
+
+- They can choose between Dial Number or Extension or Desktop
 
   - Extension: Just in case the agent is using Webex Calling or some other softphone as calling endpoint
 
     - Dial Number: E.164 format phone number
       - If you check the **International Dialing Format** box, you can choose the country code based on your geographical location from the drop-down list. You can also enter a country code or country name to filter the list. Dial numbers are validated based on the country code
-
-- Select one of the possible teams from the list. Agents can belong to multiple teams, but they can only receive calls of 1 specific teams
-
-- Check the **Remember My Credentials** box to save your station credential details for future sign-ins
-
-- Be aware that agents cannot access the Agent Desktop from multiple browsers or multiple tabs of the same browser window. In that case, a warning message will be displayed
 
 > The video below shows a demo about the agent login process and the available options:
 > {: .block-tip }
@@ -137,10 +158,10 @@ update()
 
 ## Agent Desktop Interface
 
-> The Desktop UI language is based on the language preference settings on your browser. Currently, it supports 29 languages:
+> Desktop multi-language support is based on the language preference settings on the browser. Currently, we support 29 languages:
 > Bulgarian, Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish, Dutch, English (UK), English (US), Finnish, French, German, Hungarian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Serbian, Slovak, Slovenian, Spanish, Swedish, and Turkish.
 > {: .block-tip }
-> <br> > <br>
+> <br/> > <br/>
 
 > Watch the following video, where each of the sections and their main options are explained. You will get a better idea of how the Agent Desktop look like and how to use it:
 > {: .block-tip }
@@ -148,7 +169,8 @@ update()
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/dc341488-94ab-4659-8951-4b4ba1412373" width="100%" height="100%" title="Agent Desktop Interface" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
-<br>
+<br/>
+
 ![Image1](/assets/images/AgentDesktopOverview.png)
 
 The Agent Desktop is divided in **6 sections**. In the image above you can see a general view of the Agent Desktop and where each section is located. We explain them all shortly:
@@ -165,7 +187,7 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 
 6. **Navigation bar**: By default you can find the following icons here: Home, Agent Performance Statistics and Help. However, you can customize it and add some additional icons and widgets.
 
-## Calls Handling
+## Handling Calls
 
 > In the following video you will see how to handle incoming calls and what are the different agent states:
 > {: .block-tip }
@@ -173,8 +195,9 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/f5a79811-eb60-4925-b11a-a8586760a3d3" width="100%" height="100%" title="Calls Handling" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
-<br>
-#### Agent states:
+<br/>
+
+#### Agent States:
 
 - **Available**: Indicates that you are ready to accept and respond to contact requests that are routed to you. After you sign in, you must select Available from the drop-down list to accept voice call, chat, email, and social messaging conversation requests.
 
@@ -231,7 +254,7 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 > Be aware that all entities that don't match with attendee IDs will be deleted
 > {: .block-warning }
 
-## Testing Incoming call
+## Make Incoming Calls
 
 > In this section, you will will interact as an agent and test an Incoming call. Review the video of the lab section above to understand the different call handling options.
 > {: .block-tip }
@@ -242,32 +265,35 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
   - Make sure that **`End Call`** and **`End Consult`** are enabled
   - You can also configure _Auto Wrapup and RONA timeouts_
 
-<br>
-- Now open the **Management Portal** and navigate to _Provisioning > Desktop Profiles_ and edit _your Desktop Profile_:
-	- In the **Collaboration** tab:
-		- Set the **Buddy Teams** to **`All`**
-		- Enable **`Consult to Queue`**
+<br/>
 
-<br>
+- Now open the **Management Portal** and navigate to _Provisioning > Desktop Profiles_ and edit _your Desktop Profile_:
+  - In the **Collaboration** tab:
+    - Set the **Buddy Teams** to **`All`**
+    - Enable **`Consult to Queue`**
+
+<br/>
 
 - Navigate to _Provisioning > Queue_ and edit your Queue
   - Enable **`Permit Recording, Record All Calls and Pause/Resume`**
     - Make sure that these settings are also enabled at tenant level
   - You can also set the _Recording Pause Duration_. This is the maxiumum duration that an agent can pause the recording
 
-<br>
+<br/>
+
 - Now place it's time to test the incoming call
-	- Login in both in the **Agent Desktop** and **Webex App** with _your Agent 1_ user 
-	- Input the corresponding Webex App Extension in the Agent Desktop Station Login (you can check this info in the Users module of Control Hub)
-	- Move to **`Available`** state
-	- Place an incoming call to the DN mapped to your EP (You should have mapped your EP in Lab 2)
+  - Login in both in the **Agent Desktop** and **Webex App** with _your Agent 1_ user
+  - Input the corresponding Webex App Extension in the Agent Desktop Station Login (you can check this info in the Users module of Control Hub)
+  - Move to **`Available`** state
+  - Place an incoming call to the DN mapped to your EP (You should have mapped your EP in Lab 2)
 
-<br>
+<br/>
+
 - Accept the call in the Webex App of _your Agent 1_
-	- Check the **CAD variables** and try to edit any Global Variable
-	- Change to **`Engage - Idle`**. This way you will not receive any other digital channel requests
+  - Check the **CAD variables** and try to edit any Global Variable
+  - Change to **`Engage - Idle`**. This way you will not receive any other digital channel requests
 
-<br>
+<br/>
 
 - Let's play with the call interaction buttons
   - Click on **`Hold`** to pause the conversation with the end-customer and click on **`Resume`** to talk with him again
@@ -278,7 +304,7 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 
 > For this part, you will need a third calling device for interacting as aSupervisor
 > {: .block-warning }
-> <br>
+> <br/>
 
 - Now, using a different browser, login in the **Agent Desktop** with _your Supervisor_ user and move to **`Available`** status
   - In a separate device (you mobile phone for example), login in Webex App with your _Supervisor_ user
@@ -293,34 +319,39 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/149fe8d1-c27e-4c7e-a0b9-af072487c543" width="100%" height="100%" title="User Profile" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
-<br>
+<br/>
+
 - First, we will see how to change from one team to another one
   - In order to notice some difference when we make the Team change, we need to modify some setting from _your Team 2_ (created in Lab 1) . For that, we will assign a different **Multimedia Profile** to that team.
 
-<br>
+<br/>
+
 - Navigate to the _Management Portal > Provisioning > Teams_
-	- Find _your Team 2_ and click on `Edit`
-	- Check _your User settings_ and make sure that there is not **Multimedia Profile** assigned. **User settings have preference over Team setting**, so the Multimedia Profile at User level will be applied. 
-	- Change the **Multimedia Profile** of the team from <w class = "attendee-class">attendeeID</w>\_MMP` to `Default_Telephony_Profile
+  - Find _your Team 2_ and click on `Edit`
+  - Check _your User settings_ and make sure that there is not **Multimedia Profile** assigned. **User settings have preference over Team setting**, so the Multimedia Profile at User level will be applied.
+  - Change the **Multimedia Profile** of the team from <w class = "attendee-class">attendeeID</w>\_MMP`to`Default_Telephony_Profile
 
-<br>
+<br/>
+
 - Now, login in the **Agent Desktop** selecting <w class = "attendee-class">attendeeID</w>\_team1
-	- Open _your User Profile_ and check that the **Channel Capacity**
-	- Now, click on _your Team_, you will see a dropdown list with other available Teams
-	- Click on <w class = "attendee-class">attendeeID</w>\_team2 
-	- **`Save Team Selection`** to confirm that you want to change a team
+  - Open _your User Profile_ and check that the **Channel Capacity**
+  - Now, click on _your Team_, you will see a dropdown list with other available Teams
+  - Click on <w class = "attendee-class">attendeeID</w>\_team2
+  - **`Save Team Selection`** to confirm that you want to change a team
 
-<br>
+<br/>
+
 - You will see notification appeared in the **Notification Center**
-	- You can change the **Notification settings** to disable the incoming notifications or the sound
-	- Mark the notification as `Read`
-	- Go to the **User Profile** and check the **Channel Capacity** again, it's different
+  - You can change the **Notification settings** to disable the incoming notifications or the sound
+  - Mark the notification as `Read`
+  - Go to the **User Profile** and check the **Channel Capacity** again, it's different
 
-<br>
+<br/>
+
 - Test some additional options:
-	- **Switch to Dark Mode**
-	- **Keyboard shortcuts**
-	- **Download error log**
+  - **Switch to Dark Mode**
+  - **Keyboard shortcuts**
+  - **Download error log**
 
 ## Outdial
 
@@ -330,7 +361,8 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/df20ad39-55db-4c8c-a268-bcd4818fe1f3" width="100%" height="100%" title="Outdial Call" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
-<br>
+<br/>
+
 - Navigate to _Management Portal > Provisioning > Outdial ANI_
   - Click on **`New Outdial ANI`**
   - Name: <w class = "attendee-class">attendeeID</w>\_outdialANI
@@ -338,37 +370,41 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
     - Name: <w class = "attendee-class">attendeeID</w>\_outdialANIEntry1
     - Number: Select your mapped DN
 
-<br>
+<br/>
+
 - Navigate to _Management Portal > Provisioning > Address Book_
-	- Click on **`New Address Book`**
-	- Name: <w class = "attendee-class">attendeeID</w>\_addressBook
-	- Parent Type: **`Site`**
-	- Add Address Book entries
-		- Name: <w class = "attendee-class">attendeeID</w>\_addressBookEntry1
-		- International calls are disabled, **so only US numbers are supported**. For example: +18662293239 (Cisco Helpdesk)
+  - Click on **`New Address Book`**
+  - Name: <w class = "attendee-class">attendeeID</w>\_addressBook
+  - Parent Type: **`Site`**
+  - Add Address Book entries
+    - Name: <w class = "attendee-class">attendeeID</w>\_addressBookEntry1
+    - International calls are disabled, **so only US numbers are supported**. For example: +18662293239 (Cisco Helpdesk)
 
-<br>
+<br/>
+
 - Navigate to _Management Portal > Provisioning > Desktop Profiles_
-	- Search for _your Desktop Profile_ and make sure that **Outdial is enabled and `Outdial Entry Point-1` (created by the system) selected**
-	- Select _your Outdial ANI_
+  - Search for _your Desktop Profile_ and make sure that **Outdial is enabled and `Outdial Entry Point-1` (created by the system) selected**
+  - Select _your Outdial ANI_
 
-<br>
+<br/>
+
 - Navigate to _Management Portal > Tenant > Settings_
-	- See the number of the **Default Outdial ANI**
+  - See the number of the **Default Outdial ANI**
 
 > **This is a required setting at tenant level, so PLEASE DON'T EDIT IT**
 > {: .block-danger }
 
-<br>
-- Now, login in the **Agent Desktop** with _your Agent1_ with the Webex Extension of the Agent
-	- Open the Outdial on the Horizontal Header
-  - Input your personal phone number
-	- **Don't select any Outdial ANI**
-	- Click on the telephone button to place the call
-	- The call will be delivered to your phone number from the **Default Outdial ANI** defined at Tenant level
-	- Now repeat the same but **choosing _your Outdial ANI_** configured before. You will see that the call is coming with a different ANI
+<br/>
 
-<br>
+- Now, login in the **Agent Desktop** with _your Agent1_ with the Webex Extension of the Agent
+  - Open the Outdial on the Horizontal Header
+  - Input your personal phone number
+  - **Don't select any Outdial ANI**
+  - Click on the telephone button to place the call
+  - The call will be delivered to your phone number from the **Default Outdial ANI** defined at Tenant level
+  - Now repeat the same but **choosing _your Outdial ANI_** configured before. You will see that the call is coming with a different ANI
+
+<br/>
 
 - Finally, let's see how **Adress Book** works
   - Open the Outdial window and swith to the Address Book tab
@@ -376,7 +412,11 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
   - You can search by entry name or DN
   - Try to call any of the numbers in the list
 
-# Custom Desktop Layout
+# Verify Desktop Administration
+
+The following section and describes Desktop Administration that brought together all the features you experienced on the Agent Desktop.
+
+# BONUS: Desktop Customizations
 
 ## Basic JSON elements
 
@@ -406,7 +446,7 @@ The following are the top-level and most important properties to know for JSON l
 
 - **`area`**: The `area` property is the core section of the Desktop Layout. You can define the layout as per the area.
 
-<br>
+<br/>
 
 ## Personalize the title and logo
 
@@ -417,7 +457,7 @@ The following are the top-level and most important properties to know for JSON l
 	<iframe src="https://app.vidcast.io/share/embed/de0e97f2-d0bc-447a-b326-93ccbf190203" width="100%" height="100%" title="Create a Custom Desktop Layout" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
-<br>
+<br/>
 
 - Login to **[https://portal.wxcc-us1.cisco.com](https://portal.wxcc-us1.cisco.com){:target="\_blank"}** with admin credentials.
 
@@ -436,7 +476,7 @@ The following are the top-level and most important properties to know for JSON l
 - Modify the wxmConfigured and webexConfigured key values to **_true_** to enable the standard (out of box) widgets.
 
 - **_Save As_** JSON file with a distinguishable name.
-  <br>
+  <br/>
 
 - Login as admin to **_Desktop Layout_** module in the **[Webex Contact Center Management Portal](https://portal.wxcc-us1.cisco.com){:target="\_blank"}**.
 
@@ -449,7 +489,7 @@ The following are the top-level and most important properties to know for JSON l
 - Click **_Upload_** button to upload the modified JSON file.
 
 - Click **_Save_** button to apply the layout.
-  <br>
+  <br/>
 
 - Login to the **[Agent Desktop](https://desktop.wxcc-us1.cisco.com/){:target="\_blank"}**.
 
@@ -464,7 +504,7 @@ The following are the top-level and most important properties to know for JSON l
 - Wait for few seconds to see the results.
 
 - Now you should be able to see the new logo, new title and will be able to access the out of box widgets i.e Webex & Custom Experience Analytics.
-  <br>
+  <br/>
 
 ## Reorder components of Horizontal Header
 
@@ -488,7 +528,7 @@ The following are the top-level and most important properties to know for JSON l
 - Now login to the **[Agent Desktop](https://desktop.wxcc-us1.cisco.com/){:target="\_blank"}** or refresh the browser if you are already logged in.
 
 - You should be able to see the order of components in the Horizontal header as per your configuration.
-  <br>
+  <br/>
 
 ## Create iFrame Widget & change default landing page
 
@@ -524,7 +564,7 @@ The following are the top-level and most important properties to know for JSON l
 
 - You should be able to see the new widget you added when you login to the agent desktop as it is set as the default landing page.
 
-<br>
+<br/>
 
 ## Populate Custom Widget with desktop parameters
 
@@ -542,28 +582,32 @@ The following are the top-level and most important properties to know for JSON l
 	<iframe src="https://app.vidcast.io/share/embed/6e211cd5-e0c6-4c38-a1dc-df647b60a0b3" width="100%" height="100%" title="Part 2 of 2: Sample Widget 101 & passing parameters" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
-<br>
-Below, you will find a breakdown of all possible data and type definitions that is available through the STORE key:
--   **STORE.agent**: Desktop profile info and settings. 
--   **STORE.agentContact**: Agent tasks and interactions
--   **STORE.app**: Company logo, title and dark mode
--   **STORE.auth**: Authentication token used for Single Sign On
--   **STORE.generalNotifications**: Application notifications
--   **STORE.dynamic**: Connector (smaller) or Desktop (larger) view area
+<br/>
 
-<br>
-> 
+Below, you will find a breakdown of all possible data and type definitions that is available through the STORE key:
+
+- **STORE.agent**: Desktop profile info and settings.
+- **STORE.agentContact**: Agent tasks and interactions
+- **STORE.app**: Company logo, title and dark mode
+- **STORE.auth**: Authentication token used for Single Sign On
+- **STORE.generalNotifications**: Application notifications
+- **STORE.dynamic**: Connector (smaller) or Desktop (larger) view area
+
+<br/>
+
 > Check the **[Developer guide](https://developer.webex-cx.com/documentation/guides/desktop/#custom-widgets)** for more details about Custom Widgets.
-{: .block-warning}
+> {: .block-warning}
 
 > If you want to explore and play around with the possible types of custom widgets you can create, check the below **Git repository with some samples:
 > [https://github.com/CiscoDevNet/webex-contact-center-widget-starter/tree/master/Examples](https://github.com/CiscoDevNet/webex-contact-center-widget-starter/tree/master/Examples)**
 > {: .block-warning}
 
-<br>
+<br/>
+
 ## JavaScript SDK and Modules
+
 > Desktop JavaScript SDK is an npm package that allows you to request up-to-date information from the Desktop. Using the SDK, you can request information such as agent details, assigned tasks, details of specific tasks, current browser locale, and the authentication token for Single Sign-On (SSO) integration.
-{: .block-warning}
+> {: .block-warning}
 
 - To start using the JavaScript SDK, run the following command in your project folder: `npm install @wxcc-desktop/sdk --save` or `yarn add @wxcc-desktop/sdk`.
 
@@ -584,8 +628,10 @@ Below, you will find a breakdown of all possible data and type definitions that 
 
 - Check the [Developer Guide](https://developer.webex-cx.com/documentation/guides/desktop#javascript-sdk-and-modules) for more details about each module.
 
-<br>
-<br>
+<br/>
+
+<br/>
+
 ---
 
   <script>
