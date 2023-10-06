@@ -644,6 +644,6 @@ Below, you will find a breakdown of all possible data and type definitions that 
     })
   </script>
 
-<p style="text-align:center"><strong>Congratulations, you have completed this lab! You can continue with the next one.</strong></p>
+<p style="text-align:center"><strong>Congratulations, you have completed the Agent Experience lab! Please proceed to the <a href="https://webexone.github.io/pages/SupervisorExperience/">Supervisor Experience Lab.</a></strong></p>
 		
 <p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>
