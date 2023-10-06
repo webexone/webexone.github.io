@@ -22,7 +22,9 @@ In this lab you will be configuring **Gmail** Account settings, Email Assets, En
 
 1. You received an admin credentials to configure in Management Portal and Webex Connect.
 2. You received Email account credentials.
-3. You have successfully compleated the previous Lab1 **Preconfiguration**.
+3. Lab1 Preconfiguration has been completed
+
+**Preconfiguration**.
 
 ### Quick Links
 
@@ -31,8 +33,7 @@ In this lab you will be configuring **Gmail** Account settings, Email Assets, En
 > Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="_blank"}**\
 > Gmail: **[https://mail.google.com](https://mail.google.com){:target="_blank"}**\
 > Workflows: **[GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels){:target="_blank"}**\
-> Webex Connect: https://cl1pod**\<ID\>**.imiconnect.io/ (where **\<ID\>** is your POD number)
-
+> Webex Connect: **[https://labtenant.us.webexconnect.io](https://labtenant.us.webexconnect.io){:target="_blank"}**\
 
 # Lab Section
 
@@ -51,11 +52,10 @@ Starting May 30, 2022 the **Less Secure Apps** feature was disabled on all Googl
 
 | **User email**                       |
 | ------------------------------------ | 
-| cl1webex**\<ID\>**@gmail.com   | 
+| Use your own existing gmail account or create a new one for this lab   | 
 
-> **Note:** Your \<ID\> was provided to you personally.  \<ID\> is the unique number equal to your POD.
 
-- Login to the Gmail account with the credentials above [https://mail.google.com](https://mail.google.com){:target="_blank"}. The password is the same as for Webex admin account. During first login select **Turn off smart features** 
+- Login to the Gmail account. If this is your firtst login, select **Turn off smart features** 
 
 - Enable POP3/IMAP setting by clicking on settings icon on top right corner and selecting **See all settings**.
 
@@ -73,7 +73,7 @@ Starting May 30, 2022 the **Less Secure Apps** feature was disabled on all Googl
 ### 2. Create a project at Google API Console 
 We need to activate the API if we want to use a Gmail accont for outbound email. 
 
-- Login to [Google Developers Console](https://console.developers.google.com/){:target="_blank"} with the credentials above. The password is the same as for Webex CC admin account.
+- Login to [Google Developers Console](https://console.developers.google.com/){:target="_blank"} with your Gmail credentials.
 
 - You will have to agree with the Terms of Service and pick their Country of residence. Then click **Select a project** and create a **NEW PROJECT**.
 
@@ -148,7 +148,7 @@ Now create a new client ID that will be used to identify your application to Goo
 
 - You can leave the default name. The name of your OAuth 2.0 client is only used to identify the client in the Google Cloud console and will not be shown to application users. 
 
-- In the **Authorized redirect URIs** section click **ADD URL** button and set `https://cl1pod\<ID\>.us.webexconnect.io/callback` where \<ID\> is your tenant number. Click **CREATE** button in the end.
+- In the **Authorized redirect URIs** section click **ADD URI** button and set `https://labtenant.us.webexconnect.io/callback`. Click **CREATE** button in the end.
 
 <img align="middle" src="new_images\LAB2_email\Lab2_93_email_CreateoAuthClientID.jpg" width="1000" />
 <br/>
@@ -163,9 +163,9 @@ Now create a new client ID that will be used to identify your application to Goo
 
 ## Step 2. Create an Email Asset and Register to WebexCC
 
-### 1. Create Email Assest
+### 1. Create Email Asset
 
-- As an admin, login to Webex Connect UI using the provided URL https://cl1pod**\<ID\>**.imiconnect.io/ (where **\<ID\>** is your POD number).
+- As an admin, login to Webex Connect UI using the provided URL https://labtenant.us.webexconnect.io/
 
 - Select **Assets** -> **Apps** -> **CONFIGURE NEW APP** -> **Email**.
 
@@ -177,11 +177,11 @@ Now create a new client ID that will be used to identify your application to Goo
 
 | **Entity**          | **Name** |
 | ------------------- | -------- |
-| Asset Name | EmailAsset   |
-| Email ID   | cl1webex**\<ID\>**@gmail.com  |
+| Asset Name | EmailAsset_0XX  where <0XX> is your 3-digit attendee ID  |
+| Email ID   | Your gmail address here  |
 | Authentication Type | OAuth 2.0   |
 | SMTP Server  | smtp.gmail.com |
-| Username     | cl1webex**\<ID\>**@gmail.com |
+| Username     | Your gmail address here |
 | Port     | 465 |
 | Security     | SSL |
 | Client ID | \<client_id from JSON file\>   |
@@ -207,7 +207,7 @@ Now create a new client ID that will be used to identify your application to Goo
 <br/>
 <br/>
 
-- Click on **REGISTER TO Engage** and Select the service **My First Service**. In the end click **REGISTER**.
+- Click on **REGISTER TO Engage** and Select the service **My First Service_0XX**. In the end click **REGISTER**.
 
 <img align="middle" src="new_images\LAB2_email\lab2_97_register_to_engage_gif" width="1000" />
 <br/>
@@ -267,11 +267,11 @@ Now create a new client ID that will be used to identify your application to Goo
 
 - Click on `New Entry Point`.
 
-- Input **_Name_** as `Email_EP`.
+- Input **_Name_** as `Email_EP_0XX where 0XX is your 3 digit lab ID`.
 
 - Select `Email` in the **_Channel Type_** section.
 
-- Leave the **_Asset Name_** as appered value `EmailASSET`.
+- Leave the **_Asset Name_** as appered value `EmailASSET_0XX`.
 
 - Set **_Service Level Threshold_** as `2` hours.
 
@@ -279,7 +279,8 @@ Now create a new client ID that will be used to identify your application to Goo
 
 - Click on **Save** after comparing your values with the screenshot below.
 
-<img align="middle" src="images/Lab2_Email_EP.png" width="1000" />
+<img align="middle" src="new_images/LAB2_email/Lab2_Email_0XX.png" width="1000" />
+
 <br/>
 <br/>
 
@@ -289,13 +290,13 @@ Now create a new client ID that will be used to identify your application to Goo
 
 - Click on `New Queue`.
 
-- Input **_Name_** as `Email_Q`.
+- Input **_Name_** as `Email_Q_0XX` where 0XX is your 3 digit Lab ID.
 
 - Select `Email` in the **_Channel Type_** section.
 
 - Leave the **_Queue Routing Type_** as default value `Longest Available Agent`.
 
-- In the the **_Email Distribution_** click on **Add Group** and select `Team1`.
+- In the the **_Email Distribution_** click on **Add Group** and select `Team1_0XX` where 0XX is your 3 digit Lab ID.
 
 - Set **_Service Level Threshold_** as `2` hours.
 
@@ -311,11 +312,11 @@ Now create a new client ID that will be used to identify your application to Goo
 
 - Create a second queue by repeating the same steps as above.
 
-- Input **_Name_** as `Email_Q2`.
+- Input **_Name_** as `Email_Q2_0XX`.
 
 - Select `Email` in the **_Channel Type_** section.
 
-- In the the **_Email Distribution_** click on **Add Group** and select `Team2`.
+- In the the **_Email Distribution_** click on **Add Group** and select `Team2_0XX`.
 
 <img align="middle" src="images/Lab2_Email_Q2.png" width="1000" />
 <br/>
@@ -329,7 +330,7 @@ Now create a new client ID that will be used to identify your application to Goo
 
 - Unzip the downloaded file.
 
-- Go to Webex Connect, click on **Services** and select the service in which the Asset is created in step 2. It should be **My First Service**
+- Go to Webex Connect, click on **Services** and select the service in which the Asset is created in step 2. It should be **My First Service_0XX**
 
 - In the service click on **FLOWS** -> **CREATE FLOW** .
 
@@ -341,7 +342,7 @@ Now create a new client ID that will be used to identify your application to Goo
 <br/>
 <br/>
 
-- Click **Save** and in the created workflow find the **Queue Task**, click twice, select the **QUEUE NAME** as **Email_Q** and click on **SAVE**.
+- Click **Save** and in the created workflow find the **Queue Task**, click twice, select the **QUEUE NAME** as **Email_Q_0XX** and click on **SAVE**.
 
 <img align="middle" src="new_images\LAB2_email\Lab2_99_email_Qtask_node_png" width="1000" />
 <br/>

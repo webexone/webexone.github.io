@@ -22,19 +22,19 @@ title: 'Lab 6: Whatsapp Configuration'
 
 In this Lab, we will go through the tasks that are required to complete the basic whatsapp integration. You will be able to initiate a Whatsapp contact to the Contact Center and be able to accept/respond to the contact by logging in as an agent.  
 
-In this lab you will be configuring **Whatsapp** number settings, Assets, Entry Point and corresponding workflows. All these steps are required for integrating Whatsapp with our application.  
+In this lab you will be configuring **WhatsApp** number settings, Assets, Entry Point and corresponding workflows. All these steps are required for integrating Whatsapp with our application.  
 
 ### Pre-requisite
 
-1. You recived an admin credentials to configure in Managment Portal and Webex Connect.
-2. You recived the Whatsapp number associated with your tenant.
+1. You received the admin credentials to configure in the Management Portal and Webex Connect.
+2. You received the WhatsApp number associated with your individual lab.
 3. You have successfully completed the previous Lab **Preconfiguration**
 
 # Lab Section
 
 ## Step 1. Verify Whatsapp Number Assignment
 
-- Login to your respective Webex Connect UI using the provided URL https://cl1pod**X**.imiconnect.io/ (where **X** is your POD number).
+- Login to your respective Webex Connect UI using the provided URL https://labtenant.us.webexconnect.io 
 
 - Navigate to Assets > Numbers and verify that the tenant you are using has a WhatsApp number assigned 
 
@@ -100,7 +100,7 @@ In this lab you will be configuring **Whatsapp** number settings, Assets, Entry 
 <br/>
 <br/>
 
-- Input **_Name_** as `Whatsapp_EP`.
+- Input **_Name_** as `Whatsapp_EP_0XX` where <0XX> is your 3-digit lab ID.
 
 - Select `Social Channel` in the **_Channel Type_** section.
 
@@ -124,7 +124,7 @@ In this lab you will be configuring **Whatsapp** number settings, Assets, Entry 
 <br/>
 <br/>
 
-- Input **_Name_** as `Whatsapp_Queue`.
+- Input **_Name_** as `Whatsapp_Queue_0XX` where <0XX> is your 3-digit lab ID.
 
 - Select `Social Channel` in the **_Channel Type_** section.
 
@@ -162,7 +162,7 @@ In this lab you will be configuring **Whatsapp** number settings, Assets, Entry 
 
 - Unzip the downloaded file.
 
-- Go to Webex Connect, click on **Services** and select the service in which the Asset is created in step 2. It should be **My First Service**
+- Go to Webex Connect, click on **Services** and select the service in which the Asset is created in step 2. It should be **My First Service 0XX**
 
 - In the service click on **FLOWS** -> **CREATE FLOW** 
 
@@ -186,13 +186,13 @@ In this lab you will be configuring **Whatsapp** number settings, Assets, Entry 
 <br/>
 <br/>
 
-- In the created workflow find the **Queue Task**, click twice, select the **QUEUE NAME** as **Whatsapp_Queue** and click on **SAVE**.
+- In the created workflow find the **Queue Task**, click twice, select the **QUEUE NAME** as **Whatsapp_Queue_0XX** and click on **SAVE**.
 
 <img align="middle" src="images/Lab6_16.png" width="1000" />
 <br/>
 <br/>
 
-- Finally click on Make Live on top right corner and click Make Live.
+- Finally click on Make Live on top right corner and click Make Live. In the application drop down box, select the app that corresponds to your LAB ID.
 
 <img align="middle" src="images/Lab6_17.png" width="1000" />
 <br/>

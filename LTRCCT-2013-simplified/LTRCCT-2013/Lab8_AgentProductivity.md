@@ -31,7 +31,7 @@ In this Lab, we will go through the tasks that are required to configure a basic
 # Lab Section
 ## Step 1. Create Inbound Webhook
 
-- Login to your respective Webex Connect UI using the provided URL https://cl1pod**X**.imiconnect.io/ (where **X** is your POD number).
+- Login to the Webex Connect UI using the provided URL https://labtenant.us.webexconnect.io
 
 - Navigate to Assets > Integrations > Add Integration
 
@@ -45,7 +45,7 @@ In this Lab, we will go through the tasks that are required to configure a basic
 <br/>
 <br/>
 
-- Input a desired name in the **Webhook Name** field. Copy the **Webhook URL** for later use. Click **Save**
+- Input a desired name in the **Webhook Name** field and apped the 0XX to the name to correspond to your 3-digit lab ID. Copy the **Webhook URL** for later use. Click **Save**
 
 <img align="middle" src="new_images\Lab8_agentprod\Lab8.3_name_webhook.png" width="1000" />
 <br/>
@@ -126,7 +126,7 @@ In this Lab, we will go through the tasks that are required to configure a basic
 <br/>
 <br/>
 
-- Enter a desired **name** for the room, search  for **Agent** and add the Agent user to this room. Click **Create**
+- Enter a desired **name** for the room, search  for **Agent 0XX** and add the Agent user to this room. Click **Create**
 
 <img align="middle" src="images/Lab8_13.png" width="1000" />
 <br/>
@@ -140,7 +140,7 @@ In this Lab, we will go through the tasks that are required to configure a basic
 
 ## Step 4. Fetch Webex access token and RoomId
 
-- Go to https://developer.webex.com/ and login with the administrator credential of your lab pod. 
+- Go to https://developer.webex.com/ and login with your lab administrator credentials  
 
 <img align="middle" src="images/Lab8_15.png" width="1000" />
 <br/>
@@ -162,7 +162,7 @@ In this Lab, we will go through the tasks that are required to configure a basic
 
 ## Step 5. OTP Flow configuration 
 
-- Login to your respective Webex Connect UI using the provided URL https://cl1pod**X**.imiconnect.io/ (where **X** is your POD number).
+- Login to Webex Connect UI using the provided URL https://labtenant.us.webexconnect.io
 
 - Click on **Services** and select the service in which the Email asset is created in previous labs. It should be **My First Service**
 

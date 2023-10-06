@@ -2,19 +2,27 @@
 title: 'Lab 1: Preconfiguration'
 ---
 
-# Table of Contents
 
-- [Step 1. Node Authorization for Webex CC Task and Engage nodes](#step-1-node-authorization-for-webex-cc-task-and-engage-nodes)
-- [Step 2. Download and upload CA flows in Connect](#step-2-download-and-upload-ca-flows-in-connect) 
-- [Step 3. Setup agents in Portal (Agents, Team, MMP)](#step-3-setup-agents-in-portal-agents-team-mmp)
-- [Step 4. Setup RONA timers](#step-4-setup-rona-timers)
-- [Verification: Access to the Agent Desktop](#verification-access-to-the-agent-desktop)
 
 # Introduction
 
-### Lab Objective
+### Lab pre-configuration
 
-In this Lab, we will go through the tasks that are required to complete the general pre-configuration of a tenant. These tasks are to be undertaken by an administrator. By following each of the steps, you would have prepared your tenant to begin configuring different services offered by the platform. The lab contains multiple exercises to familiarize you with the Control Hub, Management portal UI and Webex Connect. At the end of this lab you should be able to log in to an agent desktop interface.
+Since the digital channels labs are in a shared tenant, the first 3 configuration steps have been done for you to save time and potentially duplicated efforts in the labs.  Please note that these steps must be undertaken if you want to turn up digital channels in a true production environment, so we will note them here for your future reference. 
+
+Please look over steps 1, 2 & 3, then proceed to steps 4 & 5 which will require admin configuration.   
+ 
+Once you complete this preconfiguration lab, you are free to move on to either Lab 2 (email), 3 (chat), 5 (SMS) or 6 (WhatsApp) depending on your preference.   
+
+# Table of Contents
+
+- [Step 1. Node Authorization for Webex CC Task and Engage nodes](#Node-authorization)
+- [Step 2. Download and upload CA flows in Connect](#Update-CA-nodes-in-connect) 
+- [Step 3. Setup RONA Timers](#RONA-Timers)
+- [Step 4. Setup Multimedia profile](#Multimedia-profile)
+- [Step 5. Add a service for your flows](#Add-a-service)
+- [Step 6. Setup Agents & teams in portal](#Agents-teams)
+- [Step 7. Verify access to the agent desktop](#Agent-desktop-access)
 
 
 ### Pre-requisites
@@ -28,7 +36,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 > Control Hub: **[https://admin.webex.com](https://admin.webex.com){:target="_blank"}**\
 > Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal){:target="_blank"}**\
 > Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="_blank"}**\
-> Webex Connect: https://cl1pod**\<ID\>**.imiconnect.io/ (where **\<ID\>** is your POD number)
+> Webex Connect: **[https://labtenant.us.webexconnect.io/](https://labtenant.us.webexconnect.io/)
 
 # Lab Section
 
@@ -38,7 +46,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 <br/>
 <br/>
 
-## Step 1. Node Authorization for Webex CC Task and Engage nodes
+## Step 1. Node Authorization for Webex CC Task and Engage nodes - This step has been preconfigured for you
 
 Webex Connect is required to provide a valid access token for using various Webex Contact Center and Webex Engage APIs. The access token is generated using the authorization details configured within the ‘Node Runtime Authorization’ field that Webex Contact Center users are required to provide during flow configuration.
 
@@ -76,7 +84,7 @@ Webex Connect is required to provide a valid access token for using various Webe
 <br/>
 <br/>
 
-- Enter the **Authorization Name** (for example: **WxCC Authorisation**) and click **Authorize**. As the result the pop-up appears where you need to enter your Cisco admin email address (cl1admin**\<ID\>**@email.carehybrid.com) and click **Sign in**.
+- Enter the **Authorization Name** (for example: **WxCC Authorisation**) and click **Authorize**. As the result the pop-up appears where you need to enter your Cisco admin email address and click **Sign in**.
 
 <img align="middle" src="new_images\LAB1_preconfig\LAB1_2_task_auth_png" width="1000" />
 <br/>
@@ -87,7 +95,7 @@ Webex Connect is required to provide a valid access token for using various Webe
 <br/>
 <br/>
 
-## Step 2. Download and upload CA flows in Connect 
+## Step 2. Download and upload CA flows in Connect - This step has been preconfigured for you
 Every tenant must include CA flows. CA flows can be imported from the template folder in this [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels/tree/imi_flow_simplification/Webex%20Connect%20Flows){:target="_blank"}. CA flows can be added only once and will be automatically be used by all existing channel specific flows in the tenant when needed. It is recommended to add these flows in a dedicated Service named “Agnostic Flows - DO NOT MODIFY”
 
 > The agnostic flows consist of:\
@@ -141,7 +149,57 @@ Every tenant must include CA flows. CA flows can be imported from the template f
 12) **!!!** Go back and repeate steps 7 - 11 for **Task Routed flow** and **Task Modified Flow**. Select the corresponding names.
 
 
-## Step 3. Setup agents in Portal (Agents, Team, MMP)
+
+
+## Step 3. Setup RONA timers - This step has been preconfigured for you
+If an agent doesn’t answer a contact request, the contact request will return to the queue and the agent state will change to **Redirection on No Answer (RONA)**. In this task, you will play with the feature that allows administrators to override the default RONA timeout values at the tenant level for every channel type to suit the business needs of the organization. The available channels are:
+- Telephony 
+- Chat 
+- Email 
+- Social (Facebook and WhatsApp)
+
+- Log in to the Control Hub at [https://admin.webex.com](https://admin.webex.com){:target="_blank"}
+
+- Navigate to **Services** -> **Contact Center** -> **Settings** -> **Desktop** -> **RONA Timeouts**.
+<img align="middle" src="new_images\LAB1_preconfig\lab1_8_RONA_timers_png" width="1000" />
+<br/>
+<br/>
+
+- Modify the existing timers by putting the values from the tables below:
+
+| **Channel** | **New Values** | **Limitations** |
+| ----------- | -------------- | --------------- |
+| Telephony   | 18  | 1 - 120 seconds |
+| Chat        | 60  | 1 - 6000 seconds |
+| Email       | 90  | 1 - 6000 seconds |
+| Social      | 60  | 1 - 6000 seconds |
+
+
+
+## Verification: Access to the Agent Desktop
+> **Note**: To log in to the agent desktop, use either a separate web browser or a new incognito web page. This will prevent any browser caching issues with admin and agent credentials.
+
+- Navigate to **[https://desktop.wxcc-us1.cisco.com/](https://desktop.wxcc-us1.cisco.com/){:target="_blank"}** in a new browser or in incognito mode.
+
+- Enter the agent’s **email ID** `cl1agent**\<ID\>**@email.carehybrid.com`.
+
+- Enter the **Password** for the appropriate Username.
+
+- In the **_Station Login_** pane, select **"Extension"** and enter any number, for instance 1000. 
+
+> **Note:**  The Webex Calling service is not activated at this tenant we need to set a dummy extension only once during the login.
+
+- Select the `Team1` and click **_Submit_**. Make sure that you are successfully logged in to the Agent Desktop. Now you can continue with the Next Lab.
+
+<img align="middle" src="new_images\LAB1_preconfig\Lab1_9_Agent_login_gif" width="1000" />
+<br/>
+<br/>
+
+[To top of this lab](#table-of-contents)
+
+## Step 4. Create a new Multimedia profile and a new site - This step has been preconfigured for you
+
+## Step 4. Setup agents in Portal (Agents, Team, MMP) 
 
 > This step shows how to access the admin portal and navigate the different configuration menus to create a Site, Team, and Multimedia Profile that will be assigned to the Contact Center user. 
 
@@ -167,11 +225,11 @@ The users have the following preconfiguration
 | Team2               | Team2 |
 
 
-### 1. Create new MultiMedia Profile
+### 1. Create new MultiMedia Profile and new site - This step has been preconfigured for you
 
 - Login to Managment Portal by accessing [https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal){:target="\_blank"}.
 
-- Enter the admin email address (cl1admin\<ID\>@email.carehybrid.com) and click **Sign in**.
+- Enter the admin email address and **Sign in**.
 
 - Click on **_Provisioning_** and select **_Multimedia Profiles_**.
 
@@ -184,6 +242,8 @@ The users have the following preconfiguration
 <img align="middle" src="images/Lab1_MMP.png" width="1000" />
 <br/>
 <br/>
+
+
 
 ### 2. Create new Site
 
@@ -247,52 +307,6 @@ The users have the following preconfiguration
 
 - Please follow the same steps for **Supervisor** user. 
 
-
-[To top of this lab](#table-of-contents)
-
-## Step 4. Setup RONA timers
-If an agent doesn’t answer a contact request, the contact request will return to the queue and the agent state will change to **Redirection on No Answer (RONA)**. In this task, you will play with the feature that allows administrators to override the default RONA timeout values at the tenant level for every channel type to suit the business needs of the organization. The available channels are:
-- Telephony 
-- Chat 
-- Email 
-- Social (Facebook and WhatsApp)
-
-- Log in to the Control Hub at [https://admin.webex.com](https://admin.webex.com){:target="_blank"}
-
-- Navigate to **Services** -> **Contact Center** -> **Settings** -> **Desktop** -> **RONA Timeouts**.
-<img align="middle" src="new_images\LAB1_preconfig\lab1_8_RONA_timers_png" width="1000" />
-<br/>
-<br/>
-
-- Modify the existing timers by putting the values from the tables below:
-
-| **Channel** | **New Values** | **Limitations** |
-| ----------- | -------------- | --------------- |
-| Telephony   | 18  | 1 - 120 seconds |
-| Chat        | 60  | 1 - 6000 seconds |
-| Email       | 90  | 1 - 6000 seconds |
-| Social      | 60  | 1 - 6000 seconds |
-
-
-
-## Verification: Access to the Agent Desktop
-> **Note**: To log in to the agent desktop, use either a separate web browser or a new incognito web page. This will prevent any browser caching issues with admin and agent credentials.
-
-- Navigate to **[https://desktop.wxcc-us1.cisco.com/](https://desktop.wxcc-us1.cisco.com/){:target="_blank"}** in a new browser or in incognito mode.
-
-- Enter the agent’s **email ID** `cl1agent**\<ID\>**@email.carehybrid.com`.
-
-- Enter the **Password** for the appropriate Username.
-
-- In the **_Station Login_** pane, select **"Extension"** and enter any number, for instance 1000. 
-
-> **Note:**  The Webex Calling service is not activated at this tenant we need to set a dummy extension only once during the login.
-
-- Select the `Team1` and click **_Submit_**. Make sure that you are successfully logged in to the Agent Desktop. Now you can continue with the Next Lab.
-
-<img align="middle" src="new_images\LAB1_preconfig\Lab1_9_Agent_login_gif" width="1000" />
-<br/>
-<br/>
 
 [To top of this lab](#table-of-contents)
 

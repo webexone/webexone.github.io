@@ -20,14 +20,14 @@ This lab will give you a detailed understanding of the workflow logic. With that
 
 ### Pre-requisite
 
-You have successfully compleated the Lab1 and Lab2 (Email Configuration).
+You have successfully completed the Lab1 and Lab2 (Email Configuration).
 
 ### Quick Links
 
 > Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal){:target="_blank"}**\
 > Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="_blank"}**\
 > Smartsheet Table: **[smartsheet table](https://app.smartsheet.com/sheets/mGxggWGV8qcxmxvgcvRmfjxqfhcCFwGg4RHmQP71?view=grid){:target="_blank"}**\
-> Connect: https://cl1pod**\<ID\>**.imiconnect.io/ (where **\<ID\>** is your POD number)
+> Connect: **[https://labtenant.us.webexconnect.io](https://labtenant.us.webexconnect.io){:target="_blank"}**\
 
 
 # Lab Section
@@ -48,7 +48,7 @@ In this task, we will use the predefined node **PIQ and EWT**. This node provide
 
 > **Note:** PIQ/EWT node can currently be used only after the Queue Task Node.
 
-- Go to the **Services - My First Service** and open the **Email Inbound Flow**.
+- Go to the **Services - My First Service 0XX** and open the **Email Inbound Flow**.
 
 - Click on the **EDIT** button in the upper right corner.
 
@@ -64,7 +64,7 @@ In this task, we will use the predefined node **PIQ and EWT**. This node provide
 <br/>
 <br/>  
 
-- You will have to set the Queue ID in the PIQ node. Copy the Queue ID from the **[Management Portal](https://portal.wxcc-us1.cisco.com/portal){:target="_blank"}** -> **_Provisioning_** -> **_Entry Points/Queues_** -> **_Queue_**
+- You will have to set the Queue ID in the PIQ node. Copy the Queue ID from the **[Management Portal](https://portal.wxcc-us1.cisco.com/portal){:target="_blank"}** -> **_Provisioning_** -> **_Entry Points/Queues_** -> **_Queue_** - make sure to copy the Queue ID from the 0XX queue that corresponds to your lab 
 
 <img align="middle" src="images/Lab7_QueueID.png" width="1000" />
 <br/>
@@ -72,7 +72,7 @@ In this task, we will use the predefined node **PIQ and EWT**. This node provide
 
 - Go back to Webex Connect and double click on the **PIQ and EWT** node. Set up the following configuration:
 
-| **Setting's Name** | **Value**                       |
+| **Setting Name** | **Value**                       |
 | ------------- | ------------------------------------ | 
 | METHOD NAME         | Fetch Position in Queue | 
 | NODE RUNTIME AUTHORIZATION    | WxCC Authorization | 
@@ -94,7 +94,7 @@ In this task, we will use the predefined node **PIQ and EWT**. This node provide
   
 In the default workflow, auto-reply is already configured for all new tasks. In this step, we will improve the answer by changing the message and adding the PIQ variable.
 
-- Double-click the the **Email** node and in the **MESSAGE**. 
+- Double-click the the **Email** node and in the **MESSAGE** field. 
 
 <img align="middle" src="new_images\Lab7_advemail\Lab_7.31_email_auto_reply_node.png" width="1000" />  
 <br/>
@@ -122,7 +122,7 @@ Press **SAVE**.
   
   
 ## Step 4. Enhancing Routing based on a Subject
-In this task, you will be checking **"Cisco Live"** text in the **Subject**. If it is not there, the task will be routed to another queue **Email_Q2**.
+this task, you will be checking **"Webex One"** text in the **Subject**. If it is not there, the task will be routed to another queue **Email_Q2_0XX**.
 
 We will use the **Branch** node which allows you to split your flow based on conditional statements without the need to write any custom code. You can configure multiple branches within a single node. The supported conditions are:\
     - Equals\
@@ -157,11 +157,11 @@ We will use the **Branch** node which allows you to split your flow based on con
 
 - Double-click the **Branch** node and set the following conditions for Branch 1:
   
-| **Setting's Name** | **Value**                       |
+| **Setting Name** | **Value**                       |
 | ------------- | ------------------------------------ | 
 | Variable    | $(n2.email.subject) | 
 | CONDITION   | Regular expression (RegEx) | 
-| VALUE    | [cC][iI][sS][cC][oO]\s[lL][iI][vV][eE] | 
+| VALUE    | [wW][eE][bB][eE][xX]\s[oO][nN][eE] | 
 
 
 <img align="middle" src="images/Lab7_subject3.png" width="1000" />  
@@ -180,14 +180,14 @@ We will use the **Branch** node which allows you to split your flow based on con
 
 Double-click the second **Queue Task** node and set the following options:
   
-| **Setting's Name** | **Value**                       |
+| **Setting Name** | **Value**                       |
 | ------------- | ------------------------------------ | 
 | NODE AUTHORIZATION    | \<WxCC Authorisation\>  | 
 | TASK ID   | $(flid) | 
 | CONVERSATION ID    | $(conversationId) |   
 | MEDIA TYPE    | Email |   
 | MEDIA CHANNEL    | Email |   
-| QUEUE NAME    | Email_Q2 |   
+| QUEUE NAME    | Email_Q2_0XX |   
   
 <img align="middle" src="images/Lab7_subject5.png" width="1000" />  
 <br/>
@@ -205,7 +205,7 @@ Double-click the second **Queue Task** node and set the following options:
 
 - Go to your personal email account or ask the proctor to send 2 emails **with and without** the "Cisco Live" subject.
 
-- Go to the agent desktop [https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="_blank"}. Sign in as the agent in "Team1" and make the agent **Available**. You should get only 1 email without "Cisco Live" subject. 
+- Go to the agent desktop [https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="_blank"}. Sign in as the agent in "Team1_0XX" and make the agent **Available**. You should get only 1 email without the "Webex One" subject. 
 
 <img align="middle" src="images/Lab7_subject7.png" width="1000" />  
 <br/>
@@ -252,7 +252,7 @@ It needs just for the verification, exactly the same we will be doing in the Ema
 
 ### 2. HTTP Request configuration  
 
-- Make sure that you have an access to the [smartsheet table](https://app.smartsheet.com/sheets/mGxggWGV8qcxmxvgcvRmfjxqfhcCFwGg4RHmQP71?view=grid){:target="_blank"}. Please ask the proctor to grand the access.
+- Make sure that you have an access to the [smartsheet table](https://app.smartsheet.com/sheets/mGxggWGV8qcxmxvgcvRmfjxqfhcCFwGg4RHmQP71?view=grid){:target="_blank"}. Please ask the proctor to grant access.
 
 - Click the **EDIT** button in the upper right corner.
   
@@ -264,7 +264,7 @@ It needs just for the verification, exactly the same we will be doing in the Ema
 
 - Double-click the **HTTP Request** node, set the following options, and click **SAVE**.
   
-| **Setting's Name** | **Value**                       |
+| **Setting Name** | **Value**                       |
 | ------------- | ------------------------------------ | 
 | METHOD    | POST | 
 | ENDPOINT URL   | https://api.smartsheet.com/2.0/sheets/6430831221729156/rows | 
@@ -313,7 +313,7 @@ It needs just for the verification, exactly the same we will be doing in the Ema
 - After 1 minute check the smartsheet table. The row with the email details has to appear: [https://app.smartsheet.com/sheets/mGxggWGV8qcxmxvgcvRmfjxqfhcCFwGg4RHmQP71?view=grid](https://app.smartsheet.com/sheets/mGxggWGV8qcxmxvgcvRmfjxqfhcCFwGg4RHmQP71?view=grid){:target="_blank"}
   
  
-## BONUS TASK - Integration with Webex Teams (Alarm notification)
+## BONUS TASK - Integration with Webex Teams (Alarm notification) - to be tried outside of the lab
 The idea is to show that you can integrate the Flow with Webex Teams and this can be used as the notifications for supervisors based on the specific criteria.
 This section has the bonus category where we can check how you understand this topic. Here we give you the task without a step-by-step explanation the result will be the message from the Webex bot in our Cisco Live space. 
 
@@ -333,7 +333,7 @@ This section has the bonus category where we can check how you understand this t
 
 3) **HTTP Request** node settings: 
   
-| **Setting's Name** | **Value**                       |
+| **Setting Name** | **Value**                       |
 | ------------- | ------------------------------------ | 
 | METHOD    | POST | 
 | ENDPOINT URL   | https://webexapis.com/v1/messages | 

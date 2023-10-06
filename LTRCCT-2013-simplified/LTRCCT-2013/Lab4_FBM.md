@@ -45,7 +45,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 > Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal){:target="_blank"}**\
 > Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="_blank"}**\
 > Workflows: **[GitHub page]( https://github.com/CiscoDevNet/webexcc-digital-channels/tree/imi_flow_simplification/Webex%20Connect%20Flows){:target="_blank"}**\
-> Connect: https://cl1pod**\<ID\>**.imiconnect.io/ (where **\<ID\>** is your POD number)
+> Connect: **[https://labtenant.us.webexconnect.io](https://labtenant.us.webexconnect.io) {:target="_blank"}**\
 
 # Lab Section
 
@@ -71,7 +71,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 ## Step 2. Facebook Messenger Asset creation & register to Webex CC
 
-- Login to your respective Webex Connect UI using the provided URL https://cl1pod**X**.imiconnect.io/ (where **X** is your POD number).
+- Login to your respective Webex Connect UI using the provided URL https://labtenant.us.webexconnect.io
 
 - Navigate to `Assets` > `Apps` > `Configure New App` > `Messenger` and Click on `Add Messenger Page` button
 
@@ -103,13 +103,13 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 <br/>
 <br/>
 
--  Provide the name and click `Save`
+-  •	Name your asset FBMAsset_0XX  where <0XX> is your 3 digit Lab ID and click `save`
 
 <img align="middle" src="images/Lab4_10.jpg" width="1000" />
 <br/>
 <br/>
 
--  Click `Register to Webex CC`  in the ‘Configure New App-Messenger’ window ->  In the resulting window select the service and click `Register`.
+-  Click `Register to Webex CC`  in the ‘Configure New App-Messenger’ window ->  In the resulting window select the service that you created earlier and click `Register`.
 
 <img align="middle" src="images/Lab4_11.jpg" width="600" />
 <br/>
@@ -143,7 +143,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 - Click on `New Entry Point`.
 
-- Input **_Name_** as `FBM_EP`.
+- Input **_Name_** as `FBM_EP_0XX` where <0XX> is your 3-digit lab ID.
 
 - Select `Social Channel` in the **_Channel Type_** section.
 
@@ -167,7 +167,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 - Click on `New Queue`.
 
-- Input **_Name_** as `FBM_Q`.
+- Input **_Name_** as `FBM_Q_0XX` where <0XX> is the 3-digit lab ID.
 
 - Select `Social Channel` in the **_Channel Type_** section.
 
@@ -197,7 +197,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 - Unzip the downloaded file.
 
-- Go to Webex Connect, click on **Services** and select the service in which the Asset is created in step 2. It should be **My First Service**
+- Go to Webex Connect, click on **Services** and select the service in which the Asset is created in step 2. It should be **My First Service 0XX**
 
 - In the service click on **FLOWS** -> **CREATE FLOW** .
 
@@ -205,7 +205,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 <br/>
 <br/>
 
-- Enter the **FLOW NAME** as **FBM Inbound Flow**, select the **TYPE** as **Work Flow** and under **METHOD** select **Upload a flow**.
+- Enter the **FLOW NAME** as **FBM Inbound Flow 0XX** where 0XX is your 3-digit lab ID, select the **TYPE** as **Work Flow** and under **METHOD** select **Upload a flow**.
 
 - Drag and drop the **Facebook Inbound Flow.workflow** flow file that you unzipped, click **CREATE** and then click **SAVE**.
 
@@ -242,7 +242,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 ### 3. Edit Queue Task node
 
-- In the created workflow find the **Queue Task**, click twice, select the **QUEUE NAME** as **FBM_Q** and add Skill requirement for Sales to be True and click on **SAVE**.
+- In the created workflow find the **Queue Task**, click twice, select the **QUEUE NAME** as **FBM_Q_0XX** and add Skill requirement for Sales to be True and click on **SAVE**.
 
 <img align="middle" src="images/Lab4_18.jpg" width="1000" />
 <br/>
