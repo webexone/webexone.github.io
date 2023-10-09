@@ -152,7 +152,7 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 
 ## Step 4. Create/Upload Whatsapp flow
 
-- Download the Whatsapp flow from the [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels/tree/imi_flow_simplification/Webex%20Connect%20Flows){:target="_blank"}.
+- Download the Whatsapp flow from the [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels/tree/main/Webex%20Connect%20Flows/v3.0/Template/Event%20Handling%20Workflows){:target="_blank"}.
 
 - Navigate to **webex connect flows -> 3.0->template -> media specific workflows -> whatsapp inbound flow.workflow.zip**, select the zip file and click download.
 

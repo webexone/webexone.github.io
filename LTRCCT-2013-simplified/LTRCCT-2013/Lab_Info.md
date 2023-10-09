@@ -11,7 +11,7 @@ title: 'Lab Pre-requisites'
 
 # Introduction
 Digital channels are now more impactful than ever. 
-These labs are specially designed for this Webex ONE session. The main purpose of the labs is to give a clear understanding of New Digital Channels functionality. You will learn how to create and configure all digital channels including Chat, Email, Facebook, Whatsapp and SMS. You will get a clear understanding of how to use scripts and troubleshoot issues by using the debug console.
+These labs are specially designed for this Webex ONE session. The main purpose of the labs is to give a clear understanding of New Digital Channels functionality. You will learn how to create and configure all digital channels including Chat, Email, Whatsapp and SMS. You will get a clear understanding of how to use scripts and troubleshoot issues by using the debug console.
 
 ## Lab Topology
 <img align="middle" src="images/topology.png" width="1000" />
