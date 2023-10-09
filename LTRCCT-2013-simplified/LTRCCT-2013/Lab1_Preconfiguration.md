@@ -6,7 +6,7 @@ title: 'Lab 1: Preconfiguration'
 
 # Introduction
 
-### Lab pre-configuration
+### Lab pre-configuration and agent setup
 
 Since the digital channels labs are in a shared tenant, the first 3 configuration steps have been done for you to save time and potentially duplicated efforts in the labs.  Please note that these steps must be undertaken if you want to turn up digital channels in a true production environment, so we will note them here for your future reference. 
 
@@ -36,7 +36,7 @@ Once you complete this preconfiguration lab, you are free to move on to either L
 > Control Hub: **[https://admin.webex.com](https://admin.webex.com){:target="_blank"}**\
 > Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal){:target="_blank"}**\
 > Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="_blank"}**\
-> Webex Connect: **[https://labtenant.us.webexconnect.io/](https://labtenant.us.webexconnect.io/)
+> Webex Connect: **[https://labtenant.us.webexconnect.io/](https://labtenant.us.webexconnect.io/){:target="_blank"}**\
 
 # Lab Section
 
@@ -96,14 +96,14 @@ Webex Connect is required to provide a valid access token for using various Webe
 <br/>
 
 ## Step 2. Download and upload CA flows in Connect - This step has been preconfigured for you
-Every tenant must include CA flows. CA flows can be imported from the template folder in this [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels/tree/imi_flow_simplification/Webex%20Connect%20Flows){:target="_blank"}. CA flows can be added only once and will be automatically be used by all existing channel specific flows in the tenant when needed. It is recommended to add these flows in a dedicated Service named “Agnostic Flows - DO NOT MODIFY”
+Every tenant must include CA flows. CA flows can be imported from the template folder in this [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels/tree/main/Webex%20Connect%20Flows/v3.0/Template/Event%20Handling%20Workflows){:target="_blank"}. CA flows can be added only once and will be automatically be used by all existing channel specific flows in the tenant when needed. It is recommended to add these flows in a dedicated Service named “Agnostic Flows - DO NOT MODIFY”
 
 > The agnostic flows consist of:\
 > • Task Routed - Adding an agent participant to a conversation;\
 > • Task Modified - Adding an agent to or removing an agent from an ongoing conversation (e.g., for chat transfer or conference);\
 > • Task Close - Closing the conversation;
 
-1) Download all flows from the [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels/tree/imi_flow_simplification/Webex%20Connect%20Flows){:target="_blank"}.
+1) Download all flows from the [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels/tree/main/Webex%20Connect%20Flows/v3.0/Template/Event%20Handling%20Workflows){:target="_blank"}.
 
 2) Navigate to **webex connect -> v3.0 -> template -> event handling workflows**
 
@@ -176,30 +176,44 @@ If an agent doesn’t answer a contact request, the contact request will return 
 
 
 
-## Verification: Access to the Agent Desktop
-> **Note**: To log in to the agent desktop, use either a separate web browser or a new incognito web page. This will prevent any browser caching issues with admin and agent credentials.
 
-- Navigate to **[https://desktop.wxcc-us1.cisco.com/](https://desktop.wxcc-us1.cisco.com/){:target="_blank"}** in a new browser or in incognito mode.
-
-- Enter the agent’s **email ID** `cl1agent**\<ID\>**@email.carehybrid.com`.
-
-- Enter the **Password** for the appropriate Username.
-
-- In the **_Station Login_** pane, select **"Extension"** and enter any number, for instance 1000. 
-
-> **Note:**  The Webex Calling service is not activated at this tenant we need to set a dummy extension only once during the login.
-
-- Select the `Team1` and click **_Submit_**. Make sure that you are successfully logged in to the Agent Desktop. Now you can continue with the Next Lab.
-
-<img align="middle" src="new_images\LAB1_preconfig\Lab1_9_Agent_login_gif" width="1000" />
-<br/>
-<br/>
-
-[To top of this lab](#table-of-contents)
 
 ## Step 4. Create a new Multimedia profile and a new site - This step has been preconfigured for you
 
-## Step 4. Setup agents in Portal (Agents, Team, MMP) 
+- Login to Managment Portal by accessing https://portal.wxcc-us1.cisco.com/portal.
+- Enter the admin email address and click Sign in.
+- Click on Provisioning and select Multimedia Profiles.
+- Click on + New Multimedia Profile to open Multimedia Profile configuration page. 
+- Input Name as MMP.
+- In the Media Details section, select the blended multimedia profile and input `1` for Voice, `3` for Chat, `3` for Email, , `3` for Social Channel and click on Save button.
+
+<img align="middle" src="images\Lab1_MMP.png" width="1000" />
+<br/>
+<br/>
+
+### Step 4.1. Create a new site
+
+-	Navigate to Provisioning and select Site.
+-	Click on + New Site button and provide the Name as Site.
+-	Select MMP in the Multimedia Profile drop down and hit Save.
+
+<img align="middle" src="images\Lab1_Site.png" width="1000" />
+<br/>
+<br/>
+
+
+## Step 5. Create a new service for your Digital channel flows 
+
+Navigate to Webex Connect: **[https://labtenant.us.webexconnect.io](https://labtenant.us.webexconnect.io){:target="_blank"}
+
+- Click “Create New Service” button and add a service named My First Service <0XX> where 0XX is your 3 digit Lab ID.  In all subsequent labs, assets will be associated to this service
+
+<img align="middle" src="new_images\LAB1_preconfig\AddServiceForLabs.gif" width="1000" />
+<br/>
+<br/>
+
+
+## Step 6. Setup agents in Portal (Agents, Team) 
 
 > This step shows how to access the admin portal and navigate the different configuration menus to create a Site, Team, and Multimedia Profile that will be assigned to the Contact Center user. 
 
@@ -210,10 +224,10 @@ The users have the following preconfiguration
 
 | **User Role** | **User email**                       |
 | ------------- | ------------------------------------ | 
-| Agent         | cl1agent**\<ID\>**@email.carehybrid.com   | 
-| Supervisor    | cl1sup**\<ID\>**@email.carehybrid.com     | 
+| Agent         | wxcclabs+agent_ ID<0XX>@gmail.com    | 
+| Supervisor    | wxcclabs+supvr_ ID<0XX>@gmail.com      | 
 
-> **Note:** Your \<ID\> was provided to you personally.  \<ID\> is the unique number equal to your POD.
+> **Note:** Your admin account password was given to you personally.  <0XX> is your 3 digit lab number.
 
 ### User Settings
 
@@ -221,71 +235,34 @@ The users have the following preconfiguration
 | ------------------- | -------- |
 | Multimedia Profiles | MMP   |
 | Site                | Site  |
-| Team1               | Team1 |
-| Team2               | Team2 |
+| Team1               | Team1_0XX |
+| Team2               | Team2_0XX |
+
+### Step 6.1. Create new Teams
+
+-	Navigate to **_Provisioning_** and select Team.
+
+-	Click on + New Team.
+
+-	Select **_Site_** from the Site drop-down.
+
+-	Input Name as `Team1_0XX` 
+
+-	Use the default Type `Agent Based`.
+
+-	Select MMP in the **_Multimedia Profile_** drop-down.
+
+-	Leave `Global Layout` in the Desktop Layout drop-down as the default value and hit Save.
+
+Please follow the same steps as above to add an extra Team as `Team2_0XX`
 
 
-### 1. Create new MultiMedia Profile and new site - This step has been preconfigured for you
 
-- Login to Managment Portal by accessing [https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal){:target="\_blank"}.
-
-- Enter the admin email address and **Sign in**.
-
-- Click on **_Provisioning_** and select **_Multimedia Profiles_**.
-
-- Click on `+ New Multimedia Profile` to open Multimedia Profile configuration page.
-
-- Input Name as `MMP`.
-
-- In the Media Details section, select the blended multimedia profile and input `1` for **_Voice_**, `3` for **_Chat_**, `3` for **_Email_**, , `3` for **_Social Channel_** and click on **_Save_** button.
-
-<img align="middle" src="images/Lab1_MMP.png" width="1000" />
-<br/>
-<br/>
-
-
-
-### 2. Create new Site
-
-- Navigate to **_Provisioning_** and select **_Site_**.
-
-- Click on `+ New Site` button and provide the Name as `Site`.
-
-- Select `MMP` in the **_Multimedia Profile_** drop down and hit **_Save_**.
-
-<img align="middle" src="images/Lab1_Site.png" width="1000" />
-<br/>
-<br/>
-
-### 3. Create new Teams
-
-- Navigate to **_Provisioning_** and select **_Team_**.
-
-- Click on `+ New Team`.
-
-- Select `Site` from the **_Site_** drop-down.
-
-- Input **_Name_** as `Team1`.
-
-- Use the default **_Type_** `Agent Based`.
-
-- Select `MMP` in the **_Multimedia Profile_** drop-down.
-
-- Left as a default value **_Global Layout_** in the **_Desktop Layout_** drop-down and hit **_Save_**.
-
-<img align="middle" src="images/Lab1_Team.png" width="1000" />
-<br/>
-<br/>
-
-- Please follow the same steps as above to add an extra Team as `Team2`. 
-
-[To top of this lab](#table-of-contents)
-
-### 4. User Configuration
+### Step 6.2. User Configuration
 
 - Click on **_Provisioning_** and select **_Users_**.
 
-- Click on `...` for the **Agent** user, to launch the **_Edit_** view for a particular User configuration.
+- Click on `...` for the **Agent** user, to launch the **_Edit_** view for the agent that is designated for your lab:  wxcclabs+agent_ ID<0XX>@gmail.com.
 
 - Make sure that the **_User Profile_** is set as **_Premium Agent User Profile_**.
 
@@ -293,7 +270,7 @@ The users have the following preconfiguration
 
 - In the **_Agent Settings_** section, select `Site` in the **_Site_** drop-down.
 
-- Click the **_Teams_** area and select `Team1` and `Team2`.
+- Click the **_Teams_** area and select `Team1_0XX` and `Team2_0XX`.
 
 - Select `Agent Profile` in the **_Agent Profile_** drop-down list.
 
@@ -307,6 +284,27 @@ The users have the following preconfiguration
 
 - Please follow the same steps for **Supervisor** user. 
 
+
+[To top of this lab](#table-of-contents)
+
+## Step 7. Verification: Access to the Agent Desktop
+> **Note**: To log in to the agent desktop, use either a separate web browser or a new incognito web page. This will prevent any browser caching issues with admin and agent credentials.
+
+- Navigate to **[https://desktop.wxcc-us1.cisco.com/](https://desktop.wxcc-us1.cisco.com/){:target="_blank"}** in a new browser or in incognito mode.
+
+- Enter the agent’s **email ID** `wxcclabs+agent_ ID<0XX>@gmail.com`.
+
+- Enter the **Password** for the appropriate Username.
+
+- In the **_Station Login_** pane, select **"Extension"** and enter any number, for instance 1000. 
+
+> **Note:**  The Webex Calling service is not activated at this tenant we need to set a dummy extension only once during the login.
+
+- Select the `Team1_0XX` and click **_Submit_**. Make sure that you are successfully logged in to the Agent Desktop. Now you can continue with the Next Lab.
+
+<img align="middle" src="new_images\LAB1_preconfig\Lab1_9_Agent_login_gif" width="1000" />
+<br/>
+<br/>
 
 [To top of this lab](#table-of-contents)
 

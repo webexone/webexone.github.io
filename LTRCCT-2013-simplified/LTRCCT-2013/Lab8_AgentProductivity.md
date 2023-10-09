@@ -164,7 +164,7 @@ In this Lab, we will go through the tasks that are required to configure a basic
 
 - Login to Webex Connect UI using the provided URL https://labtenant.us.webexconnect.io
 
-- Click on **Services** and select the service in which the Email asset is created in previous labs. It should be **My First Service**
+- Click on **Services** and select the service in which the Email asset is created in previous labs. It should be **My First Service 0XX**
 
 - In the service click on **FLOWS** -> **CREATE FLOW** 
 
@@ -280,7 +280,7 @@ Content-Type: application/json
 <br/>
 <br/>
 
-- Click **Make Live** option on the top right of the flow builder UI, select the **Email** application and click **Make Live**
+- Click **Make Live** option on the top right of the flow builder UI, select the **EmailAsset_0XX** application and click **Make Live**
 
 <img align="middle" src="images/Lab8_32.png" width="1000" />  
 <br/>
@@ -301,7 +301,7 @@ Content-Type: application/json
 <br/>
 <br/>
 
-- Set the value of "webexConfigured" parameter to "true" and save the file. 
+- Set the value of "webexConfigured" parameter to "true" and save the file as `Default Desktop Layout_0XX.json`. 
 
 <img align="middle" src="images/Lab8_35.png" width="1000" /> 
 <br/>

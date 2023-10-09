@@ -324,7 +324,7 @@ Now create a new client ID that will be used to identify your application to Goo
 
 ## Step 4. Create/Upload Email flow
 
-- Download the email flow from the [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels/tree/imi_flow_simplification/Webex%20Connect%20Flows) 
+- Download the email flow from the [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels/tree/main/Webex%20Connect%20Flows/v3.0/Template/Event%20Handling%20Workflows) 
 
 - Navigate to **webex connect flows -> 3.0 -> template -> media specific workflows -> email inbound flow.workflow.zip**, select the zip file and click download.
 
