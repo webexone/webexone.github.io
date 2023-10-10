@@ -1,5 +1,8 @@
 ---
 title: 'Lab 9: Flow Debug Capabilities'
+author: Dave Easton, Karthik Sundaram
+date: 2023-10-04
+layout: post
 ---
 
 # Table of Contents
@@ -17,12 +20,11 @@ title: 'Lab 9: Flow Debug Capabilities'
   - [Back to top](#back-to-top)
     - [Congratulations, you have completed this section!](#congratulations-you-have-completed-this-section)
 
-
 # Introduction
 
 ## Lab Objective
 
-In this lab, we will go through the concepts and basics of flow debugging options in Webex Connect.  
+In this lab, we will go through the concepts and basics of flow debugging options in Webex Connect.
 
 ## Pre-requisite
 
@@ -32,23 +34,21 @@ In this lab, we will go through the concepts and basics of flow debugging option
 
 ## 1. Verify decryption access for Webex Connect Owner
 
->**Note**: Each Webex Connect tenant will have one owner added when the tenant is created. This owner will have decryption access by default. For any additional users added to the Connect tenant, please ensure that decryption access is enabled.
+> **Note**: Each Webex Connect tenant will have one owner added when the tenant is created. This owner will have decryption access by default. For any additional users added to the Connect tenant, please ensure that decryption access is enabled.
 
-
-- Login to Webex Connect and navigate to Settings > Team mates 
+- Login to Webex Connect and navigate to Settings > Team mates
 
 <img align="middle" src="new_images\Lab9_flowdebug\lab9.1_decrypt.png" width="1000" />
 <br/>
 <br/>
 
-- Verify that decryption access is enabled for the owner of the Webex Connect tenant 
-
+- Verify that decryption access is enabled for the owner of the Webex Connect tenant
 
 ## 2. Enabling Debug logs
 
->**Note**: By default only standard logs will be enabled. To enable debug logs, the below steps have to be completed
+> **Note**: By default only standard logs will be enabled. To enable debug logs, the below steps have to be completed
 
-- Login to Webex Connect and navigate to your respective service and select the flow you would like to debug 
+- Login to Webex Connect and navigate to your respective service and select the flow you would like to debug
 
 - Under actions click on 'arrow' mark and select manage. This will bring up flow workspace.
 
@@ -65,7 +65,6 @@ In this lab, we will go through the concepts and basics of flow debugging option
 <img align="middle" src="images/Lab9_3.jpg" width="1000" />
 <br/>
 <br/>
-
 
 ## 3. Accessing the logs
 
@@ -89,20 +88,18 @@ In this lab, we will go through the concepts and basics of flow debugging option
 <br/>
 <br/>
 
-- Each node will have either a success or error outcome. When debugging, we can review the individual interaction and based on the outcome of the node, further debugging steps can be taken. 
+- Each node will have either a success or error outcome. When debugging, we can review the individual interaction and based on the outcome of the node, further debugging steps can be taken.
 
 <img align="middle" src="new_images\Lab9_flowdebug\lab9.5_resolve_node_outcome.png" width="1000" />
 <br/>
 <br/>
 
+## 4. Flow Analytics
 
-## 4. Flow Analytics 
-
-- The Analyse mode of Webex Connect Flow Builder provides you the ability to analyze the performance of your published flows at every node. 
-  
+- The Analyse mode of Webex Connect Flow Builder provides you the ability to analyze the performance of your published flows at every node.
 - The Analyse mode provides an aggregate view of the execution counters at every node, enabling you to analyze the flow traffic and make necessary changes as per the customer interaction patterns.
 
-- Once the flow you wish to analyze is opened, switch to the Analyse mode 
+- Once the flow you wish to analyze is opened, switch to the Analyse mode
 
 <img align="middle" src="new_images\Lab9_flowdebug\lab9.51_analyse.png" width="1000" />
 <br/>
@@ -113,7 +110,7 @@ In this lab, we will go through the concepts and basics of flow debugging option
 - The Analyse mode also provides an insight into the successful transactions and drop-outs caused due to errors or failures at each node – both incoming and outgoing.
   - **Node counter** is the aggregate of execution counters for each of the nodes.
   - **Connector counter** indicates the number of transactions that have passed from the previous node to the following node.
-  - **Node outcome counter** indicates the count of each outcomes of a node 
+  - **Node outcome counter** indicates the count of each outcomes of a node
 
 <img align="middle" src="new_images\Lab9_flowdebug\lab9.7_connector_counters.png" width="1000" />
 <br/>
@@ -125,7 +122,7 @@ In this lab, we will go through the concepts and basics of flow debugging option
 <br/>
 <br/>
 
-- Click View Chart directly to see the Sankey chart for the complete flow. 
+- Click View Chart directly to see the Sankey chart for the complete flow.
 
 <img align="middle" src="new_images\Lab9_flowdebug\lab9.81_view_chart.png" width="1000" />
 <br/>
@@ -137,27 +134,24 @@ In this lab, we will go through the concepts and basics of flow debugging option
 <br/>
 <br/>
 
-- You can export the chart to SVG, PNG or CSV format to be shared with Cisco TAC or others for debugging or trend analysis. 
+- You can export the chart to SVG, PNG or CSV format to be shared with Cisco TAC or others for debugging or trend analysis.
 
-## 5. Share Flow Settings 
+## 5. Share Flow Settings
 
-- You can generate a shareable link for flow and share the flow with other users. 
-  
+- You can generate a shareable link for flow and share the flow with other users.
 - Anyone with the link can view the flow. Users who view the flow can see it in a view-only mode.
 
-- You can decide if you want to include/exclude the Analyse mode in the flow that you share. When you include the Analyse mode, all the execution counters along with the Sankey charts become part of the shared flow. 
+- You can decide if you want to include/exclude the Analyse mode in the flow that you share. When you include the Analyse mode, all the execution counters along with the Sankey charts become part of the shared flow.
 
-- Open the flow and on the right side click 'Share Flow' option to configure a password and share the flow in view only mode 
+- Open the flow and on the right side click 'Share Flow' option to configure a password and share the flow in view only mode
 
 <img align="middle" src="new_images\Lab9_flowdebug\lab9.9_share_flow.png" width="1000" />
 <br/>
 <br/>
 
+## [Back to top](#table-of-contents)
 
-[Back to top](#table-of-contents)
----
-
-### Congratulations, you have completed this section! 
+### Congratulations, you have completed this section!
 
 <script>
 function mainPage() {window.location.href = "Home";}

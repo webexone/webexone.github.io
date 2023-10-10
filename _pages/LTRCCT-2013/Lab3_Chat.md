@@ -1,14 +1,17 @@
 ---
 title: 'Lab 3: Live Chat Configuration'
+author: Dave Easton, Karthik Sundaram
+date: 2023-10-04
+layout: post
 ---
 
-
 # Table of Contents
+
 - [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
-    - [Lab Objective](#lab-objective)
-    - [Pre-requisite](#pre-requisite)
-    - [Quick Links](#quick-links)
+  - [Lab Objective](#lab-objective)
+  - [Pre-requisite](#pre-requisite)
+  - [Quick Links](#quick-links)
 - [Lab Section](#lab-section)
   - [Step 1. Live Chat Asset creation & register to Webex Engage](#step-1-live-chat-asset-creation--register-to-webex-cc)
   - [Step 2. Chat Template creation for website integration](#step-2-chat-template-creation-for-website-integration)
@@ -32,7 +35,6 @@ title: 'Lab 3: Live Chat Configuration'
   - [Back to top](#back-to-top)
     - [Congratulations, you have completed this section!](#congratulations-you-have-completed-this-section)
 
-
 # Introduction
 
 ### Lab Objective
@@ -41,7 +43,6 @@ In this Lab, we will go through the tasks that are required to complete a basic 
 
 In this lab you will be configuring the Service, Chat Assets, Entry Point, Queue, Chat Template, Website Settings, and corresponding workflows.
 
-
 ### Pre-requisite
 
 1. You received an admin credentials to configure in Management Portal and Webex Connect.
@@ -49,17 +50,17 @@ In this lab you will be configuring the Service, Chat Assets, Entry Point, Queue
 
 ### Quick Links
 
-> Control Hub: **[https://admin.webex.com](https://admin.webex.com){:target="_blank"}**\
-> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal){:target="_blank"}**\
-> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="_blank"}**\
-> Workflows: **[GitHub page]( https://github.com/CiscoDevNet/webexcc-digital-channels/tree/main/Webex%20Connect%20Flows/v3.0/Template/Event%20Handling%20Workflows) {:target="_blank"}**\
-> Connect: **[https://labtenant.us.webexconnect.io](https://labtenant.us.webexconnect.io) {:target="_blank"}**\
+> Control Hub: **[https://admin.webex.com](https://admin.webex.com){:target="\_blank"}**\
+> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal){:target="\_blank"}**\
+> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="\_blank"}**\
+> Workflows: **[GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels/tree/main/Webex%20Connect%20Flows/v3.0/Template/Event%20Handling%20Workflows) {:target="\_blank"}**\
+> Connect: **[https://labtenant.us.webexconnect.io](https://labtenant.us.webexconnect.io) {:target="\_blank"}**\
 
 # Lab Section
 
 ## Step 1. Live Chat Asset creation & register to Webex Engage
 
-- Login to your respective Webex Connect UI using the provided URL https://labtenant.us.webexconnect.io 
+- Login to your respective Webex Connect UI using the provided URL https://labtenant.us.webexconnect.io
 
 - Navigate to `Assets` > `Apps` > `Configure New App` > `Mobile / Web`
 
@@ -67,9 +68,9 @@ In this lab you will be configuring the Service, Chat Assets, Entry Point, Queue
 <br/>
 <br/>
 
-- Name your asset `LiveChatAsset_0XX` where 0XX is your 3-digit Lab ID 
+- Name your asset `LiveChatAsset_0XX` where 0XX is your 3-digit Lab ID
 
-- Toggle/Enable `Live Chat / In-AppMessaging` to "ON" and choose `PRIMARY TRANSPORT PROTOCOL` as  MQTT" & `SECONDARY TRANSPORT PROTOCOL` as Web Socket" and enable `Use Secured Port` and `SAVE`.
+- Toggle/Enable `Live Chat / In-AppMessaging` to "ON" and choose `PRIMARY TRANSPORT PROTOCOL` as MQTT" & `SECONDARY TRANSPORT PROTOCOL` as Web Socket" and enable `Use Secured Port` and `SAVE`.
 
 <img align="middle" src="images/Lab3_2.jpg" width="700" />
 <br/>
@@ -267,7 +268,8 @@ Here is a screenshot of the Dropdown configuration with 2 options, one for **Sal
 ## Step 4. Website Settings
 
 ### 1. Configure Live Chat widget
-- From Management Portal, access the menu and cross launch **New Digital Channels Admin Portal**  by choosing `New Digital Channels`
+
+- From Management Portal, access the menu and cross launch **New Digital Channels Admin Portal** by choosing `New Digital Channels`
 
 <img align="middle" src="images/Lab3_13.jpg" width="400" />
 <br/>
@@ -318,7 +320,7 @@ Here is a screenshot of the Dropdown configuration with 2 options, one for **Sal
 <br/>
 <br/>
 
-- Open a new tab in your browser and navigate to [W3Schools Online HTML Editor](https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello){:target="_blank"}.
+- Open a new tab in your browser and navigate to [W3Schools Online HTML Editor](https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello){:target="\_blank"}.
 
 - Paste de chat bubble code just above the `</body>` tag
 
@@ -387,7 +389,8 @@ Here is a screenshot of the Dropdown configuration with 2 options, one for **Sal
 ## Step 6. Create/Upload Live Chat flow
 
 ### 1. Initial flow loading
-- Download the default inbound chat flow from the [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels){:target="_blank"}.
+
+- Download the default inbound chat flow from the [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels){:target="\_blank"}.
 
 - Navigate to **webex connect flows** -> **v3.0** -> **template** -> **media specific workflows** -> **Live Chat inbound flow.workflow.zip**, select the zip file and click download.
 
@@ -427,9 +430,9 @@ Here is a screenshot of the Dropdown configuration with 2 options, one for **Sal
 
 - Select the Custom Variables tab and set the following variable defaults:
 
-*domain*: Set it to `www.w3schools.com` (if this field is not present, move on)
+_domain_: Set it to `www.w3schools.com` (if this field is not present, move on)
 
-*liveChatDomain*: Set it to `www.w3schools.com`
+_liveChatDomain_: Set it to `www.w3schools.com`
 
 <img align="middle" src="new_images\Lab3_chat\lab3_8_chat_flow_cust_var_1_png" width="1000" />
 <br/>
@@ -459,7 +462,7 @@ Here is a screenshot of the Dropdown configuration with 2 options, one for **Sal
 <br/>
 <br/>
 
-- Finally click on Make Live on top right corner -> Under Application select LiveChatAsset_0XX that corresponds to your Lab ID and click  `Make Live`.
+- Finally click on Make Live on top right corner -> Under Application select LiveChatAsset_0XX that corresponds to your Lab ID and click `Make Live`.
 
 <img align="middle" src="new_images\Lab3_chat\lab3_92_chat_flow_make_live_png" width="1000" />
 <br/>
@@ -481,7 +484,7 @@ Here is a screenshot of the Dropdown configuration with 2 options, one for **Sal
 <br/>
 <br/>
 
-- Go back to the tab where you opened [W3Schools Online HTML Editor](https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello){:target="_blank"} and pasted the live chat widget code.
+- Go back to the tab where you opened [W3Schools Online HTML Editor](https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello){:target="\_blank"} and pasted the live chat widget code.
 
 - Click `Start Conversation`
 
@@ -535,7 +538,7 @@ Here is a screenshot of the Dropdown configuration with 2 options, one for **Sal
 
 ## Step 8. Search and view conversation transcripts
 
-- You can search and view conversation transcripts from the New Digital Channels Engage interface. Go to the already openned tab or from Management Portal, access the menu and cross launch **New Digital Channels Admin Portal**  by choosing `New Digital Channels`. Then click on Switch to Customer Care button at the top right.
+- You can search and view conversation transcripts from the New Digital Channels Engage interface. Go to the already openned tab or from Management Portal, access the menu and cross launch **New Digital Channels Admin Portal** by choosing `New Digital Channels`. Then click on Switch to Customer Care button at the top right.
 
 <img align="middle" src="new_images\Lab3_chat\lab3_93_customer_care_png" width="400" />
 <br/>
@@ -581,9 +584,7 @@ Here is a screenshot of the Dropdown configuration with 2 options, one for **Sal
 <br/>
 <br/>
 
-
-[Back to top](#table-of-contents)
----
+## [Back to top](#table-of-contents)
 
 ### Congratulations, you have completed this section!
 

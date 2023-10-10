@@ -1,12 +1,16 @@
 ---
 title: 'Lab 6: Whatsapp Configuration'
+author: Dave Easton, Karthik Sundaram
+date: 2023-10-04
+layout: post
 ---
 
 # Table of Contents
+
 - [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
-    - [Lab Objective](#lab-objective)
-    - [Pre-requisite](#pre-requisite)
+  - [Lab Objective](#lab-objective)
+  - [Pre-requisite](#pre-requisite)
 - [Lab Section](#lab-section)
   - [Step 1. Verify Whatsapp Number Assignment](#step-1-verify-whatsapp-number-assignment)
   - [Step 2. Whatsapp Asset registration to Webex Engage](#step-2-whatsapp-asset-registration-to-webexcc)
@@ -15,14 +19,14 @@ title: 'Lab 6: Whatsapp Configuration'
   - [Verification - send Whatsapp message and accept the request](#verification---send-whatsapp-message-and-accept-the-request)
   - [Back to top](#back-to-top)
     - [Congratulations, you have completed this section!](#congratulations-you-have-completed-this-section)
- 
+
 # Introduction
 
 ### Lab Objective
 
-In this Lab, we will go through the tasks that are required to complete the basic whatsapp integration. You will be able to initiate a Whatsapp contact to the Contact Center and be able to accept/respond to the contact by logging in as an agent.  
+In this Lab, we will go through the tasks that are required to complete the basic whatsapp integration. You will be able to initiate a Whatsapp contact to the Contact Center and be able to accept/respond to the contact by logging in as an agent.
 
-In this lab you will be configuring **WhatsApp** number settings, Assets, Entry Point and corresponding workflows. All these steps are required for integrating Whatsapp with our application.  
+In this lab you will be configuring **WhatsApp** number settings, Assets, Entry Point and corresponding workflows. All these steps are required for integrating Whatsapp with our application.
 
 ### Pre-requisite
 
@@ -34,15 +38,15 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 
 ## Step 1. Verify Whatsapp Number Assignment
 
-- Login to your respective Webex Connect UI using the provided URL https://labtenant.us.webexconnect.io 
+- Login to your respective Webex Connect UI using the provided URL https://labtenant.us.webexconnect.io
 
-- Navigate to Assets > Numbers and verify that the tenant you are using has a WhatsApp number assigned 
+- Navigate to Assets > Numbers and verify that the tenant you are using has a WhatsApp number assigned
 
 <img align="middle" src="images/Lab6_1.png" width="1000" />
 <br/>
 <br/>
 
->**Note**: Whatsapp Numbers cannot be procured directly from the Webex CC integrated Webex Connect tenant. For production use, please note that customers will have to work with Partners to go through a procurement process to enable Whatsapp and get numbers assigned to the tenant.
+> **Note**: Whatsapp Numbers cannot be procured directly from the Webex CC integrated Webex Connect tenant. For production use, please note that customers will have to work with Partners to go through a procurement process to enable Whatsapp and get numbers assigned to the tenant.
 
 - Identify and make note of the APP ID (We will need this later in the flow configuration)
 
@@ -64,13 +68,13 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 
 ## Step 2. Whatsapp Asset registration to Webex Engage
 
-- In the Whatsapp number assigned, under actions select the 'Manage' option 
+- In the Whatsapp number assigned, under actions select the 'Manage' option
 
 <img align="middle" src="images/Lab6_2.png" width="1000" />
 <br/>
 <br/>
 
-- Click 'Register to Webex Engage option' 
+- Click 'Register to Webex Engage option'
 
 <img align="middle" src="new_images\Lab6_whatsapp\Lab_6.1_register_to_engage.png" width="1000" />
 <br/>
@@ -82,7 +86,7 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 <br/>
 <br/>
 
-- Verify that the 'Register to Webex Engage' option is now disabled and there is a message indicating the time when the asset was registered along with the service to which it is assigned. 
+- Verify that the 'Register to Webex Engage' option is now disabled and there is a message indicating the time when the asset was registered along with the service to which it is assigned.
 
 <img align="middle" src="new_images\Lab6_whatsapp\Lab_6.3_register_success.png" width="1000" />
 <br/>
@@ -90,7 +94,7 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 
 ## Step 3. Whatsapp Entry Point and Queue creation
 
-- Login to Webex Contact Centre administration portal 
+- Login to Webex Contact Centre administration portal
 
 - Click on **_Provisioning_** and select **_Entry Points/Queues_** > **_Entry Point_**.
 
@@ -134,7 +138,7 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 <br/>
 <br/>
 
-- Select the Agent based teams created in the previous lab and click `Save` . Once saved, click `Close` to exit this window. 
+- Select the Agent based teams created in the previous lab and click `Save` . Once saved, click `Close` to exit this window.
 
 <img align="middle" src="images/Lab6_10.png" width="1000" />
 <br/>
@@ -152,7 +156,7 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 
 ## Step 4. Create/Upload Whatsapp flow
 
-- Download the Whatsapp flow from the [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels/tree/main/Webex%20Connect%20Flows/v3.0/Template/Event%20Handling%20Workflows){:target="_blank"}.
+- Download the Whatsapp flow from the [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels/tree/main/Webex%20Connect%20Flows/v3.0/Template/Event%20Handling%20Workflows){:target="\_blank"}.
 
 - Navigate to **webex connect flows -> 3.0->template -> media specific workflows -> whatsapp inbound flow.workflow.zip**, select the zip file and click download.
 
@@ -164,7 +168,7 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 
 - Go to Webex Connect, click on **Services** and select the service in which the Asset is created in step 2. It should be **My First Service 0XX**
 
-- In the service click on **FLOWS** -> **CREATE FLOW** 
+- In the service click on **FLOWS** -> **CREATE FLOW**
 
 - Enter the **FLOW NAME** as **Whatsapp Inbound Flow**, select the **TYPE** as **Work Flow** and under **METHOD** select **Upload a flow**.
 
@@ -198,7 +202,7 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 <br/>
 <br/>
 
-- Wait for 2 minutes and verify that the flow is published successfully. 
+- Wait for 2 minutes and verify that the flow is published successfully.
 
 <img align="middle" src="new_images\Lab6_whatsapp\Lab_6.6_flow_live.png" width="1000" />
 <br/>
@@ -208,7 +212,7 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 
 ## Verification - send Whatsapp message and accept the request
 
-- Login to the Agent Desktop and make the agent Available. 
+- Login to the Agent Desktop and make the agent Available.
 
 <img align="middle" src="images/Lab2_Agent1.png" width="1000" />
 <br/>
@@ -226,7 +230,7 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 <br/>
 <br/>
 
-- Send a message to the contact identified in the previous step to initiate the conversation. 
+- Send a message to the contact identified in the previous step to initiate the conversation.
 
 <img align="middle" src="images/Lab6_25.png" width="500" />
 <br/>
@@ -250,17 +254,15 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 <br/>
 <br/>
 
-- Add wrap up and close the task. 
+- Add wrap up and close the task.
 
 <img align="middle" src="images/Lab6_22.png" width="1000" />
 <br/>
 <br/>
 
+## [Back to top](#table-of-contents)
 
-[Back to top](#table-of-contents)
----
-
-### Congratulations, you have completed this section! 
+### Congratulations, you have completed this section!
 
 <script>
 function mainPage() {window.location.href = "Home";}
