@@ -23,15 +23,9 @@ layout: post
 
 ## Overview
 
-In this lab, we will go through the Agents Desktop experience for Webex Contact Center.
+Welcome to the Webex Contact Center Agent Experience!
 
-We will review the overall Agent Experience and associated Administrative toggles associated with tailoring the Agent Experience on the Webex Contact Center:
-
-- Sign-In Experience using WebRTC Endpoints.
-- Alternate Telephony Options to take calls.
-- Profile Settings for the Desktop settings and behavior.
-- Profile settings for Channel Capacity.
-- Advanced Use cases.
+In this lab we will review the overall Agent Experience and associated Administrative toggles associated with Agents on Webex Contact Center:
 
 At the end of this lab, you should be able to handle calls as an agent, understand how to add onto the functionality of the Agent Desktop out of box and explore advanced extensibility available.
 
