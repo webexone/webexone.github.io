@@ -1,13 +1,16 @@
 ---
 title: 'Lab 5: SMS Configuration'
+author: Dave Easton, Karthik Sundaram
+date: 2023-10-04
+layout: post
 ---
 
-
 # Table of Contents
+
 - [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
-    - [Lab Objective](#lab-objective)
-    - [Pre-requisite](#pre-requisite)
+  - [Lab Objective](#lab-objective)
+  - [Pre-requisite](#pre-requisite)
 - [Lab Section](#lab-section)
   - [Step 1. Verify SMS Number Assignment](#step-1-verify-sms-number-assignment)
   - [Step 2. SMS Asset registration to Webex Engage](#step-2-sms-asset-registration-to-webexcc)
@@ -19,15 +22,13 @@ title: 'Lab 5: SMS Configuration'
   - [Back to top](#back-to-top)
     - [Congratulations, you have completed this section!](#congratulations-you-have-completed-this-section)
 
-
 # Introduction
 
 ### Lab Objective
 
-In this Lab, we will go through the tasks that are required to complete the basic SMS integration. You will be able to initiate a SMS contact to the Contact Center and be able to accept/respond to the contact by logging in as an agent.  
+In this Lab, we will go through the tasks that are required to complete the basic SMS integration. You will be able to initiate a SMS contact to the Contact Center and be able to accept/respond to the contact by logging in as an agent.
 
-In this lab you will be configuring **SMS** number settings, SMS Assets, Entry Point and corresponding workflows. All these steps are required for integrating SMS with our application.  
-
+In this lab you will be configuring **SMS** number settings, SMS Assets, Entry Point and corresponding workflows. All these steps are required for integrating SMS with our application.
 
 ### Pre-requisite
 
@@ -39,28 +40,27 @@ In this lab you will be configuring **SMS** number settings, SMS Assets, Entry P
 
 ## Step 1. Verify SMS Number Assignment
 
-- Login to your respective Webex Connect UI using the provided URL https://labtenant.us.webexconnect.io 
+- Login to your respective Webex Connect UI using the provided URL https://labtenant.us.webexconnect.io
 
-- Navigate to Assets > Numbers and verify that the tenant you are using has a SMS number assigned 
+- Navigate to Assets > Numbers and verify that the tenant you are using has a SMS number assigned
 
 <img align="middle" src="new_images\Lab5_SMS\Lab_5_1_check_number_png" width="1000" />
 <br/>
 <br/>
 
->**Note**: SMS Numbers cannot be procured directly from the Webex CC integrated IMI Connect tenant. For production use, please note that customers will have to work with Partners to go through a procurement process to enable SMS and get numbers assigned to the tenant.
-
+> **Note**: SMS Numbers cannot be procured directly from the Webex CC integrated IMI Connect tenant. For production use, please note that customers will have to work with Partners to go through a procurement process to enable SMS and get numbers assigned to the tenant.
 
 ## Step 2. SMS Asset registration to Webex Engage
 
 ### 1. Register SMS asset to Webex Engage
 
-- In the SMS number assigned, under actions select the 'Manage' option 
+- In the SMS number assigned, under actions select the 'Manage' option
 
 <img align="middle" src="new_images\Lab5_SMS\Lab_5_2_manage_number_png" width="1000" />
 <br/>
 <br/>
 
-- Click 'Register to Webex Engage option' 
+- Click 'Register to Webex Engage option'
 
 <img align="middle" src="new_images\Lab5_SMS\Lab_5_3_register_number_png" width="1000" />
 <br/>
@@ -72,7 +72,7 @@ In this lab you will be configuring **SMS** number settings, SMS Assets, Entry P
 <br/>
 <br/>
 
-- Verify that the 'Register to Webex Engage' option is now disabled and there is a message indicating the time when the asset was registered along with the service to which it is assigned. 
+- Verify that the 'Register to Webex Engage' option is now disabled and there is a message indicating the time when the asset was registered along with the service to which it is assigned.
 
 <img align="middle" src="new_images\Lab5_SMS\Lab_5_5_registered_png" width="1000" />
 <br/>
@@ -80,9 +80,9 @@ In this lab you will be configuring **SMS** number settings, SMS Assets, Entry P
 
 ## Step 3. SMS Entry Point and Queue creation
 
-### 1. Create Entry Point in Management Portal 
+### 1. Create Entry Point in Management Portal
 
-- Login to Webex Contact Centre administration portal 
+- Login to Webex Contact Centre administration portal
 
 - Click on **_Provisioning_** and select **_Entry Points/Queues_** > **_Entry Point_**.
 
@@ -126,7 +126,7 @@ In this lab you will be configuring **SMS** number settings, SMS Assets, Entry P
 <br/>
 <br/>
 
-- Select the Agent based teams created in the previous lab and click `Save` . Once saved, click `Close` to exit this window. 
+- Select the Agent based teams created in the previous lab and click `Save` . Once saved, click `Close` to exit this window.
 
 <img align="middle" src="images/Lab5_10.jpg" width="1000" />
 <br/>
@@ -142,10 +142,9 @@ In this lab you will be configuring **SMS** number settings, SMS Assets, Entry P
 <br/>
 <br/>
 
-
 ## Step 4. Create/Upload SMS flow
 
-- Download the SMS flow from the [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels/tree/main/Webex%20Connect%20Flows/v3.0/Template/Event%20Handling%20Workflows){:target="_blank"}.
+- Download the SMS flow from the [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels/tree/main/Webex%20Connect%20Flows/v3.0/Template/Event%20Handling%20Workflows){:target="\_blank"}.
 
 - Navigate to **webex connect flows -> 3.0-> template-> media specific workflows -> smsinbound flow.workflow.zip**, select the zip file and click download.
 
@@ -157,7 +156,7 @@ In this lab you will be configuring **SMS** number settings, SMS Assets, Entry P
 
 - Go to Webex Connect, click on **Services** and select the service in which the Asset is created in step 2. It should be **My First Service 0xx**
 
-- In the service click on **FLOWS** -> **CREATE FLOW** 
+- In the service click on **FLOWS** -> **CREATE FLOW**
 
 - Enter the **FLOW NAME** as **SMS Inbound Flow**, select the **TYPE** as **Work Flow** and under **METHOD** select **Upload a flow**.
 
@@ -167,9 +166,9 @@ In this lab you will be configuring **SMS** number settings, SMS Assets, Entry P
 <br/>
 <br/>
 
-- Once the flow is saved, the 'Configure SMS Event' node will open. Select the SMS number assigned to your tenant in the **_INCOMING NUMBER_** section 
+- Once the flow is saved, the 'Configure SMS Event' node will open. Select the SMS number assigned to your tenant in the **_INCOMING NUMBER_** section
 
-- Input **_*_** as `Keyword` and click on **Verify**
+- Input **_\*_** as `Keyword` and click on **Verify**
 
 <img align="middle" src="new_images\Lab5_SMS\Lab_5_7_SMS_node_1_png" width="1000" />
 <br/>
@@ -183,7 +182,7 @@ In this lab you will be configuring **SMS** number settings, SMS Assets, Entry P
 <br/>
 <br/>
 
-- Find and open all the **SMS** nodes and select the SMS number assigned to your tenant in the **_FROM NUMBER_** section 
+- Find and open all the **SMS** nodes and select the SMS number assigned to your tenant in the **_FROM NUMBER_** section
 
 <img align="middle" src="new_images\Lab5_SMS\Lab_5_8_SMS_all_sms_nodes_png" width="1000" />
 <br/>
@@ -199,14 +198,13 @@ In this lab you will be configuring **SMS** number settings, SMS Assets, Entry P
 <br/>
 <br/>
 
-- Wait for 2 minutes and verify that the flow is **published** successfully. 
-
+- Wait for 2 minutes and verify that the flow is **published** successfully.
 
 [To top of this lab](#table-of-contents)
 
 ## Verification - send SMS and accept the request
 
-- Login to the Agent Desktop and make the agent Available. 
+- Login to the Agent Desktop and make the agent Available.
 
 <img align="middle" src="images/Lab2_Agent1.png" width="1000" />
 <br/>
@@ -232,17 +230,15 @@ In this lab you will be configuring **SMS** number settings, SMS Assets, Entry P
 <br/>
 <br/>
 
-- Add wrap up and close the task. 
+- Add wrap up and close the task.
 
 <img align="middle" src="images/Lab5_23.jpg" width="1000" />
 <br/>
 <br/>
 
+## [Back to top](#table-of-contents)
 
-[Back to top](#table-of-contents)
----
-
-### Congratulations, you have completed this section! 
+### Congratulations, you have completed this section!
 
 <script>
 function mainPage() {window.location.href = "Home";}
@@ -266,4 +262,3 @@ function nextLab()
   padding: 10px;">Go to the Next Lab</button>
 
 </div>
-

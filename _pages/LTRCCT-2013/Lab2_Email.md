@@ -1,22 +1,25 @@
 ---
 title: 'Lab 2: Email Configuration'
+author: Dave Easton, Karthik Sundaram
+date: 2023-10-04
+layout: post
 ---
 
 # Table of Contents
+
 - [Step 1. Gmail account configuration](#step-1-gmail-account-configuration)
 - [Step 2. Create Email Asset and Register to WebeXCC](#step-2-create-email-asset-and-register-to-webexcc)
 - [Step 3. Email Entry Point and Queue creation](#step-3-email-entry-point-and-queue-creation)
 - [Step 4. Create/Upload Email flow](#step-4-createupload-email-flow)
 - [Verification: Send an Email and accept the task](#verification-send-an-email-and-accept-the-task)
 
-
 # Introduction
 
 ### Lab Objective
 
-In this Lab, we will go through the tasks that are required to complete the basic email configuration. You will be able to initiate an email to the Contact Center and be able to accept/respond to the email by logging in as an agent.  
+In this Lab, we will go through the tasks that are required to complete the basic email configuration. You will be able to initiate an email to the Contact Center and be able to accept/respond to the email by logging in as an agent.
 
-In this lab you will be configuring **Gmail** Account settings, Email Assets, Entry Point and corresponding workflows. All those steps are required for connecting the Email account with our application.  
+In this lab you will be configuring **Gmail** Account settings, Email Assets, Entry Point and corresponding workflows. All those steps are required for connecting the Email account with our application.
 
 ### Pre-requisite
 
@@ -28,34 +31,34 @@ In this lab you will be configuring **Gmail** Account settings, Email Assets, En
 
 ### Quick Links
 
-> Control Hub: **[https://admin.webex.com](https://admin.webex.com){:target="_blank"}**\
-> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal){:target="_blank"}**\
-> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="_blank"}**\
-> Gmail: **[https://mail.google.com](https://mail.google.com){:target="_blank"}**\
-> Workflows: **[GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels){:target="_blank"}**\
-> Webex Connect: **[https://labtenant.us.webexconnect.io](https://labtenant.us.webexconnect.io){:target="_blank"}**\
+> Control Hub: **[https://admin.webex.com](https://admin.webex.com){:target="\_blank"}**\
+> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal){:target="\_blank"}**\
+> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="\_blank"}**\
+> Gmail: **[https://mail.google.com](https://mail.google.com){:target="\_blank"}**\
+> Workflows: **[GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels){:target="\_blank"}**\
+> Webex Connect: **[https://labtenant.us.webexconnect.io](https://labtenant.us.webexconnect.io){:target="\_blank"}**\
 
 # Lab Section
 
 ### Configuration Order
+
 <img align="middle" src="images/Lab2_ConfigOrder.png" width="1000" />
 <br/>
 <br/>
 
 ## Step 1. Gmail account configuration
+
 Starting May 30, 2022 the **Less Secure Apps** feature was disabled on all Google accounts. As long as this setting was enabled, it was possible to send emails via Gmail SMTP. In this lab, we will be using new OAuth 2.0 authentication for outbound email functionality.
 
->**Note**: For this lab, we have created a Gmail account. Optionally, use your own account for polling and handling the emails. It can be a Gmail account or Office 365 account or any account which has email forwarding. The instructions below are applicable only for the Gmail accounts.
-
+> **Note**: For this lab, we have created a Gmail account. Optionally, use your own account for polling and handling the emails. It can be a Gmail account or Office 365 account or any account which has email forwarding. The instructions below are applicable only for the Gmail accounts.
 
 ### 1. Gmail forwarding activation (for incoming emails)
 
-| **User email**                       |
-| ------------------------------------ | 
-| Use your own existing gmail account or create a new one for this lab   | 
+| **User email**                                                       |
+| -------------------------------------------------------------------- |
+| Use your own existing gmail account or create a new one for this lab |
 
-
-- Login to the Gmail account. If this is your firtst login, select **Turn off smart features** 
+- Login to the Gmail account. If this is your firtst login, select **Turn off smart features**
 
 - Enable POP3/IMAP setting by clicking on settings icon on top right corner and selecting **See all settings**.
 
@@ -69,11 +72,11 @@ Starting May 30, 2022 the **Less Secure Apps** feature was disabled on all Googl
 <br/>
 <br/>
 
+### 2. Create a project at Google API Console
 
-### 2. Create a project at Google API Console 
-We need to activate the API if we want to use a Gmail accont for outbound email. 
+We need to activate the API if we want to use a Gmail accont for outbound email.
 
-- Login to [Google Developers Console](https://console.developers.google.com/){:target="_blank"} with your Gmail credentials.
+- Login to [Google Developers Console](https://console.developers.google.com/){:target="\_blank"} with your Gmail credentials.
 
 - You will have to agree with the Terms of Service and pick their Country of residence. Then click **Select a project** and create a **NEW PROJECT**.
 
@@ -81,7 +84,7 @@ We need to activate the API if we want to use a Gmail accont for outbound email.
 <br/>
 <br/>
 
-- Keep the default project's name and press **Create** at the bottom. Make sure that now you have selected this project. 
+- Keep the default project's name and press **Create** at the bottom. Make sure that now you have selected this project.
 
 <img align="middle" src="new_images\LAB2_email\Lab2_3_google_console_proj_name_png" width="1000" />
 <br/>
@@ -115,7 +118,7 @@ We need to activate the API if we want to use a Gmail accont for outbound email.
 <br/>
 <br/>
 
--  It will bring you to a page with many fields. Just enter the **App name** as `WebexApp`, choose your **User support email** and enter the same email in the **Developer contact information**. In the end press **SAVE AND CONTINUE**.
+- It will bring you to a page with many fields. Just enter the **App name** as `WebexApp`, choose your **User support email** and enter the same email in the **Developer contact information**. In the end press **SAVE AND CONTINUE**.
 
 <img align="middle" src="new_images\LAB2_email\Lab2_8_google_console_app_info_png" width="1000" />
 <br/>
@@ -133,12 +136,11 @@ We need to activate the API if we want to use a Gmail accont for outbound email.
 <br/>
 <br/>
 
-
 ### 5. Credentials and authentication with OAuth 2.0
 
 Now create a new client ID that will be used to identify your application to Google’s OAuth servers.
 
-- In the APIs & Services section, click on **Credentials** and then pick **OAuth client ID** from the drop-down list of the **CREATE CREDENTIALS** button. 
+- In the APIs & Services section, click on **Credentials** and then pick **OAuth client ID** from the drop-down list of the **CREATE CREDENTIALS** button.
 
 <img align="middle" src="new_images\LAB2_email\Lab2_92_google_console_oauth_client_ID_png" width="1000" />
 <br/>
@@ -146,7 +148,7 @@ Now create a new client ID that will be used to identify your application to Goo
 
 - Select `Web application` in the **Application type**
 
-- You can leave the default name. The name of your OAuth 2.0 client is only used to identify the client in the Google Cloud console and will not be shown to application users. 
+- You can leave the default name. The name of your OAuth 2.0 client is only used to identify the client in the Google Cloud console and will not be shown to application users.
 
 - In the **Authorized redirect URIs** section click **ADD URI** button and set `https://labtenant.us.webexconnect.io/callback`. Click **CREATE** button in the end.
 
@@ -159,7 +161,6 @@ Now create a new client ID that will be used to identify your application to Goo
 <img align="middle" src="new_images\LAB2_email\Lab2_931_google_console_json_png" width="1000" />
 <br/>
 <br/>
-
 
 ## Step 2. Create an Email Asset and Register to WebexCC
 
@@ -175,25 +176,23 @@ Now create a new client ID that will be used to identify your application to Goo
 
 - Set the settings according to the table below:
 
-| **Entity**          | **Name** |
-| ------------------- | -------- |
-| Asset Name | EmailAsset_0XX  where <0XX> is your 3-digit attendee ID  |
-| Email ID   | Your gmail address here  |
-| Authentication Type | OAuth 2.0   |
-| SMTP Server  | smtp.gmail.com |
-| Username     | Your gmail address here |
-| Port     | 465 |
-| Security     | SSL |
-| Client ID | \<client_id from JSON file\>   |
-| client Secret | \<client_secret from JSON file\>    |
-| Authorization URL | https://accounts.google.com/o/oauth2/auth |
-| Scope | https://mail.google.com/ https://www.googleapis.com/auth/gmail.send |
-| Access Token URL | https://oauth2.googleapis.com/token |
-| Refresh Token URL | https://oauth2.googleapis.com/token |
+| **Entity**          | **Name**                                                            |
+| ------------------- | ------------------------------------------------------------------- |
+| Asset Name          | EmailAsset_0XX where <0XX> is your 3-digit attendee ID              |
+| Email ID            | Your gmail address here                                             |
+| Authentication Type | OAuth 2.0                                                           |
+| SMTP Server         | smtp.gmail.com                                                      |
+| Username            | Your gmail address here                                             |
+| Port                | 465                                                                 |
+| Security            | SSL                                                                 |
+| Client ID           | \<client_id from JSON file\>                                        |
+| client Secret       | \<client_secret from JSON file\>                                    |
+| Authorization URL   | https://accounts.google.com/o/oauth2/auth                           |
+| Scope               | https://mail.google.com/ https://www.googleapis.com/auth/gmail.send |
+| Access Token URL    | https://oauth2.googleapis.com/token                                 |
+| Refresh Token URL   | https://oauth2.googleapis.com/token                                 |
 
 > where \<ID\> is your POD ID
-
-
 
 - Click **GENERATE TOKEN** and follow the step on the screenshot:
 
@@ -215,8 +214,8 @@ Now create a new client ID that will be used to identify your application to Goo
 
 ### 2. Add forwarding Address
 
-- Copy the forwarding address from the created asset in the previous step then go back to your gmail account. 
- 
+- Copy the forwarding address from the created asset in the previous step then go back to your gmail account.
+
 <img align="middle" src="images/Lab2_Assest4.png" width="1000" />
 <br/>
 <br/>
@@ -233,15 +232,15 @@ Now create a new client ID that will be used to identify your application to Goo
 <br/>
 <br/>
 
-- Go back to Webex Connect and click on **Tools** -> **Export Logs**. 
+- Go back to Webex Connect and click on **Tools** -> **Export Logs**.
 
-- Under Inbound logs, Select the App that was created -> Select Channel Event as `Incoming Email` -> Select the period as `Today`. Wait until status is changed to **Ready for download** and click **Download** icon. 
+- Under Inbound logs, Select the App that was created -> Select Channel Event as `Incoming Email` -> Select the period as `Today`. Wait until status is changed to **Ready for download** and click **Download** icon.
 
 <img align="middle" src="images/Lab2_ExportLog1.gif" width="1000" />
 <br/>
 <br/>
 
-- Once a log file is downloaded, open the log file, under the **Subject** column, copy the confirmation code. 
+- Once a log file is downloaded, open the log file, under the **Subject** column, copy the confirmation code.
 
 <img align="middle" src="images/Lab2_ExportLog2.png" width="1000" />
 <br/>
@@ -261,7 +260,7 @@ Now create a new client ID that will be used to identify your application to Goo
 
 ## Step 3. Email Entry Point and Queue creation
 
-### 1. Create Entry Point in Management Portal 
+### 1. Create Entry Point in Management Portal
 
 - Click on **_Provisioning_** and select **_Entry Points/Queues_** > **_Entry Point_**.
 
@@ -284,7 +283,7 @@ Now create a new client ID that will be used to identify your application to Goo
 <br/>
 <br/>
 
-### 2. Create 2 Queues in Management Portal 
+### 2. Create 2 Queues in Management Portal
 
 - Click on **_Provisioning_** and select **_Entry Points/Queues_** > **_Queue_**.
 
@@ -324,7 +323,7 @@ Now create a new client ID that will be used to identify your application to Goo
 
 ## Step 4. Create/Upload Email flow
 
-- Download the email flow from the [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels/tree/main/Webex%20Connect%20Flows/v3.0/Template/Event%20Handling%20Workflows) 
+- Download the email flow from the [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels/tree/main/Webex%20Connect%20Flows/v3.0/Template/Event%20Handling%20Workflows)
 
 - Navigate to **webex connect flows -> 3.0 -> template -> media specific workflows -> email inbound flow.workflow.zip**, select the zip file and click download.
 
@@ -366,7 +365,7 @@ Now create a new client ID that will be used to identify your application to Goo
 
 - Go to personal email account and send an email to the support email address that was initially configured in the Email Asset.
 
-- Go to the Agent Desktop and make the agent Available. 
+- Go to the Agent Desktop and make the agent Available.
 
 <img align="middle" src="images/Lab2_Agent1.png" width="1000" />
 <br/>
@@ -380,11 +379,9 @@ Now create a new client ID that will be used to identify your application to Goo
 
 - Add wrap up and close the task.
 
+## [Back to top](#table-of-contents)
 
-[Back to top](#table-of-contents)
----
-
-### Congratulations, you have completed this section! 
+### Congratulations, you have completed this section!
 
 <script>
 function mainPage() {window.location.href = "Home";}

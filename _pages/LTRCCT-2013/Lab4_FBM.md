@@ -1,14 +1,17 @@
 ---
 title: 'Lab 4: Facebook Messenger Configuration'
+author: Dave Easton, Karthik Sundaram
+date: 2023-10-04
+layout: post
 ---
 
-
 # Table of Contents
+
 - [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
-    - [Lab Objective](#lab-objective)
-    - [Pre-requisite](#pre-requisite)
-    - [Quick Links](#quick-links)
+  - [Lab Objective](#lab-objective)
+  - [Pre-requisite](#pre-requisite)
+  - [Quick Links](#quick-links)
 - [Lab Section](#lab-section)
   - [Step 1 Facebook Page configuration](#step-1-facebook-page-configuration)
   - [Step 2. Facebook Messenger Asset creation & register to Webex CC](#step-2-facebook-messenger-asset-creation--register-to-webex-cc)
@@ -23,15 +26,13 @@ title: 'Lab 4: Facebook Messenger Configuration'
   - [Back to top](#back-to-top)
     - [Congratulations, you have completed this section!](#congratulations-you-have-completed-this-section)
 
-
 # Introduction
 
 ### Lab Objective
 
-In this Lab, we will go through the tasks that are required to complete the basic Facebook Messenger (FBM) integration. You will be able to initiate a Facebook contact to the Contact Center from Facebook Messenger and be able to accept/respond to the contact by logging in as an agent.  
+In this Lab, we will go through the tasks that are required to complete the basic Facebook Messenger (FBM) integration. You will be able to initiate a Facebook contact to the Contact Center from Facebook Messenger and be able to accept/respond to the contact by logging in as an agent.
 
 In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, Website Settings, and corresponding workflows.
-
 
 ### Pre-requisite
 
@@ -41,11 +42,11 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 ### Quick Links
 
-> Control Hub: **[https://admin.webex.com](https://admin.webex.com){:target="_blank"}**\
-> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal){:target="_blank"}**\
-> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="_blank"}**\
-> Workflows: **[GitHub page]( https://github.com/CiscoDevNet/webexcc-digital-channels/tree/main/Webex%20Connect%20Flows/v3.0/Template/Event%20Handling%20Workflows){:target="_blank"}**\
-> Connect: **[https://labtenant.us.webexconnect.io](https://labtenant.us.webexconnect.io) {:target="_blank"}**\
+> Control Hub: **[https://admin.webex.com](https://admin.webex.com){:target="\_blank"}**\
+> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal){:target="\_blank"}**\
+> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="\_blank"}**\
+> Workflows: **[GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels/tree/main/Webex%20Connect%20Flows/v3.0/Template/Event%20Handling%20Workflows){:target="\_blank"}**\
+> Connect: **[https://labtenant.us.webexconnect.io](https://labtenant.us.webexconnect.io) {:target="\_blank"}**\
 
 # Lab Section
 
@@ -53,7 +54,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 - Customer/Partner should have a Facebook account to create a Facebook Business page
 
-- Login to Facebook and create a business page that can be used in WxCC for polling and handling the messenger chats Additional details of facebook page setup is available here: [Facebook Business page setup](https://www.facebook.com/business/pages/set-up){:target="_blank"}
+- Login to Facebook and create a business page that can be used in WxCC for polling and handling the messenger chats Additional details of facebook page setup is available here: [Facebook Business page setup](https://www.facebook.com/business/pages/set-up){:target="\_blank"}
 
 - Click on `Create a Page` button
 
@@ -103,13 +104,13 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 <br/>
 <br/>
 
--  •	Name your asset FBMAsset_0XX  where <0XX> is your 3 digit Lab ID and click `save`
+- • Name your asset FBMAsset_0XX where <0XX> is your 3 digit Lab ID and click `save`
 
 <img align="middle" src="images/Lab4_10.jpg" width="1000" />
 <br/>
 <br/>
 
--  Click `Register to Webex CC`  in the ‘Configure New App-Messenger’ window ->  In the resulting window select the service that you created earlier and click `Register`.
+- Click `Register to Webex CC`  in the ‘Configure New App-Messenger’ window -> In the resulting window select the service that you created earlier and click `Register`.
 
 <img align="middle" src="images/Lab4_11.jpg" width="600" />
 <br/>
@@ -137,7 +138,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 ## Step 3. Create Entry Point and Queue
 
-### 1. Create Entry Point in Management Portal 
+### 1. Create Entry Point in Management Portal
 
 - Click on **_Provisioning_** and select **_Entry Points/Queues_** > **_Entry Point_**.
 
@@ -148,7 +149,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 - Select `Social Channel` in the **_Channel Type_** section.
 
 - Select `Facebook Messenger` in the **_Social Channel Type_** section.
-- 
+-
 - Leave the **_Asset Name_** as the configured value earlier.
 
 - Set **_Service Level Threshold_** as `300` seconds.
@@ -161,7 +162,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 <br/>
 <br/>
 
-### 2. Create Queue in Management Portal 
+### 2. Create Queue in Management Portal
 
 - Click on **_Provisioning_** and select **_Entry Points/Queues_** > **_Queue_**.
 
@@ -173,7 +174,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 - Click `Add Group` in the **_Conversation distribution_** section.
 
-- Select the Agent based teams created in the previous lab and click `Save` . Once saved, click `Close` to exit this window. 
+- Select the Agent based teams created in the previous lab and click `Save` . Once saved, click `Close` to exit this window.
 
 - Input **_Maximum Time in Queue_** as `300`.
 
@@ -191,7 +192,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 ### 1. Initial flow loading
 
-- Download the default Facebook Inbound flow from the [GitHub page]( https://github.com/CiscoDevNet/webexcc-digital-channels/tree/main/Webex%20Connect%20Flows/v3.0/Template/Event%20Handling%20Workflows){:target="_blank"}.
+- Download the default Facebook Inbound flow from the [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels/tree/main/Webex%20Connect%20Flows/v3.0/Template/Event%20Handling%20Workflows){:target="\_blank"}.
 
 - Navigate to **webex connect flows -> 3.0 -> template -> media specific workflows -> facebook inbound flow.workflow.zip**, select the zip file and click download.
 
@@ -216,7 +217,6 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 ### 2. Start node and Custom Variables
 
 - A page will load with the imported workflow. We must make some changes to the default inbound flow based on our setup.
-  
 - First Click `Save` in the `Configure APP Event` page that loaded, this defines what will trigger the flow and the default settings are already good.
 
 <img align="middle" src="images/Lab4_3.jpg" width="1000" />
@@ -231,8 +231,8 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 - Select the Custom Variables tab and set the following Default Values:
 
-*FBPageID*: to the numeric string in the m.me link we saved earlier in Step 2.\
-*appid*: Application ID (appID) from the FBM Asset from Step 2
+_FBPageID_: to the numeric string in the m.me link we saved earlier in Step 2.\
+_appid_: Application ID (appID) from the FBM Asset from Step 2
 
 <img align="middle" src="images/Lab4_17.jpg" width="1000" />
 <br/>
@@ -249,7 +249,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 <br/>
 
 - Finally click on Make Live on top right corner
-  
+
 <img align="middle" src="images/Lab4_20.jpg" width="400" />
 <br/>
 <br/>
@@ -266,7 +266,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 ## Step 5. Verification - start Facebook Chat and accept the request
 
-- Open a new tab and login to the Agent Desktop if you haven't done already and make the agent Available (if you haven't done already in Lab2). 
+- Open a new tab and login to the Agent Desktop if you haven't done already and make the agent Available (if you haven't done already in Lab2).
 
 <img align="middle" src="images/Lab2_Agent1.png" width="1000" />
 <br/>
@@ -306,16 +306,15 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 <br/>
 <br/>
 
-- Add wrap up and close the task. 
+- Add wrap up and close the task.
 
 <img align="middle" src="images/Lab4_29.jpg" width="400" />
 <br/>
 <br/>
 
-[Back to top](#table-of-contents)
----
+## [Back to top](#table-of-contents)
 
-### Congratulations, you have completed this section! 
+### Congratulations, you have completed this section!
 
 <script>
 function mainPage() {window.location.href = "Home";}
@@ -339,4 +338,3 @@ function nextLab()
   padding: 10px;">Go to the Next Lab</button>
 
 </div>
-
