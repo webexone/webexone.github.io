@@ -69,7 +69,7 @@ In this task, we will use the predefined node **PIQ and EWT**. This node provide
 
 - You will have to set the Queue ID in the PIQ node. Copy the Queue ID from the **[Management Portal](https://portal.wxcc-us1.cisco.com/portal){:target="\_blank"}** -> **_Provisioning_** -> **_Entry Points/Queues_** -> **_Queue_** - make sure to copy the Queue ID from the 0XX queue that corresponds to your lab
 
-<img align="middle" src="images/Lab7_QueueID.png" width="1000" />
+<img align="middle" src="/images/Lab7_QueueID.png" width="1000" />
 <br/>
 <br/>
 
@@ -127,21 +127,22 @@ Press **SAVE**.
 this task, you will be checking **"Webex One"** text in the **Subject**. If it is not there, the task will be routed to another queue **Email_Q2_0XX**.
 
 We will use the **Branch** node which allows you to split your flow based on conditional statements without the need to write any custom code. You can configure multiple branches within a single node. The supported conditions are:\
- - Equals\
- - Not equals\
- - Less than\
- - Greater than\
- - Less than or equals\
- - Greater than or equals\
- - Regular expression (RegEx)\
- - Equals ignore case\
- - Contains\
- - Contains ignore case\
- - In\
- - Not in\
- - Starts with\
- - Ends with\
- - Between
+
+- Equals\
+- Not equals\
+- Less than\
+- Greater than\
+- Less than or equals\
+- Greater than or equals\
+- Regular expression (RegEx)\
+- Equals ignore case\
+- Contains\
+- Contains ignore case\
+- In\
+- Not in\
+- Starts with\
+- Ends with\
+- Between
 
 - Click the **EDIT** button in the upper right corner.
 
@@ -165,7 +166,7 @@ We will use the **Branch** node which allows you to split your flow based on con
 | CONDITION        | Regular expression (RegEx)         |
 | VALUE            | [wW][eE][bB][eE][xX]\s[oO][nN][eE] |
 
-<img align="middle" src="images/Lab7_subject3.png" width="1000" />  
+<img align="middle" src="/images/Lab7_subject3.png" width="1000" />  
 <br/>
 <br/>
 
@@ -190,7 +191,7 @@ Double-click the second **Queue Task** node and set the following options:
 | MEDIA CHANNEL      | Email                  |
 | QUEUE NAME         | Email_Q2_0XX           |
 
-<img align="middle" src="images/Lab7_subject5.png" width="1000" />  
+<img align="middle" src="/images/Lab7_subject5.png" width="1000" />  
 <br/>
 <br/>
 
@@ -208,7 +209,7 @@ Double-click the second **Queue Task** node and set the following options:
 
 - Go to the agent desktop [https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="\_blank"}. Sign in as the agent in "Team1_0XX" and make the agent **Available**. You should get only 1 email without the "Webex One" subject.
 
-<img align="middle" src="images/Lab7_subject7.png" width="1000" />  
+<img align="middle" src="/images/Lab7_subject7.png" width="1000" />  
 <br/>
 <br/>
 
@@ -218,7 +219,7 @@ Double-click the second **Queue Task** node and set the following options:
 
 > **Note:** You cannot change your team if you have active tasks, interactions, or incoming task requests. The Team option is disabled.
 
-<img align="middle" src="images/Lab7_subject8.gif" width="1000" />  
+<img align="middle" src="/images/Lab7_subject8.gif" width="1000" />  
 <br/>
 <br/>
 
@@ -241,14 +242,14 @@ The steps below were **preconfigured** for you. They has to be done only once.
 
 - The smartsheet grid was created. And Columns’ ID were collected through API (we will need it for the API request when we will be adding a new row).
 
-<img align="middle" src="images/Lab7_smartsheet2.png" width="1000" />  
+<img align="middle" src="/images/Lab7_smartsheet2.png" width="1000" />  
 <br/>
 <br/>
 
 - We checked that we are able to add a row through the postman acording to the [smartsheet documentation](https://smartsheet.redoc.ly/#operation/rows-addToSheet){:target="\_blank"}.
   It needs just for the verification, exactly the same we will be doing in the Email Workflow with the **HTTP Request** node.
 
-<img align="middle" src="images/Lab7_smartsheet3.png" width="1000" />  
+<img align="middle" src="/images/Lab7_smartsheet3.png" width="1000" />  
 <br/>
 <br/>
 
@@ -297,7 +298,7 @@ The steps below were **preconfigured** for you. They has to be done only once.
   }
 ```
 
-<img align="middle" src="images/Lab7_smartsheet5.png" width="1000" /> 
+<img align="middle" src="/images/Lab7_smartsheet5.png" width="1000" /> 
 <br/>
 <br/>
 
@@ -321,13 +322,13 @@ This section has the bonus category where we can check how you understand this t
 
 1. The Webex API token is generated for you.
 
-<img align="middle" src="images/Lab7_webex1.png" width="1000" />   
+<img align="middle" src="/images/Lab7_webex1.png" width="1000" />   
 <br/>
 <br/>
 
 2. Here is the example of the Postman request.
 
-<img align="middle" src="images/Lab7_webex2.png" width="1000" /> 
+<img align="middle" src="/images/Lab7_webex2.png" width="1000" /> 
 <br/>
 <br/>
 
@@ -350,10 +351,9 @@ This section has the bonus category where we can check how you understand this t
 }
 ```
 
-<img align="middle" src="images/Lab7_webex3.png" width="1000" /> 
+<img align="middle" src="/images/Lab7_webex3.png" width="1000" /> 
 <br/>
 <br/>
-
 
 ## [Back to top](#table-of-contents)
 
