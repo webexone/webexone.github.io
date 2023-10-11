@@ -31,11 +31,12 @@ At the end of this lab, you should be able to handle calls as an agent, understa
 
 ## Table of Contents
 
-| Section                                               | Lab Type      | Dificulty Level | Estimated length |
-| ----------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Agent Desktop Experience](#agent-desktop-overview)   | Demo          | EASY            | 20 min           |
-| [Desktop Administration](#desktop-administration)     | Practical Lab | EASY            | 15 min           |
-| [Bonus: Customizations & Extensions](#custom-desktop) | Practical Lab | MEDIUM          | 15 min           |
+| Section                                                             | Lab Type      | Dificulty Level | Estimated length |
+| ------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
+| [Agent Desktop Experience](#agent-desktop-overview)                 | Demo          | EASY            | 20 min           |
+| [Customized Agent Desktop Experience](#desktop-administration)      | Practical Lab | EASY            | 15 min           |
+| [Desktop Administration](#desktop-administration)                   | Practical Lab | EASY            | 15 min           |
+| [Bonus: Understanding Customizations & Extensions](#custom-desktop) | Practical Lab | MEDIUM          | 15 min           |
 
 ## Introduction
 
@@ -51,19 +52,22 @@ At the end of this lab, you should be able to handle calls as an agent, understa
 
 ### Pre-Requisites
 
-1. You need **1 extra device** (your personal phone for example) to test inbound calls to Webex Contact Center.
+**You Will Need**
 
-> Note: For completing the first section of the lab, all the Desktop Administration configurations have already been done for you to experience the fully loaded desktop.
+1. **1 extra device** (your personal phone for example) to test inbound calls to Webex Contact Center. You can use your cell phone for this
 
-> We will explore each of the Administration elements in the Administration section.
+> Note: For completing the first section of the lab, all the Desktop Administration configurations have already been done for you to experience the fully loaded desktop. To understand what was configured, you may refer to the Desktop Administration Experience in the second half of this lab.
 
-- You should have a copy of the administrator's credentials to Control Hub.
+> We will explore each of the Administration elements at a later time in the Desktop Administration section.
+
+- Copy of the Administrator credentials to Control Hub.
+- Copy of the Agent login Credentials to the Agent Desktop.
 
 2. The following items are already pre-configured:
 
 - Agent and Supervisor users are created and configured for logins.
-- You have agent's access to the Agent Desktop URL: https://desktop.wxcc-us1.cisco.com
-- Agent is part of 2 Teams.
+- You have agent's access to the Agent Desktop URL: [https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com)
+- Agent is part of 2 Teams. <attendeeID_team1> and <attendeeID_team2>
 - Webex Calling extensions are assigned to a WxCC users (agent and supervisor) to experience alternative login options.
 - Simple inbound Voice flow is configured for test calls.
 
@@ -99,7 +103,9 @@ update()
 
 ## Login Process
 
-- Login using the URL: https://desktop.wxcc-us1.cisco.com/
+- To Login to the Agent Desktop, launch Google Chrome and to the URL: [https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com)
+
+> **Note: Please Google Chrome as the browser to use the all new WebRTC Voice Option**
 
 > Tip: You can also find this link under Control Hub: [admin.webex.com](https://admin.webex.com) > Contact Center > Settings
 
@@ -115,11 +121,11 @@ update()
 
 > We will use the new feature of Desktop telephony that uses the browser as a device to directly receive calls.
 
-- Click on the Radio button that says "Desktop".
+- Notice that the voice option defaults to "Desktop".
 
-- Select one of the possible teams from the list. Agents can belong to multiple teams, but they can only receive calls of 1 specific teams
+- Select Team1 from the list. Agents can belong to multiple teams, but they can only receive calls of 1 specific teams. Your agent is configured for 2 teams.
 
-- Check the **Remember My Credentials** box to save your station credential decision for future sign-ins.
+- Check the **Remember My Credentials** box to save your credentials for future sign-ins.
 
 - Click Sign in to be connected to telephony and complete the login process.
 
@@ -128,6 +134,13 @@ update()
 > NOTE: Agents cannot access the Agent Desktop from multiple browsers or multiple tabs of the same browser window. In that case, a warning message will be displayed
 
 ![agent-desktop](/assets/images/Agent/01-image.png)
+
+> The video below shows a demo about the agent login process and the available options:
+> {: .block-tip }
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/e4b450ff-9d3f-424d-96bb-2f0988b81743" width="100%" height="100%" title="Station Login" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 **NOTE:**
 
@@ -142,13 +155,6 @@ update()
 
     - Dial Number: E.164 format phone number
       - If you check the **International Dialing Format** box, you can choose the country code based on your geographical location from the drop-down list. You can also enter a country code or country name to filter the list. Dial numbers are validated based on the country code
-
-> The video below shows a demo about the agent login process and the available options:
-> {: .block-tip }
-
-<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/e4b450ff-9d3f-424d-96bb-2f0988b81743" width="100%" height="100%" title="Station Login" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
-</div>
 
 ## Agent Desktop Interface
 
@@ -179,7 +185,63 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 
 5. **Agent Interaction History**: You can view your previous contacts of the agent across all the channels (voice, email, chat, and social) in this pane. The pane displays details for the last 24 hours. Moreover, for Voice channel you can callback to the contact phone number.
 
-6. **Navigation bar**: By default you can find the following icons here: Home, Agent Performance Statistics and Help. However, you can customize it and add some additional icons and widgets.
+6. **Navigation pane**: By default you can find the following icons here: Home, Agent Performance Statistics and Help. However, you can customize it and add some additional icons and widgets.
+
+## Explore Agent Desktop Header Actions
+
+(content + screenshot)
+
+### Explore Agent State and Idle codes
+
+(content + screenshot)
+
+### Launch the Webex App
+
+(content + screenshot)
+
+### Launch the Notification Pane
+
+(content + screenshot)
+
+### Launch the Agent Settings Pane
+
+(content + screenshot)
+
+#### Verify Profile Settings
+
+(content + screenshot)
+
+#### Verify Channel Information for Omnichannel
+
+(content + screenshot)
+
+#### Verify Notification Settings
+
+(content + screenshot)
+
+#### Switch to Dark Mode
+
+(content + screenshot)
+
+#### View Desktop Mic & Speaker Options
+
+(content + screenshot)
+
+#### Explore Shortcuts
+
+(content + screenshot)
+
+#### Download Error Logs
+
+(content + screenshot)
+
+#### Test Your Network
+
+(content + screenshot)
+
+## Explore the new Help Documentation
+
+(content + screenshot)
 
 ## Handling Calls
 
@@ -225,7 +287,9 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 
 - **Conference**: To start a three-way conference call between you, the customer and another agent. For this option, you (primary agent) must have initiated a consult call. Click Transfer to transfer the call to the consulting agent. The consulted agent can exit the call by clicking Exit Conference, and the call continues between the primary agent and the customer. Only the primary agent can end the Conference.
 
-# Basic Features
+# Basic Administration Entities
+
+The following Administration entities have been configured for you.
 
 | **Entity**           | **Name**                                                               |
 | -------------------- | ---------------------------------------------------------------------- |
@@ -248,7 +312,7 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 > Be aware that all entities that don't match with attendee IDs will be deleted
 > {: .block-warning }
 
-## Make Incoming Calls
+## Make an Incoming Call
 
 > In this section, you will will interact as an agent and test an Incoming call. Review the video of the lab section above to understand the different call handling options.
 > {: .block-tip }
@@ -410,7 +474,22 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 
 The following section and describes Desktop Administration that brought together all the features you experienced on the Agent Desktop.
 
+## Send Product Feedback
+
+Before you move onto the bonus sections, we would love to hear from you!
+Explore the product feedback option from right within the Agent Desktop.
+Please fill in the survey and help us improve the product!
+
+(content + screenshot)
+
 # BONUS: Desktop Customizations
+
+The next section covers advanced customizations elements on the Agent Desktop and showcases the HOW in terms of customizing the desktop.
+Refer to the sections to understand how the desktop layout was configured.
+
+To get a copy of the Desktop Layout used in Webex One, go to:
+
+You can open this file in any file editor.
 
 ## Basic JSON elements
 
