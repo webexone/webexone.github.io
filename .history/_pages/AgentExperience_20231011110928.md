@@ -107,9 +107,9 @@ update()
 
 > In this example, please use the specific login for your attendee ID
 
-![agent-desktop](../assets/images/agent/01-image.png)
+![agent-desktop](/assets/images/Agent/01-image.png)
 
-![agent-desktop](../assets/images/agent/01-image.png)
+![agent-desktop](/assets/images/Agent/01-image.png)
 
 - This is the station Login Screen. Agents may input the number where they need to receive incoming and outdial calls.
 
@@ -123,11 +123,11 @@ update()
 
 - Click Sign in to be connected to telephony and complete the login process.
 
-![agent-desktop](../assets/images/agent/01-image.png)
+![agent-desktop](/assets/images/Agent/01-image.png)
 
 > NOTE: Agents cannot access the Agent Desktop from multiple browsers or multiple tabs of the same browser window. In that case, a warning message will be displayed
 
-![agent-desktop](../assets/images/agent/01-image.png)
+![agent-desktop](/assets/images/Agent/01-image.png)
 
 **NOTE:**
 
@@ -165,7 +165,7 @@ update()
 </div>
 <br/>
 
-![Image1](../assets/images/agentDesktopOverview.png)
+![Image1](/assets/images/AgentDesktopOverview.png)
 
 The Agent Desktop is divided in **6 sections**. In the image above you can see a general view of the Agent Desktop and where each section is located. We explain them all shortly:
 
