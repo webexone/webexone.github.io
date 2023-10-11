@@ -4,3 +4,5 @@ _draft/
 .obsidian/
 .env
 .DS_Store
+.history
+.history/**
