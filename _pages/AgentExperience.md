@@ -512,6 +512,8 @@ Here is a schematic showing how the Agent Desktop configuraton aligns to all the
 
 The following Administration entities have been configured for you.
 
+To verify, navigate to WebexOne
+
 | **Entity**           | **Name**                                                               |
 | -------------------- | ---------------------------------------------------------------------- |
 | Agent 1              | <w class = "attendee-class">attendeeID</w>_agent1@mailinator.com       |
