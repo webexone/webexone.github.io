@@ -25,30 +25,28 @@ layout: post
 
 Welcome to the Webex Contact Center Agent Experience!
 
-In this lab we will review the overall Agent Experience and associated Administrative toggles associated with Agents on Webex Contact Center:
+Here we will look at the overall Agent Experience and associated Administrative toggles associated with Configuring Agents on Webex Contact Center.
 
-At the end of this lab, you should be able to handle calls as an agent, understand how to add onto the functionality of the Agent Desktop out of box and explore advanced extensibility available.
+This lab begins with out of box functionality of the Agent Desktop and explores advanced extensibility options and use cases for the Agent persona.
 
 ## Table of Contents
 
-| Section                                                             | Lab Type      | Dificulty Level | Estimated length |
-| ------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Agent Desktop Experience](#agent-desktop-overview)                 | Demo          | EASY            | 20 min           |
-| [Customized Agent Desktop Experience](#desktop-administration)      | Practical Lab | EASY            | 15 min           |
-| [Desktop Administration](#desktop-administration)                   | Practical Lab | EASY            | 15 min           |
-| [Bonus: Understanding Customizations & Extensions](#custom-desktop) | Practical Lab | MEDIUM          | 15 min           |
+| Topic                                                          | Type               | Dificulty | Time   |
+| -------------------------------------------------------------- | ------------------ | --------- | ------ |
+| [Agent Desktop Experience](#agent-desktop-overview)            | Demo & Walkthrough | EASY      | 20 min |
+| [Extend the Agent Desktop Experience](#desktop-administration) | Practical Lab      | EASY      | 15 min |
+| [Desktop Administration](#desktop-administration)              | Exploration        | EASY      | 15 min |
+| [BONUS: Customizations & Programmability](#custom-desktop)     | Practical Lab      | ADVANCED  | 30 min |
 
 ## Introduction
 
 ### Lab Objectives
 
-- The objective of this lab is to get an idea about the Agents user journey, to familiarize with the platform they use and to explore some of the most useful new features they offer.
+- The objective of this lab is to understand the Agent Experience on Webex Contact Center, logging into the Agent Desktop application on Webex Contact Center and exploring out of box capabilities.
+- The first section we will explore the entire Agent Desktop interface and proceeds with Inbound, Outbound and Omnichannel contact workflows.
+- In the second section, you will learn some of the extensions to the Agent Desktop, explore the widgets available both out of box and custommizations available in terms of the possibilities with Desktop Widgets and workflows.
 
-- In the first part of the lab we will focus on explaining the different parts and and possible functions of Agent Desktop interface
-
-- In the second part of the lab, you will learn some of the basic functions that a user can perform as an agent: handle Incoming calls, making outdial calls and configure some User Profile setting
-
-- In the third part of the lab we will customize Horizontal header of the platform and also add some custom widget in the Navigarion bar section.
+- The Bonus section (OPTIONAL), covers advanced extensions of the Desktop and dives deep into the layout design and programmatic extensions.
 
 ### Pre-Requisites
 
@@ -67,20 +65,17 @@ At the end of this lab, you should be able to handle calls as an agent, understa
 
 - Agent and Supervisor users are created and configured for logins.
 - You have agent's access to the Agent Desktop URL: [https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com)
-- Agent is part of 2 Teams. <attendeeID_team1> and <attendeeID_team2>
+- Agent is part of 2 Teams. (Your Attendee ID) with team1 and team2.
 - Webex Calling extensions are assigned to a WxCC users (agent and supervisor) to experience alternative login options.
-- Simple inbound Voice flow is configured for test calls.
+
+- An inbound Voice flow is configured for test calls.
 
 ### Quick Links
 
-> Control Hub: **[https://admin.webex.com](https://admin.webex.com){:target="\_blank"}**\
-> Administration Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal){:target="\_blank"}**\
+> Control Hub Administration: **[https://admin.webex.com](https://admin.webex.com){:target="\_blank"}**\
 > Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="\_blank"}**\
-> Developer Portal: **[https://developer.webex-cx.com](https://developer.webex-cx.com/){:target="\_blank"}**\
-> API Samples Git Repository: **[https://github.com/CiscoDevNet/webex-contact-center-api-samples](https://github.com/CiscoDevNet/webex-contact-center-api-samples){:target="\_blank"}**\
-> Widgets Samples Git Repository: **[https://github.com/CiscoDevNet/webex-contact-center-widget-starter/tree/master/Examples](https://github.com/CiscoDevNet/webex-contact-center-widget-starter/tree/master/Examples){:target="\_blank"}**\
 
-## Lab Section
+## Lab Configuration
 
 > Please submit the form with your Attendee ID. All configuration items in the lab guide will be renamed with that prefix.
 > {: .block-tip }
@@ -98,6 +93,26 @@ At the end of this lab, you should be able to handle calls as an agent, understa
 document.forms["attendee-form"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID" 
 update()
 </script>
+
+The following Administration entities have been configured for you:
+
+Please note, that to proceed to the next section, you will need to use the accounts shown in the top 3 areas.
+
+| **Entity**           | **Name**                                                              |
+| -------------------- | --------------------------------------------------------------------- |
+| Agent 1              | wxcclabs+agent_ID<w class = "attendee-class">attendeeID</w>@gmail.com |
+| Supervisor 1         | wxcclabs+supvr_ID<w class = "attendee-class">attendeeID</w>@gmail.com |
+| Administrator        | wxcclabs+admin_ID<w class = "attendee-class">attendeeID</w>@gmail.com |
+| Desktop Profile      | <w class = "attendee-class">attendeeID</w>\_desktopProfile            |
+| Entry Point          | <w class = "attendee-class">attendeeID</w>\_EP                        |
+| Queue                | <w class = "attendee-class">attendeeID</w>\_Q                         |
+| Team 1               | <w class = "attendee-class">attendeeID</w>\_team1                     |
+| Team 2               | <w class = "attendee-class">attendeeID</w>\_team2                     |
+| Outdial ANI          | <w class = "attendee-class">attendeeID</w>\_outdialANI                |
+| Outdial ANI Entry 1  | <w class = "attendee-class">attendeeID</w>\_outdialANIEntry1          |
+| Address Book         | <w class = "attendee-class">attendeeID</w>\_addressBook               |
+| Address Book Entry 1 | <w class = "attendee-class">attendeeID</w>\_addressBookEntry1         |
+| Multimedia Profile   | <w class = "attendee-class">attendeeID</w>\_MMP                       |
 
 # Agent Desktop Overview
 
