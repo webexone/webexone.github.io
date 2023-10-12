@@ -42,13 +42,11 @@ This lab begins with out of box functionality of the Agent Desktop and explores 
 
 ### Lab Objectives
 
-- The objective of this lab is to get an idea about the Agents user journey, to familiarize with the platform they use and to explore some of the most useful new features they offer.
+- The objective of this lab is to understand the Agent Experience on Webex Contact Center, logging into the Agent Desktop application on Webex Contact Center and exploring out of box capabilities.
+- The first section we will explore the entire Agent Desktop interface and proceeds with Inbound, Outbound and Omnichannel contact workflows.
+- In the second section, you will learn some of the extensions to the Agent Desktop, explore the widgets available both out of box and custommizations available in terms of the possibilities with Desktop Widgets and workflows.
 
-- In the first part of the lab we will focus on explaining the different parts and and possible functions of Agent Desktop interface
-
-- In the second part of the lab, you will learn some of the basic functions that a user can perform as an agent: handle Incoming calls, making outdial calls and configure some User Profile setting
-
-- In the third part of the lab we will customize Horizontal header of the platform and also add some custom widget in the Navigarion bar section.
+- The Bonus section (OPTIONAL), covers advanced extensions of the Desktop and dives deep into the layout design and programmatic extensions.
 
 ### Pre-Requisites
 
@@ -67,9 +65,10 @@ This lab begins with out of box functionality of the Agent Desktop and explores 
 
 - Agent and Supervisor users are created and configured for logins.
 - You have agent's access to the Agent Desktop URL: [https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com)
-- Agent is part of 2 Teams. <attendeeID_team1> and <attendeeID_team2>
+- Agent is part of 2 Teams. (Your Attendee ID) with team1 and team2.
 - Webex Calling extensions are assigned to a WxCC users (agent and supervisor) to experience alternative login options.
-- Simple inbound Voice flow is configured for test calls.
+
+- An inbound Voice flow is configured for test calls.
 
 ### Quick Links
 
