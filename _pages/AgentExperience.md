@@ -113,9 +113,11 @@ update()
 
 > In this example, please use the specific login for your attendee ID
 
-![agent-desktop](../assets/images/agent/01-image.png)
+<img src="../assets/images/agent/01-image.png" alt="agent-desktop" height="400" width="800"/>
+<br>
+<br>
 
-![agent-desktop](../assets/images/agent/01-image.png)
+<img src="../assets/images/agent/02-image.png" alt="agent-desktop" height="400" width="800"/>
 
 - This is the station Login Screen. Agents may input the number where they need to receive incoming and outdial calls.
 
@@ -129,18 +131,19 @@ update()
 
 - Click Sign in to be connected to telephony and complete the login process.
 
-![agent-desktop](../assets/images/agent/01-image.png)
+<img src="../assets/images/agent/03-image.png" alt="agent-desktop" height="400" width="800"/>
 
 > NOTE: Agents cannot access the Agent Desktop from multiple browsers or multiple tabs of the same browser window. In that case, a warning message will be displayed
 
-![agent-desktop](../assets/images/agent/01-image.png)
+<img src="../assets/images/agent/04-image.png" alt="agent-desktop" height="400" width="800"/>
 
 > The video below shows a demo about the agent login process and the available options:
 > {: .block-tip }
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/e4b450ff-9d3f-424d-96bb-2f0988b81743" width="100%" height="100%" title="Station Login" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+	<img src="../assets/images/agent/AgentLogin.gif"  title="Station Login" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></img>
 </div>
+<br>
 
 **NOTE:**
 
