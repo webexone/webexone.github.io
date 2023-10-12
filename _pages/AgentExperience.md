@@ -25,18 +25,18 @@ layout: post
 
 Welcome to the Webex Contact Center Agent Experience!
 
-In this lab we will review the overall Agent Experience and associated Administrative toggles associated with Agents on Webex Contact Center:
+Here we will look at the overall Agent Experience and associated Administrative toggles associated with Configuring Agents on Webex Contact Center.
 
-At the end of this lab, you should be able to handle calls as an agent, understand how to add onto the functionality of the Agent Desktop out of box and explore advanced extensibility available.
+This lab begins with out of box functionality of the Agent Desktop and explores advanced extensibility options and use cases for the Agent persona.
 
 ## Table of Contents
 
-| Section                                                             | Lab Type      | Dificulty Level | Estimated length |
-| ------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Agent Desktop Experience](#agent-desktop-overview)                 | Demo          | EASY            | 20 min           |
-| [Customized Agent Desktop Experience](#desktop-administration)      | Practical Lab | EASY            | 15 min           |
-| [Desktop Administration](#desktop-administration)                   | Practical Lab | EASY            | 15 min           |
-| [Bonus: Understanding Customizations & Extensions](#custom-desktop) | Practical Lab | MEDIUM          | 15 min           |
+| Topic                                                          | Type               | Dificulty | Time   |
+| -------------------------------------------------------------- | ------------------ | --------- | ------ |
+| [Agent Desktop Experience](#agent-desktop-overview)            | Demo & Walkthrough | EASY      | 20 min |
+| [Extend the Agent Desktop Experience](#desktop-administration) | Practical Lab      | EASY      | 15 min |
+| [Desktop Administration](#desktop-administration)              | Exploration        | EASY      | 15 min |
+| [BONUS: Customizations & Programmability](#custom-desktop)     | Practical Lab      | ADVANCED  | 30 min |
 
 ## Introduction
 
@@ -73,14 +73,10 @@ At the end of this lab, you should be able to handle calls as an agent, understa
 
 ### Quick Links
 
-> Control Hub: **[https://admin.webex.com](https://admin.webex.com){:target="\_blank"}**\
-> Administration Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal){:target="\_blank"}**\
+> Control Hub Administration: **[https://admin.webex.com](https://admin.webex.com){:target="\_blank"}**\
 > Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="\_blank"}**\
-> Developer Portal: **[https://developer.webex-cx.com](https://developer.webex-cx.com/){:target="\_blank"}**\
-> API Samples Git Repository: **[https://github.com/CiscoDevNet/webex-contact-center-api-samples](https://github.com/CiscoDevNet/webex-contact-center-api-samples){:target="\_blank"}**\
-> Widgets Samples Git Repository: **[https://github.com/CiscoDevNet/webex-contact-center-widget-starter/tree/master/Examples](https://github.com/CiscoDevNet/webex-contact-center-widget-starter/tree/master/Examples){:target="\_blank"}**\
 
-## Lab Section
+## Lab Configuration
 
 > Please submit the form with your Attendee ID. All configuration items in the lab guide will be renamed with that prefix.
 > {: .block-tip }
@@ -98,6 +94,23 @@ At the end of this lab, you should be able to handle calls as an agent, understa
 document.forms["attendee-form"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID" 
 update()
 </script>
+
+The following Administration entities have been configured for you.
+
+| **Entity**           | **Name**                                                               |
+| -------------------- | ---------------------------------------------------------------------- |
+| Agent 1              | <w class = "attendee-class">attendeeID</w>_agent1@mailinator.com       |
+| Supervisor 1         | <w class = "attendee-class">attendeeID</w>\_supervisor1@mailinator.com |
+| Desktop Profile      | <w class = "attendee-class">attendeeID</w>\_desktopProfile             |
+| Entry Point          | <w class = "attendee-class">attendeeID</w>\_EP                         |
+| Queue                | <w class = "attendee-class">attendeeID</w>\_Q                          |
+| Team 1               | <w class = "attendee-class">attendeeID</w>\_team1                      |
+| Team 2               | <w class = "attendee-class">attendeeID</w>\_team2                      |
+| Outdial ANI          | <w class = "attendee-class">attendeeID</w>\_outdialANI                 |
+| Outdial ANI Entry 1  | <w class = "attendee-class">attendeeID</w>\_outdialANIEntry1           |
+| Address Book         | <w class = "attendee-class">attendeeID</w>\_addressBook                |
+| Address Book Entry 1 | <w class = "attendee-class">attendeeID</w>\_addressBookEntry1          |
+| Multimedia Profile   | <w class = "attendee-class">attendeeID</w>\_MMP                        |
 
 # Agent Desktop Overview
 
