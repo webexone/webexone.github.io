@@ -116,6 +116,40 @@ Please note, that to proceed to the next section, you will need to use the accou
 
 # Agent Desktop Overview
 
+> Desktop multi-language support is based on the language preference settings on the browser. Currently, we support 29 languages:
+> Bulgarian, Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish, Dutch, English (UK), English (US), Finnish, French, German, Hungarian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Serbian, Slovak, Slovenian, Spanish, Swedish, and Turkish.
+> {: .block-tip }
+> <br/> > <br/>
+
+(remove this -- convert it to a GIF)
+
+> Watch the following video, where each of the sections and their main options are explained. You will get a better idea of how the Agent Desktop look like and how to use it:
+> {: .block-tip }
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/dc341488-94ab-4659-8951-4b4ba1412373" width="100%" height="100%" title="Agent Desktop Interface" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
+<br/>
+
+![Image1](/assets/images/Agent/AgentDesktopOverview.png)
+
+When you receive an active interaction, you will notice that the
+Agent Desktop is divided into **6 sections**. In the image above you can see a general view of the Agent Desktop and where each section is located.
+
+Here is an overview of the sections:
+
+1. **Task List**: When a request is routed to your queue and you are _Available_, a new request appears in your Task List pane. You must accept the requests to start communication with the customer.
+
+2. **Horizontal Header**: Basic functionalities such as: Title and logo, Agent availability state, Notification Center, Outdial and User Profile. We will explain more in detail some User Profile options in the next section of the lab.
+
+3. **Interaction Control**: When you accept a voice call (inbound or outbound), by default, the Interaction Control pane is expanded. This pane includes: customer information (CAD variables), timers (for example: connected and call on hold time) and call control buttons (Record, Hold, Transfer...).
+
+4. **Auxiliary Information**: The center pane displays details based on your selection of the contact card in the Task List panel. For Voice requests, it will display the customer contacts history. Whereas for any digital channels (email, chat or social messaging), you will see the whole conversation with the customer and you will be able to send new messages.
+
+5. **Agent Interaction History**: You can view your previous contacts of the agent across all the channels (voice, email, chat, and social) in this pane. The pane displays details for the last 24 hours. Moreover, for Voice channel you can callback to the contact phone number.
+
+6. **Navigation pane**: By default you can find the following icons here: Home, Agent Performance Statistics and Help. However, you can customize it and add some additional icons and widgets.
+
 ## Login Process
 
 - To Login to the Agent Desktop, launch Google Chrome and to the URL: [https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com)
@@ -170,27 +204,39 @@ Please note, that to proceed to the next section, you will need to use the accou
 
 ## Explore Agent Desktop Header Actions
 
-The Agent Desktop has
+The following section explores the Agent Desktop header actions.
 
 ### Explore Agent State and Idle codes
 
-(content + screenshot)
+The header section of the agent desktop contains the State change toggle where the agent can make themselves available.
+
+This also has the section where you can view the Idle codes.
+
+These Idle codes are customizable.
+
+(screenshot - GIF)
 
 ### Explore the Agent Personal Statistics
 
-(content + Screenshot)
+The Agent can access the out of box Agent Personal Statistics Reports on the left navigation screen.
+
+(screenshot - GIF)
 
 ### Launch the Webex App
 
-(content + screenshot)
+Launch webex App
+
+Send a message to the supervisor user - search for supervisor or admin user and send a message
+
+(content + screenshot - GIF)
 
 ### Launch the Notification Pane
 
-(content + screenshot)
+(content + screenshot - GIF)
 
 ### Launch the Agent Settings Pane
 
-(content + screenshot)
+(content + screenshot - GIF)
 
 #### Verify Profile Settings
 
@@ -214,7 +260,11 @@ The Agent Desktop has
 
 #### Explore Shortcuts
 
-(content + screenshot)
+(content + screenshot - GIF)
+
+Change the state from Idle to Available using the shortcut
+
+(screenshot - GIF)
 
 #### Download Error Logs
 
@@ -222,13 +272,25 @@ The Agent Desktop has
 
 #### Test Your Network
 
+This is specifically for the Desktop Voice option. Agents can also test their local network connectivity for latency and bandwidth requirements on the Agent Desktop.
+
 (content + screenshot)
 
 ## Explore the new Help Documentation
 
+The help documentation has been enhanced with Webex Help Center. Agents will now be redirected to the new Webex Help Center for online help including search.
+
 (content + screenshot)
 
-## Make an Incoming Call
+# Make an Incoming Call
+
+> In the following video you will see how to handle incoming calls and what are the different agent states:
+> {: .block-tip }
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/f5a79811-eb60-4925-b11a-a8586760a3d3" width="100%" height="100%" title="Calls Handling" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
+<br/>
 
 > In this section, you will will interact as an agent and test an Incoming call. Review the video of the lab section above to understand the different call handling options.
 > {: .block-tip }
@@ -240,7 +302,8 @@ The Agent Desktop has
   - You can also configure _Auto Wrapup and RONA timeouts_
 
 <br/>
-(screenshot)
+(screenshot - GIF)
+
 - Now open the **Management Portal** and navigate to _Provisioning > Desktop Profiles_ and edit _your Desktop Profile_:
   - In the **Collaboration** tab:
     - Set the **Buddy Teams** to **`All`**
@@ -248,7 +311,7 @@ The Agent Desktop has
 
 <br/>
 
-(screenshot)
+(screenshot - GIF)
 
 - Navigate to _Provisioning > Queue_ and edit your Queue
   - Enable **`Permit Recording, Record All Calls and Pause/Resume`**
@@ -256,8 +319,7 @@ The Agent Desktop has
   - You can also set the _Recording Pause Duration_. This is the maxiumum duration that an agent can pause the recording
 
 <br/>
-
-(screenshot)
+(screenshot - GIF)
 
 - Now place it's time to test the incoming call
   - Login in both in the **Agent Desktop** and **Webex App** with _your Agent 1_ user
@@ -267,7 +329,7 @@ The Agent Desktop has
 
 <br/>
 
-(screenshot)
+(screenshot - GIF)
 
 - Accept the call in the Webex App of _your Agent 1_
   - Check the **CAD variables** and try to edit any Global Variable
@@ -275,7 +337,7 @@ The Agent Desktop has
 
 <br/>
 
-(screenshot)
+(screenshot - GIF)
 
 - Let's play with the call interaction buttons
   - Click on **`Hold`** to pause the conversation with the end-customer and click on **`Resume`** to talk with him again
@@ -293,17 +355,7 @@ The Agent Desktop has
   - Place the call from the third calling endpoint (your personal phone for example)
   - Try **`Consult, Conference and Transfer`** functions between End Customer, Agent and Supervisor.
 
-## Handling Calls
-
-> In the following video you will see how to handle incoming calls and what are the different agent states:
-> {: .block-tip }
-
-<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/f5a79811-eb60-4925-b11a-a8586760a3d3" width="100%" height="100%" title="Calls Handling" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
-</div>
-<br/>
-
-#### Agent States:
+### Agent States:
 
 - **Available**: Indicates that you are ready to accept and respond to contact requests that are routed to you. After you sign in, you must select Available from the drop-down list to accept voice call, chat, email, and social messaging conversation requests.
 
@@ -337,67 +389,6 @@ The Agent Desktop has
 
 - **Conference**: To start a three-way conference call between you, the customer and another agent. For this option, you (primary agent) must have initiated a consult call. Click Transfer to transfer the call to the consulting agent. The consulted agent can exit the call by clicking Exit Conference, and the call continues between the primary agent and the customer. Only the primary agent can end the Conference.
 
-## Active Interaction Interface
-
-> Desktop multi-language support is based on the language preference settings on the browser. Currently, we support 29 languages:
-> Bulgarian, Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish, Dutch, English (UK), English (US), Finnish, French, German, Hungarian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Serbian, Slovak, Slovenian, Spanish, Swedish, and Turkish.
-> {: .block-tip }
-> <br/> > <br/>
-
-(remove this)
-
-> Watch the following video, where each of the sections and their main options are explained. You will get a better idea of how the Agent Desktop look like and how to use it:
-> {: .block-tip }
-
-<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/dc341488-94ab-4659-8951-4b4ba1412373" width="100%" height="100%" title="Agent Desktop Interface" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
-</div>
-<br/>
-
-![Image1](/assets/images/agentDesktopOverview.png)
-
-When you receive an active interaction, you will notice that the
-Agent Desktop is divided into **6 sections**. In the image above you can see a general view of the Agent Desktop and where each section is located.
-
-Here is an overview of the sections:
-
-1. **Task List**: When a request is routed to your queue and you are _Available_, a new request appears in your Task List pane. You must accept the requests to start communication with the customer.
-
-2. **Horizontal Header**: Basic functionalities such as: Title and logo, Agent availability state, Notification Center, Outdial and User Profile. We will explain more in detail some User Profile options in the next section of the lab.
-
-3. **Interaction Control**: When you accept a voice call (inbound or outbound), by default, the Interaction Control pane is expanded. This pane includes: customer information (CAD variables), timers (for example: connected and call on hold time) and call control buttons (Record, Hold, Transfer...).
-
-4. **Auxiliary Information**: The center pane displays details based on your selection of the contact card in the Task List panel. For Voice requests, it will display the customer contacts history. Whereas for any digital channels (email, chat or social messaging), you will see the whole conversation with the customer and you will be able to send new messages.
-
-5. **Agent Interaction History**: You can view your previous contacts of the agent across all the channels (voice, email, chat, and social) in this pane. The pane displays details for the last 24 hours. Moreover, for Voice channel you can callback to the contact phone number.
-
-6. **Navigation pane**: By default you can find the following icons here: Home, Agent Performance Statistics and Help. However, you can customize it and add some additional icons and widgets.
-
-# Basic Administration Entities
-
-The following Administration entities have been configured for you.
-
-| **Entity**           | **Name**                                                               |
-| -------------------- | ---------------------------------------------------------------------- |
-| Agent 1              | <w class = "attendee-class">attendeeID</w>_agent1@mailinator.com       |
-| Supervisor 1         | <w class = "attendee-class">attendeeID</w>\_supervisor1@mailinator.com |
-| Desktop Profile      | <w class = "attendee-class">attendeeID</w>\_desktopProfile             |
-| Entry Point          | <w class = "attendee-class">attendeeID</w>\_EP                         |
-| Queue                | <w class = "attendee-class">attendeeID</w>\_Q                          |
-| Team 1               | <w class = "attendee-class">attendeeID</w>\_team1                      |
-| Team 2               | <w class = "attendee-class">attendeeID</w>\_team2                      |
-| Outdial ANI          | <w class = "attendee-class">attendeeID</w>\_outdialANI                 |
-| Outdial ANI Entry 1  | <w class = "attendee-class">attendeeID</w>\_outdialANIEntry1           |
-| Address Book         | <w class = "attendee-class">attendeeID</w>\_addressBook                |
-| Address Book Entry 1 | <w class = "attendee-class">attendeeID</w>\_addressBookEntry1          |
-| Multimedia Profile   | <w class = "attendee-class">attendeeID</w>\_MMP                        |
-
-> **NOTE:** Please create all the tenant entities following the naming convention mentioned specified in the table above. Your attendeeID is provided in the email in the **"Attendee ID"** line.
-> {: .block-warning }
-
-> Be aware that all entities that don't match with attendee IDs will be deleted
-> {: .block-warning }
-
 ## Outdial
 
 > In this section, we will test Outdial calls using different Outdial ANIs and Address Books.
@@ -408,6 +399,8 @@ The following Administration entities have been configured for you.
 </div>
 <br/>
 
+(screenshot - GIF)
+
 - Navigate to _Management Portal > Provisioning > Outdial ANI_
   - Click on **`New Outdial ANI`**
   - Name: <w class = "attendee-class">attendeeID</w>\_outdialANI
@@ -416,6 +409,8 @@ The following Administration entities have been configured for you.
     - Number: Select your mapped DN
 
 <br/>
+
+(screenshot - GIF)
 
 - Navigate to _Management Portal > Provisioning > Address Book_
   - Click on **`New Address Book`**
@@ -427,11 +422,15 @@ The following Administration entities have been configured for you.
 
 <br/>
 
+(screenshot - GIF)
+
 - Navigate to _Management Portal > Provisioning > Desktop Profiles_
   - Search for _your Desktop Profile_ and make sure that **Outdial is enabled and `Outdial Entry Point-1` (created by the system) selected**
   - Select _your Outdial ANI_
 
 <br/>
+
+(screenshot - GIF)
 
 - Navigate to _Management Portal > Tenant > Settings_
   - See the number of the **Default Outdial ANI**
@@ -440,6 +439,8 @@ The following Administration entities have been configured for you.
 > {: .block-danger }
 
 <br/>
+
+(screenshot - GIF)
 
 - Now, login in the **Agent Desktop** with _your Agent1_ with the Webex Extension of the Agent
   - Open the Outdial on the Horizontal Header
@@ -502,6 +503,35 @@ The following Administration entities have been configured for you.
 # Verify Desktop Administration
 
 The following section and describes Desktop Administration that brought together all the features you experienced on the Agent Desktop.
+
+Here is a schematic showing how the Agent Desktop configuraton aligns to all the entities on Webex Control Hub.
+
+(screenshot)
+
+## Administration Entities
+
+The following Administration entities have been configured for you.
+
+| **Entity**           | **Name**                                                               |
+| -------------------- | ---------------------------------------------------------------------- |
+| Agent 1              | <w class = "attendee-class">attendeeID</w>_agent1@mailinator.com       |
+| Supervisor 1         | <w class = "attendee-class">attendeeID</w>\_supervisor1@mailinator.com |
+| Desktop Profile      | <w class = "attendee-class">attendeeID</w>\_desktopProfile             |
+| Entry Point          | <w class = "attendee-class">attendeeID</w>\_EP                         |
+| Queue                | <w class = "attendee-class">attendeeID</w>\_Q                          |
+| Team 1               | <w class = "attendee-class">attendeeID</w>\_team1                      |
+| Team 2               | <w class = "attendee-class">attendeeID</w>\_team2                      |
+| Outdial ANI          | <w class = "attendee-class">attendeeID</w>\_outdialANI                 |
+| Outdial ANI Entry 1  | <w class = "attendee-class">attendeeID</w>\_outdialANIEntry1           |
+| Address Book         | <w class = "attendee-class">attendeeID</w>\_addressBook                |
+| Address Book Entry 1 | <w class = "attendee-class">attendeeID</w>\_addressBookEntry1          |
+| Multimedia Profile   | <w class = "attendee-class">attendeeID</w>\_MMP                        |
+
+> **NOTE:** Please create all the tenant entities following the naming convention mentioned specified in the table above. Your attendeeID is provided in the email in the **"Attendee ID"** line.
+> {: .block-warning }
+
+> Be aware that all entities that don't match with attendee IDs will be deleted
+> {: .block-warning }
 
 ## Send Product Feedback
 
