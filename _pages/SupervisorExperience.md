@@ -59,7 +59,7 @@ In this section you will act as a supervisor and perform activities. The Supervi
 
 - In the next window, set your role as **supervisor** and your **own extension**. Please note that you can set your role either as **supervisor** or **agent and supervisor**. We will select this second option at the end of this lab.
 
-![Lab_4_ESD](/assets/images/Lab4_ESD_11.png)
+![Lab_4_ESD](/assets/images/Supervisor/DC_Lab_4_Supervisor_Config_11.png)
 
 - When you sign in to the **Supervisor Desktop**, the appearance depends on how the Webex Contact Center administrator has configured the desktop layout. The **Supervisor Desktop** display size must be greater than 500 x 500 pixels (width x height). You must set your web browser zoom to 100% for the best experience with the Supervisor Desktop. With this lab layout you get :
 
@@ -72,11 +72,11 @@ Bulgarian, Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish, 
 
 - **Home Page** :
 
-![Lab_4_ESD](/assets/images/Lab4_ESD_2.png)
+![Lab_4_ESD](/assets/images/Supervisor/DC_Lab_4_Supervisor_Config_1.png)
 
 - click on the third menu option, you now see the **Team Performance Details** page where your agents activities are displayed : status, call duration, team, ... In the last column, you are presented two options : **chat** or **monitor**. The monitoring option is obvisously only enabled when an agent is in conversation with a customer otherwise the icon will be greyed.
 
-![Lab_4_ESD](/assets/images/Lab4_ESD_3.png)
+![Lab_4_ESD](/assets/images/Supervisor/DC_Lab_4_Supervisor_Config_3.png)
 
 - The columns displayed are the following
 
@@ -98,7 +98,7 @@ Bulgarian, Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish, 
 
 - you can customize this view to show / hide columns or group information at your convenience.
 
-![Lab_4_ESD](/assets/images/Lab4_ESD_32.png)
+![Lab_4_ESD](/assets/images/Supervisor/DC_Lab_4_Supervisor_Config_32.png)
 
 #### **Chat with your agents**
 
@@ -106,59 +106,59 @@ Collaboration between agents and supervisors can help your Contact Center to be 
 
 - Click on the **Send Message** button
 
-![Lab_4_ESD](/assets/images/Lab4_ESD_4_chat.png)
+![Lab_4_ESD](/assets/images/Supervisor/DC_Lab_4_Supervisor_Config_4_chat.png)
 
 - Fill the chat window with a message to send to your agent
 
-![Lab_4_ESD](/assets/images/Lab4_ESD_5_chat.png)
+![Lab_4_ESD](/assets/images/Supervisor/DC_Lab_4_Supervisor_Config_5_chat.png)
 
 - On the agent side, observe the message notification received
 
-![Lab_4_ESD](/assets/images/Lab4_ESD_6_chat.png)
+![Lab_4_ESD](/assets/images/Supervisor/DC_Lab_4_Supervisor_Config_6_chat.png)
 
 - If, as an agent, you want to answer to the supervisor, your will need to click on the **Webex logo** to open the Webex app embedded in the **Agent Desktop**. You can then reply to the supervisor directly.
 
-![Lab_4_ESD](/assets/images/Lab4_ESD_7_chat.png)
+![Lab_4_ESD](/assets/images/Supervisor/DC_Lab_4_Supervisor_Config_7_chat.png)
 
 - On the supervisor side, observe the message notification received
 
-![Lab_4_ESD](/assets/images/Lab4_ESD_8_chat.png)
+![Lab_4_ESD](/assets/images/Supervisor/DC_Lab_4_Supervisor_Config_8_chat.png)
 
 #### **Monitor calls**
 
 - As a supervisor, the **Team Performance Details** page allows you to see all connected agents and decide to monitor calls by clicking on the **Review and Monitor** icon.
 
-![Lab_4_ESD](/assets/images/Lab4_ESD_9_monitor.png)
+![Lab_4_ESD](/assets/images/Supervisor/DC_Lab_4_Supervisor_Config_9_monitor.png)
 
 - The following popup will be displayed. Click on **Start Monitoring**. Please note a supervisor can monitor other call types such as callbacks, outdial calls, outbound preview campaign calls.
 
-![Lab_4_ESD](/assets/images/Lab4_ESD_10_monitor.png)
+![Lab_4_ESD](/assets/images/Supervisor/DC_Lab_4_Supervisor_Config_10_monitor.png)
 
 - In your **Supervisor Desktop**, an incoming popover window will be displayed and your softphone will ring as Webex Contact Center is now trying to reach you. You recognize the agent you want to monitor and other call variables are displayed. The Flow configuration defines variables to display on this popover (max 6). Accept the call on your supervisor softphone.
 
-![Lab_4_ESD](/assets/images/Lab4_ESD_11_monitor.png)
+![Lab_4_ESD](/assets/images/Supervisor/DC_Lab_4_Supervisor_Config_11_monitor.png)
 
 - As a supervisor, the call you are now monitoring is displayed in your desktop with agent and customer details of which the call variables so you are aware of the context of the call. You can view previous communications with a customer across all channels (voice, email, chat, and social) in the **Contact History** pane. The pane displays details for the last 24 hours.
 
-![Lab_4_ESD](/assets/images/Lab4_ESD_12_monitor.png)
+![Lab_4_ESD](/assets/images/Supervisor/DC_Lab_4_Supervisor_Config_12_monitor.png)
 
 - You can pause the monitoring and start is again if you will
 
-![Lab_4_ESD](/assets/images/Lab4_ESD_13_monitor.png)
+![Lab_4_ESD](/assets/images/Supervisor/DC_Lab_4_Supervisor_Config_13_monitor.png)
 
 #### **Particular case when a supervisor is also an agent**
 
 - When you sign in to the Supervisor Desktop, you can - depending or your team assignement - choose either the supervisor role or supervisor AND agent role.
 
-![Lab_4_ESD](/assets/images/Lab4_ESD_14_monitor.png)
+![Lab_4_ESD](/assets/images/Supervisor/DC_Lab_4_Supervisor_Config_14_monitor.png)
 
 - In the case, the supervisor experience is a bit different as your agent status appears in the header section of the Desktop.
 
-![Lab_4_ESD](/assets/images/Lab4_ESD_15_monitor.png)
+![Lab_4_ESD](/assets/images/Supervisor/DC_Lab_4_Supervisor_Config_15_monitor.png)
 
 - If, as a supervisor, you chose to monitor a call, your status is set to **Engaged** and you cannot take other calls as an agent.
 
-![Lab_4_ESD](/assets/images/Lab4_ESD_16_monitor.png)
+![Lab_4_ESD](/assets/images/Supervisor/DC_Lab_4_Supervisor_Config_16_monitor.png)
 
 # Supervisor Administration
 
@@ -167,43 +167,43 @@ Collaboration between agents and supervisors can help your Contact Center to be 
   - **_supervisor_** section is used when the user signs in to supervisor desktop with **_Supervisor_** role.
   - **_supervisorAdmin_** section is used when the user signs in to supervisor desktop with **_Supervisor and Agent_** role.
 
-![Lab_4_WebexCC_Config_1](/assets/images/DC_Lab_4_Supervisor_WebexCC_1.png)
+![Lab_4_WebexCC_Config_1](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_1.png)
 
 - Go to **_Provisioning_** -> **_Desktop Layout_** and click on **_New Layout_**.
 
-![Lab_4_WebexCC_Config_2](/assets/images/DC_Lab_4_Supervisor_WebexCC_2.png)
+![Lab_4_WebexCC_Config_2](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_2.png)
 
 - Provide **_Name_**, press **_Upload_** button and select JSON layout file downloaded above. After the file is uploaded check and make sure the validation is completed successfully and save desktop layout.
 
-![Lab_4_WebexCC_Config_3](/assets/images/DC_Lab_4_Supervisor_WebexCC_3.png)
+![Lab_4_WebexCC_Config_3](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_3.png)
 
 - Go to **_Provisioning_** -> **_Teams_** and click on **_New Team_**.
 
-![Lab_4_WebexCC_Config_4](/assets/images/DC_Lab_4_Supervisor_WebexCC_4.png)
+![Lab_4_WebexCC_Config_4](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_4.png)
 
 - Choose proper **_Site_** from drop-down list according to the lab guide, provide **_Name_**, select **_Desktop Layout_** for supervisor created at the previous step and save the team.
 
-![Lab_4_WebexCC_Config_5](/assets/images/DC_Lab_4_Supervisor_WebexCC_5.png)
+![Lab_4_WebexCC_Config_5](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_5.png)
 
 - Go to **_Provisioning_** -> **_User Profiles_**, find default **_Supervisor Profile_**, click on **_..._** button next to it, then on **_Copy_**.
 
-![Lab_4_WebexCC_Config_6](/assets/images/DC_Lab_4_Supervisor_WebexCC_6.png)
+![Lab_4_WebexCC_Config_6](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_6.png)
 
 - Provide proper user profile name and go to **_Module Settings_** tab.
 
-![Lab_4_WebexCC_Config_7](/assets/images/DC_Lab_4_Supervisor_WebexCC_7.png)
+![Lab_4_WebexCC_Config_7](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_7.png)
 
 - Select **_Module Access_** as **_Specific_**. Check and make sure **_Send Messages_** and **_Mid-Call Monitor_** capabilities are enabled.
 
-![Lab_4_WebexCC_Config_8](/assets/images/DC_Lab_4_Supervisor_WebexCC_8.png)
+![Lab_4_WebexCC_Config_8](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_8.png)
 
 - Scroll to the bottom of the page and save supervisor profile.
 
-![Lab_4_WebexCC_Config_9](/assets/images/DC_Lab_4_Supervisor_WebexCC_9.png)
+![Lab_4_WebexCC_Config_9](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_9.png)
 
 - Go to **Provisioning\*** -> **_Users_**, find your supervisor user, click on **_..._** button next to it, then on **_Edit_**.
 
-![Lab_4_WebexCC_Config_10](/assets/images/DC_Lab_4_Supervisor_WebexCC_10.png)
+![Lab_4_WebexCC_Config_10](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_10.png)
 
 - Set the following parameters and save changes:
 
@@ -216,34 +216,34 @@ Collaboration between agents and supervisors can help your Contact Center to be 
 | Agent Profile          | Select the default one - **_Agent-Profile_**                   |
 | Multimedia Profile     | Select the default one - **_Default_Multimedia_Profile_**      |
 
-![Lab_4_WebexCC_Config_11](/assets/images/DC_Lab_4_Supervisor_WebexCC_11.png)
+![Lab_4_WebexCC_Config_11](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_11.png)
 
 # Supervisor Licensing
 
 - Login to Control Hub under organization admin account.
 - Go to **_Users_**, click on supervisor's account, scroll dow to **_Licenses_** section and press **_Edit Licenses_** button.
 
-![Lab_4_Supervisor_Config_1](/assets/images/DC_Lab_4_Supervisor_Config_1.png)
+![Lab_4_Supervisor_Config_1](/assets/images/Supervisor/DC_Lab_4_Supervisor_Config_1.png)
 
 - Press **_Edit Licenses_** button on **_Edit services_** page.
 
-![Lab_4_Supervisor_Config_2](/assets/images/DC_Lab_4_Supervisor_Config_2.png)
+![Lab_4_Supervisor_Config_2](/assets/images/Supervisor/DC_Lab_4_Supervisor_Config_2.png)
 
 - Go to **_Contact Center_** tab, tick **_Licenses Agent_** checkbox and assign **_Premium Agent - Supervisor Role_** license. Then save changes.
 
-![Lab_4_Supervisor_Config_3](/assets/images/DC_Lab_4_Supervisor_Config_3.png)
+![Lab_4_Supervisor_Config_3](/assets/images/Supervisor/DC_Lab_4_Supervisor_Config_3.png)
 
 - Check and make sure supervisor license has been assigned. Then click on **_Close_** button to return to the user settings.
 
-![Lab_4_Supervisor_Config_4](/assets/images/DC_Lab_4_Supervisor_Config_4.png)
+![Lab_4_Supervisor_Config_4](/assets/images/Supervisor/DC_Lab_4_Supervisor_Config_4.png)
 
 - Check and make sure supervisor license is displayed in **_Licenses_** section of user seetings on Control Hub.
 
-![Lab_4_Supervisor_Config_5](/assets/images/DC_Lab_4_Supervisor_Config_5.png)
+![Lab_4_Supervisor_Config_5](/assets/images/Supervisor/DC_Lab_4_Supervisor_Config_5.png)
 
 - Go to **_Contact Center_** -> **_Settings_** and press **_Synchronize Users_** button to sync all changes from Control Hub to Webex CC Management Portal.
 
-![Lab_4_Supervisor_Config_6](/assets/images/DC_Lab_4_Supervisor_Config_6.png)
+![Lab_4_Supervisor_Config_6](/assets/images/Supervisor/DC_Lab_4_Supervisor_Config_6.png)
 
 ---
 
