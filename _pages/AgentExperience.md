@@ -115,7 +115,6 @@ update()
 
 <img src="../assets/images/agent/01-image.png" alt="agent-desktop" height="400" width="800"/>
 <br>
-<br>
 
 <img src="../assets/images/agent/02-image.png" alt="agent-desktop" height="400" width="800"/>
 
@@ -138,12 +137,12 @@ update()
 <img src="../assets/images/agent/04-image.png" alt="agent-desktop" height="400" width="800"/>
 
 > The video below shows a demo about the agent login process and the available options:
-> {: .block-tip }
+
+<br>
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<img src="../assets/images/agent/AgentLogin.gif"  title="Station Login" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></img>
+	<img src="../assets/images/agent/AgentLogin.gif"  title="Station Login" border="1" style="position:absolute; top:0; left: 0;border-radius: 20px"></img>
 </div>
-<br>
 
 **NOTE:**
 
