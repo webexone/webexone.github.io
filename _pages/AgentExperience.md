@@ -95,22 +95,25 @@ document.forms["attendee-form"][1].value = localStorage.getItem("attendeeID") ||
 update()
 </script>
 
-The following Administration entities have been configured for you.
+The following Administration entities have been configured for you:
 
-| **Entity**           | **Name**                                                               |
-| -------------------- | ---------------------------------------------------------------------- |
-| Agent 1              | <w class = "attendee-class">attendeeID</w>_agent1@mailinator.com       |
-| Supervisor 1         | <w class = "attendee-class">attendeeID</w>\_supervisor1@mailinator.com |
-| Desktop Profile      | <w class = "attendee-class">attendeeID</w>\_desktopProfile             |
-| Entry Point          | <w class = "attendee-class">attendeeID</w>\_EP                         |
-| Queue                | <w class = "attendee-class">attendeeID</w>\_Q                          |
-| Team 1               | <w class = "attendee-class">attendeeID</w>\_team1                      |
-| Team 2               | <w class = "attendee-class">attendeeID</w>\_team2                      |
-| Outdial ANI          | <w class = "attendee-class">attendeeID</w>\_outdialANI                 |
-| Outdial ANI Entry 1  | <w class = "attendee-class">attendeeID</w>\_outdialANIEntry1           |
-| Address Book         | <w class = "attendee-class">attendeeID</w>\_addressBook                |
-| Address Book Entry 1 | <w class = "attendee-class">attendeeID</w>\_addressBookEntry1          |
-| Multimedia Profile   | <w class = "attendee-class">attendeeID</w>\_MMP                        |
+Please note, that to proceed to the next section, you will need to use the accounts shown in the top 3 areas.
+
+| **Entity**           | **Name**                                                              |
+| -------------------- | --------------------------------------------------------------------- |
+| Agent 1              | wxcclabs+agent_ID<w class = "attendee-class">attendeeID</w>@gmail.com |
+| Supervisor 1         | wxcclabs+supvr_ID<w class = "attendee-class">attendeeID</w>@gmail.com |
+| Administrator        | wxcclabs+admin_ID<w class = "attendee-class">attendeeID</w>@gmail.com |
+| Desktop Profile      | <w class = "attendee-class">attendeeID</w>\_desktopProfile            |
+| Entry Point          | <w class = "attendee-class">attendeeID</w>\_EP                        |
+| Queue                | <w class = "attendee-class">attendeeID</w>\_Q                         |
+| Team 1               | <w class = "attendee-class">attendeeID</w>\_team1                     |
+| Team 2               | <w class = "attendee-class">attendeeID</w>\_team2                     |
+| Outdial ANI          | <w class = "attendee-class">attendeeID</w>\_outdialANI                |
+| Outdial ANI Entry 1  | <w class = "attendee-class">attendeeID</w>\_outdialANIEntry1          |
+| Address Book         | <w class = "attendee-class">attendeeID</w>\_addressBook               |
+| Address Book Entry 1 | <w class = "attendee-class">attendeeID</w>\_addressBookEntry1         |
+| Multimedia Profile   | <w class = "attendee-class">attendeeID</w>\_MMP                       |
 
 # Agent Desktop Overview
 
