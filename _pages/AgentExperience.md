@@ -113,10 +113,9 @@ update()
 
 > In this example, please use the specific login for your attendee ID
 
-<img src="../assets/images/agent/01-image.png" alt="agent-desktop" height="400" width="800"/>
-<br>
+![agent-desktop](/assets/images/agent/01-image.png)
 
-<img src="../assets/images/agent/02-image.png" alt="agent-desktop" height="400" width="800"/>
+![agent-desktop](/assets/images/agent/02-image.png)
 
 - This is the station Login Screen. Agents may input the number where they need to receive incoming and outdial calls.
 
@@ -130,19 +129,15 @@ update()
 
 - Click Sign in to be connected to telephony and complete the login process.
 
-<img src="../assets/images/agent/03-image.png" alt="agent-desktop" height="400" width="800"/>
+![agent-desktop](/assets/images/agent/03-image.png)
 
 > NOTE: Agents cannot access the Agent Desktop from multiple browsers or multiple tabs of the same browser window. In that case, a warning message will be displayed
 
-<img src="../assets/images/agent/04-image.png" alt="agent-desktop" height="400" width="800"/>
+![agent-desktop](/assets/images/agent/04-image.png)
 
 > The video below shows a demo about the agent login process and the available options:
 
-<br>
-
-<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<img src="../assets/images/agent/AgentLogin.gif"  title="Station Login" border="1" style="position:absolute; top:0; left: 0;border-radius: 20px"></img>
-</div>
+![agent-desktop](/assets/images/agent/AgentLogin.gif)
 
 **NOTE:**
 
@@ -173,7 +168,7 @@ update()
 </div>
 <br/>
 
-![Image1](../assets/images/agentDesktopOverview.png)
+![Image1](/assets/images/agentDesktopOverview.png)
 
 The Agent Desktop is divided in **6 sections**. In the image above you can see a general view of the Agent Desktop and where each section is located. We explain them all shortly:
 
@@ -721,4 +716,4 @@ Below, you will find a breakdown of all possible data and type definitions that 
 
 <p style="text-align:center"><strong>Congratulations, you have completed the Agent Experience lab! Please proceed to the <a href="https://webexone.github.io/pages/SupervisorExperience/">Supervisor Experience Lab.</a></strong></p>
 		
-<p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>
+<p style="text-align:center;">![agent-desktop](/assets/gitbook/images/webex.png)</p>
