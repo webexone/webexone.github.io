@@ -168,44 +168,17 @@ Please note, that to proceed to the next section, you will need to use the accou
     - Dial Number: E.164 format phone number
       - If you check the **International Dialing Format** box, you can choose the country code based on your geographical location from the drop-down list. You can also enter a country code or country name to filter the list. Dial numbers are validated based on the country code
 
-## Agent Desktop Interface
-
-> Desktop multi-language support is based on the language preference settings on the browser. Currently, we support 29 languages:
-> Bulgarian, Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish, Dutch, English (UK), English (US), Finnish, French, German, Hungarian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Serbian, Slovak, Slovenian, Spanish, Swedish, and Turkish.
-> {: .block-tip }
-> <br/> > <br/>
-
-> Watch the following video, where each of the sections and their main options are explained. You will get a better idea of how the Agent Desktop look like and how to use it:
-> {: .block-tip }
-
-<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/dc341488-94ab-4659-8951-4b4ba1412373" width="100%" height="100%" title="Agent Desktop Interface" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
-</div>
-<br/>
-
-![Image1](/assets/images/agentDesktopOverview.png)
-
-The Agent Desktop is divided in **6 sections**. In the image above you can see a general view of the Agent Desktop and where each section is located. We explain them all shortly:
-
-1. **Task List**: When a request is routed to your queue and you are _Available_, a new request appears in your Task List pane. You must accept the requests to start communication with the customer.
-
-2. **Horizontal Header**: Basic functionalities such as: Title and logo, Agent availability state, Notification Center, Outdial and User Profile. We will explain more in detail some User Profile options in the next section of the lab.
-
-3. **Interaction Control**: When you accept a voice call (inbound or outbound), by default, the Interaction Control pane is expanded. This pane includes: customer information (CAD variables), timers (for example: connected and call on hold time) and call control buttons (Record, Hold, Transfer...).
-
-4. **Auxiliary Information**: The center pane displays details based on your selection of the contact card in the Task List panel. For Voice requests, it will display the customer contacts history. Whereas for any digital channels (email, chat or social messaging), you will see the whole conversation with the customer and you will be able to send new messages.
-
-5. **Agent Interaction History**: You can view your previous contacts of the agent across all the channels (voice, email, chat, and social) in this pane. The pane displays details for the last 24 hours. Moreover, for Voice channel you can callback to the contact phone number.
-
-6. **Navigation pane**: By default you can find the following icons here: Home, Agent Performance Statistics and Help. However, you can customize it and add some additional icons and widgets.
-
 ## Explore Agent Desktop Header Actions
 
-(content + screenshot)
+The Agent Desktop has
 
 ### Explore Agent State and Idle codes
 
 (content + screenshot)
+
+### Explore the Agent Personal Statistics
+
+(content + Screenshot)
 
 ### Launch the Webex App
 
@@ -255,6 +228,71 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 
 (content + screenshot)
 
+## Make an Incoming Call
+
+> In this section, you will will interact as an agent and test an Incoming call. Review the video of the lab section above to understand the different call handling options.
+> {: .block-tip }
+
+- In order to test properly an incoming call, first we need to make sure that we have all the call handling options enabled
+
+- Login with your administrator user in the **Control Hub** and navigate to _Services > Contact Center > Settings > Desktop_
+  - Make sure that **`End Call`** and **`End Consult`** are enabled
+  - You can also configure _Auto Wrapup and RONA timeouts_
+
+<br/>
+(screenshot)
+- Now open the **Management Portal** and navigate to _Provisioning > Desktop Profiles_ and edit _your Desktop Profile_:
+  - In the **Collaboration** tab:
+    - Set the **Buddy Teams** to **`All`**
+    - Enable **`Consult to Queue`**
+
+<br/>
+
+(screenshot)
+
+- Navigate to _Provisioning > Queue_ and edit your Queue
+  - Enable **`Permit Recording, Record All Calls and Pause/Resume`**
+    - Make sure that these settings are also enabled at tenant level
+  - You can also set the _Recording Pause Duration_. This is the maxiumum duration that an agent can pause the recording
+
+<br/>
+
+(screenshot)
+
+- Now place it's time to test the incoming call
+  - Login in both in the **Agent Desktop** and **Webex App** with _your Agent 1_ user
+  - Input the corresponding Webex App Extension in the Agent Desktop Station Login (you can check this info in the Users module of Control Hub)
+  - Move to **`Available`** state
+  - Place an incoming call to the DN mapped to your EP (You should have mapped your EP in Lab 2)
+
+<br/>
+
+(screenshot)
+
+- Accept the call in the Webex App of _your Agent 1_
+  - Check the **CAD variables** and try to edit any Global Variable
+  - Change to **`Engage - Idle`**. This way you will not receive any other digital channel requests
+
+<br/>
+
+(screenshot)
+
+- Let's play with the call interaction buttons
+  - Click on **`Hold`** to pause the conversation with the end-customer and click on **`Resume`** to talk with him again
+  - Click on **`Pause Recording`**, say some personal infor and click again on **`Resume`** to continue the recording
+  - Click on **`Transfer`** and select the **`Welcome_EP`**
+    - End-customer be redirected to a common EP already created
+  - **End** the call (this can be done from customer or agent perspective) and select any **Wrap-up code**
+
+> For this part, you will need a third calling device for interacting as aSupervisor
+> {: .block-warning }
+> <br/>
+
+- Now, using a different browser, login in the **Agent Desktop** with _your Supervisor_ user and move to **`Available`** status
+  - In a separate device (you mobile phone for example), login in Webex App with your _Supervisor_ user
+  - Place the call from the third calling endpoint (your personal phone for example)
+  - Try **`Consult, Conference and Transfer`** functions between End Customer, Agent and Supervisor.
+
 ## Handling Calls
 
 > In the following video you will see how to handle incoming calls and what are the different agent states:
@@ -299,6 +337,42 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 
 - **Conference**: To start a three-way conference call between you, the customer and another agent. For this option, you (primary agent) must have initiated a consult call. Click Transfer to transfer the call to the consulting agent. The consulted agent can exit the call by clicking Exit Conference, and the call continues between the primary agent and the customer. Only the primary agent can end the Conference.
 
+## Active Interaction Interface
+
+> Desktop multi-language support is based on the language preference settings on the browser. Currently, we support 29 languages:
+> Bulgarian, Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish, Dutch, English (UK), English (US), Finnish, French, German, Hungarian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Serbian, Slovak, Slovenian, Spanish, Swedish, and Turkish.
+> {: .block-tip }
+> <br/> > <br/>
+
+(remove this)
+
+> Watch the following video, where each of the sections and their main options are explained. You will get a better idea of how the Agent Desktop look like and how to use it:
+> {: .block-tip }
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/dc341488-94ab-4659-8951-4b4ba1412373" width="100%" height="100%" title="Agent Desktop Interface" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
+<br/>
+
+![Image1](/assets/images/agentDesktopOverview.png)
+
+When you receive an active interaction, you will notice that the
+Agent Desktop is divided into **6 sections**. In the image above you can see a general view of the Agent Desktop and where each section is located.
+
+Here is an overview of the sections:
+
+1. **Task List**: When a request is routed to your queue and you are _Available_, a new request appears in your Task List pane. You must accept the requests to start communication with the customer.
+
+2. **Horizontal Header**: Basic functionalities such as: Title and logo, Agent availability state, Notification Center, Outdial and User Profile. We will explain more in detail some User Profile options in the next section of the lab.
+
+3. **Interaction Control**: When you accept a voice call (inbound or outbound), by default, the Interaction Control pane is expanded. This pane includes: customer information (CAD variables), timers (for example: connected and call on hold time) and call control buttons (Record, Hold, Transfer...).
+
+4. **Auxiliary Information**: The center pane displays details based on your selection of the contact card in the Task List panel. For Voice requests, it will display the customer contacts history. Whereas for any digital channels (email, chat or social messaging), you will see the whole conversation with the customer and you will be able to send new messages.
+
+5. **Agent Interaction History**: You can view your previous contacts of the agent across all the channels (voice, email, chat, and social) in this pane. The pane displays details for the last 24 hours. Moreover, for Voice channel you can callback to the contact phone number.
+
+6. **Navigation pane**: By default you can find the following icons here: Home, Agent Performance Statistics and Help. However, you can customize it and add some additional icons and widgets.
+
 # Basic Administration Entities
 
 The following Administration entities have been configured for you.
@@ -323,105 +397,6 @@ The following Administration entities have been configured for you.
 
 > Be aware that all entities that don't match with attendee IDs will be deleted
 > {: .block-warning }
-
-## Make an Incoming Call
-
-> In this section, you will will interact as an agent and test an Incoming call. Review the video of the lab section above to understand the different call handling options.
-> {: .block-tip }
-
-- In order to test properly an incoming call, first we need to make sure that we have all the call handling options enabled
-
-- Login with your administrator user in the **Control Hub** and navigate to _Services > Contact Center > Settings > Desktop_
-  - Make sure that **`End Call`** and **`End Consult`** are enabled
-  - You can also configure _Auto Wrapup and RONA timeouts_
-
-<br/>
-
-- Now open the **Management Portal** and navigate to _Provisioning > Desktop Profiles_ and edit _your Desktop Profile_:
-  - In the **Collaboration** tab:
-    - Set the **Buddy Teams** to **`All`**
-    - Enable **`Consult to Queue`**
-
-<br/>
-
-- Navigate to _Provisioning > Queue_ and edit your Queue
-  - Enable **`Permit Recording, Record All Calls and Pause/Resume`**
-    - Make sure that these settings are also enabled at tenant level
-  - You can also set the _Recording Pause Duration_. This is the maxiumum duration that an agent can pause the recording
-
-<br/>
-
-- Now place it's time to test the incoming call
-  - Login in both in the **Agent Desktop** and **Webex App** with _your Agent 1_ user
-  - Input the corresponding Webex App Extension in the Agent Desktop Station Login (you can check this info in the Users module of Control Hub)
-  - Move to **`Available`** state
-  - Place an incoming call to the DN mapped to your EP (You should have mapped your EP in Lab 2)
-
-<br/>
-
-- Accept the call in the Webex App of _your Agent 1_
-  - Check the **CAD variables** and try to edit any Global Variable
-  - Change to **`Engage - Idle`**. This way you will not receive any other digital channel requests
-
-<br/>
-
-- Let's play with the call interaction buttons
-  - Click on **`Hold`** to pause the conversation with the end-customer and click on **`Resume`** to talk with him again
-  - Click on **`Pause Recording`**, say some personal infor and click again on **`Resume`** to continue the recording
-  - Click on **`Transfer`** and select the **`Welcome_EP`**
-    - End-customer be redirected to a common EP already created
-  - **End** the call (this can be done from customer or agent perspective) and select any **Wrap-up code**
-
-> For this part, you will need a third calling device for interacting as aSupervisor
-> {: .block-warning }
-> <br/>
-
-- Now, using a different browser, login in the **Agent Desktop** with _your Supervisor_ user and move to **`Available`** status
-  - In a separate device (you mobile phone for example), login in Webex App with your _Supervisor_ user
-  - Place the call from the third calling endpoint (your personal phone for example)
-  - Try **`Consult, Conference and Transfer`** functions between End Customer, Agent and Supervisor.
-
-## Exploring User Profile
-
-> In this section, we will explore what are the available options and settings under the User Profile.
-> {: .block-tip }
-
-<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/149fe8d1-c27e-4c7e-a0b9-af072487c543" width="100%" height="100%" title="User Profile" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
-</div>
-<br/>
-
-- First, we will see how to change from one team to another one
-  - In order to notice some difference when we make the Team change, we need to modify some setting from _your Team 2_ (created in Lab 1) . For that, we will assign a different **Multimedia Profile** to that team.
-
-<br/>
-
-- Navigate to the _Management Portal > Provisioning > Teams_
-  - Find _your Team 2_ and click on `Edit`
-  - Check _your User settings_ and make sure that there is not **Multimedia Profile** assigned. **User settings have preference over Team setting**, so the Multimedia Profile at User level will be applied.
-  - Change the **Multimedia Profile** of the team from <w class = "attendee-class">attendeeID</w>\_MMP`to`Default_Telephony_Profile
-
-<br/>
-
-- Now, login in the **Agent Desktop** selecting <w class = "attendee-class">attendeeID</w>\_team1
-  - Open _your User Profile_ and check that the **Channel Capacity**
-  - Now, click on _your Team_, you will see a dropdown list with other available Teams
-  - Click on <w class = "attendee-class">attendeeID</w>\_team2
-  - **`Save Team Selection`** to confirm that you want to change a team
-
-<br/>
-
-- You will see notification appeared in the **Notification Center**
-  - You can change the **Notification settings** to disable the incoming notifications or the sound
-  - Mark the notification as `Read`
-  - Go to the **User Profile** and check the **Channel Capacity** again, it's different
-
-<br/>
-
-- Test some additional options:
-  - **Switch to Dark Mode**
-  - **Keyboard shortcuts**
-  - **Download error log**
 
 ## Outdial
 
@@ -481,6 +456,48 @@ The following Administration entities have been configured for you.
   - You will see the the list of entries of <w class = "attendee-class">attendeeID</w>\_addressBook configured before
   - You can search by entry name or DN
   - Try to call any of the numbers in the list
+
+## Exploring User Profile
+
+> In this section, we will explore what are the available options and settings under the User Profile.
+> {: .block-tip }
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/149fe8d1-c27e-4c7e-a0b9-af072487c543" width="100%" height="100%" title="User Profile" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
+<br/>
+
+- First, we will see how to change from one team to another one
+  - In order to notice some difference when we make the Team change, we need to modify some setting from _your Team 2_ (created in Lab 1) . For that, we will assign a different **Multimedia Profile** to that team.
+
+<br/>
+
+- Navigate to the _Management Portal > Provisioning > Teams_
+  - Find _your Team 2_ and click on `Edit`
+  - Check _your User settings_ and make sure that there is not **Multimedia Profile** assigned. **User settings have preference over Team setting**, so the Multimedia Profile at User level will be applied.
+  - Change the **Multimedia Profile** of the team from <w class = "attendee-class">attendeeID</w>\_MMP`to`Default_Telephony_Profile
+
+<br/>
+
+- Now, login in the **Agent Desktop** selecting <w class = "attendee-class">attendeeID</w>\_team1
+  - Open _your User Profile_ and check that the **Channel Capacity**
+  - Now, click on _your Team_, you will see a dropdown list with other available Teams
+  - Click on <w class = "attendee-class">attendeeID</w>\_team2
+  - **`Save Team Selection`** to confirm that you want to change a team
+
+<br/>
+
+- You will see notification appeared in the **Notification Center**
+  - You can change the **Notification settings** to disable the incoming notifications or the sound
+  - Mark the notification as `Read`
+  - Go to the **User Profile** and check the **Channel Capacity** again, it's different
+
+<br/>
+
+- Test some additional options:
+  - **Switch to Dark Mode**
+  - **Keyboard shortcuts**
+  - **Download error log**
 
 # Verify Desktop Administration
 
