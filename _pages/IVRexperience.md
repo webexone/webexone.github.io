@@ -681,12 +681,9 @@ update()
     > ---  
 
 ---
----
-title: (BONUS) Experience Management
-layout: post
----
 
-## Table of Contents 
+
+## Bonus - Experience Management
 
 | Topic                                                                                    | Lab Type      | Difficulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
