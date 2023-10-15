@@ -1,7 +1,7 @@
 ---
-title: Lab 1 - Admin Experience
-author: Dmitry Bokatov
-date: 2022-01-02
+title: Admin Experience
+author: Bhushan Suresh
+date: 2023-10-15
 layout: post
 ---
 ```
