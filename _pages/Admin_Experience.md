@@ -63,7 +63,12 @@ You can do the tasks from the lab guide either on the **Lab Tenant** (you need t
 
 > The overall aim of admin consolidation is to provide a single pane of glass (SPOG) experience for administrators so that admins need not have frequent context switch by having to traverse different applications. The following video outlines the new features of a new admin experience. This introduces, the new left navigation panel for Webex Contact Center in Control Hub as well as other configuration settings which were migrated from the Management Portal.
 
-![Admin Experience](/assets/images/AE_image1.png)
+
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/8c40da99-5967-465a-8efb-092949d76c73" width="100%" height="100%" title="Introduction to the new Admin Experience" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
+
 
 # Control Hub User Management Tasks
 
