@@ -12,7 +12,8 @@ Choose the right lab guide for the current session.
 
 |                                       Lab Details                                        | Estimated |
 | :--------------------------------------------------------------------------------------: | :-------: |
-| [Webex Contact Center Admintrator Experience & Contact Routing](/pages/AdminExperience/) |  90 min   |
+|        [Webex Contact Center Admintrator Experience & ](/pages/Admin_Experience/)        |  40 min   |
+|        [Webex Contact Center Contact Routing Experience](/pages/IVRExperience/)          |  50 min   |
 |             [Webex Contact Center Agent Experience](/pages/AgentExperience/)             |  50 min   |
 |        [Webex Contact Center Supervisor Experience](/pages/SupervisorExperience/)        |  40 min   |
 |         [Webex Contact Center Reporting Experience](/pages/ReportingExperience/)         |  90 min   |
