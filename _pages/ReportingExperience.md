@@ -13,7 +13,7 @@ Last modified: Mon, 20 Feb 2023
 
 | Topic                                                                                                           | Lab Type          | Dificulty Level | Estimated length |
 | --------------------------------------------------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
-| [Admin Portal Dashboard and Analyzer User Interfaces](#admin-portal-dashboard-and-analyzer-user-interfaces)     | Practical Lab     | EASY            | 20 min           |
+| [Admin Portal Dashboard and Analyzer User Interfaces](#admin-portal-dashboard-and-analyzer-user-interfaces)     | Practical Lab     | EASY            | 90 min           |
 | [Getting Data Insight using Stock Visualizations](#getting-data-insight-using-stock-visualizations)             | Practical Lab     | EASY            | 35 min           |
 | [Understanding Data and Creating Custom Visualizations](#understanding-data-and-creating-custom-visualizations) | Practical Lab     | MEDIUM          | 60 min           |
 | [Dashboards](#dashboards)                                                                                       | Practical Lab     | EASY            | 20 min           |
