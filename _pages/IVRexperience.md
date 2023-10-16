@@ -42,7 +42,7 @@ layout: post
 | [Creating an opt-out option with ANI readout](#creating-an-opt-out-option-with-ani-readout)                   | Practical Lab | EASY            | 15 min           |
 | [Adding the ability to receive a callback at a different number](#adding-the-ability-to-receive-a-callback-at-a-different-number)                   | Practical Lab | EASY            | 15 min           |
 | [Adding the ability to collect an extension and present it to an agent during a callback](#adding-the-ability-to-collect-an-extension-and-present-it-to-an-agent-during-a-callback)                   | Practical Lab | EASY            | 15 min | 
-| [Bonus - Experience Management](#Bonus-Experience-Management)                   | Practical Lab | EASY            | 15 min | 
+| [Bonus - Experience Management](#bonus---experience-management)                   | Practical Lab | EASY            | 15 min | 
 
          
 ---
