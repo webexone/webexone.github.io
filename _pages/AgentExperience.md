@@ -188,6 +188,8 @@ Here is an overview of the sections:
 
 ![agent-desktop](/assets/images/agent/AgentLogin.gif)
 
+---
+
 **NOTE:**
 
 > The login device and DN can be enforced on the Desktop Profile as follows
@@ -214,13 +216,17 @@ This also has the section where you can view the Idle codes.
 
 These Idle codes are customizable.
 
-(screenshot - GIF)
+![agent-desktop-State-Idle](/assets/images/agent/Agent_State_Idle.gif)
+
+---
 
 ### Explore the Agent Personal Statistics
 
 The Agent can access the out of box Agent Personal Statistics Reports on the left navigation screen.
 
-(screenshot - GIF)
+![agent-desktop-Personal-Statistics](/assets/images/agent/Agent_Personal_Statistics.gif)
+
+---
 
 ### Launch the Webex App
 
@@ -228,59 +234,87 @@ Launch webex App
 
 Send a message to the supervisor user - search for supervisor or admin user and send a message
 
-(content + screenshot - GIF)
+![agent-desktop-webex-App](/assets/images/agent/Agent_Webex_App.gif)
+
+---
 
 ### Launch the Notification Pane
 
-(content + screenshot - GIF)
+![agent-desktop-Notification-Pane](/assets/images/agent/Agent_Notification_Pane.gif)
+
+---
 
 ### Launch the Agent Settings Pane
 
-(content + screenshot - GIF)
+![agent-desktop-Settings-Pane](/assets/images/agent/Agent_Settings_Pane.gif)
+
+---
 
 #### Verify Profile Settings
 
-(content + screenshot)
+![agent-desktop-Profile-Settings](/assets/images/agent/Agent_Profile_Settings.gif)
+
+---
 
 #### Verify Channel Information for Omnichannel
 
-(content + screenshot)
+![agent-desktop-Channel-Information](/assets/images/agent/Agent_Channel_Information.gif)
+
+---
 
 #### Verify Notification Settings
 
-(content + screenshot)
+![agent-desktop-Notification-Pane](/assets/images/agent/Agent_Notification_Pane.gif)
+
+---
 
 #### Switch to Dark Mode
 
-(content + screenshot)
+![agent-desktop-Dark-Mode](/assets/images/agent/Agent_Dark_Mode.gif)
+
+---
 
 #### View Desktop Mic & Speaker Options
 
-(content + screenshot)
+![agent-desktop-Mic-Speaker](/assets/images/agent/Agent_Mic_Speaker.gif)
+
+---
 
 #### Explore Shortcuts
 
-(content + screenshot - GIF)
+![agent-desktop-Shortcuts](/assets/images/agent/Agent_Shortcuts.gif)
+
+---
+
+#### Change State Shortcuts
 
 Change the state from Idle to Available using the shortcut
 
-(screenshot - GIF)
+![agent-desktop-State_Change_Shortscut](/assets/images/agent/Agent_State_Change_Shortscut.gif)
+
+---
 
 #### Download Error Logs
 
-(content + screenshot)
+![agent-desktop-Error-Logs](/assets/images/agent/Agent_Error-Logs.gif)
+
+---
 
 #### Test Your Network
 
 This is specifically for the Desktop Voice option. Agents can also test their local network connectivity for latency and bandwidth requirements on the Agent Desktop.
 
-(content + screenshot)
+![agent-desktop-Test-Network](/assets/images/agent/Agent_Test_Network.gif)
+
+---
 
 ## Explore the new Help Documentation
 
 The help documentation has been enhanced with Webex Help Center. Agents will now be redirected to the new Webex Help Center for online help including search.
 
-(content + screenshot)
+![agent-desktop-Help-Documentation](/assets/images/agent/Agent_Help_Documentation.gif)
+
+---
 
 # Make an Incoming Call
 
@@ -297,52 +331,59 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 
 - In order to test properly an incoming call, first we need to make sure that we have all the call handling options enabled
 
-- Login with your administrator user in the **Control Hub** and navigate to _Services > Contact Center > Settings > Desktop_
+- Login with your administrator user in the **Control Hub**: [https://admin.webex.com](https://admin.webex.com)
+  Navigate to SERVICES > Contact Center > TENANT SETTINGS > Desktop\_
   - Make sure that **`End Call`** and **`End Consult`** are enabled
   - You can also configure _Auto Wrapup and RONA timeouts_
 
-<br/>
-(screenshot - GIF)
+![CH-Settings-Desktop](/assets/images/agent/CH_Settings_Desktop.gif)
 
-- Now open the **Management Portal** and navigate to _Provisioning > Desktop Profiles_ and edit _your Desktop Profile_:
+---
+
+- Navigate to _DESKTOP EXPERIENCE > Desktop Profiles_ and view _your Desktop Profile_:
   - In the **Collaboration** tab:
-    - Set the **Buddy Teams** to **`All`**
-    - Enable **`Consult to Queue`**
+    - Make sure the **Buddy Teams** to **`All`**
+    - Make sure Enable **`Consult to Queue`**
 
-<br/>
+![CH-Desktop-Profile](/assets/images/agent/CH_Desktop_Profile.gif)
 
-(screenshot - GIF)
+---
 
-- Navigate to _Provisioning > Queue_ and edit your Queue
-  - Enable **`Permit Recording, Record All Calls and Pause/Resume`**
+- Navigate to CUSTOMER EXPERIENCE > Queue\_ and view your Queue
+  - Make sure **`Permit Monitoring, Pause/Resume`** are Enabled
     - Make sure that these settings are also enabled at tenant level
   - You can also set the _Recording Pause Duration_. This is the maxiumum duration that an agent can pause the recording
 
-<br/>
-(screenshot - GIF)
+(screenshot - GIF - **NEED CLARITY**)
+
+![CH-Desktop-Queues](/assets/images/agent/CH_Desktop_Queues.gif)
+
+---
 
 - Now place it's time to test the incoming call
-  - Login in both in the **Agent Desktop** and **Webex App** with _your Agent 1_ user
-  - Input the corresponding Webex App Extension in the Agent Desktop Station Login (you can check this info in the Users module of Control Hub)
+  - Login the **Agent Desktop** with _your Agent 1_ user
   - Move to **`Available`** state
-  - Place an incoming call to the DN mapped to your EP (You should have mapped your EP in Lab 2)
+  - Place an incoming call to the DN mapped to your EP, in other words, this is the number a customer would call into... (You should have mapped your EP in Lab 2)
+  - You will be asked to enter your Attendee Id: i.e. _138#_
 
-<br/>
+![CH-Desktop-Call-In](/assets/images/agent/CH_Desktop_Call_In.gif)
 
-(screenshot - GIF)
+---
 
-- Accept the call in the Webex App of _your Agent 1_
+(screenshot - GIF - **NEED CLARITY**)
+
+- After you have Aaccepted the call in the Agent Desktop of _your Agent 1_
   - Check the **CAD variables** and try to edit any Global Variable
-  - Change to **`Engage - Idle`**. This way you will not receive any other digital channel requests
+  - Notice the status has changed to **`Engaged`**.
 
-<br/>
+![CH-Desktop-Call-In-Accepted](/assets/images/agent/CH_Desktop_Call_In_Accepted.gif)
 
-(screenshot - GIF)
+---
 
 - Let's play with the call interaction buttons
   - Click on **`Hold`** to pause the conversation with the end-customer and click on **`Resume`** to talk with him again
   - Click on **`Pause Recording`**, say some personal infor and click again on **`Resume`** to continue the recording
-  - Click on **`Transfer`** and select the **`Welcome_EP`**
+  - Click on **`Transfer`**, select **`Queue`** and then in the pull down menu select the **`Welcome_EP`** **NEED CLARITY**
     - End-customer be redirected to a common EP already created
   - **End** the call (this can be done from customer or agent perspective) and select any **Wrap-up code**
 
