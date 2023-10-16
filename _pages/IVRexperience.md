@@ -681,10 +681,9 @@ update()
     >
     > ---  
 
----
 
 
-## Bonus - Experience Management
+# Bonus - Experience Management
 
 | Topic                                                                                    | Lab Type      | Difficulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
