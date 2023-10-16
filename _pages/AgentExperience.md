@@ -343,7 +343,7 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 - Navigate to _DESKTOP EXPERIENCE > Desktop Profiles_ and view _your Desktop Profile_:
   - In the **Collaboration** tab:
     - Make sure the **Buddy Teams** to **`All`**
-    - Make sure Enable **`Consult to Queue`**
+    - Make sure Enable **`Consult to Queue`** is also set
 
 ![CH-Desktop-Profile](/assets/images/agent/CH_Desktop_Profile.gif)
 
@@ -353,8 +353,6 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
   - Make sure **`Permit Monitoring, Pause/Resume`** are Enabled
     - Make sure that these settings are also enabled at tenant level
   - You can also set the _Recording Pause Duration_. This is the maxiumum duration that an agent can pause the recording
-
-(screenshot - GIF - **NEED CLARITY**)
 
 ![CH-Desktop-Queues](/assets/images/agent/CH_Desktop_Queues.gif)
 
@@ -370,8 +368,6 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 
 ---
 
-(screenshot - GIF - **NEED CLARITY**)
-
 - After you have Aaccepted the call in the Agent Desktop of _your Agent 1_
   - Check the **CAD variables** and try to edit any Global Variable
   - Notice the status has changed to **`Engaged`**.
@@ -383,7 +379,7 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 - Let's play with the call interaction buttons
   - Click on **`Hold`** to pause the conversation with the end-customer and click on **`Resume`** to talk with him again
   - Click on **`Pause Recording`**, say some personal infor and click again on **`Resume`** to continue the recording
-  - Click on **`Transfer`**, select **`Queue`** and then in the pull down menu select the **`Welcome_EP`** **NEED CLARITY**
+  - Click on **`Transfer`**, select **`Queue`** and then in the pull down menu select the `Welcome_EP`
     - End-customer be redirected to a common EP already created
   - **End** the call (this can be done from customer or agent perspective) and select any **Wrap-up code**
 
@@ -391,7 +387,20 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 > {: .block-warning }
 > <br/>
 
-- Now, using a different browser, login in the **Agent Desktop** with _your Supervisor_ user and move to **`Available`** status
+- Now, lets create a new Chrome profile so we can login the Supervisor on the same browser
+
+  - Select `Profiles` on Chrome
+  - Select `Add Profile`
+  - Select `continue without an account`
+  - Give it a name .i.e `supervisor`
+  - Click `done`
+
+![CH-Desktop-Call-In-Accepted](/assets/images/agent/Chrome-Create-Profile.gif)
+
+---
+
+- After you create a new Chrome Profile, login in the **Agent Desktop** with _your Supervisor_ user and move to **`Available`** status
+
   - In a separate device (you mobile phone for example), login in Webex App with your _Supervisor_ user
   - Place the call from the third calling endpoint (your personal phone for example)
   - Try **`Consult, Conference and Transfer`** functions between End Customer, Agent and Supervisor.
