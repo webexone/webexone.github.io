@@ -42,6 +42,8 @@ layout: post
 | [Creating an opt-out option with ANI readout](#creating-an-opt-out-option-with-ani-readout)                   | Practical Lab | EASY            | 15 min           |
 | [Adding the ability to receive a callback at a different number](#adding-the-ability-to-receive-a-callback-at-a-different-number)                   | Practical Lab | EASY            | 15 min           |
 | [Adding the ability to collect an extension and present it to an agent during a callback](#adding-the-ability-to-collect-an-extension-and-present-it-to-an-agent-during-a-callback)                   | Practical Lab | EASY            | 15 min | 
+| [Introduction to Flow Debugger](#introduction-to-flow-debugger)                   | Practical Lab | EASY            | 15 min | 
+| [Introduction to Flow Versioning](#introduction-to-flow-versioning)                   | Practical Lab | EASY            | 15 min | 
 | [Bonus - Experience Management](#bonus---experience-management)                   | Practical Lab | EASY            | 15 min | 
 
          
@@ -682,6 +684,17 @@ update()
     > ---  
 
 ---
+
+# Introduction to Flow Debugger
+> Flow designer is a simple drag-and-drop user interface (UI) to define the flows. The following video explains the Flow Designer layout, activity library, and terminology used in the Flow Designer.
+
+---
+
+# Introduction to Flow Versioning
+> Flow designer is a simple drag-and-drop user interface (UI) to define the flows. The following video explains the Flow Designer layout, activity library, and terminology used in the Flow Designer.
+
+---
+
 
 # Bonus - Experience Management
 
