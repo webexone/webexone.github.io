@@ -31,11 +31,16 @@ In Part 2, we will look at the Webex Contact Center Supervior Experience and ass
 
 | Topic                                                          | Type          | Dificulty    | Time   |
 | -------------------------------------------------------------- | ------------- | ------------ | ------ |
-| [Part 1: Agent Desktop Experience](#agent-desktop-overview)    | Exploration   | EASY         | 20 min |
-| [Extend the Agent Desktop Experience](#desktop-administration) | Practical Lab | EASY         | 15 min |
-| [Desktop Administration](#desktop-administration)              | Exploration   | INTERMEDIATE | 15 min |
-| [Part 2: Supervisor Experience](#supervisor-experience)        | Exploration   | EASY         | 20 min |
-| [Supervisor Administration](#supervisor-administration)        | Practical Lab | INTERMEDIATE | 15 min |
+| [Part 1: Agent Desktop Experience](#agent-desktop-overview)    | Exploration   | EASY         | 5 min |
+| [Make an Inbound Call]()    | Activity   | EASY         | 5 min |
+| [Make an Outdial Call]()   | Activity   | EASY         | 5 min |
+| [Extend the Agent Desktop Experience](#desktop-administration) | Activity | INTERMEDIATE         | 10 min |
+| [Desktop Administration](#desktop-administration)              | Exploration   | INTERMEDIATE | 10 min |
+| [Part 2: Supervisor Experience](#supervisor-experience)        | Exploration   | EASY         | 5 min |
+| [Exploring Supervisor Roles](#supervisor-experience)        | Exploration   | EASY         | 5 min |
+| [Team Performance - Team Messaging - Changing State](#supervisor-experience)        | Exploration   | EASY         | 10 min |
+| [Quality Management Recordings](#supervisor-experience)        | Exploration   | EASY         | 5 min |
+| [Supervisor Administration](#supervisor-administration)        | Practical Lab | INTERMEDIATE | 10 min |
 | [Supervisor Licensing](#supervisor-licensing)                  | Practical Lab | EASY         | 5 min  |
 | [BONUS: Customizations & Programmability](#custom-desktop)     | Practical Lab | ADVANCED     | 30 min |
 
@@ -76,15 +81,18 @@ Example:
 >
 > 100_team2
 
-3. Agents will use WebRTC endpoints. Webex Calling extensions are also assigned to users (agent and supervisor) to experience alternative login options.
+3. Agents will use the browser for voice calls, via WebRTC (Web Real-time communication) endpoints. Webex Calling extensions are also assigned to users (agent and supervisor) to experience alternative device options. Webex Contact Center agents & supervisors can use any combination of these devices, including PSTN endpoints and cellphones.
 
 4. An inbound Voice flow is configured for test calls.
 
 ### Quick Links
 
-> Control Hub Administration: **[https://admin.webex.com](https://admin.webex.com){:target="\_blank"}**\
-> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="\_blank"}**\
+You will only need access to 2 web portals for this lab.
 
+> Control Hub Administration: **[https://admin.webex.com](https://admin.webex.com){:target="\_blank"}**\
+> Contact Center Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="\_blank"}**\
+
+**The Contact Center Desktop is 
 ## Lab Configuration
 
 > Please submit the form with your Attendee ID. All configuration items in the lab guide will be renamed with that prefix.
@@ -563,7 +571,7 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
   - You can search by entry name or DN
   - Try to call any of the numbers in the list
 
-## Exploring User Profile
+## Exploring User Profiles & Switching Teams
 
 > In this section, we will explore what are the available options and settings under the User Profile.
 
@@ -572,37 +580,50 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 </div>
 <br/>
 
+(screenshot - GIF)
+
 - First, we will see how to change from one team to another one
-  - In order to notice some difference when we make the Team change, we need to modify some setting from _your Team 2_ (created in Lab 1) . For that, we will assign a different **Multimedia Profile** to that team.
+  - In order to notice some difference when we make the Team change, we need to modify some setting from _your Team 2_ (created in Lab 1). For that, we will assign a different **Multimedia Profile** to that team.
 
 <br/>
 
+(screenshot - GIF)s
+
 - Navigate to the _Management Portal > Provisioning > Teams_
   - Find _your Team 2_ and click on `Edit`
-  - Check _your User settings_ and make sure that there is not **Multimedia Profile** assigned. **User settings have preference over Team setting**, so the Multimedia Profile at User level will be applied.
+  - Check _your User settings_ and verify the **Multimedia Profile** assigned. **User settings have preference over Team setting**, so the Multimedia Profile at **User** level will be applied over the **Team**.
   - Change the **Multimedia Profile** of the team from <w class = "attendee-class">attendeeID</w>\_MMP`to`Default_Telephony_Profile
 
 <br/>
 
-- Now, login in the **Agent Desktop** selecting <w class = "attendee-class">attendeeID</w>\_team1
+(screenshot - GIF)
+
+- Now, login to the **Agent Desktop** selecting <w class = "attendee-class">attendeeID</w>\_team1
   - Open _your User Profile_ and check that the **Channel Capacity**
-  - Now, click on _your Team_, you will see a dropdown list with other available Teams
+  - Now, click on _your Team_, you will see a dropdown list with other available Teams. \_team1 and \_team2
   - Click on <w class = "attendee-class">attendeeID</w>\_team2
   - **`Save Team Selection`** to confirm that you want to change a team
 
-<br/>
-
-- You will see notification appeared in the **Notification Center**
-  - You can change the **Notification settings** to disable the incoming notifications or the sound
-  - Mark the notification as `Read`
-  - Go to the **User Profile** and check the **Channel Capacity** again, it's different
+(screenshot - GIF)
 
 <br/>
 
-- Test some additional options:
-  - **Switch to Dark Mode**
-  - **Keyboard shortcuts**
-  - **Download error log**
+- You will see a new notification appears in the **Notification Center**
+  - You can change the **Notification settings** to disable the incoming notifications or the sound.
+  - Mark the notification as `Read`.
+  - Go to the **User Profile** and check the **Channel Capacity** again, it's different.
+
+(screenshot - GIF)
+
+## Custom Widget Landscape
+
+> The next section covers the experience you see with switching to the new team : Team2
+>
+> **Team2 has a dedicated desktop layout that shows you the power of custom widgets and extensibility of the Desktop**
+
+###
+
+<br/>
 
 # Verify Desktop Administration
 
@@ -638,14 +659,6 @@ To verify, navigate to WebexOne
 
 > Be aware that all entities that don't match with attendee IDs will be deleted
 > {: .block-warning }
-
-## Send Product Feedback
-
-Before you move onto the bonus sections, we would love to hear from you!
-Explore the product feedback option from right within the Agent Desktop.
-Please fill in the survey and help us improve the product!
-
-(content + screenshot)
 
 ---
 
@@ -890,6 +903,17 @@ Collaboration between agents and supervisors can help your Contact Center to be 
 - Go to **_Contact Center_** -> **_Settings_** and press **_Synchronize Users_** button to sync all changes from Control Hub to Webex CC Management Portal.
 
 ![Lab_4_Supervisor_Config_6](/assets/images/Supervisor/DC_Lab_4_Supervisor_Config_6.png)
+
+## Send Product Feedback
+
+Thank you for completing the labs, we would love to hear direct product feedback from you!
+Explore the product feedback option from right within the Agent Desktop.
+
+(screenshot - GIF)
+
+Please fill in the survey and help us improve the product!
+
+(screenshot - GIF)
 
 ---
 
