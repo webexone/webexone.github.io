@@ -737,88 +737,103 @@ To verify, navigate to Control Hub Portal > Contact Center Settings
 | Address Book Entry 1 | <w class = "attendee-class">attendeeID</w>\_addressBookEntry1          |
 | Multimedia Profile   | <w class = "attendee-class">attendeeID</w>\_MMP                        |
 
-> **NOTE:** Please create all the tenant entities following the naming convention mentioned specified in the table above. Your attendeeID is provided in the email in the **"Attendee ID"** line.
-> {: .block-warning }
-
-> Be aware that all entities that don't match with attendee IDs will be deleted
-> {: .block-warning }
+> **NOTE:** All of the above the tenant entities follow the naming convention mentioned specified in the table above. Your attendeeID is provided in the email in the **"Attendee ID"** line.
+> All of this configuration has been done for you.
 
 ---
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      console.log('DOMContentLoaded OKOK')
-    })
+# Part 2: Supervisor Experience
 
-    window.addEventListener('load', () => {
-      console.log('window load OK')
-    })
-  </script>
-
-## **Introduction**
-
-#### **Lab Objective**
+### Objective
 
 This lab is designed to introduce the audience to the Extensible Supervisor Desktop (ESD), its configuration and capabilities. In addition this lab contains demo which shows user experience when working with ESD.
 
-#### **Pre-requisite**
+#### Example of your agent and supervisor users on Control Hub
 
-1.  Admin credentials to login to Control Hub and Webex Contact Center administration portal.
-2.  At least one admin and one supervisor users with extensions have been created on Control Hub according to the instructions provided in **_Lab 1 - Admin Experience_**.
-3.  Standard or Premium agent license is assigned to agent's account on Control Hub.
-4.  Agent account is configured on Webex CC management portal and you are able to sign in as an agent.
-
-#### Example of agent and supervisor users on Control Hub
-
-| **User Role** | **User email**                                                        | **User Extension**                                          |
-| ------------- | --------------------------------------------------------------------- | ----------------------------------------------------------- |
-| Agent         | <w class="attendee_out">Your_Attendee_ID</w>\_agent1@Your_Domain      | <w class= "agentEXT_out">Your Agent Extension</w>           |
-| Supervisor    | <w class="attendee_out">Your_Attendee_ID</w>\_supervisor1@Your_Domain | <w class= "supervisorEXT_out">Your Supervisor Extension</w> |
+| **User Role** | **User email**                                                          | **User Extension**                                          |
+| ------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------- |
+| Agent         | wxcclabs+agent_ID<w class="attendee_out">Your_Attendee_ID</w>@gmail.com | <w class= "agentEXT_out">Your Agent Extension</w>           |
+| Supervisor    | wxcclabs+supvr_ID<w class="attendee_out">Your_Attendee_ID</w>@gmail.com | <w class= "supervisorEXT_out">Your Supervisor Extension</w> |
 
 #### Quick Links
 
 > Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
-> Webex CC Management Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
-> Agent / Supervisor Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**
+> Supervisor Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**
 
-# Supervisor Experience
+## Supervisor Roles
 
-In this section you will act as a supervisor and perform activities. The Supervisor Desktop provides a holistic supervisor experience within a centralized interface. It enables supervisors to manage, monitor, assess, guide, and assist agents. It also enables administrators to customize the Supervisor Desktop with widgets to address specific Contact Center business needs
+As a supervisor you can be one of two roles.
 
-<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/2d7fd721-b192-43d1-83f9-68c7f2d544b3" width="100%" height="100%" title="Supervisor Desktop Demonstration" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
-</div>
+We will review this on Control Hub Settings.
+
+- Look up your Supervisor User bu going to admin.webex.com > Contact Center > Settings > Contact Center Users
+- Ensure that the Supervisor user wxcclabs+supvr_ID_your_attendee_ID\_@gmail.com has the role
+
+(Screenshot - GIF)
+
+**Supervisor Only Role:**
+
+- You can choose not to be an Agent. This is called the **Supervisor Only Role**
+- This is enabled by setting up a User with the Supervisor License and a Primary Team.
+- Contact Center need not be enabled for the User.
+
+(Screenshot - GIF)
+
+## Pre-requisites
+
+1.  A supervisor user configured as described below.
+2.  One agent logged in and in conversation with a customer so you can monitor the call.
+3.  Webex App Installed - Please install and download the Webex App from: https://www.webex.com/downloads.html
+
+> **We will use the [Webex App](https://www.webex.com/downloads.html) as the Supervisor endpoint Device.**
+
+**Supervisor and Agent Role**
+
+- You can to take calls from the Queue as a supervisor. This is called the **Supervisor and Agent Role**
+- This is enabled by setting up a User with the Supervisor License, a Primary Team AND marking the user Contact Center enabled.
+
+(Screenshot - GIF)
+
 <br>
 
-#### **Pre-requisite**
-
-1.  a supervisor user configured as described above
-2.  one agent logged in and in conversation with a customer so you can monitor the call.
-
-#### **Supervisor Log in**
+## Supervisor Login
 
 - Sign in to the **Supervisor Desktop**: https://desktop.wxcc-us1.cisco.com with your supervisor credentials.
 
 - In the next window, set your role as **supervisor** and your **own extension**. Please note that you can set your role either as **supervisor** or **agent and supervisor**. We will select this second option at the end of this lab.
 
-![Lab_4_ESD](/assets/images/Supervisor/DC_Lab_4_Supervisor_Config_11.png)
+![Lab_4_ESD](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_11.png)
 
 - When you sign in to the **Supervisor Desktop**, the appearance depends on how the Webex Contact Center administrator has configured the desktop layout. The **Supervisor Desktop** display size must be greater than 500 x 500 pixels (width x height). You must set your web browser zoom to 100% for the best experience with the Supervisor Desktop. With this lab layout you get :
 
 1. **Home Page**: Displays a user friendly interface that provides a consolidated view of key contact center metrics and filters. This is the default landing page in the Supervisor Desktop. The administrator can customize the Home Page in the layout JSON file.
+
+(screenshot - GIF)
+
 2. **Task**: Displays all the tasks when you sign in to the Desktop in dual role (supervisor and agent) or as a supervisor, interactions such as voice, chat, email, and social messaging conversations, along with monitoring. The icon displays a badge indicating the number of requests that you have not accepted across various channels.
+
+(screenshot - GIF)
+
 3. **Team Performance**: Displays real-time information about an agent and a consolidated view of an agent’s performance as part of the team. You can also monitor and send 1:1 messages to an agent.
 
-Note the **Supervisor Desktop** UI supports localization in 30 languages. The following are the supported languages:
-Bulgarian, Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish, Dutch, English (UK), English (US),Finnish,French, German, Hungarian, Italian,Japanese, Korean, Norwegian,Polish,Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Serbian, Slovak, Slovenian, Spanish, Swedish, Turkish, and Ukrainian. The Supervisor Desktop UI language is based on the language preference settings on your browser. For example, let us consider that you have selected the preferred language as French on the Google Chrome browser. When you launch the Supervisor Desktop in the Google Chrome browser, the Supervisor Desktop UI appears in Français (French).
+(screenshot - GIF)
+
+> Note: **Supervisor Desktop** supports localization in 30 languages. The following are the supported languages:
+> Bulgarian, Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish, Dutch, English (UK), English (US),Finnish,French, German, Hungarian, Italian,Japanese, Korean, Norwegian,Polish,Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Serbian, Slovak, Slovenian, Spanish, Swedish, Turkish, and Ukrainian.
+>
+> The Supervisor Desktop language is based on the language preference settings on your browser.
+>
+> For example, let us consider that you have selected the preferred language as French on the Google Chrome browser.
+>
+> When you launch the Supervisor Desktop in the Google Chrome browser, the Supervisor Desktop UI appears in Français (French).
 
 - **Home Page** :
 
-![Lab_4_ESD](/assets/images/Supervisor/DC_Lab_4_Supervisor_Config_1.png)
+(screenshot - GIF)
 
-- click on the third menu option, you now see the **Team Performance Details** page where your agents activities are displayed : status, call duration, team, ... In the last column, you are presented two options : **chat** or **monitor**. The monitoring option is obvisously only enabled when an agent is in conversation with a customer otherwise the icon will be greyed.
+- Click on the third menu option, you now see the **Team Performance Details** page where your agents activities are displayed : status, call duration, team, ... In the last column, you are presented two options : **chat** or **monitor**. The monitoring option is obvisously only enabled when an agent is in conversation with a customer otherwise the icon will be greyed.
 
-![Lab_4_ESD](/assets/images/Supervisor/DC_Lab_4_Supervisor_Config_3.png)
+(screenshot - GIF)
 
 - The columns displayed are the following
 
@@ -842,7 +857,7 @@ Bulgarian, Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish, 
 
 ![Lab_4_ESD](/assets/images/Supervisor/Lab4_ESD_3.png)
 
-#### **Chat with your agents**
+## Chat with your agents
 
 Collaboration between agents and supervisors can help your Contact Center to be more effective and efficient for your customers and this is why we have enabled Webex messaging features in both Agent and Supervisor desktops.
 
@@ -866,7 +881,7 @@ Collaboration between agents and supervisors can help your Contact Center to be 
 
 ![Lab_4_ESD](/assets/images/Supervisor/Lab4_ESD_8_chat.png)
 
-#### **Monitor calls**
+## Monitor calls
 
 - As a supervisor, the **Team Performance Details** page allows you to see all connected agents and decide to monitor calls by clicking on the **Review and Monitor** icon.
 
@@ -888,7 +903,7 @@ Collaboration between agents and supervisors can help your Contact Center to be 
 
 ![Lab_4_ESD](/assets/images/Supervisor/Lab4_ESD_13_monitor.png)
 
-#### **Particular case when a supervisor is also an agent**
+## Supervisor and Agent flow
 
 - When you sign in to the Supervisor Desktop, you can - depending or your team assignement - choose either the supervisor role or supervisor AND agent role.
 
@@ -962,7 +977,9 @@ Collaboration between agents and supervisors can help your Contact Center to be 
 
 # Supervisor Licensing
 
-- Login to Control Hub under organization admin account.
+> In This section, we will review the Supervisor Licensing Requirements.
+
+- Login to Control Hub using your administrator account.
 - Go to **_Users_**, click on supervisor's account, scroll dow to **_Licenses_** section and press **_Edit Licenses_** button.
 
 ![Lab_4_Supervisor_Config_1](/assets/images/Supervisor/DC_Lab_4_Supervisor_Config_1.png)
@@ -989,8 +1006,11 @@ Collaboration between agents and supervisors can help your Contact Center to be 
 
 ## Send Product Feedback
 
-Thank you for completing the labs, we would love to hear direct product feedback from you!
-Explore the product feedback option from right within the Agent Desktop.
+Thank you for completing the Agent and Supervisor labs, we would love to hear direct product feedback from you!
+
+Explore the product feedback option from right within the Contact Center Desktop.
+
+Click the icon to launch the Experience Management Survey.
 
 (screenshot - GIF)
 
