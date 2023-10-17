@@ -235,7 +235,7 @@ Launch the Webex App from within the Desktop to message other users in the organ
 Send a message to the supervisor user - search for supervisor or admin user and send a message.
 
 Your Supervisor is configured in the format:
-**wxcclabs_supvr_ID<attendeeID>@gmail.com**
+**wxcclabs_supvr_ID\<attendeeID\>@gmail.com**
 
 ![agent-desktop-webex-App](/assets/images/agent/Agent_Webex_App.gif)
 
@@ -361,7 +361,7 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 
 ---
 
-# Make an Incoming Call
+## Make an Incoming Call
 
 > In this section, you will will interact as an agent and test an Incoming call. Review the video of the lab section above to understand the different call handling options.
 
@@ -441,7 +441,7 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
   - Place the call from the third calling endpoint (your personal phone for example)
   - Try **`Consult, Conference and Transfer`** functions between End Customer, Agent and Supervisor.
 
-### Agent States:
+### Agent States
 
 - **Available**: Indicates that you are ready to accept and respond to contact requests that are routed to you. After you sign in, you must select Available from the drop-down list to accept voice call, chat, email, and social messaging conversation requests.
 
@@ -451,7 +451,7 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 
 - **Engaged**: indicates that you are busy and connected with a customer. When you have accepted the contact request, the Available state changes to the Engaged - Available label. When you're in this state, you can continue to receive active requests on other channels, depending on the channel capacity. If you don't want to receive more requests, you can select any Idle state, so you will be moved to Engaged - Idle label.
 
-#### Manage Voice Calls
+### Manage Voice Calls
 
 - **Call Associated Data (CAD) variables**: These variables allow the administrator to collect call data such as a case number or any action code of the customer. In Flow Designer, your administrator configures the variables, labels of the variables, and the order in which they must appear on the Interaction Control panel. While you are on a call, you can edit the CAD variables if your administrator configures the CAD variables as editable.
 
