@@ -690,7 +690,8 @@ The left pane of the Agent Desktop now has a large number of custom widgets, sho
 - Another example widget shows you how you can perform various actions programmatically using the Webex Contact Center Desktop JavaScript Software Development Kit (JS SDK) that has been used to extend functionality beyond what is possible out of box.
 - A simple example task would be: Make a call, and then either Hold or Unhold the call, or experiment with Pause and Resume of the Recording while entering credit card information.
 - For more information on this widget, speak to your lab proctor.
-- (screenshot - GIF)
+
+(screenshot - GIF)
 
 #### Send SMS Widget
 
@@ -707,15 +708,19 @@ The left pane of the Agent Desktop now has a large number of custom widgets, sho
 
 The following section and describes Desktop Administration that brought together all the features you experienced on the Agent Desktop.
 
+> **This is more of a walkthrough, to understand how these toggles are configured**
+
 Here is a schematic showing how the Agent Desktop configuraton aligns to all the entities on Webex Control Hub.
 
-(screenshot)
+(schematic - overview)
 
 ## Administration Entities
 
 The following Administration entities have been configured for you.
 
-To verify, navigate to WebexOne
+To verify, navigate to Control Hub Portal > Contact Center Settings
+
+(screenshot - GIF)
 
 | **Entity**           | **Name**                                                               |
 | -------------------- | ---------------------------------------------------------------------- |
