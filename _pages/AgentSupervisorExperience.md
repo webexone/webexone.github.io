@@ -41,7 +41,7 @@ In Part 2, we will look at the Webex Contact Center Supervior Experience and ass
 
 # Part 1: Agent Experience
 
-## Objectives
+### Objectives
 
 - Understand the Agent Experience on Webex Contact Center by logging into the Agent Desktop application and exploring out of box capabilities.
 - Understand the entire Agent Desktop interface and functions, including Inbound, Outbound and Omnichannel contact workflows.
@@ -123,7 +123,7 @@ Please note, that to proceed to the next section, you will need to use the accou
 | Address Book Entry 1 | <w class = "attendee-class">attendeeID</w>\_addressBookEntry1         |
 | Multimedia Profile   | <w class = "attendee-class">attendeeID</w>\_MMP                       |
 
-# Agent Desktop Overview
+## Agent Desktop Overview
 
 > Desktop multi-language support is based on the language preference settings on the browser. Currently, we support 29 languages:
 > Bulgarian, Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish, Dutch, English (UK), English (US), Finnish, French, German, Hungarian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Serbian, Slovak, Slovenian, Spanish, Swedish, and Turkish.
@@ -147,7 +147,7 @@ Here is an overview of the sections:
 
 6. **Navigation pane**: By default you can find the following icons here: Home, Agent Performance Statistics and Help. However, you can customize it and add some additional icons and widgets.
 
-## Login Process
+## Desktop Login Process
 
 - To Login to the Agent Desktop, launch Google Chrome and to the URL: [https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com)
 
@@ -201,7 +201,7 @@ Here is an overview of the sections:
     - Dial Number: E.164 format phone number
       - If you check the **International Dialing Format** box, you can choose the country code based on your geographical location from the drop-down list. You can also enter a country code or country name to filter the list. Dial numbers are validated based on the country code
 
-## Explore Agent Desktop Header Actions
+### Explore Agent Desktop Header Actions
 
 The following section explores the Agent Desktop header actions.
 
@@ -258,7 +258,7 @@ To review or change the Desktop Settings, click on the persona icon on the top r
 
 ---
 
-#### Verify Profile Settings
+### Verify Profile Settings
 
 The Profile settings shows the Agent which Device(s) or Teams are configured for use, allowing the agent to switch the Device OR Teams that they wish to login.
 
@@ -269,7 +269,7 @@ The Profile settings shows the Agent which Device(s) or Teams are configured for
 
 ---
 
-#### Verify Channel Information for Omnichannel
+### Verify Channel Information for Omnichannel
 
 The Channel capacity determines how many contacts the Agent can handle at a maximum, per channel.
 
@@ -279,7 +279,7 @@ The Channel capacity determines how many contacts the Agent can handle at a maxi
 
 ---
 
-#### Verify Notification Settings
+### Verify Notification Settings
 
 The notification settings under user settings allows you to Enable/Disable the Notifications, Enable Silent Notifications, or Enable/Disable the sound. You can also change the volume of the Chime for the incoming contact.
 
@@ -289,7 +289,7 @@ The notification settings under user settings allows you to Enable/Disable the N
 
 ---
 
-#### Switch to Dark Mode
+### Switch to Dark Mode
 
 You can switchover the theme on the Desktop using the Dark mode toggle. This helps with visibility on the eyes in low light conditions and can be a user preference for the theme.
 
@@ -299,7 +299,7 @@ You can switchover the theme on the Desktop using the Dark mode toggle. This hel
 
 ---
 
-#### View Desktop Mic & Speaker Options
+### View Desktop Mic & Speaker Options
 
 This is a setting that is enabled for all logged in Agents with the Desktop (WebRTC) option. This can help troubleshoot any audio related settings for the Agent's microphone or speaker volumes.
 
@@ -307,7 +307,7 @@ This is a setting that is enabled for all logged in Agents with the Desktop (Web
 
 ---
 
-#### Explore Shortcuts
+### Explore Shortcuts
 
 Try to speed up actions with keyboard shortcuts available out of box on the Agent Desktop.
 
@@ -317,7 +317,7 @@ You can launch the shortcuts using Ctrl+Alt+F for Windows (or Cmd+Option+F for M
 
 ---
 
-#### Change State Shortcuts
+### Change State Shortcuts
 
 Change the state from Idle to Available using the shortcut
 
@@ -330,7 +330,7 @@ Change the state from Idle to Available using the shortcut
 
 ---
 
-#### Download Error Logs
+### Download Error Logs
 
 A diagnostic must have for Agents is the ability to download error reports to send to administrators for troubleshooting.
 
@@ -343,7 +343,7 @@ A diagnostic must have for Agents is the ability to download error reports to se
 
 ---
 
-#### Test Your Network
+### Test Your Network
 
 This is specifically for the Desktop Voice option. Agents can also test their local network connectivity for latency and bandwidth requirements on the Agent Desktop - eespecially for diagnostics.
 
@@ -351,7 +351,7 @@ This is specifically for the Desktop Voice option. Agents can also test their lo
 
 ---
 
-## Explore the new Help Documentation
+### Explore the new Help Documentation
 
 The help documentation has been enhanced with Webex Help Center. Agents will now be redirected to the new Webex Help Center for online help including search.
 
@@ -475,9 +475,34 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 
 - **Conference**: To start a three-way conference call between you, the customer and another agent. For this option, you (primary agent) must have initiated a consult call. Click Transfer to transfer the call to the consulting agent. The consulted agent can exit the call by clicking Exit Conference, and the call continues between the primary agent and the customer. Only the primary agent can end the Conference.
 
-## Outdial
+## Outdial Calls
 
 > In this section, we will test Outdial calls using different Outdial ANIs and Address Books.
+
+### Make an Outdial Call
+
+- While Logged into the Agent Desktop, look for the Address book.
+- You will see two contacts that are preloaded for you. You can directly make a call to any of those numbers.
+
+> Not choosing an option on the dropdown selects the Default Outdial ANI (Calling Number Mask) of the tenant. This is configured on Control Hub, under the Desktop Settings. admin.webex.com > Contact Center > Desktop Settings > Outdial ANI
+
+(screenshot - GIF)
+
+> **Note: These are live numbers published on cisco.com!**
+
+- Alternatively, you can select a customized Calling Number mask by selecting the Outdial ANI dropdown. This Outdial ANI dropdown can be configured on the Desktop Profile settings for the Agent.
+
+(screenshot - GIF)
+
+- You will notice that upon clicking the dial button, the Agent is first connected to the call, and then the remote party is connected - and the calls are bridged.
+
+(screenshot - GIF)
+
+> **Note: Outdial also supports pre-dial activities that can be configured on the WebexCC Flow Designer. The Flow Designer has been configured for you with the Custom Caller Associated Data Variables that are visibile upon Outdial**
+
+(screenshot - GIF)
+
+### Verify the Outdial Configuration
 
 (screenshot - GIF)
 
