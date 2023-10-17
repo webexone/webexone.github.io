@@ -29,15 +29,20 @@ In Part 2, we will look at the Webex Contact Center Supervior Experience and ass
 
 # Table of Contents
 
-| Topic                                                          | Type          | Dificulty    | Time   |
-| -------------------------------------------------------------- | ------------- | ------------ | ------ |
-| [Part 1: Agent Desktop Experience](#agent-desktop-overview)    | Exploration   | EASY         | 20 min |
-| [Extend the Agent Desktop Experience](#desktop-administration) | Practical Lab | EASY         | 15 min |
-| [Desktop Administration](#desktop-administration)              | Exploration   | INTERMEDIATE | 15 min |
-| [Part 2: Supervisor Experience](#supervisor-experience)        | Exploration   | EASY         | 20 min |
-| [Supervisor Administration](#supervisor-administration)        | Practical Lab | INTERMEDIATE | 15 min |
-| [Supervisor Licensing](#supervisor-licensing)                  | Practical Lab | EASY         | 5 min  |
-| [BONUS: Customizations & Programmability](#custom-desktop)     | Practical Lab | ADVANCED     | 30 min |
+| Topic                                                                        | Type          | Dificulty    | Time   |
+| ---------------------------------------------------------------------------- | ------------- | ------------ | ------ |
+| [Part 1: Agent Desktop Experience](#agent-desktop-overview)                  | Exploration   | EASY         | 5 min  |
+| [Make an Inbound Call]()                                                     | Activity      | EASY         | 5 min  |
+| [Make an Outdial Call]()                                                     | Activity      | EASY         | 5 min  |
+| [Extend the Agent Desktop Experience](#desktop-administration)               | Activity      | INTERMEDIATE | 10 min |
+| [Desktop Administration](#desktop-administration)                            | Exploration   | INTERMEDIATE | 10 min |
+| [Part 2: Supervisor Experience](#supervisor-experience)                      | Exploration   | EASY         | 5 min  |
+| [Exploring Supervisor Roles](#supervisor-experience)                         | Exploration   | EASY         | 5 min  |
+| [Team Performance - Team Messaging - Changing State](#supervisor-experience) | Exploration   | EASY         | 10 min |
+| [Quality Management Recordings](#supervisor-experience)                      | Exploration   | EASY         | 5 min  |
+| [Supervisor Administration](#supervisor-administration)                      | Practical Lab | INTERMEDIATE | 10 min |
+| [Supervisor Licensing](#supervisor-licensing)                                | Practical Lab | EASY         | 5 min  |
+| [BONUS: Customizations & Programmability](#custom-desktop)                   | Practical Lab | ADVANCED     | 30 min |
 
 # Part 1: Agent Experience
 
@@ -76,14 +81,18 @@ Example:
 >
 > 100_team2
 
-3. Agents will use WebRTC endpoints. Webex Calling extensions are also assigned to users (agent and supervisor) to experience alternative login options.
+3. Agents will use the browser for voice calls, via WebRTC (Web Real-time communication) endpoints. Webex Calling extensions are also assigned to users (agent and supervisor) to experience alternative device options. Webex Contact Center agents & supervisors can use any combination of these devices, including PSTN endpoints and cellphones.
 
 4. An inbound Voice flow is configured for test calls.
 
 ### Quick Links
 
+You will only need access to 2 web portals for this lab.
+
 > Control Hub Administration: **[https://admin.webex.com](https://admin.webex.com){:target="\_blank"}**\
-> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="\_blank"}**\
+> Contact Center Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="\_blank"}**\
+
+\*\*The Contact Center Desktop is
 
 ## Lab Configuration
 
@@ -395,20 +404,34 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 ---
 
 - Now place it's time to test the incoming call
+
   - Login the **Agent Desktop** with _your Agent 1_ user
   - Move to **`Available`** state
   - Place an incoming call to the DN mapped to your EP, in other words, this is the number a customer would call into... (You should have mapped your EP in Lab 2)
   - You will be asked to enter your Attendee Id: i.e. _138#_
 
+- When the call arrives - you will be able to see an incoming popover when the Agent is offered the contact. It will have an Accept and Decline button since it is a Browser powered softphone.
+
+![Agent Popover](/assets/images/agent/Agent_Popover.png)
+
+> **Click on the Accept Button to take the call**
+
 ![CH-Desktop-Call-In](/assets/images/agent/CH_Desktop_Call_In.gif)
+
+> Note: The variables displayed in the incoming popover and on the Desktop can be ordered in a custom manner.
+> This is done on the flow designer on the flow level.
+
+![Variable-Order](/assets/images/agent/Agent_VariableOrder.png)
 
 ---
 
-- After you have Aaccepted the call in the Agent Desktop of _your Agent 1_
-  - Check the **CAD variables** and try to edit any Global Variable
-  - Notice the status has changed to **`Engaged`**.
+- After you have Accepted the call in the Agent Desktop of _your Agent 1_
+  - Check the **CAD variables** and try to edit any of the Editable Variables. This is customizable via Flow Designer.
+  - Notice the status of the Desktop has changed to **`Engaged`**.
 
 ![CH-Desktop-Call-In-Accepted](/assets/images/agent/CH_Desktop_Call_In_Accepted.gif)
+
+> **Note**: While you are engaged for a voice call, you are still marked available on other channels based on your channel capacity. This is the configuration on the Multimedia Profile settings on the Agent Desktop.
 
 ---
 
@@ -563,7 +586,7 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
   - You can search by entry name or DN
   - Try to call any of the numbers in the list
 
-## Exploring User Profile
+## Exploring User Profiles & Switching Teams
 
 > In this section, we will explore what are the available options and settings under the User Profile.
 
@@ -572,37 +595,113 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 </div>
 <br/>
 
+(screenshot - GIF)
+
 - First, we will see how to change from one team to another one
-  - In order to notice some difference when we make the Team change, we need to modify some setting from _your Team 2_ (created in Lab 1) . For that, we will assign a different **Multimedia Profile** to that team.
+  - In order to notice some difference when we make the Team change, we need to modify some setting from _your Team 2_ (created in Lab 1). For that, we will assign a different **Multimedia Profile** to that team.
 
 <br/>
 
+(screenshot - GIF)s
+
 - Navigate to the _Management Portal > Provisioning > Teams_
   - Find _your Team 2_ and click on `Edit`
-  - Check _your User settings_ and make sure that there is not **Multimedia Profile** assigned. **User settings have preference over Team setting**, so the Multimedia Profile at User level will be applied.
+  - Check _your User settings_ and verify the **Multimedia Profile** assigned. **User settings have preference over Team setting**, so the Multimedia Profile at **User** level will be applied over the **Team**.
   - Change the **Multimedia Profile** of the team from <w class = "attendee-class">attendeeID</w>\_MMP`to`Default_Telephony_Profile
 
 <br/>
 
-- Now, login in the **Agent Desktop** selecting <w class = "attendee-class">attendeeID</w>\_team1
+(screenshot - GIF)
+
+- Now, login to the **Agent Desktop** selecting <w class = "attendee-class">attendeeID</w>\_team1
   - Open _your User Profile_ and check that the **Channel Capacity**
-  - Now, click on _your Team_, you will see a dropdown list with other available Teams
+  - Now, click on _your Team_, you will see a dropdown list with other available Teams. \_team1 and \_team2
   - Click on <w class = "attendee-class">attendeeID</w>\_team2
   - **`Save Team Selection`** to confirm that you want to change a team
 
-<br/>
-
-- You will see notification appeared in the **Notification Center**
-  - You can change the **Notification settings** to disable the incoming notifications or the sound
-  - Mark the notification as `Read`
-  - Go to the **User Profile** and check the **Channel Capacity** again, it's different
+(screenshot - GIF)
 
 <br/>
 
-- Test some additional options:
-  - **Switch to Dark Mode**
-  - **Keyboard shortcuts**
-  - **Download error log**
+- You will see a new notification appears in the **Notification Center**
+  - You can change the **Notification settings** to disable the incoming notifications or the sound.
+  - Mark the notification as `Read`.
+  - Go to the **User Profile** and check the **Channel Capacity** again, it's different.
+
+(screenshot - GIF)
+
+## Custom Widget Landscape
+
+> The next section covers the experience you just saw with switching to the new team : Team2
+
+**Team2 has a dedicated desktop layout that shows you the power of custom widgets and extensibility of the Desktop**
+
+### Header Widgets and Advanced Header order
+
+- You will notice that the Agent desktop now has a custom widget in the Header area that is displaying the shift timer.
+
+- You will also notice that the order of the widgets has been changed, with the state timer now in the center.
+
+- This is the "Advanced Header" feature and allows you to embed widgets in the header area along with the help of the `advancedHeader`` component in the Desktop Layout.
+
+(screenshot - GIF)
+
+### Exploring Navigation Area Widgets
+
+The left pane of the Agent Desktop now has a large number of custom widgets, showing you the power of extensibility in the Agent Desktop.
+
+#### Analyzer Report Custom Widget
+
+- Custom Analyzer Reports can be embedded in the Contact Center Desktop directly by pointing to the permalink inside the layout.
+- This loads up an iFrame version of the widget on the desktop.
+- For more information on this widget, speak to your lab proctor.
+
+(screenshot - GIF)
+
+#### Smartsheet Custom Widget
+
+- External Sites can be embedded into the Agent Desktop for Agent and Supervisor Workflows.
+- In this example, a shareable and embeddable link from Smarsheet.com is embedded into the Desktop workflow.
+
+(screenshot - GIF)
+
+#### State Change Custom Widget
+
+- Webcomponent widgets like the Example Widget allows developers to pass data from the Desktop into the widget.
+- Here, in this example you can see that Agent Desktop data is passed into another widget that is hosted externally.
+- The widget can be configured to obtain access to the Agent's Access Token to perform workflow automations.
+- Expanding the Drawer, this custom widget also allows you to change the Agent State.
+- Once the State is changed, you can see the Team and other information show up.
+- This shows you the power of the extensible Webex Contact Center Desktop JS SDK (JavaScript Software Development Kit) and event driven architectures of custom widgets.
+- For more information on this widget, speak to your lab proctor.
+
+(screenshot - GIF)
+
+#### Custom Address Book Widget
+
+- Another sample widget in the form of a custom Address book widget shows you the power of creating Attendant Console like widgets in the Agent Desktop.
+- Clicking the Call button actually makes a call externally, showcasing the power of the "Click to Call" functionality built into this custom widget.
+- For more information on this widget, speak to your lab proctor.
+
+(screenshot - GIF)
+
+#### Custom Call Control Widget
+
+- Another example widget shows you how you can perform various actions programmatically using the Webex Contact Center Desktop JavaScript Software Development Kit (JS SDK) that has been used to extend functionality beyond what is possible out of box.
+- A simple example task would be: Make a call, and then either Hold or Unhold the call, or experiment with Pause and Resume of the Recording while entering credit card information.
+- For more information on this widget, speak to your lab proctor.
+- (screenshot - GIF)
+
+#### Send SMS Widget
+
+- Another example widget shows you how the Agent Desktop can be configured to send outbound SMSes in call by configuring Webex Connect flows.
+- This custom widget allows you to enter your cell number, and any text - to send yourself a message.
+- In the background, the Widget is configured to use Webex Connect webhooks to send a custom payload and trigger a custom workflow.
+- For more information on this widget, speak to your lab proctor.
+
+(screenshot - GIF)
+
+<br/>
 
 # Verify Desktop Administration
 
@@ -638,14 +737,6 @@ To verify, navigate to WebexOne
 
 > Be aware that all entities that don't match with attendee IDs will be deleted
 > {: .block-warning }
-
-## Send Product Feedback
-
-Before you move onto the bonus sections, we would love to hear from you!
-Explore the product feedback option from right within the Agent Desktop.
-Please fill in the survey and help us improve the product!
-
-(content + screenshot)
 
 ---
 
@@ -890,6 +981,17 @@ Collaboration between agents and supervisors can help your Contact Center to be 
 - Go to **_Contact Center_** -> **_Settings_** and press **_Synchronize Users_** button to sync all changes from Control Hub to Webex CC Management Portal.
 
 ![Lab_4_Supervisor_Config_6](/assets/images/Supervisor/DC_Lab_4_Supervisor_Config_6.png)
+
+## Send Product Feedback
+
+Thank you for completing the labs, we would love to hear direct product feedback from you!
+Explore the product feedback option from right within the Agent Desktop.
+
+(screenshot - GIF)
+
+Please fill in the survey and help us improve the product!
+
+(screenshot - GIF)
 
 ---
 
