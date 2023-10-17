@@ -355,6 +355,8 @@ This is specifically for the Desktop Voice option. Agents can also test their lo
 
 The help documentation has been enhanced with Webex Help Center. Agents will now be redirected to the new Webex Help Center for online help including search.
 
+> Note: This will now open a new tab for the
+
 ![agent-desktop-Help-Documentation](/assets/images/agent/Agent_Help_Documentation.gif)
 
 ---
