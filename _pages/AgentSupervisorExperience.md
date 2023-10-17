@@ -5,6 +5,12 @@ date: 2023-10-04
 layout: post
 ---
 
+Welcome to the Webex Contact Center Agent & Supervisor Experience!
+
+In Part 1, we will look at the Webex Contact Center Agent Experience and associated Administrative toggles with configuring Agents on Webex Contact Center.
+
+In Part 2, we will look at the Webex Contact Center Supervior Experience and associated Administrative toggles associated with Configuring Supervisors on Webex Contact Center.
+
 <script>
     function update(){them = Array.from(document.querySelectorAll("input")).reduce((acc, input) => ({...acc, [input.id + "_out"] : input.value}),{});
 	Object.entries(them).forEach((entry) => {
@@ -21,27 +27,19 @@ layout: post
   }
 </script>
 
+# Table of Contents
+
+| Topic                                                          | Type          | Dificulty    | Time   |
+| -------------------------------------------------------------- | ------------- | ------------ | ------ |
+| [Part 1: Agent Desktop Experience](#agent-desktop-overview)    | Exploration   | EASY         | 20 min |
+| [Extend the Agent Desktop Experience](#desktop-administration) | Practical Lab | EASY         | 15 min |
+| [Desktop Administration](#desktop-administration)              | Exploration   | INTERMEDIATE | 15 min |
+| [Part 2: Supervisor Experience](#supervisor-experience)        | Exploration   | EASY         | 20 min |
+| [Supervisor Administration](#supervisor-administration)        | Practical Lab | INTERMEDIATE | 15 min |
+| [Supervisor Licensing](#supervisor-licensing)                  | Practical Lab | EASY         | 5 min  |
+| [BONUS: Customizations & Programmability](#custom-desktop)     | Practical Lab | ADVANCED     | 30 min |
+
 # Part 1: Agent Experience
-
-## Overview
-
-Welcome to the Webex Contact Center Agent & Supervisor Experience!
-
-In Part 1, we will look at the Webex Contact Center Agent Experience and associated Administrative toggles with configuring Agents on Webex Contact Center.
-
-In Part 2, we will look at the Webex Contact Center Supervior Experience and associated Administrative toggles associated with Configuring Supervisors on Webex Contact Center.
-
-## Table of Contents
-
-| Topic                                                          | Type               | Dificulty | Time   |
-| -------------------------------------------------------------- | ------------------ | --------- | ------ |
-| [Agent Desktop Experience](#agent-desktop-overview)            | Demo & Walkthrough | EASY      | 20 min |
-| [Extend the Agent Desktop Experience](#desktop-administration) | Practical Lab      | EASY      | 15 min |
-| [Desktop Administration](#desktop-administration)              | Exploration        | EASY      | 15 min |
-| [Supervisor Experience](#supervisor-experience)                | Practical Lab      | EASY      | 20 min |
-| [Supervisor Administration](#supervisor-administration)        | Practical Lab      | EASY      | 15 min |
-| [Supervisor Licensing](#supervisor-licensing)                  | Practical Lab      | EASY      | 5 min  |
-| [BONUS: Customizations & Programmability](#custom-desktop)     | Practical Lab      | ADVANCED  | 30 min |
 
 ## Objectives
 
@@ -213,9 +211,10 @@ The header section of the agent desktop contains the State change toggle where t
 
 This also has the section where you can view the Idle codes.
 
-These Idle codes are customizable.
-
 ![agent-desktop-State-Idle](/assets/images/agent/Agent_State_Idle.gif)
+
+> Note: The Idle codes are customizable and configured under **Webex Control Hub > Contact Center Settings > Idle / Wrap up Codes**
+> These Idle codes can then be customized per Desktop Profile, on a per user level.
 
 ---
 
@@ -225,13 +224,18 @@ The Agent can access the out of box Agent Personal Statistics Reports on the lef
 
 ![agent-desktop-Personal-Statistics](/assets/images/agent/Agent_Personal_Statistics.gif)
 
+> Note: These Agent Personal Statistics are canned reports out of the box. However, one can configure custom Analyzer Reports for Agents in the Layout if custom reporting views are needed.
+
 ---
 
-### Launch the Webex App
+### Organizational Messaging using the Webex App
 
-Launch webex App
+Launch the Webex App from within the Desktop to message other users in the organization. This is a quick way for the Agent to message the Supervisor, or the Supervisor to be able to send messages to the Agent.
 
-Send a message to the supervisor user - search for supervisor or admin user and send a message
+Send a message to the supervisor user - search for supervisor or admin user and send a message.
+
+Your Supervisor is configured in the format:
+**wxcclabs_supvr_ID<attendeeID>@gmail.com**
 
 ![agent-desktop-webex-App](/assets/images/agent/Agent_Webex_App.gif)
 
@@ -239,11 +243,16 @@ Send a message to the supervisor user - search for supervisor or admin user and 
 
 ### Launch the Notification Pane
 
+The notification pane on the desktop shows you the notifications of incoming calls or messages.
+The agent can also launch previously delivered screenpops from this pane.
+
 ![agent-desktop-Notification-Pane](/assets/images/agent/Agent_Notification_Pane.gif)
 
 ---
 
 ### Launch the Agent Settings Pane
+
+To review or change the Desktop Settings, click on the persona icon on the top right.
 
 ![agent-desktop-Settings-Pane](/assets/images/agent/Agent_Settings_Pane.gif)
 
@@ -251,17 +260,30 @@ Send a message to the supervisor user - search for supervisor or admin user and 
 
 #### Verify Profile Settings
 
+The Profile settings shows the Agent which Device(s) or Teams are configured for use, allowing the agent to switch the Device OR Teams that they wish to login.
+
+> This is defined in the **Desktop Profile** on the User or Team level.
+> Teams are defined on the **User Settings** under Contact Center Settings
+
 ![agent-desktop-Profile-Settings](/assets/images/agent/Agent_Profile_Settings.gif)
 
 ---
 
 #### Verify Channel Information for Omnichannel
 
+The Channel capacity determines how many contacts the Agent can handle at a maximum, per channel.
+
+> This is defined in the **Multimedia Profile** on the User or Team level.
+
 ![agent-desktop-Channel-Information](/assets/images/agent/Agent_Channel_Information.gif)
 
 ---
 
 #### Verify Notification Settings
+
+The notification settings under user settings allows you to Enable/Disable the Notifications, Enable Silent Notifications, or Enable/Disable the sound. You can also change the volume of the Chime for the incoming contact.
+
+> Note: These settings persist as long as the browser cache is retained for the user.
 
 ![agent-desktop-Notification-Pane](/assets/images/agent/Agent_Notification_Pane.gif)
 
