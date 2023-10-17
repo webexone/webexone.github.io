@@ -1,6 +1,6 @@
 ---
 title: Advanced Desktop Customizations
-author: Arunabh Bhattacharjee
+author: Niko Theologitis & Arunabh Bhattacharjee
 date: 2023-10-12
 layout: post
 ---
