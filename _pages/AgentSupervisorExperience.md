@@ -481,7 +481,7 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 
 (screenshot - GIF)
 
-- Navigate to _Management Portal > Provisioning > Outdial ANI_
+- Navigate to _DESKTOP EXPERIENCE > Outdial ANI_
   - Click on **`New Outdial ANI`**
   - Name: <w class = "attendee-class">attendeeID</w>\_outdialANI
   - Add Outdial ANI entry
