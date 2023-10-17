@@ -291,17 +291,27 @@ The notification settings under user settings allows you to Enable/Disable the N
 
 #### Switch to Dark Mode
 
+You can switchover the theme on the Desktop using the Dark mode toggle. This helps with visibility on the eyes in low light conditions and can be a user preference for the theme.
+
+> This is another setting that is preserved with the user's browser cache.
+
 ![agent-desktop-Dark-Mode](/assets/images/agent/Agent_Dark_Mode.gif)
 
 ---
 
 #### View Desktop Mic & Speaker Options
 
+This is a setting that is enabled for all logged in Agents with the Desktop (WebRTC) option. This can help troubleshoot any audio related settings for the Agent's microphone or speaker volumes.
+
 ![agent-desktop-Mic-Speaker](/assets/images/agent/Agent_Mic_Speaker.gif)
 
 ---
 
 #### Explore Shortcuts
+
+Try to speed up actions with keyboard shortcuts available out of box on the Agent Desktop.
+
+You can launch the shortcuts using Ctrl+Alt+F for Windows (or Cmd+Option+F for MAC users)
 
 ![agent-desktop-Shortcuts](/assets/images/agent/Agent_Shortcuts.gif)
 
@@ -311,19 +321,31 @@ The notification settings under user settings allows you to Enable/Disable the N
 
 Change the state from Idle to Available using the shortcut
 
-![agent-desktop-State_Change_Shortscut](/assets/images/agent/Agent_State_Change_Shortscut.gif)
+**Example for Mac users:**
+
+> Try Ctrl + Option + F to bring up the shortcuts
+> Try Ctrl + Option + R to go Ready
+> Try Ctrl + Option + N to go Not Ready by typing an Idle code + Enter
+> ![agent-desktop-State_Change_Shortscut](/assets/images/agent/Agent_State_Change_Shortscut.gif)
 
 ---
 
 #### Download Error Logs
 
+A diagnostic must have for Agents is the ability to download error reports to send to administrators for troubleshooting.
+
+> Use Ctrl + Shift + 2 as a shortcut to download and view the log file!
+
 ![agent-desktop-Error-Logs](/assets/images/agent/Agent_Error-Logs.gif)
+
+> What you will notice when you open the file:
+> The Desktop uses a combination of secure HTTPS as well as Websocket connectivity to stay connected to the backend.
 
 ---
 
 #### Test Your Network
 
-This is specifically for the Desktop Voice option. Agents can also test their local network connectivity for latency and bandwidth requirements on the Agent Desktop.
+This is specifically for the Desktop Voice option. Agents can also test their local network connectivity for latency and bandwidth requirements on the Agent Desktop - eespecially for diagnostics.
 
 ![agent-desktop-Test-Network](/assets/images/agent/Agent_Test_Network.gif)
 
