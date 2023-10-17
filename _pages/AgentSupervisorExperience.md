@@ -1,6 +1,6 @@
 ---
-title: Agent Experience
-author: Arunabh Bhattacharjee
+title: Agent & Supervisor Experience
+author: Niko Theologitis & Arunabh Bhattacharjee
 date: 2023-10-04
 layout: post
 ---
@@ -21,13 +21,15 @@ layout: post
   }
 </script>
 
+# Part 1: Agent Experience
+
 ## Overview
 
-Welcome to the Webex Contact Center Agent Experience!
+Welcome to the Webex Contact Center Agent & Supervisor Experience!
 
-Here we will look at the overall Agent Experience and associated Administrative settings for Agents on Webex Contact Center.
+In Part 1, we will look at the Webex Contact Center Agent Experience and associated Administrative toggles with configuring Agents on Webex Contact Center.
 
-This lab begins with out of box functionality of the Agent Desktop and explores advanced extensibility options and use cases for the Agent persona.
+In Part 2, we will look at the Webex Contact Center Supervior Experience and associated Administrative toggles associated with Configuring Supervisors on Webex Contact Center.
 
 ## Table of Contents
 
@@ -36,15 +38,17 @@ This lab begins with out of box functionality of the Agent Desktop and explores 
 | [Agent Desktop Experience](#agent-desktop-overview)            | Demo & Walkthrough | EASY      | 20 min |
 | [Extend the Agent Desktop Experience](#desktop-administration) | Practical Lab      | EASY      | 15 min |
 | [Desktop Administration](#desktop-administration)              | Exploration        | EASY      | 15 min |
+| [Supervisor Experience](#supervisor-experience)                | Practical Lab      | EASY      | 20 min |
+| [Supervisor Administration](#supervisor-administration)        | Practical Lab      | EASY      | 15 min |
+| [Supervisor Licensing](#supervisor-licensing)                  | Practical Lab      | EASY      | 5 min  |
+| [BONUS: Customizations & Programmability](#custom-desktop)     | Practical Lab      | ADVANCED  | 30 min |
 
-## Introduction
+## Objectives
 
-### Lab Objectives
-
-- Gain an understanding of the Agent Experience and navigate the Agent Desktop on Webex Contact Center while exploring its built-in and customizable capabilities.
-- **Exploration of Agent Desktop:** Navigate through the Agent Desktop interface. Learn about handling Inbound and Outbound contacts and various agent workflows.
-- **Extensions and Customizations:** Explore out-of-the-box and custom built widgets. Understand workflows and Desktop Widget possibilities.
-- **Bonus:** Dive into advanced desktop extensions, focusing on layout design and programmatic extensions to the Desktop.
+- Understand the Agent Experience on Webex Contact Center by logging into the Agent Desktop application and exploring out of box capabilities.
+- Understand the entire Agent Desktop interface and functions, including Inbound, Outbound and Omnichannel contact workflows.
+- Learn about the extensions to the Agent Desktop Experience, exploring widgets available both out of box and customizations - learning the possibilities with Desktop Widgets and custom workflows.
+- The Bonus section (OPTIONAL), covers advanced Desktop extensions, diving deep into Desktop layout design and programmatic extensions.
 
 ### Pre-Requisites
 
@@ -52,32 +56,40 @@ This lab begins with out of box functionality of the Agent Desktop and explores 
 
 1. **1 extra device** (your personal phone for example) to test inbound calls to Webex Contact Center. You can use your cell phone for this
 
-2. **Pre-configured Webex Contact Center tenant**
-
 > Note: For completing the first section of the lab, all the Desktop Administration configurations have already been done for you to experience the fully loaded desktop. To understand what was configured, you may refer to the Desktop Administration Experience in the second half of this lab.
 
 > We will explore each of the Administration elements at a later time in the Desktop Administration section.
 
-- Copy of the Administrator credentials to Control Hub.
-- Copy of the Agent login Credentials to the Agent Desktop.
+- Administrator credentials to Control Hub [admin.webex.com](https://admin.webex.com).
+- Agent Login Credentials to the Agent Desktop.
+  [desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com)
 
-3. **Configured Users & Flow**
+2. The following items are already pre-configured:
 
 - Agent and Supervisor users are created and configured for logins.
-- Access to the Contact Center Desktop application: [https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com)
+- You have agent's access to the Agent Desktop URL: [https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com)
 - Agent is part of 2 Teams. (Your Attendee ID) with team1 and team2.
-- Webex Calling extensions are assigned to a WxCC users (agent and supervisor) to experience alternative login options.
-- An inbound Voice flow is configured for test calls.
+
+Example:
+
+> If your attendee ID: 100
+>
+> 100_team1
+>
+> 100_team2
+
+3. Agents will use WebRTC endpoints. Webex Calling extensions are also assigned to users (agent and supervisor) to experience alternative login options.
+
+4. An inbound Voice flow is configured for test calls.
 
 ### Quick Links
 
 > Control Hub Administration: **[https://admin.webex.com](https://admin.webex.com){:target="\_blank"}**\
-> Contact Center Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="\_blank"}**\
+> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="\_blank"}**\
 
 ## Lab Configuration
 
 > Please submit the form with your Attendee ID. All configuration items in the lab guide will be renamed with that prefix.
-> {: .block-tip }
 
 <div class="alert"></div>
 <form id="attendee-form">
@@ -93,7 +105,7 @@ document.forms["attendee-form"][1].value = localStorage.getItem("attendeeID") ||
 update()
 </script>
 
-The following Administration entities have been pre-configured for you.
+The following Administration entities have been configured for you:
 
 Please note, that to proceed to the next section, you will need to use the accounts shown in the top 3 rows.
 
@@ -117,15 +129,6 @@ Please note, that to proceed to the next section, you will need to use the accou
 
 > Desktop multi-language support is based on the language preference settings on the browser. Currently, we support 29 languages:
 > Bulgarian, Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish, Dutch, English (UK), English (US), Finnish, French, German, Hungarian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Serbian, Slovak, Slovenian, Spanish, Swedish, and Turkish.
-
-(remove this -- convert it to a GIF)
-
-> Watch the following video, where each of the sections and their main options are explained. You will get a better idea of how the Agent Desktop look like and how to use it.
-
-<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/dc341488-94ab-4659-8951-4b4ba1412373" width="100%" height="100%" title="Agent Desktop Interface" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
-</div>
-<br/>
 
 ![Image1](/assets/images/Agent/AgentDesktopOverview.png)
 
@@ -314,16 +317,7 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 
 # Make an Incoming Call
 
-> In the following video you will see how to handle incoming calls and what are the different agent states:
-> {: .block-tip }
-
-<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/f5a79811-eb60-4925-b11a-a8586760a3d3" width="100%" height="100%" title="Calls Handling" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
-</div>
-<br/>
-
 > In this section, you will will interact as an agent and test an Incoming call. Review the video of the lab section above to understand the different call handling options.
-> {: .block-tip }
 
 - In order to test properly an incoming call, first we need to make sure that we have all the call handling options enabled
 
@@ -438,12 +432,6 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 ## Outdial
 
 > In this section, we will test Outdial calls using different Outdial ANIs and Address Books.
-> {: .block-tip }
-
-<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/df20ad39-55db-4c8c-a268-bcd4818fe1f3" width="100%" height="100%" title="Outdial Call" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
-</div>
-<br/>
 
 (screenshot - GIF)
 
@@ -507,7 +495,6 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 ## Exploring User Profile
 
 > In this section, we will explore what are the available options and settings under the User Profile.
-> {: .block-tip }
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/149fe8d1-c27e-4c7e-a0b9-af072487c543" width="100%" height="100%" title="User Profile" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
@@ -588,6 +575,18 @@ Explore the product feedback option from right within the Agent Desktop.
 Please fill in the survey and help us improve the product!
 
 (content + screenshot)
+
+---
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log('DOMContentLoaded OKOK')
+    })
+
+    window.addEventListener('load', () => {
+      console.log('window load OK')
+    })
+  </script>
 
 <p style="text-align:center"><strong>Congratulations, you have completed the Agent Experience lab! Please proceed to the <a href="https://webexone.github.io/pages/SupervisorExperience/">Supervisor Experience Lab.</a></strong></p>
 		
