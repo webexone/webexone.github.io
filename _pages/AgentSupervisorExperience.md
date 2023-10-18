@@ -5,11 +5,9 @@ date: 2023-10-04
 layout: post
 ---
 
-Welcome to the Webex Contact Center Agent & Supervisor Experience!
+In Part 1, we will explore the Webex Contact Center Agent Experience and the associated administrative toggles for configuring agents in the Webex Contact Center.
 
-In Part 1, we will look at the Webex Contact Center Agent Experience and associated Administrative toggles with configuring Agents on Webex Contact Center.
-
-In Part 2, we will look at the Webex Contact Center Supervior Experience and associated Administrative toggles associated with Configuring Supervisors on Webex Contact Center.
+In Part 2, we will examine the Webex Contact Center Supervisor Experience and the associated administrative toggles for configuring supervisors in the Webex Contact Center.
 
 <script>
     function update(){them = Array.from(document.querySelectorAll("input")).reduce((acc, input) => ({...acc, [input.id + "_out"] : input.value}),{});
@@ -48,46 +46,45 @@ In Part 2, we will look at the Webex Contact Center Supervior Experience and ass
 
 ### Objectives
 
-- Understand the Agent Experience on Webex Contact Center by logging into the Agent Desktop application and exploring out of box capabilities.
-- Understand the entire Agent Desktop interface and functions, including Inbound, Outbound and Omnichannel contact workflows.
-- Learn about the extensions to the Agent Desktop Experience, exploring widgets available both out of box and customizations - learning the possibilities with Desktop Widgets and custom workflows.
-- The Bonus section (OPTIONAL), covers advanced Desktop extensions, diving deep into Desktop layout design and programmatic extensions.
+- Explore the Agent Experience on the Webex Contact Center by logging into the Agent Desktop application and navigating its out-of-the-box capabilities.
+- Familiarize yourself with the complete Agent Desktop interface and its functions, covering Inbound, Outbound, and Omnichannel contact workflows.
+- Dive into extensions of the Agent Desktop Experience, understanding the available widgets—both out-of-the-box and custom—and recognizing the potential of Desktop Widgets and customized workflows.
+- The Bonus section (OPTIONAL) delves into advanced Desktop extensions, focusing on Desktop layout design and programmatic extensions.
 
 ### Pre-Requisites
 
+> Note: To complete the initial section of the lab, all Desktop Administration configurations are already set up. This ensures you can experience a fully equipped desktop. For insights on what was configured, please refer to the Desktop Administration Experience later in this lab.
+
+> We'll delve into each Administrative element in the following **Desktop Administration** sections that covers `configuration and administrative tasks`.
+
 **You Will Need**
 
-1. **1 extra device** (your personal phone for example) to test inbound calls to Webex Contact Center. You can use your cell phone for this
+1. **One additional device** (like your personal phone) to test inbound calls to the Webex Contact Center. You can use your cell phone for this purpose.
 
-> Note: For completing the first section of the lab, all the Desktop Administration configurations have already been done for you to experience the fully loaded desktop. To understand what was configured, you may refer to the Desktop Administration Experience in the second half of this lab.
+- Administrator credentials for the Control Hub: [admin.webex.com](https://admin.webex.com).
+- Agent Login Credentials for the Agent Desktop: [desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com).
 
-> We will explore each of the Administration elements at a later time in the Desktop Administration section.
+1. The items listed below have been pre-configured for you:
 
-- Administrator credentials to Control Hub [admin.webex.com](https://admin.webex.com).
-- Agent Login Credentials to the Agent Desktop.
-  [desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com)
-
-2. The following items are already pre-configured:
-
-- Agent and Supervisor users are created and configured for logins.
-- You have agent's access to the Agent Desktop URL: [https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com)
-- Agent is part of 2 Teams. (Your Attendee ID) with team1 and team2.
+- Agent and Supervisor user accounts are configured and ready for logins.
+- You can access the Agent Desktop via the URL: [https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com).
+- As an agent, you're associated with two teams—designated by your Attendee ID—as "Team1" and "Team2".
 
 Example:
 
-> If your attendee ID: 100
+> If your attendee ID is 100:
 >
-> 100_team1
+> 100_Team1
 >
-> 100_team2
+> 100_Team2
 
-3. Agents will use the browser for voice calls, via WebRTC (Web Real-time communication) endpoints. Webex Calling extensions are also assigned to users (agent and supervisor) to experience alternative device options. Webex Contact Center agents & supervisors can use any combination of these devices, including PSTN endpoints and cellphones.
+1. Agents will use browsers for voice calls using WebRTC (Web Real-time Communication) endpoints. Additionally, Webex Calling extensions have been assigned to users (both agents and supervisors) to facilitate alternate device experiences. Webex Contact Center agents and supervisors can opt for any mix of these devices, encompassing PSTN endpoints and mobile phones.
 
-4. An inbound Voice flow is configured for test calls.
+2. A preset inbound Voice flow is available for test calls.
 
 ### Quick Links
 
-You will only need access to 2 web portals for this lab.
+For this lab, you'll only require access to two web portals:
 
 > Control Hub Administration: **[https://admin.webex.com](https://admin.webex.com){:target="\_blank"}**\
 > Contact Center Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="\_blank"}**\
@@ -112,7 +109,7 @@ document.forms["attendee-form"][1].value = localStorage.getItem("attendeeID") ||
 update()
 </script>
 
-The following Administration entities have been configured for you:
+The following Administration entities have been configured for you via [Webex Control Hub](https://admin.webex.com){:target="\_blank"}
 
 Please note, that to proceed to the next section, you will need to use the accounts shown in the top 3 rows.
 
@@ -134,13 +131,13 @@ Please note, that to proceed to the next section, you will need to use the accou
 
 ## Agent Desktop Overview
 
-> Desktop multi-language support is based on the language preference settings on the browser. Currently, we support 29 languages:
+> Desktop multi-language support is based on the language settings on the browser. Currently, we support 29 languages, including:
 > Bulgarian, Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish, Dutch, English (UK), English (US), Finnish, French, German, Hungarian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Serbian, Slovak, Slovenian, Spanish, Swedish, and Turkish.
 
 ![Image1](/assets/images/Agent/AgentDesktopOverview.png)
 
-When you receive an active interaction, you will notice that the
-Agent Desktop is divided into **6 sections**. In the image above you can see a general view of the Agent Desktop and where each section is located.
+The Agent Desktop is divided into **6 sections**.
+The image above shows the general view after receiving an interaction.
 
 Here is an overview of the sections:
 
