@@ -509,58 +509,67 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 
 > Not choosing an option on the dropdown selects the Default Outdial ANI (Calling Number Mask) of the tenant. This is configured on Control Hub, under the Desktop Settings. admin.webex.com > Contact Center > Desktop Settings > Outdial ANI
 
-(screenshot - GIF)
+![Agent-AddressBook](/assets/images/agent/Agent_AddressBook.gif)
+
+---
 
 > **Note: These are live numbers published on cisco.com!**
 
-- Alternatively, you can select a customized Calling Number mask by selecting the Outdial ANI dropdown. This Outdial ANI dropdown can be configured on the Desktop Profile settings for the Agent.
+- Alternatively, you can select a customized Calling Number mask by selecting the Outdial ANI dropdown. This Outdial ANI dropdown can be configured on the `Outdial ANI` settings in Control Hub.
 
-(screenshot - GIF)
+![Agent-OutdialANI_Mask](/assets/images/agent/Agent_OutdialANI_Mask.gif)
 
-- You will notice that upon clicking the dial button, the Agent is first connected to the call, and then the remote party is connected - and the calls are bridged.
+---
 
-(screenshot - GIF)
+- **CLARITY??** _You will notice that upon clicking the dial button, the Agent is first connected to the call, and then the remote party is connected - and the calls are bridged._
+
+![Agent-Outdial_Call](/assets/images/agent/Agent_Outdial_Call.gif)
+
+---
 
 > **Note: Outdial also supports pre-dial activities that can be configured on the WebexCC Flow Designer. The Flow Designer has been configured for you with the Custom Caller Associated Data Variables that are visibile upon Outdial**
 
-(screenshot - GIF)
+![CH-Outdial_Flow](/assets/images/agent/CH_Outdial_Flow.gif)
+
+---
 
 ### Verify the Outdial Configuration
 
 (screenshot - GIF)
 
-- Navigate to _DESKTOP EXPERIENCE > Outdial ANI_
-  - Click on **`New Outdial ANI`**
-  - Name: <w class = "attendee-class">attendeeID</w>\_outdialANI
-  - Add Outdial ANI entry
-    - Name: <w class = "attendee-class">attendeeID</w>\_outdialANIEntry1
-    - Number: Select your mapped DN
+- On Control Hub, Navigate to _DESKTOP EXPERIENCE > Outdial ANI_
+  - In the Search bar type your attendee number to find your Outdial ANI**`NNN_OutdialANI`**
+  - Click on it, and look at all the settings:
 
 <br/>
 
-(screenshot - GIF)
+![CH_Outdial_Verify](/assets/images/agent/CH_Outdial_Verify.gif)
 
-- Navigate to _Management Portal > Provisioning > Address Book_
-  - Click on **`New Address Book`**
-  - Name: <w class = "attendee-class">attendeeID</w>\_addressBook
-  - Parent Type: **`Site`**
-  - Add Address Book entries
-    - Name: <w class = "attendee-class">attendeeID</w>\_addressBookEntry1
-    - International calls are disabled, **so only US numbers are supported**. For example: +18662293239 (Cisco Helpdesk)
+---
+
+- In Control Hub, Navigate to DESKTOP EXPERIENCE > _Address Books_
+  - Click on **`WebexOneAddressBook`**
+  - Look at settings: `Please do change these settings as they are global and will affect all users on Tenant`
 
 <br/>
 
-(screenshot - GIF)
+![CH_AddressBook_Verify](/assets/images/agent/CH_AddressBook_Verify.gif)
 
-- Navigate to _Management Portal > Provisioning > Desktop Profiles_
-  - Search for _your Desktop Profile_ and make sure that **Outdial is enabled and `Outdial Entry Point-1` (created by the system) selected**
-  - Select _your Outdial ANI_
+---
+
+- In Control Hub, Navigate to _DESKTOP EXPERIENCE > Desktop Profiles_
+  - Search for _your Desktop Profile_
+  - Select `Dial Plans`
+  - Make sure that **Outdial is enabled and your Outdial ANI `NNN_OutdialANI` is selected**
+  - This is where you also assign the Address Book
 
 <br/>
 
-(screenshot - GIF)
+![CH_Desktop_Profiles_Verify](/assets/images/agent/CH_Desktop_Profiles_Verify.gif)
 
-- Navigate to _Management Portal > Tenant > Settings_
+---
+
+- In Control Hub, Navigate to _TENANT SETTINGS > Voice_
   - See the number of the **Default Outdial ANI**
 
 > **This is a required setting at tenant level, so PLEASE DON'T EDIT IT**
@@ -568,7 +577,9 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 
 <br/>
 
-(screenshot - GIF)
+![CH_OutdialANI_Number](/assets/images/agent/CH_OutdialANI_Number.gif)
+
+---
 
 - Now, login in the **Agent Desktop** with _your Agent1_ with the Webex Extension of the Agent
   - Open the Outdial on the Horizontal Header
