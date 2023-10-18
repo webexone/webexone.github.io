@@ -42,7 +42,7 @@ Last modified: Wed, 20 Sep 2023
 | [Part 2:6 Adding the ability to collect an extension and present it to an agent during a callback](#adding-the-ability-to-collect-an-extension-and-present-it-to-an-agent-during-a-callback)                   | Practical Lab | EASY            | 15 min | 
 | [Part 2:7 Introduction to Flow Debugger](#introduction-to-flow-debugger)                   | Practical Lab | EASY            | 15 min | 
 | [Part 2:8 Introduction to Flow Versioning](#introduction-to-flow-versioning)                   | Practical Lab | EASY            | 15 min | 
-| [##Part 3: Bonus - Experience Management](#bonus---experience-management##)                   | Practical Lab | EASY            | 15 min | 
+| [Part 3: Bonus - Experience Management](#bonus---experience-management)                   | Practical Lab | EASY            | 15 min | 
 
 
 ## Overview of the lab:
