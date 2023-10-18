@@ -516,7 +516,7 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 
 ---
 
-- **CLARITY??** _You will notice that upon clicking the dial button, the Agent is first connected to the call, and then the remote party is connected - and the calls are bridged._
+> _You will notice that upon clicking the dial button, the Agent is presented with a floating pop-over that displays call varibales and is then connected to the call, and then the remote party is connected - following which the call legs are bridged._
 
 ![Agent-Outdial_Call](/assets/images/agent/Agent_Outdial_Call.gif)
 
@@ -529,8 +529,6 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 ---
 
 ### Verify the Outdial Configuration
-
-(screenshot - GIF)
 
 - On Control Hub, Navigate to _DESKTOP EXPERIENCE > Outdial ANI_
   - In the Search bar type your attendee number to find your Outdial ANI**`NNN_OutdialANI`**
@@ -576,60 +574,35 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 
 ---
 
-- Now, login in the **Agent Desktop** with _your Agent1_ with the Webex Extension of the Agent
-  - Open the Outdial on the Horizontal Header
-  - Input your personal phone number
-  - **Don't select any Outdial ANI**
-  - Click on the telephone button to place the call
-  - The call will be delivered to your phone number from the **Default Outdial ANI** defined at Tenant level
-  - Now repeat the same but **choosing _your Outdial ANI_** configured before. You will see that the call is coming with a different ANI
-
 <br/>
 
-- Finally, let's see how **Adress Book** works
-  - Open the Outdial window and swith to the Address Book tab
-  - You will see the the list of entries of <w class = "attendee-class">attendeeID</w>\_addressBook configured before
-  - You can search by entry name or DN
-  - Try to call any of the numbers in the list
+## Exploring Profile Settings & Switching Teams
 
-## Exploring User Profiles & Switching Teams
+> In this section, we will explore what are the available options and settings under the Profile Settings.
 
-> In this section, we will explore what are the available options and settings under the User Profile.
-
-<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/149fe8d1-c27e-4c7e-a0b9-af072487c543" width="100%" height="100%" title="User Profile" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
-</div>
 <br/>
-
-(screenshot - GIF)
 
 - First, we will see how to change from one team to another one
-  - In order to notice some difference when we make the Team change, we need to modify some setting from _your Team 2_ (created in Lab 1). For that, we will assign a different **Multimedia Profile** to that team.
+
+![Agent_Switch_Teams](/assets/images/agent/Agent_Switch_Teams.gif)
+
+---
+
+- We are applying a different Layout.json per Team, to showcase how two teams might look differently.
+
+- To see where that is applied
+  - Navigate to the _USER MANAGEMENT > Teams_
+  - Search _your Team 2_ and click on `Edit`
+  - At quick glance you can see that your Team1 is using the `Gloabl Layout` and Team2 is using the `WebexOne_DesktopLayout`
+  - You can click each team to explore further
+
+![Agent_Switch_Teams_Show](/assets/images/agent/Agent_Switch_Teams_Show.gif)
+
+---
 
 <br/>
 
-(screenshot - GIF)s
-
-- Navigate to the _Management Portal > Provisioning > Teams_
-  - Find _your Team 2_ and click on `Edit`
-  - Check _your User settings_ and verify the **Multimedia Profile** assigned. **User settings have preference over Team setting**, so the Multimedia Profile at **User** level will be applied over the **Team**.
-  - Change the **Multimedia Profile** of the team from <w class = "attendee-class">attendeeID</w>\_MMP`to`Default_Telephony_Profile
-
-<br/>
-
-(screenshot - GIF)
-
-- Now, login to the **Agent Desktop** selecting <w class = "attendee-class">attendeeID</w>\_team1
-  - Open _your User Profile_ and check that the **Channel Capacity**
-  - Now, click on _your Team_, you will see a dropdown list with other available Teams. \_team1 and \_team2
-  - Click on <w class = "attendee-class">attendeeID</w>\_team2
-  - **`Save Team Selection`** to confirm that you want to change a team
-
-(screenshot - GIF)
-
-<br/>
-
-- You will see a new notification appears in the **Notification Center**
+- **CLARIFY** You will see a new notification appears in the **Notification Center**
   - You can change the **Notification settings** to disable the incoming notifications or the sound.
   - Mark the notification as `Read`.
   - Go to the **User Profile** and check the **Channel Capacity** again, it's different.
@@ -650,7 +623,9 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 
 - This is the "Advanced Header" feature and allows you to embed widgets in the header area along with the help of the `advancedHeader`` component in the Desktop Layout.
 
-(screenshot - GIF)
+![Agent_Header](/assets/images/agent/Agent_Header.gif)
+
+---
 
 ### Exploring Navigation Area Widgets
 
@@ -662,14 +637,18 @@ The left pane of the Agent Desktop now has a large number of custom widgets, sho
 - This loads up an iFrame version of the widget on the desktop.
 - For more information on this widget, speak to your lab proctor.
 
-(screenshot - GIF)
+![Agent_Widget_Analyzer](/assets/images/agent/Agent_Widget_Analyzer.gif)
+
+---
 
 #### Smartsheet Custom Widget
 
 - External Sites can be embedded into the Agent Desktop for Agent and Supervisor Workflows.
 - In this example, a shareable and embeddable link from Smarsheet.com is embedded into the Desktop workflow.
 
-(screenshot - GIF)
+![Agent_Widget_Smartsheet](/assets/images/agent/Agent_Widget_Smartsheet.gif)
+
+---
 
 #### State Change Custom Widget
 
@@ -681,7 +660,16 @@ The left pane of the Agent Desktop now has a large number of custom widgets, sho
 - This shows you the power of the extensible Webex Contact Center Desktop JS SDK (JavaScript Software Development Kit) and event driven architectures of custom widgets.
 - For more information on this widget, speak to your lab proctor.
 
-(screenshot - GIF)
+![Agent_Widget_Example](/assets/images/agent/Agent_Widget_Example.gif)
+
+---
+
+- Part of the Desktop SDK is a method that can be applied to pause recording if an agent was to enter for example, a customers Credit card information, example below.
+- **FYI**, you must be on an `active` call.
+
+![Agent_Widget_Pause_Resume](/assets/images/agent/Agent_Widget_Pause_Resume.gif)
+
+---
 
 #### Custom Address Book Widget
 
@@ -689,7 +677,9 @@ The left pane of the Agent Desktop now has a large number of custom widgets, sho
 - Clicking the Call button actually makes a call externally, showcasing the power of the "Click to Call" functionality built into this custom widget.
 - For more information on this widget, speak to your lab proctor.
 
-(screenshot - GIF)
+![Agent_Widget_AddressBook](/assets/images/agent/Agent_Widget_AddressBook.gif)
+
+---
 
 #### Custom Call Control Widget
 
@@ -697,16 +687,21 @@ The left pane of the Agent Desktop now has a large number of custom widgets, sho
 - A simple example task would be: Make a call, and then either Hold or Unhold the call, or experiment with Pause and Resume of the Recording while entering credit card information.
 - For more information on this widget, speak to your lab proctor.
 
-(screenshot - GIF)
+![Agent_Widget_CallControls](/assets/images/agent/Agent_Widget_CallControls.gif)
+
+---
 
 #### Send SMS Widget
 
 - Another example widget shows you how the Agent Desktop can be configured to send outbound SMSes in call by configuring Webex Connect flows.
+- **FYI**, To use these `call controls` you must be on an `active` call.
 - This custom widget allows you to enter your cell number, and any text - to send yourself a message.
 - In the background, the Widget is configured to use Webex Connect webhooks to send a custom payload and trigger a custom workflow.
 - For more information on this widget, speak to your lab proctor.
 
-(screenshot - GIF)
+![Agent_Widget_SMS](/assets/images/agent/Agent_Widget_SMS.gif)
+
+---
 
 <br/>
 
