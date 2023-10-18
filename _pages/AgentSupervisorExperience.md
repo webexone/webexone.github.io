@@ -89,11 +89,9 @@ For this lab, you'll only require access to two web portals:
 > Control Hub Administration: **[https://admin.webex.com](https://admin.webex.com){:target="\_blank"}**\
 > Contact Center Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="\_blank"}**\
 
-\*\*The Contact Center Desktop is
-
 ## Lab Configuration
 
-> Please submit the form with your Attendee ID. All configuration items in the lab guide will be renamed with that prefix.
+> Please submit the form below with your Attendee ID. All configuration items in the lab guide will be renamed with that prefix.
 
 <div class="alert"></div>
 <form id="attendee-form">
