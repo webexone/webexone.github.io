@@ -45,12 +45,12 @@ Last modified: Wed, 20 Sep 2023
 | [Part 3: Bonus - Experience Management](#bonus---experience-management)                   | Practical Lab | EASY            | 15 min | 
 
 
-## Overview of the lab:
+## Overview of the Admin Experience 
 
 In this Lab, we will go through Admin UI by completing the tasks that are required for the general pre-configuration of a tenant. These tasks are to be undertaken by a customer administrator. By following each of the steps, you would have prepared your tenant to begin configuring different services offered by the platform. At the end of the lab, you should be able to log in to an agent interface with the configured user extension.
 You can do the tasks from the lab guide either on the **Lab Tenant** (you need to request access from the lab support team) or you can do it directly on your **Gold Tenant** / personal tenant.
 
-## Introduction
+### Introduction
 
 ### Lab Objective
 
@@ -67,15 +67,15 @@ You can do the tasks from the lab guide either on the **Lab Tenant** (you need t
 > Control Hub: **[https://admin.webex.com](https://admin.webex.com){:target="\_blank"}**\
 > Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="\_blank"}**\
 
-## Lab Section
+### Lab Section
 
-# Introduction to the new Admin Experience
+## Introduction to the new Admin Experience
 
 > The overall aim of admin consolidation is to provide a single pane of glass (SPOG) experience for administrators so that admins need not have frequent context switch by having to traverse different applications. The following video outlines the new features of a new admin experience. This introduces, the new left navigation panel for Webex Contact Center in Control Hub as well as other configuration settings which were migrated from the Management Portal.
 
 ![Admin_Experience](/assets/images/AE_image1.png)
 
-# Control Hub User Management Tasks
+## Control Hub User Management Tasks
 
 > The following video outlines the process to manage different types of users to the Customer tenant. Following the steps, you will add new users and set the Calling extension. While adding the user, we will see how to select user roles.
 
@@ -234,7 +234,7 @@ update()
 - Repeat the steps above for the supervisor.
 
 
-# Bulk Operations
+## Bulk Operations
 
 > In this section you will learn how to use the Bulk Configuration in Control Hub by creating a second team. As an administrator, you can use Bulk Operations to create, modify, import, or export configuration objects in Webex Contact Center. This feature provides greater speed and efficiency to deploy and configure Webex Contact Center systems.
 
@@ -299,7 +299,7 @@ xxxx_team2,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
 - In the Management Portal directly associate the **<w class="attendee_out">Your_Attendee_ID</w>_Team2** with your agent and supervisor by adding your users to that team (__Advanced Settings -> Agents__).
 
 
-# Access to the Agent Desktop
+## Access to the Agent Desktop
 
 > By following the steps below, you will log in to the Agent Desktop with your credentials and indicate the number (DN) where you want to receive the calls.
 
