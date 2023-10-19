@@ -767,12 +767,15 @@ As a supervisor you can be one of two roles.
 
 We will review this on Control Hub Settings.
 
-- Look up your Supervisor User bu going to admin.webex.com > Contact Center > Settings > Contact Center Users
-- Ensure that the Supervisor user wxcclabs+supvr_ID_your_attendee_ID\_@gmail.com has the role
+- Look up your Supervisor User bu going to admin.webex.com > Contact Center > USER MANAGEMENT > Contact Center Users
+- Ensure that the Supervisor user wxcclabs+supvr_ID_your_attendee_ID\_@gmail.com has the Supervisor Profile in the `User Profile` field
 
-(Screenshot - GIF)
+![Supervisor_UserProfile](/assets/images/supervisor/Supervisor_UserProfile.gif)
+
+---
 
 **Supervisor Only Role:**
+**CLARITY**
 
 - You can choose not to be an Agent. This is called the **Supervisor Only Role**
 - This is enabled by setting up a User with the Supervisor License and a Primary Team.
@@ -793,7 +796,9 @@ We will review this on Control Hub Settings.
 - You can to take calls from the Queue as a supervisor. This is called the **Supervisor and Agent Role**
 - This is enabled by setting up a User with the Supervisor License, a Primary Team AND marking the user Contact Center enabled.
 
-(Screenshot - GIF)
+![Supervisor_And_Agent_Role](/assets/images/supervisor/Supervisor_And_Agent_Role.gif)
+
+---
 
 <br>
 
