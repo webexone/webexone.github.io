@@ -482,12 +482,11 @@ update()
    ><img src="/assets/images/IVR/saveJsonChrome.gif" width="243">
    
       ---
-2. Click Routing Strategy <img src="/assets/images/IVR/rsToFlow.gif" Align= "right" height="200">
-3. Click on Flows in the top ribbon 
-4. Click Import
-5. Select flow_template
+2. Click Flows > Manage Flows > Import flows > Select flow_template
+<img src="/assets/images/fe_2.gif" Align= "right" height="200">
+
 <br><br><br><br><br><br><br><br>
-6. Click the ellipsis next to the newly imported flow_template and select Open 
+3. Click the ellipsis next to the newly imported flow_template and select Open 
    > <img src="/assets/images/IVR/openFlow.JPG" height="40">
    > 
    > Rename the flow to <w class="attendee_out">AttendeeID</w>_TechSummit by clicking on the pencil icon at the top of the screen, next to the flow name
