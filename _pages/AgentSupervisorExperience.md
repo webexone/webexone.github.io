@@ -978,42 +978,36 @@ Collaboration between agents and supervisors can help your Contact Center to be 
 
 ## User Profile
 
-- Under **_Provisioning_** -> **_User Profiles_**, find default **_Supervisor Profile_**, click on **_..._** button next to it, then on **_Copy_**.
+- Under **_Provisioning_** -> **_User Profiles_**, find default **_Supervisor Profile_**, and let us take a look at it.
 
 ![Lab_4_WebexCC_Config_6](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_6.png)
 
-- Provide proper user profile name and go to **_Module Settings_** tab.
+- We are able to view the Module Settings and Team settings and Access Rights.
+- This is where we are able to check on the Supervisor settings.
 
 ![Lab_4_WebexCC_Config_7](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_7.png)
 
-- Select **_Module Access_** as **_Specific_**. Check and make sure **_Send Messages_** and **_Mid-Call Monitor_** capabilities are enabled.
+- Go ahead and create a New User Profile: Name it <attendeeID>\_SupervisorProfile. Make this of type Supervisor.
+
+- Try to select a subset of module settings, and teams. Here is where you can decide which teams you want to be able to monitor.
 
 ![Lab_4_WebexCC_Config_8](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_8.png)
 
-- Scroll to the bottom of the page and save supervisor profile.
+- Scroll to the bottom of the page and save the supervisor profile.
 
 ![Lab_4_WebexCC_Config_9](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_9.png)
 
-- Go to **Provisioning\*** -> **_Users_**, find your supervisor user, click on **_..._** button next to it, then on **_Edit_**.
+- Go to **Provisioning\*** -> **_Users_**, find your supervisor user, and Edit the User Profile to point to the new User Profile you just created: attendeeID_supervisorProfile
 
 ![Lab_4_WebexCC_Config_10](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_10.png)
 
 - Set the following parameters and save changes:
 
-| **Parameter Name**     | **Parameter Value**                                            |
-| ---------------------- | -------------------------------------------------------------- |
-| Contact Center Enabled | Yes                                                            |
-| Primary Team           | Select supervisor team created above                           |
-| Site                   | Select proper site according the to lab guide                  |
-| Teams                  | Add teams which supervisor can use when signing in as an agent |
-| Agent Profile          | Select the default one - **_Agent-Profile_**                   |
-| Multimedia Profile     | Select the default one - **_Default_Multimedia_Profile_**      |
-
 ![Lab_4_WebexCC_Config_11](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_11.png)
 
 # Supervisor Licensing
 
-> In This section, we will review the Supervisor Licensing Requirements.
+> In This section, we will review the Supervisor Licensing that creates the supervisor.
 
 - Login to Control Hub using your administrator account.
 - Go to **_Users_**, click on supervisor's account, scroll dow to **_Licenses_** section and press **_Edit Licenses_** button.
