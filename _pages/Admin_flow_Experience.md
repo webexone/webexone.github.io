@@ -24,7 +24,7 @@ Last modified: Wed, 20 Sep 2023
   }
 </script>
 
-## Table of Contents
+# Table of Contents
 
 | Topic                                                                                 | Lab Type           | Difficulty Level | Estimated length |
 | ------------------------------------------------------------------------------------- | ------------------ | ---------------- | ---------------- |
@@ -45,7 +45,7 @@ Last modified: Wed, 20 Sep 2023
 | [Part 3: Bonus - Experience Management](#bonus---experience-management)                   | Practical Lab | EASY            | 15 min | 
 
 
-## Overview of the Admin Experience 
+# Overview of the Admin Experience 
 
 In this Lab, we will go through Admin UI by completing the tasks that are required for the general pre-configuration of a tenant. These tasks are to be undertaken by a customer administrator. By following each of the steps, you would have prepared your tenant to begin configuring different services offered by the platform. At the end of the lab, you should be able to log in to an agent interface with the configured user extension.
 You can do the tasks from the lab guide either on the **Lab Tenant** (you need to request access from the lab support team) or you can do it directly on your **Gold Tenant** / personal tenant.
@@ -154,7 +154,7 @@ update()
  
 - Refresh the **_Users_** page in the Control Hub, make sure that both users are in **Active** status.
 
-# Contact Center User Configuration
+## Contact Center User Configuration
 
 > The following video outlines how to create a Site, Team, and Multimedia Profile that will be assigned to the Contact Center users. We will also learn how to navigate to the Webex Contact Center admin section and how to associate customer-created Site, Team, and Multi-Media Profile with new users.
 
