@@ -348,7 +348,7 @@ xxxx_team2,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
 		
 <p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>
 
-## Overview of the lab:
+# Introduction to Flow Designer
 
 In this lab, we will configure all of the required elements to deliver a call into a queue.  We will then create a new flow and iterate on it adding functionality and exploring opportunities for improvement.
 
@@ -418,7 +418,7 @@ update()
 
 ## Lab Section
 
-# Introduction to Flow Designer
+## Flow Designer
 > Flow designer is a simple drag-and-drop user interface (UI) to define the flows. The following video explains the Flow Designer layout, activity library, and terminology used in the Flow Designer.
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
@@ -426,7 +426,7 @@ update()
 </div>
 
 
-# Configuring tenant for Call Delivery
+## Configuring tenant for Call Delivery
 
 ⚠️ If you are using your Gold Tenant you can use this link to download the [Audio Files](https://webexcc.github.io/assets/files/lab_wav.zip){:target="\_blank"}. Those files are already pre-uploaded on the Lab Tenant.
 
@@ -577,7 +577,7 @@ update()
     >
     > ---
 
-# Adding Functionality to Your Flow
+## Adding Functionality to Your Flow
 
 ## Adding a comfort message while a call is in queue
 1. Delete the connection which loops from the end of the Play Music node back to the beginning of the Play Music node.
@@ -616,7 +616,7 @@ update()
    >
    > ---
 
-## Creating alternating comfort messages while a call is in queue
+### Creating alternating comfort messages while a call is in queue
 1. Create a new flow variable: 
     > Click on the cog in the lower left corner of the canvas <img src="/assets/images/IVR/flowCog.JPG" height="40"> (or on the background of the flow) 
     >
@@ -665,7 +665,7 @@ update()
     >
     > ---
 
-## Creating an opt-out option with ANI readout
+### Creating an opt-out option with ANI readout
 1. Create new flow variables:
    > Name: callbackANI
    >> Type: String
@@ -767,7 +767,7 @@ update()
 
 
 
-## Adding the ability to receive a callback at a different number
+### Adding the ability to receive a callback at a different number
 1. Add a new Menu node
     > Activity Label: confirmNumber
     >
@@ -843,7 +843,7 @@ update()
 
 
 
-## Adding the ability to collect an extension and present it to an agent during a callback
+### Adding the ability to collect an extension and present it to an agent during a callback
 1. Create new flow variable:
    > Name: Extension
    >
@@ -1003,7 +1003,7 @@ update()
 | [Configure Post Interaction Digital Survey](#configure-post-interaction-digital-survey) | Practical Lab | EASY | 10 min |
 
 
-## Overview of the lab:
+## Overview of the lab
 In this lab, we will configure all the required elements to collect and view end-customer feedback using the new Experience Management.
 
 
@@ -1037,9 +1037,7 @@ In this lab, we will configure all the required elements to collect and view end
 
   ---
 
-## Introduction
-
-# Introduction to Experience Management Post Interaction and Post Call Surveys
+## Introduction to Experience Management Post Interaction and Post Call Surveys
 > Experience Management is a next-gen tool that facilitates post interaction surveys and outcomes. It allows you to track and measure customer satisfaction using anchor metrics like Net Promoter Score (NPS), Customer Effort Score (CES), and Customer Satisfaction (CSAT). Webex Contact Center brings in an integration of Experience Management for its post call survey interactive voice response (PCS IVR) and digital channels.
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
@@ -1047,8 +1045,8 @@ In this lab, we will configure all the required elements to collect and view end
 </div>
 
 
-## Lab Section
-# Configure Post Call IVR Survey
+### Lab Section
+## Configure Post Call IVR Survey
 
 ### Create a survey
 1. Click on Contact Center under Services from Control Hub 
@@ -1170,7 +1168,7 @@ In this lab, we will configure all the required elements to collect and view end
    
 ---
 
-### Provide a survey response
+## Provide a survey response
 
 > **NOTE:** Refer to the section Basic Features in Lab 3 - Agent Desktop if you are unfamiliar with testing an incoming call
 {: .block-warning }
@@ -1183,7 +1181,7 @@ In this lab, we will configure all the required elements to collect and view end
 
 
 ---
-### Download and validate the survey response
+## Download and validate the survey response
 
 1. Navigate to the Surveys page on Control Hub
 2. Click on the download button on the far right of your survey
