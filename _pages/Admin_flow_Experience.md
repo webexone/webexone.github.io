@@ -483,7 +483,7 @@ update()
    
       ---
 2. Click Flows > Manage Flows > Import flows > Select flow_template
-<img src="/assets/images/fe_2.gif" Align= "right" height="200">
+   > <img src="/assets/images/fe_2.gif">
 
 <br><br><br><br><br><br><br><br>
 3. Click the ellipsis next to the newly imported flow_template and select Open 
