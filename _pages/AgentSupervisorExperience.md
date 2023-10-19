@@ -27,20 +27,20 @@ In Part 2, we will examine the Webex Contact Center Supervisor Experience and th
 
 # Table of Contents
 
-| Topic                                                                        | Type          | Dificulty    | Time   |
-| ---------------------------------------------------------------------------- | ------------- | ------------ | ------ |
-| [Part 1: Agent Desktop Experience](#agent-desktop-overview)                  | Exploration   | EASY         | 5 min  |
-| [Make an Inbound Call]()                                                     | Activity      | EASY         | 5 min  |
-| [Make an Outdial Call]()                                                     | Activity      | EASY         | 5 min  |
-| [Extend the Agent Desktop Experience](#desktop-administration)               | Activity      | INTERMEDIATE | 10 min |
-| [Desktop Administration](#desktop-administration)                            | Exploration   | INTERMEDIATE | 10 min |
-| [Part 2: Supervisor Experience](#supervisor-experience)                      | Exploration   | EASY         | 5 min  |
-| [Exploring Supervisor Roles](#supervisor-experience)                         | Exploration   | EASY         | 5 min  |
-| [Team Performance - Team Messaging - Changing State](#supervisor-experience) | Exploration   | EASY         | 10 min |
-| [Quality Management Recordings](#supervisor-experience)                      | Exploration   | EASY         | 5 min  |
-| [Supervisor Administration](#supervisor-administration)                      | Practical Lab | INTERMEDIATE | 10 min |
-| [Supervisor Licensing](#supervisor-licensing)                                | Practical Lab | EASY         | 5 min  |
-| [BONUS: Customizations & Programmability](#custom-desktop)                   | Practical Lab | ADVANCED     | 30 min |
+| Topic                                                                             | Type          | Dificulty    | Time   |
+| --------------------------------------------------------------------------------- | ------------- | ------------ | ------ |
+| [Part 1: Agent Desktop Experience](#agent-desktop-overview)                       | Exploration   | EASY         | 5 min  |
+| [1.1: Make an Inbound Call](#desktop-login-process)                               | Activity      | EASY         | 5 min  |
+| [1.2: Make an Outdial Call]()                                                     | Activity      | EASY         | 5 min  |
+| [1.2: Extend the Agent Desktop Experience](#desktop-administration)               | Activity      | INTERMEDIATE | 10 min |
+| [1.2: Desktop Administration](#desktop-administration)                            | Exploration   | INTERMEDIATE | 10 min |
+| [Part 2: Supervisor Experience](#supervisor-experience)                           | Exploration   | EASY         | 5 min  |
+| [2.1: Exploring Supervisor Roles](#supervisor-experience)                         | Exploration   | EASY         | 5 min  |
+| [2.2: Team Performance - Team Messaging - Changing State](#supervisor-experience) | Exploration   | EASY         | 10 min |
+| [2.3: Quality Management Recordings](#supervisor-experience)                      | Exploration   | EASY         | 5 min  |
+| [2.4: Supervisor Administration](#supervisor-administration)                      | Practical Lab | INTERMEDIATE | 10 min |
+| [2.5: Supervisor Licensing](#supervisor-licensing)                                | Practical Lab | EASY         | 5 min  |
+| [BONUS: Customizations & Programmability](#custom-desktop)                        | Practical Lab | ADVANCED     | 30 min |
 
 # Part 1: Agent Experience
 
@@ -747,56 +747,63 @@ To verify, navigate to Control Hub Portal > Contact Center Settings
 
 ### Objective
 
-This lab is designed to introduce the audience to the Extensible Supervisor Desktop (ESD), its configuration and capabilities. In addition this lab contains demo which shows user experience when working with ESD.
+This lab is designed to introduce the audience to the Extensible Supervisor Desktop (ESD), its configuration and capabilities.
 
-#### Example of your agent and supervisor users on Control Hub
+At the end of the lab, you should have a good understanding of the Supervisor role on Webex Contact Center, the Supervisor Desktop and common Supervisor workflows available.
+
+#### You are provided two users on Control Hub to simulate the lab activities
 
 | **User Role** | **User email**                                                          | **User Extension**                                          |
 | ------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------- |
-| Agent         | wxcclabs+agent_ID<w class="attendee_out">Your_Attendee_ID</w>@gmail.com | <w class= "agentEXT_out">Your Agent Extension</w>           |
+| Agent         | wxcclabs+agent_ID<w class="attendee_out">Your_Attendee_ID</w>@gmail.com | WebRTC (Browser)                                            |
 | Supervisor    | wxcclabs+supvr_ID<w class="attendee_out">Your_Attendee_ID</w>@gmail.com | <w class= "supervisorEXT_out">Your Supervisor Extension</w> |
 
 #### Quick Links
 
 > Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
 > Supervisor Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**
+> Webex App (Download): \*\*\*\*
 
-## Supervisor Roles
+## Supervisor Desktop Modes
 
-As a supervisor you can be one of two roles.
+> **The following section explains the types of login modes into the Supervisor Desktop**
+>
+> The Supervisor Role is assigned as a part of the Control Hub License.
+> When you assign a Control Hub Supervisor License, you are automatically assigned the Default Supervisor User Profile.
 
 We will review this on Control Hub Settings.
 
-- Look up your Supervisor User bu going to admin.webex.com > Contact Center > USER MANAGEMENT > Contact Center Users
-- Ensure that the Supervisor user wxcclabs+supvr_ID_your_attendee_ID\_@gmail.com has the Supervisor Profile in the `User Profile` field
+> Control Hub > Contact Center Users > Supervisor User > User Profile: Supervisor Profile
+
+- Look up your Supervisor User bu going to admin.webex.com > Contact Center > User Management (Category) > Contact Center Users
+- Ensure that the Supervisor user wxcclabs+supvr_ID_your_attendee_ID\_@gmail.com has the `Supervisor Profile` in the `User Profile` field
 
 ![Supervisor_UserProfile](/assets/images/supervisor/Supervisor_UserProfile.gif)
 
 ---
 
-**Supervisor Only Role:**
-**CLARITY**
+**Supervisor Only Mode:**
 
-- You can choose not to be an Agent. This is called the **Supervisor Only Role**
+- You can choose not to be an Agent but still login to the Supervisor Desktop. This is called the **Supervisor Only Role**.
 - This is enabled by setting up a User with the Supervisor License and a Primary Team.
 - Contact Center need not be enabled for the User.
+- In this role, you will still need a Primary Team assigment which will be used to display the statistics.
+- The Supervisor Only Role is used for Team Statistics and Reporting.
 
-(Screenshot - GIF)
-
-## Pre-requisites
-
-1.  A supervisor user configured as described below.
-2.  One agent logged in and in conversation with a customer so you can monitor the call.
-3.  Webex App Installed - Please install and download the Webex App from: https://www.webex.com/downloads.html
-
-> **We will use the [Webex App](https://www.webex.com/downloads.html) as the Supervisor endpoint Device.**
-
-**Supervisor and Agent Role**
+**Supervisor and Agent Mode**
 
 - You can to take calls from the Queue as a supervisor. This is called the **Supervisor and Agent Role**
 - This is enabled by setting up a User with the Supervisor License, a Primary Team AND marking the user Contact Center enabled.
 
 ![Supervisor_And_Agent_Role](/assets/images/supervisor/Supervisor_And_Agent_Role.gif)
+
+### Pre-requisites:
+
+1.  A supervisor user configured as described below.
+2.  A agent logged in and in conversation with a customer so you can monitor the call.
+3.  Webex App Installed - Please install and download the Webex App from: https://www.webex.com/downloads.html
+
+> **We will use the [Webex App](https://www.webex.com/downloads.html) as the Supervisor endpoint Device.**
 
 ---
 
@@ -806,7 +813,9 @@ We will review this on Control Hub Settings.
 
 - Sign in to the **Supervisor Desktop**: https://desktop.wxcc-us1.cisco.com with your supervisor credentials.
 
-- In the next window, set your role as **supervisor** and your **own extension**. Please note that you can set your role either as **supervisor** or **agent and supervisor**. We will select this second option at the end of this lab.
+- In the next window, set your role as **Supervisor** and your **own extension**. Please note that you can set your role either as **supervisor** or **agent and supervisor**. We will select this second option at the end of this lab.
+
+> **This mode will help you perform midcall monitoring and reporting**
 
 ![Supervisor_Login](/assets/images/supervisor/Supervisor_Login.gif)
 
@@ -842,8 +851,6 @@ We will review this on Control Hub Settings.
 > When you launch the Supervisor Desktop in the Google Chrome browser, the Supervisor Desktop UI appears in Français (French).
 
 - Click on the third menu option, you now see the **Team Performance Details** page where your agents activities are displayed : status, call duration, team, ... In the last column, you are presented two options : **chat** or **monitor**. The monitoring option is obvisously only enabled when an agent is in conversation with a customer otherwise the icon will be greyed.
-
-(screenshot - GIF)
 
 - The columns displayed are the following
 
@@ -939,72 +946,68 @@ Collaboration between agents and supervisors can help your Contact Center to be 
 
 ---
 
-# Supervisor Administration
+# Verify Supervisor Desktop Administration
 
-- Download [Desktop Layout JSON](https://webexcc.github.io/assets/files/ESD_default_layout.json.zip) file for supervisor from GitHub.
+> **The following section outlines where you can find the main configuration settings for Supervisors, and their Teams, Queues and other segmentation settings**
+
+## Desktop Layout Regions for Supervisor
+
+- The Supervisor Layout is enabled for a user via the [Desktop Layout JSON](https://webexone.github.io/assets/files/ESD_default_layout.json.zip) file for supervisor from GitHub.
 - Open the file in any JSON editor, check and make sure it contains **_supervisor_** and **_supervisorAgent_** sections.
   - **_supervisor_** section is used when the user signs in to supervisor desktop with **_Supervisor_** role.
   - **_supervisorAdmin_** section is used when the user signs in to supervisor desktop with **_Supervisor and Agent_** role.
 
 ![Lab_4_WebexCC_Config_1](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_1.png)
 
-- Lets see where this is uploaded
-- Go to _DESKTOP EXPERIENCE_ -> _Desktop Layout_
+- Lets see where this is uploaded.
+- On Webex Control Hub (admin.webex.com) - Go to _DESKTOP EXPERIENCE_ -> _Desktop Layout_
 
 ![CH_DesktopLayout](/assets/images/Supervisor/CH_DesktopLayout.gif)
 
 ---
 
-- Provide **_Name_**, press **_Upload_** button and select JSON layout file downloaded above. After the file is uploaded check and make sure the validation is completed successfully and save desktop layout.
+- This is where we can upload a new Desktop layout for the Supervisor and also validate the layout.
 
 ![Lab_4_WebexCC_Config_3](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_3.png)
 
 ---
 
-- Go to **_Provisioning_** -> **_Teams_** and click on **_New Team_**.
+- To verify layout Assignments, go to Control Hub > **_Teams_** and search for your Team (Team1 or Team2). You will find the WebexOne_desktopLayout in there.
 
 ![Lab_4_WebexCC_Config_4](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_4.png)
 
-- Choose proper **_Site_** from drop-down list according to the lab guide, provide **_Name_**, select **_Desktop Layout_** for supervisor created at the previous step and save the team.
+## User Profile
 
-![Lab_4_WebexCC_Config_5](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_5.png)
-
-- Go to **_Provisioning_** -> **_User Profiles_**, find default **_Supervisor Profile_**, click on **_..._** button next to it, then on **_Copy_**.
+- Under **_Provisioning_** -> **_User Profiles_**, find default **_Supervisor Profile_**, and let us take a look at it.
 
 ![Lab_4_WebexCC_Config_6](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_6.png)
 
-- Provide proper user profile name and go to **_Module Settings_** tab.
+- We are able to view the Module Settings and Team settings and Access Rights.
+- This is where we are able to check on the Supervisor settings.
 
 ![Lab_4_WebexCC_Config_7](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_7.png)
 
-- Select **_Module Access_** as **_Specific_**. Check and make sure **_Send Messages_** and **_Mid-Call Monitor_** capabilities are enabled.
+- Go ahead and create a New User Profile: Name it <attendeeID>\_SupervisorProfile. Make this of type Supervisor.
+
+- Try to select a subset of module settings, and teams. Here is where you can decide which teams you want to be able to monitor.
 
 ![Lab_4_WebexCC_Config_8](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_8.png)
 
-- Scroll to the bottom of the page and save supervisor profile.
+- Scroll to the bottom of the page and save the supervisor profile.
 
 ![Lab_4_WebexCC_Config_9](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_9.png)
 
-- Go to **Provisioning\*** -> **_Users_**, find your supervisor user, click on **_..._** button next to it, then on **_Edit_**.
+- Go to **Provisioning\*** -> **_Users_**, find your supervisor user, and Edit the User Profile to point to the new User Profile you just created: attendeeID_supervisorProfile
 
 ![Lab_4_WebexCC_Config_10](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_10.png)
 
 - Set the following parameters and save changes:
 
-| **Parameter Name**     | **Parameter Value**                                            |
-| ---------------------- | -------------------------------------------------------------- |
-| Contact Center Enabled | Yes                                                            |
-| Primary Team           | Select supervisor team created above                           |
-| Site                   | Select proper site according the to lab guide                  |
-| Teams                  | Add teams which supervisor can use when signing in as an agent |
-| Agent Profile          | Select the default one - **_Agent-Profile_**                   |
-| Multimedia Profile     | Select the default one - **_Default_Multimedia_Profile_**      |
-
 ![Lab_4_WebexCC_Config_11](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_11.png)
 
 # Supervisor Licensing
 
-> In This section, we will review the Supervisor Licensing Requirements.
+> In This section, we will review the Supervisor Licensing that creates the supervisor.
 
 - Login to Control Hub using your administrator account.
 - Go to **_Users_**, click on supervisor's account, scroll dow to **_Licenses_** section and press **_Edit Licenses_** button.
