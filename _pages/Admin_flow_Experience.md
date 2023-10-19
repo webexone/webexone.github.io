@@ -158,7 +158,7 @@ update()
 
 > The following video outlines how to create a Site, Team, and Multimedia Profile that will be assigned to the Contact Center users. We will also learn how to navigate to the Webex Contact Center admin section and how to associate customer-created Site, Team, and Multi-Media Profile with new users.
 
-![Admin_Experience](/assets/images/AE_3.png)
+![Admin_Experience](/assets/images/AE-photo1.gif)
 
 | **Entity**          | **Name**                                                |
 | ------------------- | ------------------------------------------------------- |
