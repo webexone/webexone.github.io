@@ -419,10 +419,7 @@ update()
 ## Lab Section - Flow Designer
 > Flow designer is a simple drag-and-drop user interface (UI) to define the flows. The following video explains the Flow Designer layout, activity library, and terminology used in the Flow Designer.
 
-<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/47f262bb-b0a4-4222-9347-db942e21d5e3" width="100%" height="100%" title="Introduction to Flow Designer" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
-</div>
-
+![Flow Experience](/assets/images/fe_1.gif)
 
 ## Configuring tenant for Call Delivery
 
