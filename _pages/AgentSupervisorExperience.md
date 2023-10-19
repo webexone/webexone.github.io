@@ -1039,11 +1039,13 @@ Explore the product feedback option from right within the Contact Center Desktop
 
 Click the icon to launch the Experience Management Survey.
 
-(screenshot - GIF)
+![ExperienceManagementSurvey](/assets/images/Supervisor/ExperienceManagementSurvey.gif)
+
+---
 
 Please fill in the survey and help us improve the product!
 
-(screenshot - GIF)
+![ExperienceManagementSurvey_Form](/assets/images/Supervisor/ExperienceManagementSurvey_Form.gif)
 
 ---
 
