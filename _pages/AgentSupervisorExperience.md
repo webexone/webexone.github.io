@@ -808,21 +808,29 @@ We will review this on Control Hub Settings.
 
 - In the next window, set your role as **supervisor** and your **own extension**. Please note that you can set your role either as **supervisor** or **agent and supervisor**. We will select this second option at the end of this lab.
 
-![Lab_4_ESD](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_11.png)
+![Supervisor_Login](/assets/images/supervisor/Supervisor_Login.gif)
+
+---
 
 - When you sign in to the **Supervisor Desktop**, the appearance depends on how the Webex Contact Center administrator has configured the desktop layout. The **Supervisor Desktop** display size must be greater than 500 x 500 pixels (width x height). You must set your web browser zoom to 100% for the best experience with the Supervisor Desktop. With this lab layout you get :
 
 1. **Home Page**: Displays a user friendly interface that provides a consolidated view of key contact center metrics and filters. This is the default landing page in the Supervisor Desktop. The administrator can customize the Home Page in the layout JSON file.
 
-(screenshot - GIF)
+![Supervisor_Home](/assets/images/supervisor/Supervisor_Home.png)
+
+---
 
 2. **Task**: Displays all the tasks when you sign in to the Desktop in dual role (supervisor and agent) or as a supervisor, interactions such as voice, chat, email, and social messaging conversations, along with monitoring. The icon displays a badge indicating the number of requests that you have not accepted across various channels.
 
-(screenshot - GIF)
+![Supervisor_Task](/assets/images/supervisor/Supervisor_Task.gif)
+
+---
 
 3. **Team Performance**: Displays real-time information about an agent and a consolidated view of an agent’s performance as part of the team. You can also monitor and send 1:1 messages to an agent.
 
-(screenshot - GIF)
+![Supervisor_TeamPerformance](/assets/images/supervisor/Supervisor_TeamPerformace.gif)
+
+---
 
 > Note: **Supervisor Desktop** supports localization in 30 languages. The following are the supported languages:
 > Bulgarian, Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish, Dutch, English (UK), English (US),Finnish,French, German, Hungarian, Italian,Japanese, Korean, Norwegian,Polish,Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Serbian, Slovak, Slovenian, Spanish, Swedish, Turkish, and Ukrainian.
@@ -832,10 +840,6 @@ We will review this on Control Hub Settings.
 > For example, let us consider that you have selected the preferred language as French on the Google Chrome browser.
 >
 > When you launch the Supervisor Desktop in the Google Chrome browser, the Supervisor Desktop UI appears in Français (French).
-
-- **Home Page** :
-
-(screenshot - GIF)
 
 - Click on the third menu option, you now see the **Team Performance Details** page where your agents activities are displayed : status, call duration, team, ... In the last column, you are presented two options : **chat** or **monitor**. The monitoring option is obvisously only enabled when an agent is in conversation with a customer otherwise the icon will be greyed.
 
@@ -861,7 +865,7 @@ We will review this on Control Hub Settings.
 
 - you can customize this view to show / hide columns or group information at your convenience.
 
-![Lab_4_ESD](/assets/images/Supervisor/Lab4_ESD_3.png)
+![Supervisor_Modify_Columns](/assets/images/Supervisor/Supervisor_Modify_Columns.gif)
 
 ## Chat with your agents
 
@@ -869,45 +873,55 @@ Collaboration between agents and supervisors can help your Contact Center to be 
 
 - Click on the **Send Message** button
 
-![Lab_4_ESD](/assets/images/Supervisor/Lab4_ESD_4_chat.png)
+![Supervisor_Message](/assets/images/Supervisor/Supervisor_Message.gif)
 
 - Fill the chat window with a message to send to your agent
 
-![Lab_4_ESD](/assets/images/Supervisor/Lab4_ESD_5_chat.png)
+![Supervisor_Message_Sent](/assets/images/Supervisor/Supervisor_Message_Sent.gif)
 
 - On the agent side, observe the message notification received
 
-![Lab_4_ESD](/assets/images/Supervisor/Lab4_ESD_6_chat.png)
+![Supervisor_Message_Sent_Agent](/assets/images/Supervisor/Supervisor_Message_Sent_Agent.gif)
 
 - If, as an agent, you want to answer to the supervisor, your will need to click on the **Webex logo** to open the Webex app embedded in the **Agent Desktop**. You can then reply to the supervisor directly.
 
-![Lab_4_ESD](/assets/images/Supervisor/Lab4_ESD_7_chat.png)
+![Supervisor_Message_Sent_To_Sup](/assets/images/Supervisor/Supervisor_Message_Sent_To_Sup.gif)
 
 - On the supervisor side, observe the message notification received
 
-![Lab_4_ESD](/assets/images/Supervisor/Lab4_ESD_8_chat.png)
+![Supervisor_Message_Received_from_Agent](/assets/images/Supervisor/Supervisor_Message_Received_from_Agent.gif)
 
 ## Monitor calls
 
 - As a supervisor, the **Team Performance Details** page allows you to see all connected agents and decide to monitor calls by clicking on the **Review and Monitor** icon.
 
-![Lab_4_ESD](/assets/images/Supervisor/Lab4_ESD_9_monitor.png)
+![Supervisor_Monitor](/assets/images/Supervisor/Supervisor_Monitor.gif)
+
+---
 
 - The following popup will be displayed. Click on **Start Monitoring**. Please note a supervisor can monitor other call types such as callbacks, outdial calls, outbound preview campaign calls.
 
-![Lab_4_ESD](/assets/images/Supervisor/Lab4_ESD_10_monitor.png)
+![Supervisor_Monitor_Accept](/assets/images/supervisor/Supervisor_Monitor_Accept.gif)
+
+---
 
 - In your **Supervisor Desktop**, an incoming popover window will be displayed and your softphone will ring as Webex Contact Center is now trying to reach you. You recognize the agent you want to monitor and other call variables are displayed. The Flow configuration defines variables to display on this popover (max 6). Accept the call on your supervisor softphone.
 
-![Lab_4_ESD](/assets/images/Supervisor/Lab4_ESD_11_monitor.png)
+![Supervisor_Monitor_Floating](/assets/images/Supervisor/Supervisor_Monitor_Floating.gif)
+
+---
 
 - As a supervisor, the call you are now monitoring is displayed in your desktop with agent and customer details of which the call variables so you are aware of the context of the call. You can view previous communications with a customer across all channels (voice, email, chat, and social) in the **Contact History** pane. The pane displays details for the last 24 hours.
 
-![Lab_4_ESD](/assets/images/Supervisor/Lab4_ESD_12_monitor.png)
+![Supervisor_Monitor_History](/assets/images/Supervisor/Supervisor_Monitor_History.gif)
+
+---
 
 - You can pause the monitoring and start is again if you will
 
-![Lab_4_ESD](/assets/images/Supervisor/Lab4_ESD_13_monitor.png)
+![Supervisor_Monitor_Pause](/assets/images/Supervisor/Supervisor_Monitor_Pause.gif)
+
+---
 
 ## Supervisor and Agent flow
 
@@ -917,11 +931,13 @@ Collaboration between agents and supervisors can help your Contact Center to be 
 
 - In the case, the supervisor experience is a bit different as your agent status appears in the header section of the Desktop.
 
-![Lab_4_ESD](/assets/images/Supervisor/Lab4_ESD_15_monitor.png)
+![Lab_4_ESD](/assets/images/Supervisor/Supervisor_No_Message.gif)
 
 - If, as a supervisor, you chose to monitor a call, your status is set to **Engaged** and you cannot take other calls as an agent.
 
-![Lab_4_ESD](/assets/images/Supervisor/Lab4_ESD_16_monitor.png)
+![Supervisor_Engaged](/assets/images/Supervisor/Supervisor_Engaged.gif)
+
+---
 
 # Supervisor Administration
 
@@ -932,13 +948,18 @@ Collaboration between agents and supervisors can help your Contact Center to be 
 
 ![Lab_4_WebexCC_Config_1](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_1.png)
 
-- Go to **_Provisioning_** -> **_Desktop Layout_** and click on **_New Layout_**.
+- Lets see where this is uploaded
+- Go to _DESKTOP EXPERIENCE_ -> _Desktop Layout_
 
-![Lab_4_WebexCC_Config_2](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_2.png)
+![CH_DesktopLayout](/assets/images/Supervisor/CH_DesktopLayout.gif)
+
+---
 
 - Provide **_Name_**, press **_Upload_** button and select JSON layout file downloaded above. After the file is uploaded check and make sure the validation is completed successfully and save desktop layout.
 
 ![Lab_4_WebexCC_Config_3](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_3.png)
+
+---
 
 - Go to **_Provisioning_** -> **_Teams_** and click on **_New Team_**.
 
