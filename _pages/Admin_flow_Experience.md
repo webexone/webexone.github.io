@@ -416,9 +416,7 @@ update()
 
 ---
 
-## Lab Section
-
-## Flow Designer
+## Lab Section - Flow Designer
 > Flow designer is a simple drag-and-drop user interface (UI) to define the flows. The following video explains the Flow Designer layout, activity library, and terminology used in the Flow Designer.
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
@@ -428,7 +426,7 @@ update()
 
 ## Configuring tenant for Call Delivery
 
-⚠️ If you are using your Gold Tenant you can use this link to download the [Audio Files](https://webexcc.github.io/assets/files/lab_wav.zip){:target="\_blank"}. Those files are already pre-uploaded on the Lab Tenant.
+⚠️ You can use this link to download the [Audio Files](https://webexcc.github.io/assets/files/lab_wav.zip){:target="\_blank"}. Those files are already pre-uploaded on the Lab Tenant.
 
 ### Create a queue
 1. Click on Provisioning > Entry Points/Queues > Queue
