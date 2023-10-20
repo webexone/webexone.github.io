@@ -27,28 +27,29 @@ In Part 2, we will examine the Webex Contact Center Supervisor Experience and th
 
 # Table of Contents
 
-| Topic                                                              | Type          | Dificulty    | Time   |
-| ------------------------------------------------------------------ | ------------- | ------------ | ------ |
-| [Part 1: Agent Experience](#part-1-agent-experience)               | Exploration   | EASY         | 5 min  |
-| [1.1: Agent Desktop Overview](#desktop-login-process)              | Activity      | EASY         | 5 min  |
-| [1.2: Desktop Login Process]()                                     | Activity      | EASY         | 5 min  |
-| [1.3: Make an Incoming Call](#desktop-administration)              | Activity      | INTERMEDIATE | 10 min |
-| [1.4 Make an Outdial Call](#desktop-administration)                | Exploration   | INTERMEDIATE | 10 min |
-| [1.5: Exploring Profile Settings](#desktop-administration)         | Exploration   | INTERMEDIATE | 10 min |
-| [1.6 Custom Widget Landscape](#desktop-administration)             | Exploration   | INTERMEDIATE | 10 min |
-| [Verify Desktop Administration](#desktop-administration)           | Exploration   | INTERMEDIATE | 10 min |
-| [1.7: Administration Entities](#desktop-administration)            | Exploration   | INTERMEDIATE | 10 min |
-| [Part 2: Supervisor Experience](#part-2-supervisor-experience)     | Exploration   | EASY         | 5 min  |
-| [2.1: Supervisor Desktop Modes](#supervisor-experience)            | Exploration   | EASY         | 5 min  |
-| [2.2: Supervisor Login](#supervisor-experience)                    | Exploration   | EASY         | 10 min |
-| [2.3: Chat with your agents](#supervisor-experience)               | Exploration   | EASY         | 5 min  |
-| [2.4: Monitor calls](#supervisor-administration)                   | Practical Lab | INTERMEDIATE | 10 min |
-| [2.5: Supervisor and Agent flow](#supervisor-licensing)            | Practical Lab | EASY         | 5 min  |
-| [Verify Supervisor Desktop Administration](#supervisor-licensing)  | Practical Lab | EASY         | 5 min  |
-| [2.5: Supervisor and Agent flow](#supervisor-licensing)            | Practical Lab | EASY         | 5 min  |
-| [2.6 Desktop Layout Regions for Supervisor](#supervisor-licensing) | Practical Lab | EASY         | 5 min  |
-| [2.7: User Profile Settings for Supervisor](#supervisor-licensing) | Practical Lab | EASY         | 5 min  |
-| [BONUS: Customizations & Programmability](#custom-desktop)         | Practical Lab | ADVANCED     | 30 min |
+| Topic                                                                                  | Type             | Dificulty    | Time   |
+| -------------------------------------------------------------------------------------- | ---------------- | ------------ | ------ |
+| [Part 1: Agent Experience](#part-1-agent-experience)                                   | Exploration      | EASY         | 5 min  |
+| [1.1: Agent Desktop Overview](#11-agent-desktop-overview)                              | Exploration      | EASY         | 5 min  |
+| [1.2: Desktop Login Process](#12-desktop-login-process)                                | Activity         | EASY         | 5 min  |
+| [1.3: Make an Incoming Call](#13-make-an-incoming-call)                                | Activity         | EASY         | 5 min  |
+| [1.4 Make an Outdial Call](#14-make-an-outdial-call)                                   | Activity         | EASY         | 5 min  |
+| [1.5: Exploring Profile Settings](#15-exploring-profile-settings)                      | Exploration      | EASY         | 5 min  |
+| [1.6 Custom Widget Landscape](#16-custom-widget-landscape)                             | Activity         | INTERMEDIATE | 15 min |
+| [Verify Desktop Administration](#verify-desktop-administration)                        | Exploration      | INTERMEDIATE | 10 min |
+| [1.7: Administration Entities](#17-administration-entities)                            | Activity         | INTERMEDIATE | 10 min |
+| [Part 2: Supervisor Experience](#part-2-supervisor-experience)                         | Exploration      | EASY         | 5 min  |
+| [2.1: Supervisor Desktop Modes](#21-supervisor-desktop-modes)                          | Exploration      | EASY         | 5 min  |
+| [2.2: Supervisor Login](#22-supervisor-login)                                          | Activity         | EASY         | 5 min  |
+| [2.3: Chat with your agents](#23-chat-with-your-agents)                                | Activity         | INTERMEDIATE | 5 min  |
+| [2.4: Monitor calls](#24-monitor-calls)                                                | Activity         | INTERMEDIATE | 5 min  |
+| [2.5: Supervisor and Agent flow](#25-supervisor-and-agent-flow)                        | Activity         | EASY         | 5 min  |
+| [Verify Supervisor Desktop Administration](#verify-supervisor-desktop-administration)  | Exploration      | EASY         | 5 min  |
+| [2.6 Desktop Layout Regions for Supervisor](#25-desktop-layout-regions-for-supervisor) | Exploration      | INTERMEDIATE | 10 min |
+| [2.7: User Profile Settings for Supervisor](#26-user-profile-settings-for-supervisor)  | Activity         | INTERMEDIATE | 10 min |
+| [Supervisor Licensing](#supervisor-licensing)                                          | Exploration      | EASY         | 5 min  |
+| [Send Product Feedback](#send-product-feedback)                                        | Activity         | EASY         | 5 min  |
+| [BONUS: Customizations & Programmability](#custom-desktop)                             | BONUS - OPTIONAL | ADVANCED     | 30 min |
 
 # Part 1: Agent Experience
 
