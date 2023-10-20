@@ -37,11 +37,10 @@ Last modified: Wed, 20 Sep 2023
 | [    2.1: Configuring tenant for Call Delivery](#configuring-tenant-for-call-delivery)        | Practical Lab | EASY            | 10 min           |
 | [    2.2: Adding Text-To-Speech to the flow](#adding-text-to-speech-to-the-flow) | Practical Lab | EASY            | 8 min            |
 | [    2.3: Adding Callback functionality to the flows](#adding-text-to-speech-to-the-flow) | Practical Lab | EASY            | 8 min            |
-| [    2.4: Creating an opt-out option with ANI readout](#creating-an-opt-out-option-with-ani-readout)                   | Practical Lab | EASY            | 15 min           |
-| [    2.5: Adding the ability to receive a callback at a different number](#adding-the-ability-to-receive-a-callback-at-a-different-number)                   | Practical Lab | EASY            | 15 min           |
-| [    2.6: Adding the ability to collect an extension and present it to an agent during a callback](#adding-the-ability-to-collect-an-extension-and-present-it-to-an-agent-during-a-callback)                   | Practical Lab | EASY            | 15 min | 
-| [    2.7: Introduction to Flow Debugger](#introduction-to-flow-debugger)                   | Practical Lab | EASY            | 15 min | 
-| [    2.8: Introduction to Flow Versioning](#introduction-to-flow-versioning)                   | Practical Lab | EASY            | 15 min | 
+| [    2.3: Adding Callback functionality to the flows](#adding-text-to-speech-to-the-flow) | Practical Lab | EASY            | 8 min            |
+| [    2.4: Introduction to Flow Debugger](#introduction-to-flow-debugger)                   | Practical Lab | EASY            | 15 min | 
+| [    2.5: Introduction to Flow Versioning](#introduction-to-flow-versioning)                   | Practical Lab | EASY            | 15 min | 
+| [    2.6: Flow Error Handling](#introduction-to-flow-debugger)                   | Practical Lab | EASY            | 15 min |
 | [Part 3: Bonus - Experience Management](#bonus---experience-management)                   | Practical Lab | EASY            | 15 min | 
 
 
@@ -692,12 +691,33 @@ update()
 ---
 
 # Introduction to Flow Debugger
-> Flow designer is a simple drag-and-drop user interface (UI) to define the flows. The following video explains the Flow Designer layout, activity library, and terminology used in the Flow Designer.
+> From a UI standpoint, the flow builder UI contains a "Debug" button on the bottom pane. Clicking the button brings up the pane displaying a list of previous interactions of the flow in production. By default, there are only 100 latest interactions displayed, but the user can either input in a specific interaction ID or a date range to filter the interactions displayed.
+
+Once the user selects an interaction, the Interaction Detail pane displays the list of all the activities involved in the interaction along with their inputs/outputs, start times and end times of execution. When the details of the interaction are being viewed, the canvas, the activity properties pane (on the right side), and pane containing the list of available activities (on the left side) become immutable, meaning once a user is in debug mode, the user cannot update the flow itself, only view the data (think read-only mode). The activities that are not involved in the interaction are grayed out (showed with decreased opacity). When an activity is selected from the Interaction Detail pane, the corresponding activity is highlighted on the canvas. When the NewPhoneContact activity is selected in from the Interaction Details in the interaction pane, the corresponding activity is highlighted with an accentuated blue border.
+
+<img src="/assets/images/fe_6.gif">
 
 ---
 
 # Introduction to Flow Versioning
-> Flow designer is a simple drag-and-drop user interface (UI) to define the flows. The following video explains the Flow Designer layout, activity library, and terminology used in the Flow Designer.
+> Tagging a version of the flow should come up while publishing. There are 3 predefined tags - Live, Dev, Test, and one default Tag - Latest. The tag selection dropdown is visible after publish button is hit. Multiple tags are allowed to be selected. Once selected and published and those tags are associated to that specific version.
+
+
+<img src="/assets/images/fe_7.png">
+
+> During entry point edit, the tags can be selected as well, here only the tags which are currently in use are shown.
+
+<img src="/assets/images/fe_8.gif">
+
+>During debugging, the tags filter allows to filter any of the previous or current interactions that had those tags during execution between the time range selected. 
+
+<img src="/assets/images/fe_9.gif">
+
+While looking at the previous versions history, by clicking on the clock icon located at the top panel(Figure 4) the previous versions comes up with their tags. The versions which used to have tags and have been moved to later versions, show the tags with lighter color tone.
+
+While using goto activity(which points to another flow), the tag selection drop down appears in the properties pane(Figure 5). This allows flow developer to choose a specific tagged version to goto and their corresponding variables are used for mapping.
+
+When the flow is opened, by default, the editing option is off, making it read-only(Figure 6). Once editing is toggled on, the save and publish is enabled for the user so they can edit the flow. While the editing is on, other users are not allowed to edit. This allows users to see current or previous flow versions in read-only mode without making any updates.
 
 ---
 
