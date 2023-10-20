@@ -38,10 +38,10 @@ Last modified: Wed, 20 Sep 2023
 | [    2.2: Adding Text-To-Speech to the flow](#adding-text-to-speech-to-the-flow) | Practical Lab | EASY            | 8 min            |
 | [    2.3: Adding Callback functionality to the flows](#adding-text-to-speech-to-the-flow) | Practical Lab | EASY            | 8 min            |
 | [    2.4: Business Hours Configuration](#business_hours_configuration) | Practical Lab | EASY            | 8 min            |
-| [    2.5: Introduction to Flow Debugger](#introduction-to-flow-debugger)                   | Practical Lab | EASY            | 15 min | 
-| [    2.6: Introduction to Flow Versioning](#introduction-to-flow-versioning)                   | Practical Lab | EASY            | 15 min | 
-| [    2.7: Flow Error Handling](#flow_error_handling)                   | Practical Lab | EASY            | 15 min |
-| [Part 3: Bonus - Experience Management](#bonus---experience-management)                   | Practical Lab | EASY            | 15 min | 
+| [Part 3: Introduction to Flow Debugger](#introduction-to-flow-debugger)                   | Practical Lab | EASY            | 15 min | 
+| [Part 4:: Introduction to Flow Versioning](#introduction-to-flow-versioning)                   | Practical Lab | EASY            | 15 min | 
+| [Part 5: Flow Error Handling](#flow_error_handling)                   | Practical Lab | EASY            | 15 min |
+| [Bonus: Experience Management](#bonus---experience-management)                   | Practical Lab | EASY            | 15 min | 
 
 
 # Part 1: Introduction to the new Admin Experience 
@@ -690,7 +690,7 @@ update()
 
 ---
 
-# 2.4 Business Hours Configuration 
+## 2.4: Business Hours Configuration 
 Business hours(BH) is a feature that lets you define the operational hours of contact center. In addition to that, we can also add holidays, or event driven interventions like extended working hours during festival seasons. This feature is an upgrade over routing strategy. 
 
 Business hours aims to remove all such pain points. There are 3 sub entities which comes under business hours:
@@ -711,7 +711,7 @@ The subsequent flow execution from BH activity takes the following priority:
 
 ---
 
-# 2.5 Introduction to Flow Debugger
+# Part 3: Introduction to Flow Debugger
 From a UI standpoint, the flow builder UI contains a "Debug" button on the bottom pane. Clicking the button brings up the pane displaying a list of previous interactions of the flow in production. By default, there are only 100 latest interactions displayed, but the user can either input in a specific interaction ID or a date range to filter the interactions displayed.
 
 
@@ -726,7 +726,7 @@ Once the user selects an interaction, the Interaction Detail pane displays the l
 
 ---
 
-# 2.6 Introduction to Flow Versioning
+# Part 4: Introduction to Flow Versioning
 Tagging a version of the flow should come up while publishing. There are 3 predefined tags - Live, Dev, Test, and one default Tag - Latest. The tag selection dropdown is visible after publish button is hit. Multiple tags are allowed to be selected. Once selected and published and those tags are associated to that specific version.
 
 
@@ -759,7 +759,7 @@ While using goto activity(which points to another flow), the tag selection drop 
 
 ---
 
-# 2.7 Flow Error Handling
+# Part 5: Flow Error Handling
 The error handling feature tries to deal all kinds of errors during the flow execution. Due to the nature of errors, it could be divided into two levels: the activity error and the global error[Global Error Handler].
 
 1. On the activity level, error paths are designed to handle specific problematic situations and it gives the flow designer more freedom on how to properly handle these scenarios
@@ -779,7 +779,7 @@ Activity Level Error Handling
 
 ---
 
-# Bonus - Experience Management
+# Bonus: Experience Management
 
 | Topic                                                                                    | Lab Type      | Difficulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
