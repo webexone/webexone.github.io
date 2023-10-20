@@ -24,7 +24,7 @@ Last modified: Wed, 20 Sep 2023
   }
 </script>
 
-# Table of Contents bhushan
+# Table of Contents
 
 | Topic                                                                                 | Lab Type           | Difficulty Level | Estimated length |
 | ------------------------------------------------------------------------------------- | ------------------ | ---------------- | ---------------- |
@@ -486,9 +486,10 @@ update()
    > <img src="/assets/images/fe_2.gif">
 
 3. Click the newly imported flow_template and this will Open the flow
+
    > <img src="/assets/images/fe_3.gif">
    > 
-   > Rename the flow to <w class="attendee_out">AttendeeID</w>_TechSummit by clicking on the pencil icon at the top of the screen, next to the flow name
+   > 
    >
    > Click on the Play Message node
    >> Audio File: 0_English.wav 
@@ -570,24 +571,16 @@ update()
     >
     > ---
 
-## Adding Functionality to Your Flow
+
 
 ## Adding Text-To-Speech to the flow 
-1. Delete the connection which loops from the end of the Play Music node back to the beginning of the Play Music node.
-2. Drag a new Play Message node under the Play Music node. 
-3. Click on the Play message node
-   > 
-   > Activity Label: comfortMessage
-   >
-   > Audio File: comfort_1_English
-   >
-   > ---
-4. Click on the Play Music node
-   > Set the music duration to 15 seconds 
-   >
-   > --- 
-5. Connect the end of the Play Music node to the beginning of the play message node.
-6. Connect the end of the Play Message node to the beginning of the Play Music node.
+<img src="/assets/images/fe_4.gif">
+1. Select the PlayMessage node 
+2. Enable Text-to-speech toggle 
+3. Select the Connector  
+4. Select Output voice as en-US-Stantard-A 
+5. Select Add Text-to-Speech Message 
+6. Enter a message 
 7. Validate and Publish the flow:   
    > Click the Validation switch to turn on validation
    >
@@ -601,240 +594,8 @@ update()
    > 
    > Turn off Validation 
    >
-   > [Compare](https://webexcc.github.io/../../../assets/images/IVR/comfortMessage.JPG){:target="\_blank"}
-   >
    > ---
-8. Place a test call to <w class= "DN_out" >Your EP DN</w>
-   > Did you hear the comfort message every 15 seconds?
-   >
-   > ---
-
-### Creating alternating comfort messages while a call is in queue
-1. Create a new flow variable: 
-    > Click on the cog in the lower left corner of the canvas <img src="/assets/images/IVR/flowCog.JPG" height="40"> (or on the background of the flow) 
-    >
-    > Click Add Flow Variables
-    >> Name: Loop_Count
-    >> 
-    >> Variable Type: Integer
-    >>
-    >> Default value: 0
-    >
-    > Click Save
-    >
-    > ---
-
-2. Delete the connection from the Play Music node to the comfortMessage node.
-3. Drag a Set Variable node onto the canvas and place it below the Play Music node
-4. Click on the Set Variable node
-    > Activity Label: lCount
-    >
-    > Variable: Loop_Count
-    >
-    > Set Value: \{\{ Loop_Count + 1 \}\}
-    >
-    > ---
-5. Connect the Play Music node to lCount
-6. Drag a Condition node on the canvas
-7. Connect the end of the Set Variable node to the Condition node
-8. Click on the condition node
-    > Activity Label: evenOdd
-    >
-    > Expression: \{\{ Loop_Count is odd\}\}
-    >
-    > ---
-9. Drag another Play Message node onto the canvas 
-    > Activity Label: websiteMessage
-    >
-    > Audio File: website_English.wav
-    >
-    > ---
-10. Connect the True node edge from evenOdd to comfortMessage
-11. Connect the False node edge from evenOdd to websiteMessage
-12. Connect the end of websiteMessage node to the Play Music node
-13. Publish your flow [Compare](https://webexcc.github.io/../../../assets/images/IVR/altMessages.JPG){:target="\_blank"}
-14. Place a test call to <w class= "DN_out" >Your EP DN</w>
-    > Did you hear the comfort message and website message alternate every 15 seconds?
-    >
-    > ---
-
-### Creating an opt-out option with ANI readout
-1. Create new flow variables:
-   > Name: callbackANI
-   >> Type: String
-   >>
-   >> No default value
-   >
-   > ---
-   >
-   > Name: rDigit
-   >> Type: string
-   >>
-   >> No default value
-   >
-   > ---
-   >
-   > Name: sPosition
-   >> Type: Integer
-   >>
-   >> Default Value: 0
-   >>
-   ---
-2. Delete the connection from the websiteMessage node to Play Music
-3. Drag a Menu node onto the canvas
-   > Activity Label: callback_opt
-   >
-   > Audio File: opt_out_English.wav
-   >
-   > Make Prompt Interruptible: True
-   >
-   > Digit Number: 1 Link Description: optOut 
-   >
-   > Connect the No-Input Timeout node edge to Play Music
-   >
-   > Connect the Unmatched Entry node edge to Play Music
-   >
-   > ---
-4. Connect the websiteMessage to the callback_opt node
-5. Add a Set Variable node
-   > Activity Label: callbackANI_set
-   >
-   > Select Variable: callbackANI
-   >
-   > Set to Value: \{\{NewPhoneContact.ANI \| slice (NewPhoneContact.ANI.length -10,NewPhoneContact.ANI.length)\}\}
-   >
-   ---
-6. Connect the callback_opt optOut node edge to callbackANI_set 
-7. Add a Play Message Node
-   > Activity Label: cfrom
-   >
-   > Audio File: calling_from_English.wav
-   >
-   > ---
-8. Connect callbackANI_set to cfrom
-9. Add a Set Variable node
-   > Activity Label: rDigit_set
-   >
-   > Select Variable: rDigit
-   >
-   > Set to Value: \{\{callbackANI \| slice (sPosition,sPosition+1)\}\}
-   >
-   ---
-10. Connect cfrom to rDigit_set
-11. Add a Play Message node
-   > Activity Label: playDigit 
-   >
-   > Click Add Audio Prompt Variable
-   >> Audio Prompt Variable: \{\{rDigit\}\}_English.wav
-   >>
-   >> Delete the Audio File Drop Down
-   >> 
-   >> ---
-12. Connect rDigit_set to playDigit
-13. Add a Set Variable node
-    > Activity Label: advance
-    >
-    > Select Variable: sPosition
-    >
-    > Set to Value: \{\{sPosition+1\}\}
-    >
-   ---
-14. Connect playDigit to advance
-15. Add a Condition node
-    > Activity Label: positionCheck
-    > 
-    > Condition: \{\{sPosition <= (callbackANI.length -1) \}\}
-    >
-    > True: Connect to rDigit_set 
-    >
-    > False: Add a new Disconnect Contact node and connect it here
-    >
-   ---
-16. Connect advance to positionCheck  
-17. Publish your flow [Compare](https://webexcc.github.io/../../../assets/images/IVR/aniRead.JPG){:target="\_blank"}
-18. Place a test call to <w class= "DN_out" >Your EP DN</w>
-    > When you are given the option for a callback, press 1.
-    >> Did you hear your 10 digit callback number being read back?
-
-    ---
-
-
-
-### Adding the ability to receive a callback at a different number
-1. Add a new Menu node
-    > Activity Label: confirmNumber
-    >
-    > Prompt: number_confirm_English.wav
-    >
-    > Make Prompt Interruptible: True
-    >
-    > Digit Number: 1 Link Description: confirm number
-    >
-    > Digit Number: 2 Link Description: change number
-    >
-    > Connect No-Input Timeout to the front of the confirmNumber node
-    >
-    > Connect Unmatched Entry to the front of the confirmNumber node
-    >
-    > ---
-2. Delete the False node edge from positionCheck to Disconnect Contact
-3. Connect the False node edge from positionCheck to confirmNumber
-4. Connect the confirm number node edge to Disconnect Contact
-5. Add a Collect Digits node
-   > Activity Label: newNumber 
-   >
-   > Audio File: new_number_English.wav
-   >
-   > Make Prompt Interruptible: True
-   >
-   > Minimum Digits: 10
-   >
-   > Maximum Digits: 10
-   >
-   > Connect No-Input Timeout to the front of the newNumber node
-   >
-   > Connect Unmatched Entry to the front of the newNumber node
-   >
-   > ---
-6. Connect the change number node edge to newNumber
-7. Add a Set Variable Node
-   > Activity Label: newCB
-   >
-   > Variable: callbackANI
-   >
-   > Set Value: \{\{newNumber.DigitsEntered\}\}
-   >
-   > ---
-8. Connect newNumber to newCB
-9.  Add a Set Variable Node
-    > Activity Label:resetPosition
-    >
-    > Variable: sPosition
-    >
-    > Set Value: 0
-    >
-    > ---
-10. Connect newCB to resetPosition
-11. Add a Play message node
-    > Activity Label: rcontext
-    > 
-    > Audio File: entered_English.wav
-    >
-    > ---
-12. Connect resetPosition to rcontext
-13. Connect rcontext to rDigit_set
-14. Publish your flow [Compare](https://webexcc.github.io/../../../assets/images/IVR/changeNumber.JPG){:target="\_blank"}
-15. Place a test call to <w class= "DN_out" >Your EP DN</w>
-    > When you are given the option for a callback, press 1.
-    >
-    > Press 2 to enter a different number.
-    >> Did you hear your 10 digit callback number being read back?
-    >>
-    >> Did you hear the number you entered read back?
-
-    ---
-
-
+8. Place a test call to your EP DN
 
 ### Adding the ability to collect an extension and present it to an agent during a callback
 1. Create new flow variable:
