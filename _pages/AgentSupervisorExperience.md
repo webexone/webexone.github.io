@@ -748,9 +748,11 @@ The following section and describes Desktop Administration that brought together
 
 Here is a schematic showing how the Agent Desktop configuraton aligns to all the entities on Webex Control Hub.
 
-(schematic - overview)
+![Configuration-Overview](/assets/images/agent/admin1.png)
 
 ## 1.7: Administration Entities
+
+![User-Overview](/assets/images/agent/admin2.png)
 
 The following Administration entities have been configured for you.
 
