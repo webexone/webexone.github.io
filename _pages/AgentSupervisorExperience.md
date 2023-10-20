@@ -153,9 +153,9 @@ Here is an overview of the sections:
 
 ## Desktop Login Process
 
-- To Login to the Agent Desktop, launch Google Chrome and to the URL: [https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com)
+- To Login to the Agent Desktop, launch Google Chrome and navigate to the URL: [https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com)
 
-> **Note: Please Google Chrome as the browser to use the all new WebRTC Voice Option**
+> **Note: Please use Google Chrome as the browser to take advantage of the all new WebRTC Voice Option.**
 
 > Tip: You can also find this link under Control Hub: [admin.webex.com](https://admin.webex.com) > Contact Center > Settings
 
@@ -173,7 +173,7 @@ Here is an overview of the sections:
 
 - Notice that the voice option defaults to "Desktop".
 
-- Select Team1 from the list. Agents can belong to multiple teams, but they can only receive calls of 1 specific teams. Your agent is configured for 2 teams.
+- Select Team1 from the list. Agents can belong to multiple teams, but they can only receive calls of 1 specific team. Your agent is configured for 2 teams.
 
 - Check the **Remember My Credentials** box to save your credentials for future sign-ins.
 
@@ -181,7 +181,7 @@ Here is an overview of the sections:
 
 ![agent-desktop](/assets/images/agent/03-image.png)
 
-> NOTE: Agents cannot access the Agent Desktop from multiple browsers or multiple tabs of the same browser window. In that case, a warning message will be displayed
+> NOTE: Agents cannot access the Agent Desktop from multiple browsers or multiple tabs of the same browser window. In that case, a warning message will be displayed.
 
 ![agent-desktop](/assets/images/agent/04-image.png)
 
