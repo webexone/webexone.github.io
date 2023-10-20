@@ -35,8 +35,8 @@ Last modified: Wed, 20 Sep 2023
 | [    1.4: Access to the Agent Desktop](#access-to-the-agent-desktop)                           | Practical Lab      | EASY             | 10 min           |
 | [Part 2: Introduction to Flow Designer](#introduction-to-flow-designer) | Watch & Understand | EASY    | 10 min|  
 | [    2.1: Configuring tenant for Call Delivery](#configuring-tenant-for-call-delivery)        | Practical Lab | EASY            | 10 min           |
-| [    2.2: Adding a comfort message while a call is in queue](#adding-a-comfort-message-while-a-call-is-in-queue) | Practical Lab | EASY            | 8 min            |
-| [    2.3: Creating alternating comfort messages while a call is in queue](#creating-alternating-comfort-messages-while-a-call-is-in-queue)                                           | Practical Lab | EASY            | 15 min            |
+| [    2.2: Adding Text-To-Speech to the flow](#adding-text-to-speech-to-the-flow) | Practical Lab | EASY            | 8 min            |
+| [    2.3: Adding Callback functionality to the flows](#adding-text-to-speech-to-the-flow) | Practical Lab | EASY            | 8 min            |
 | [    2.4: Creating an opt-out option with ANI readout](#creating-an-opt-out-option-with-ani-readout)                   | Practical Lab | EASY            | 15 min           |
 | [    2.5: Adding the ability to receive a callback at a different number](#adding-the-ability-to-receive-a-callback-at-a-different-number)                   | Practical Lab | EASY            | 15 min           |
 | [    2.6: Adding the ability to collect an extension and present it to an agent during a callback](#adding-the-ability-to-collect-an-extension-and-present-it-to-an-agent-during-a-callback)                   | Practical Lab | EASY            | 15 min | 
@@ -597,143 +597,97 @@ update()
    > ---
 8. Place a test call to your EP DN
 
-### Adding the ability to collect an extension and present it to an agent during a callback
-1. Create new flow variable:
-   > Name: Extension
-   >
+## Adding Callback functionality to the flows
+<img src="/assets/images/fe_5.png"
+1. Create new flow variables:
+   > Name: CallerANI
    >> Type: String
    >>
    >> No default value
-   >>
-   >> Set as agent Viewable: True
-   >>
-   >> Desktop Label: Extension
    >
-    ---
-2. Add a Menu node
-   > Activity Label: needExt
-   > 
-   > Audio File: ext_English.wav 
-   >
-   > Make Prompt Interruptible: True
-   >
-   > Digit Number: 1 Link Description: collect ext
-   >
-   > ---  
-3. Delete to connection from the confirm number node edge of confirmNumber to Disconnect Contact
-4. Connect the confirm number node edge of confirmNumber to needExt
-5. Add a Collect Digits node
-   > Activity Label: getEXT
-   >
-   > Audio File: enter_ext_English
-   >
-   > Make Prompt Interruptible: True
-   >
-   > Connect the No-Input Timeout node edge to the front of the getEXT node
-   >
-   > Connect the Unmatched Entry node edge to the front of the getEXT node
-   > 
    > ---
-6. Connect the collect ext node edge of needExt to getEXT
-7. Add a Set Variable node
-    > Activity Label: setExt
+   >
+   > Name: rDigit
+   >> Type: string
+   >>
+   >> No default value
+   >
+   > ---
+   >
+   > Name: sPosition
+   >> Type: Integer
+   >>
+   >> Default Value: 0
+   >>
+   ---
+2. Add a new Menu node
+    > Activity Label: Menu_Callback
     >
-    > Variable: Extension
-    >
-    > Set Value: \{\{getEXT.DigitsEntered\}\}
-8. Connect getEXT to setEXT
-9. Add a Set variable node
-    > Activity Label: clrsPos
-    >
-    > Variable: sPosition 
-    >
-    > Set Value: 0
-    >
-    > ---
-10. Connect setEXT to clrsPos
-11. Add a Play Message node
-    > Activity Label: entEXT
-    >
-    > Audio File: entered_English.wav
-    >
-    > ---
-
-12. Connect clrsPos to entEXT
-13. Use Shift + left click to select nodes:
-   - rDigit_set
-   - playDigit
-   - advance
-   - positionCheck
-14. Click the copy button in the lower left corner of the canvas
-15. Drag the copied versions of the nodes under the clrsPos node
-16. Rename the copied nodes the original names = _EXT (example: rDigit_set_EXT)
-17. Connect entEXT > rDigit_set_EXT > playDigit_EXT > advance_EXT > positionCheck_EXT
-18. Edit rDigit_set_EXT 
-    > Set value: \{\{Extension \| slice (sPosition,sPosition+1)\}\}
-    >
-    > ---
-19. Edit positionCheck_EXT
-    > Expression: \{\{sPosition <= (Extension.length -1) \}\}
-    >
-    > Connect True node edge to rDigit_set_EXT
-    >
-    >  ---
-20. Add a Menu node   
-    > Activity Label: confirmEXT
-    >
-    > Audio File: ext_confirm_English.wav
+    > Prompt: Enable Text-to-Speech. Follow the previous lab and enter the message required for this lab 
     >
     > Make Prompt Interruptible: True
     >
-    > Digit Number: 1 Link Description: confirmed
+    > Digit Number: 1 Link Description: confirm number
     >
-    > Digit Number: 2 Link Description: again
+    > Digit Number: 2 Link Description: change number
     >
-    > Connect No-Input Timeout to the front of the confirmEXT node
+    > Connect No-Input Timeout to the front of the Menu node
     >
-    > Connect Unmatched Entry to the front of the confirmEXT node
-    >
-    > Connect the Again node edge to getEXT
+    > Connect Unmatched Entry to the front of the Menu node
     >
     > ---
-21. Connect the False node edge of positionCheck_EXT to confirmEXT
-22. Add a Callback node
-    > Activity Label: callback
-    >
-    > Callback Dial Number: callbackANI
-    >
-    > Callback Queue: Q_<w class="attendee_out">AttendeeID</w>
-    >
-    > ---
-23. Connect the confirmed node edge of confirmedEXT to callback
-24. Add a Play Message node
-    > Activity Label: callbackConfirm
-    >
-    > Audio File: callback_confirm_English.wav
-    >
-    > ---
-25. Connect callback to callbackConfirm
-26. Connect callbackConfirm to Disconnect Contact
-27. Connect the No-Input Timeout and Unmatched Entry node edges from needExt to Disconnect Contact
-28. Publish your flow [Compare](https://webexcc.github.io/../../../assets/images/IVR/collectExt.JPG){:target="\_blank"}
-29. Place a test call to <w class= "DN_out" >Your EP DN</w>
-    > Press one to receive a callback 
-    >
-    > Press one to keep the number which was read back
-    >
-    > Press one to receive a callback at an extension
-    >
-    > Enter <w class= "supervisorEXT_out">Your Supervisor Extension</w> and press #.
-    >
-    > In the agent desktop, go available.
-    >
-    > When your agent phone rings, answer the call.
-    > 
-    > Listen to the prompts and enter the Extension shown on the agent desktop.
-    >
-    > Your Supervisor extension should ring, answer it.
-    >
-    > ---  
+3. Add a Set Variable node
+   > Activity Label: callbackANI_set
+   >
+   > Select Variable: CallerANI
+   >
+   > Set to Value: \{\{NewPhoneContact.ANI \| slice (NewPhoneContact.ANI.length -10,NewPhoneContact.ANI.length)\}\}
+   >
+4. Add a Collect Digits node
+   > Activity Label: newNumber 
+   >
+   > Audio File: new_number_English.wav
+   >
+   > Make Prompt Interruptible: True
+   >
+   > Minimum Digits: 10
+   >
+   > Maximum Digits: 10
+   >
+   > Connect No-Input Timeout to the front of the newNumber node
+   >
+   > Connect Unmatched Entry to the front of the newNumber node
+   >
+   > ---
+5. Add a Set Variable Node
+   > Activity Label: newCB
+   >
+   > Variable: CallerANI
+   >
+   > Set Value: \{\{newNumber.DigitsEntered\}\}
+   >
+   > ---
+6. Connect newNumber to newCB
+7. Drag and Drop a Callback node 
+   > Activity Label: Callback_node
+   >
+   > Callback Dial Number: CallerANI
+   >
+   > Static ANI: Any ANI you like but this DN needs to be mapped to an EP or select the default outdial ANI
+   >
+   > ---
+8. Drag and Drop a PlayMusic node  
+   > Activity Label: Callback_confirm
+   >
+   > Static Audio File
+   >
+   > Music file: callback_confirm_English.wav
+   >
+   > ---
+8. Drag and Drop a Disconnect Contact node
+   > Activity Label: Disconnect_contact
+   >
+   > ---
 
 ---
 
