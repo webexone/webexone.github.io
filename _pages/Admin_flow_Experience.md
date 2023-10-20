@@ -24,7 +24,7 @@ Last modified: Wed, 20 Sep 2023
   }
 </script>
 
-# Table of Contents Bhushan
+# Table of Contents
 
 | Topic                                                                                 | Lab Type           | Difficulty Level | Estimated length |
 | ------------------------------------------------------------------------------------- | ------------------ | ---------------- | ---------------- |
