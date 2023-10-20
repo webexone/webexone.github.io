@@ -45,8 +45,8 @@ In Part 2, we will examine the Webex Contact Center Supervisor Experience and th
 | [2.4: Monitor calls](#24-monitor-calls)                                                | Activity         | INTERMEDIATE | 5 min  |
 | [2.5: Supervisor and Agent flow](#25-supervisor-and-agent-flow)                        | Activity         | EASY         | 5 min  |
 | [Verify Supervisor Desktop Administration](#verify-supervisor-desktop-administration)  | Exploration      | EASY         | 5 min  |
-| [2.6 Desktop Layout Regions for Supervisor](#25-desktop-layout-regions-for-supervisor) | Exploration      | INTERMEDIATE | 5 min  |
-| [2.7: User Profile Settings for Supervisor](#26-user-profile-settings-for-supervisor)  | Activity         | INTERMEDIATE | 5 min  |
+| [2.6 Desktop Layout Regions for Supervisor](#26-desktop-layout-regions-for-supervisor) | Exploration      | INTERMEDIATE | 5 min  |
+| [2.7: User Profile Settings for Supervisor](#27-user-profile-settings-for-supervisor)  | Activity         | INTERMEDIATE | 5 min  |
 | [Supervisor Licensing](#supervisor-licensing)                                          | Exploration      | EASY         | 5 min  |
 | [Send Product Feedback](#send-product-feedback)                                        | Activity         | EASY         | 5 min  |
 | [BONUS: Customizations & Programmability](#custom-desktop)                             | BONUS - OPTIONAL | ADVANCED     | 30 min |
@@ -1007,7 +1007,7 @@ Collaboration between agents and supervisors can help your Contact Center to be 
 
 > **The following section outlines where you can find the main configuration settings for Supervisors, and their Teams, Queues and other segmentation settings**
 
-## 2.6 Desktop Layout Regions for Supervisor
+## 2.6: Desktop Layout Regions for Supervisor
 
 - The Supervisor Layout is enabled for a user via the [Desktop Layout JSON](https://webexone.github.io/assets/files/ESD_default_layout.json.zip) file for supervisor from GitHub.
 - Open the file in any JSON editor, check and make sure it contains **_supervisor_** and **_supervisorAgent_** sections.
