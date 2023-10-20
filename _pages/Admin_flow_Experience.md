@@ -40,7 +40,7 @@ Last modified: Wed, 20 Sep 2023
 | [    2.3: Adding Callback functionality to the flows](#adding-text-to-speech-to-the-flow) | Practical Lab | EASY            | 8 min            |
 | [    2.4: Introduction to Flow Debugger](#introduction-to-flow-debugger)                   | Practical Lab | EASY            | 15 min | 
 | [    2.5: Introduction to Flow Versioning](#introduction-to-flow-versioning)                   | Practical Lab | EASY            | 15 min | 
-| [    2.6: Flow Error Handling](#introduction-to-flow-debugger)                   | Practical Lab | EASY            | 15 min |
+| [    2.6: Flow Error Handling](#flow_error_handling)                   | Practical Lab | EASY            | 15 min |
 | [Part 3: Bonus - Experience Management](#bonus---experience-management)                   | Practical Lab | EASY            | 15 min | 
 
 
@@ -691,41 +691,72 @@ update()
 ---
 
 # Introduction to Flow Debugger
-> From a UI standpoint, the flow builder UI contains a "Debug" button on the bottom pane. Clicking the button brings up the pane displaying a list of previous interactions of the flow in production. By default, there are only 100 latest interactions displayed, but the user can either input in a specific interaction ID or a date range to filter the interactions displayed.
+From a UI standpoint, the flow builder UI contains a "Debug" button on the bottom pane. Clicking the button brings up the pane displaying a list of previous interactions of the flow in production. By default, there are only 100 latest interactions displayed, but the user can either input in a specific interaction ID or a date range to filter the interactions displayed.
+
 
 <img src="/assets/images/fe_12.png">
 
-> Once the user selects an interaction, the Interaction Detail pane displays the list of all the activities involved in the interaction along with their inputs/outputs, start times and end times of execution. When the details of the interaction are being viewed, the canvas, the activity properties pane (on the right side), and pane containing the list of available activities (on the left side) become immutable, meaning once a user is in debug mode, the user cannot update the flow itself, only view the data (think read-only mode). The activities that are not involved in the interaction are grayed out (showed with decreased opacity). When an activity is selected from the Interaction Detail pane, the corresponding activity is highlighted on the canvas. When the NewPhoneContact activity is selected in from the Interaction Details in the interaction pane, the corresponding activity is highlighted with an accentuated blue border.
+---
+
+Once the user selects an interaction, the Interaction Detail pane displays the list of all the activities involved in the interaction along with their inputs/outputs, start times and end times of execution.
+
 
 <img src="/assets/images/fe_13.png">
 
 ---
 
 # Introduction to Flow Versioning
-> Tagging a version of the flow should come up while publishing. There are 3 predefined tags - Live, Dev, Test, and one default Tag - Latest. The tag selection dropdown is visible after publish button is hit. Multiple tags are allowed to be selected. Once selected and published and those tags are associated to that specific version.
+Tagging a version of the flow should come up while publishing. There are 3 predefined tags - Live, Dev, Test, and one default Tag - Latest. The tag selection dropdown is visible after publish button is hit. Multiple tags are allowed to be selected. Once selected and published and those tags are associated to that specific version.
 
 
 <img src="/assets/images/fe_7.png">
 
-> During entry point edit, the tags can be selected as well, here only the tags which are currently in use are shown.
+---
+
+During entry point edit, the tags can be selected as well, here only the tags which are currently in use are shown.
 
 <img src="/assets/images/fe_8.png">
+
+---
 
 >During debugging, the tags filter allows to filter any of the previous or current interactions that had those tags during execution between the time range selected. 
 
 <img src="/assets/images/fe_9.png">
 
+---
+
 > While looking at the previous versions history, by clicking on the clock icon located at the top panel the previous versions comes up with their tags. The versions which used to have tags and have been moved to later versions, show the tags with lighter color tone.
 
 <img src="/assets/images/fe_10.png">
 
+---
+
 > While using goto activity(which points to another flow), the tag selection drop down appears in the properties pane(Figure 5). This allows flow developer to choose a specific tagged version to goto and their corresponding variables are used for mapping.
+
 
 <img src="/assets/images/fe_11.png">
 
-
 ---
 
+# Flow Error Handling
+The error handling feature tries to deal all kinds of errors during the flow execution. Due to the nature of errors, it could be divided into two levels: the activity error and the global error[Global Error Handler].
+
+1. On the activity level, error paths are designed to handle specific problematic situations and it gives the flow designer more freedom on how to properly handle these scenarios
+2. For errors that are not captured by the activity error nodes, the global error handler would come into play and process the errors.
+
+<img src="/assets/images/fe_14.png">
+
+Activity Level Error Handling
+---
+
+>Defined Errors: These are the errors which are already known to flow designers or the activity owner while creating a flow. They are managed by themselves by adding the error node to the activity.
+
+>Undefined Error: Undefined errors are a way to handle unexpected system conditions.
+
+
+<img src="/assets/images/fe_15.png">
+
+---
 
 # Bonus - Experience Management
 
