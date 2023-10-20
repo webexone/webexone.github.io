@@ -29,12 +29,12 @@ In Part 2, we will examine the Webex Contact Center Supervisor Experience and th
 
 | Topic                                                                             | Type          | Dificulty    | Time   |
 | --------------------------------------------------------------------------------- | ------------- | ------------ | ------ |
-| [Part 1: Agent Desktop Experience](#agent-desktop-overview)                       | Exploration   | EASY         | 5 min  |
+| [Part 1: Agent Desktop Experience](#part-1-agent-experience)                      | Exploration   | EASY         | 5 min  |
 | [1.1: Make an Inbound Call](#desktop-login-process)                               | Activity      | EASY         | 5 min  |
 | [1.2: Make an Outdial Call]()                                                     | Activity      | EASY         | 5 min  |
 | [1.2: Extend the Agent Desktop Experience](#desktop-administration)               | Activity      | INTERMEDIATE | 10 min |
 | [1.2: Desktop Administration](#desktop-administration)                            | Exploration   | INTERMEDIATE | 10 min |
-| [Part 2: Supervisor Experience](#supervisor-experience)                           | Exploration   | EASY         | 5 min  |
+| [Part 2: Supervisor Experience](#part-2-supervisor-experience)                    | Exploration   | EASY         | 5 min  |
 | [2.1: Exploring Supervisor Roles](#supervisor-experience)                         | Exploration   | EASY         | 5 min  |
 | [2.2: Team Performance - Team Messaging - Changing State](#supervisor-experience) | Exploration   | EASY         | 10 min |
 | [2.3: Quality Management Recordings](#supervisor-experience)                      | Exploration   | EASY         | 5 min  |
@@ -89,7 +89,7 @@ For this lab, you'll only require access to two web portals:
 > Control Hub Administration: **[https://admin.webex.com](https://admin.webex.com){:target="\_blank"}**\
 > Contact Center Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="\_blank"}**\
 
-## Lab Configuration
+### Lab Configuration
 
 > Please submit the form below with your Attendee ID. All configuration items in the lab guide will be renamed with that prefix.
 
@@ -127,7 +127,7 @@ Please note, that to proceed to the next section, you will need to use the accou
 | Address Book Entry 1 | <w class = "attendee-class">attendeeID</w>\_addressBookEntry1         |
 | Multimedia Profile   | <w class = "attendee-class">attendeeID</w>\_MMP                       |
 
-## Agent Desktop Overview
+## 1.1 Agent Desktop Overview
 
 > Desktop multi-language support is based on the language settings on the browser. Currently, we support 29 languages, including:
 > Bulgarian, Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish, Dutch, English (UK), English (US), Finnish, French, German, Hungarian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Serbian, Slovak, Slovenian, Spanish, Swedish, and Turkish.
@@ -151,7 +151,7 @@ Here is an overview of the sections:
 
 6. **Navigation pane**: By default you can find the following icons here: Home, Agent Performance Statistics and Help. However, you can customize it and add some additional icons and widgets.
 
-## Desktop Login Process
+## 1.2 Desktop Login Process
 
 - To Login to the Agent Desktop, launch Google Chrome and navigate to the URL: [https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com)
 
@@ -365,7 +365,7 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 
 ---
 
-## Make an Incoming Call
+## 1.3 Make an Incoming Call
 
 > In this section, you will will interact as an agent and test an Incoming call. Review the video of the lab section above to understand the different call handling options.
 
@@ -493,11 +493,9 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 
 - **Conference**: To start a three-way conference call between you, the customer and another agent. For this option, you (primary agent) must have initiated a consult call. Click Transfer to transfer the call to the consulting agent. The consulted agent can exit the call by clicking Exit Conference, and the call continues between the primary agent and the customer. Only the primary agent can end the Conference.
 
-## Outdial Calls
+## 1.4 Make an Outdial Call
 
 > In this section, we will test Outdial calls using different Outdial ANIs and Address Books.
-
-### Make an Outdial Call
 
 - While Logged into the Agent Desktop, look for the Address book.
 - You will see two contacts that are preloaded for you. You can directly make a call to any of those numbers.
@@ -576,7 +574,7 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 
 <br/>
 
-## Exploring Profile Settings & Switching Teams
+## 1.5 Exploring Profile Settings
 
 > In this section, we will explore what are the available options and settings under the Profile Settings.
 
@@ -609,7 +607,7 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 
 (screenshot - GIF)
 
-## Custom Widget Landscape
+## 1.6 Custom Widget Landscape
 
 > The next section covers the experience you just saw with switching to the new team : Team2
 
@@ -715,7 +713,7 @@ Here is a schematic showing how the Agent Desktop configuraton aligns to all the
 
 (schematic - overview)
 
-## Administration Entities
+## 1.7 Administration Entities
 
 The following Administration entities have been configured for you.
 
@@ -764,7 +762,7 @@ At the end of the lab, you should have a good understanding of the Supervisor ro
 > Supervisor Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**
 > Webex App (Download): \*\*\*\*
 
-## Supervisor Desktop Modes
+## 2.1: Supervisor Desktop Modes
 
 > **The following section explains the types of login modes into the Supervisor Desktop**
 >
@@ -809,7 +807,7 @@ We will review this on Control Hub Settings.
 
 <br>
 
-## Supervisor Login
+## 2.2: Supervisor Login
 
 - Sign in to the **Supervisor Desktop**: https://desktop.wxcc-us1.cisco.com with your supervisor credentials.
 
@@ -874,7 +872,7 @@ We will review this on Control Hub Settings.
 
 ![Supervisor_Modify_Columns](/assets/images/Supervisor/Supervisor_Modify_Columns.gif)
 
-## Chat with your agents
+## 2.3: Chat with your agents
 
 Collaboration between agents and supervisors can help your Contact Center to be more effective and efficient for your customers and this is why we have enabled Webex messaging features in both Agent and Supervisor desktops.
 
@@ -898,7 +896,7 @@ Collaboration between agents and supervisors can help your Contact Center to be 
 
 ![Supervisor_Message_Received_from_Agent](/assets/images/Supervisor/Supervisor_Message_Received_from_Agent.gif)
 
-## Monitor calls
+## 2.4: Monitor calls
 
 - As a supervisor, the **Team Performance Details** page allows you to see all connected agents and decide to monitor calls by clicking on the **Review and Monitor** icon.
 
@@ -930,7 +928,7 @@ Collaboration between agents and supervisors can help your Contact Center to be 
 
 ---
 
-## Supervisor and Agent flow
+## 2.5: Supervisor and Agent flow
 
 - When you sign in to the Supervisor Desktop, you can - depending or your team assignement - choose either the supervisor role or supervisor AND agent role.
 
@@ -950,7 +948,7 @@ Collaboration between agents and supervisors can help your Contact Center to be 
 
 > **The following section outlines where you can find the main configuration settings for Supervisors, and their Teams, Queues and other segmentation settings**
 
-## Desktop Layout Regions for Supervisor
+## 2.5 Desktop Layout Regions for Supervisor
 
 - The Supervisor Layout is enabled for a user via the [Desktop Layout JSON](https://webexone.github.io/assets/files/ESD_default_layout.json.zip) file for supervisor from GitHub.
 - Open the file in any JSON editor, check and make sure it contains **_supervisor_** and **_supervisorAgent_** sections.
@@ -976,7 +974,7 @@ Collaboration between agents and supervisors can help your Contact Center to be 
 
 ![Lab_4_WebexCC_Config_4](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_4.png)
 
-## User Profile
+## 2.6: User Profile Settings for Supervisor
 
 - Under **_Provisioning_** -> **_User Profiles_**, find default **_Supervisor Profile_**, and let us take a look at it.
 
@@ -1034,7 +1032,7 @@ Collaboration between agents and supervisors can help your Contact Center to be 
 
 ![Lab_4_Supervisor_Config_6](/assets/images/Supervisor/DC_Lab_4_Supervisor_Config_6.png)
 
-## Send Product Feedback
+# Send Product Feedback
 
 Thank you for completing the Agent and Supervisor labs, we would love to hear direct product feedback from you!
 
