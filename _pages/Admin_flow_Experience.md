@@ -75,7 +75,7 @@ You can do the tasks from the lab guide either on the **Lab Tenant** (you need t
 
 ![Admin_Experience](/assets/images/AE_image1.png)
 
-## Control Hub User Management Tasks
+## Control Hub User Management Tasks 
 
 > The following video outlines the process to manage different types of users to the Customer tenant. Following the steps, you will add new users and set the Calling extension. While adding the user, we will see how to select user roles.
 
