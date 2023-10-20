@@ -1009,7 +1009,7 @@ Collaboration between agents and supervisors can help your Contact Center to be 
 
 ## 2.6: Desktop Layout Regions for Supervisor
 
-- The Supervisor Layout is enabled for a user via the [Desktop Layout JSON](https://webexone.github.io/assets/files/ESD_default_layout.json.zip) file for supervisor from GitHub.
+- The Supervisor Layout is enabled for a user via the [Desktop Layout JSON](https://webexone.github.io/assets/files/WebexOne_Layout.json) file for supervisor from GitHub.
 - Open the file in any JSON editor, check and make sure it contains **_supervisor_** and **_supervisorAgent_** sections.
   - **_supervisor_** section is used when the user signs in to supervisor desktop with **_Supervisor_** role.
   - **_supervisorAdmin_** section is used when the user signs in to supervisor desktop with **_Supervisor and Agent_** role.
