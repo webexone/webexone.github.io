@@ -485,19 +485,19 @@ update()
 2. Click Flows > Manage Flows > Import flows > Select flow_template
    > <img src="/assets/images/fe_2.gif">
 
-3. Click the ellipsis next to the newly imported flow_template and select Open 
-   > <img src="/assets/images/IVR/openFlow.JPG" height="40">
+3. Click the newly imported flow_template and this will Open the flow
+   > <img src="/assets/images/fe_3.gif">
    > 
    > Rename the flow to <w class="attendee_out">AttendeeID</w>_TechSummit by clicking on the pencil icon at the top of the screen, next to the flow name
    >
    > Click on the Play Message node
-   >> Audio File: welcome.wav 
+   >> Audio File: 0_English.wav 
    >
    > ---
    > Click on the Queue Contact node
    >> Select Static Queue
    >>
-   >> Queue: Q_<w class="attendee_out">AttendeeID</w>
+   >> Queue: 001_VoiceQueue
    >>
    > ---
    >
@@ -572,7 +572,7 @@ update()
 
 ## Adding Functionality to Your Flow
 
-## Adding a comfort message while a call is in queue
+## Adding Text-To-Speech to the flow 
 1. Delete the connection which loops from the end of the Play Music node back to the beginning of the Play Music node.
 2. Drag a new Play Message node under the Play Music node. 
 3. Click on the Play message node
