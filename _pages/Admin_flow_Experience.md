@@ -37,14 +37,14 @@ Last modified: Wed, 20 Sep 2023
 | [    2.1: Configuring tenant for Call Delivery](#configuring-tenant-for-call-delivery)        | Practical Lab | EASY            | 10 min           |
 | [    2.2: Adding Text-To-Speech to the flow](#adding-text-to-speech-to-the-flow) | Practical Lab | EASY            | 8 min            |
 | [    2.3: Adding Callback functionality to the flows](#adding-text-to-speech-to-the-flow) | Practical Lab | EASY            | 8 min            |
-| [    2.3: Adding Callback functionality to the flows](#adding-text-to-speech-to-the-flow) | Practical Lab | EASY            | 8 min            |
-| [    2.4: Introduction to Flow Debugger](#introduction-to-flow-debugger)                   | Practical Lab | EASY            | 15 min | 
-| [    2.5: Introduction to Flow Versioning](#introduction-to-flow-versioning)                   | Practical Lab | EASY            | 15 min | 
-| [    2.6: Flow Error Handling](#flow_error_handling)                   | Practical Lab | EASY            | 15 min |
+| [    2.4: Business Hours Configuration](#business_hours_configuration ) | Practical Lab | EASY            | 8 min            |
+| [    2.5: Introduction to Flow Debugger](#introduction-to-flow-debugger)                   | Practical Lab | EASY            | 15 min | 
+| [    2.6: Introduction to Flow Versioning](#introduction-to-flow-versioning)                   | Practical Lab | EASY            | 15 min | 
+| [    2.7: Flow Error Handling](#flow_error_handling)                   | Practical Lab | EASY            | 15 min |
 | [Part 3: Bonus - Experience Management](#bonus---experience-management)                   | Practical Lab | EASY            | 15 min | 
 
 
-# Overview of the Admin Experience 
+## Part 1: Introduction to the new Admin Experience 
 
 In this Lab, we will go through Admin UI by completing the tasks that are required for the general pre-configuration of a tenant. These tasks are to be undertaken by a customer administrator. By following each of the steps, you would have prepared your tenant to begin configuring different services offered by the platform. At the end of the lab, you should be able to log in to an agent interface with the configured user extension.
 You can do the tasks from the lab guide either on the **Lab Tenant** (you need to request access from the lab support team) or you can do it directly on your **Gold Tenant** / personal tenant.
@@ -68,13 +68,13 @@ You can do the tasks from the lab guide either on the **Lab Tenant** (you need t
 
 ### Lab Section
 
-## Introduction to the new Admin Experience
+
 
 > The overall aim of admin consolidation is to provide a single pane of glass (SPOG) experience for administrators so that admins need not have frequent context switch by having to traverse different applications. The following video outlines the new features of a new admin experience. This introduces, the new left navigation panel for Webex Contact Center in Control Hub as well as other configuration settings which were migrated from the Management Portal.
 
 ![Admin_Experience](/assets/images/AE_image1.png)
 
-## Control Hub User Management Tasks 
+## 1.1: Control Hub User Management Tasks 
 
 > The following video outlines the process to manage different types of users to the Customer tenant. Following the steps, you will add new users and set the Calling extension. While adding the user, we will see how to select user roles.
 
@@ -153,7 +153,7 @@ update()
  
 - Refresh the **_Users_** page in the Control Hub, make sure that both users are in **Active** status.
 
-## Contact Center User Configuration
+## 1.2: Contact Center User Configuration
 
 > The following video outlines how to create a Site, Team, and Multimedia Profile that will be assigned to the Contact Center users. We will also learn how to navigate to the Webex Contact Center admin section and how to associate customer-created Site, Team, and Multi-Media Profile with new users.
 
@@ -231,7 +231,7 @@ update()
 - Repeat the steps above for the supervisor.
 
 
-## Bulk Operations
+## 1.3: Bulk Operations
 
 > In this section you will learn how to use the Bulk Configuration in Control Hub by creating a second team. As an administrator, you can use Bulk Operations to create, modify, import, or export configuration objects in Webex Contact Center. This feature provides greater speed and efficiency to deploy and configure Webex Contact Center systems.
 
@@ -296,7 +296,7 @@ xxxx_team2,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
 - In the Management Portal directly associate the **<w class="attendee_out">Your_Attendee_ID</w>_Team2** with your agent and supervisor by adding your users to that team (__Advanced Settings -> Agents__).
 
 
-## Access to the Agent Desktop
+## 1.4: Access to the Agent Desktop
 
 > By following the steps below, you will log in to the Agent Desktop with your credentials and indicate the number (DN) where you want to receive the calls.
 
@@ -347,7 +347,7 @@ xxxx_team2,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
 		
 <p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>
 
-# Introduction to Flow Designer
+# Part 2: Introduction to Flow Designer
 
 In this lab, we will configure all of the required elements to deliver a call into a queue.  We will then create a new flow and iterate on it adding functionality and exploring opportunities for improvement.
 
@@ -420,7 +420,7 @@ update()
 
 ![Flow Experience](/assets/images/fe_1.gif)
 
-## Configuring tenant for Call Delivery
+## 2.1: Configuring tenant for Call Delivery
 
 ⚠️ You can use this link to download the [Audio Files](https://webexcc.github.io/assets/files/lab_wav.zip){:target="\_blank"}. Those files are already pre-uploaded on the Lab Tenant.
 
@@ -572,7 +572,7 @@ update()
 
 
 
-## Adding Text-To-Speech to the flow 
+## 2.2: Adding Text-To-Speech to the flow 
 <img src="/assets/images/fe_4.gif">
 1. Select the PlayMessage node 
 2. Enable Text-to-speech toggle 
@@ -596,7 +596,7 @@ update()
    > ---
 8. Place a test call to your EP DN
 
-## Adding Callback functionality to the flows
+## 2.3: Adding Callback functionality to the flows
 <img src="/assets/images/fe_5.png"
 1. Create new flow variables:
    > Name: CallerANI
@@ -690,7 +690,27 @@ update()
 
 ---
 
-# Introduction to Flow Debugger
+# 2.4 Business Hours Configuration 
+Business hours(BH) is a feature that lets you define the operational hours of contact center. In addition to that, we can also add holidays, or event driven interventions like extended working hours during festival seasons. This feature is an upgrade over routing strategy. 
+
+Business hours aims to remove all such pain points. There are 3 sub entities which comes under business hours:
+
+>1. Working hours - Define normal operational hours. Add one or more shifts to have per-day or per-hour timing control
+>2. Holidays - Define 24 hours break in operations like Christmas Day
+>3. Overrides - Define an event based intervention in which operational hours are disrupted. Like black Friday sale when CC is operating at additional capacity. Or like emergency downtime, in which we close all operations immediately
+
+The subsequent flow execution from BH activity takes the following priority:
+
+>1. Priority-1 Override: checks if any of the override schedules apply at a given moment during execution
+>2. Priority-2 Holidays: checks if any of the holiday hours schedules apply at a given moment during execution
+>3. Priority-3 Working hours: checks if any of the working hours shift schedules apply at a given moment during execution
+>4. Priority-4 Default: If no schedule applies, then route following the "Default" port will be selected
+
+
+<img src="/assets/images/fe_16.png">
+---
+
+# 2.5 Introduction to Flow Debugger
 From a UI standpoint, the flow builder UI contains a "Debug" button on the bottom pane. Clicking the button brings up the pane displaying a list of previous interactions of the flow in production. By default, there are only 100 latest interactions displayed, but the user can either input in a specific interaction ID or a date range to filter the interactions displayed.
 
 
@@ -705,7 +725,7 @@ Once the user selects an interaction, the Interaction Detail pane displays the l
 
 ---
 
-# Introduction to Flow Versioning
+# 2.6 Introduction to Flow Versioning
 Tagging a version of the flow should come up while publishing. There are 3 predefined tags - Live, Dev, Test, and one default Tag - Latest. The tag selection dropdown is visible after publish button is hit. Multiple tags are allowed to be selected. Once selected and published and those tags are associated to that specific version.
 
 
@@ -719,26 +739,26 @@ During entry point edit, the tags can be selected as well, here only the tags wh
 
 ---
 
->During debugging, the tags filter allows to filter any of the previous or current interactions that had those tags during execution between the time range selected. 
+During debugging, the tags filter allows to filter any of the previous or current interactions that had those tags during execution between the time range selected. 
 
 <img src="/assets/images/fe_9.png">
 
 ---
 
-> While looking at the previous versions history, by clicking on the clock icon located at the top panel the previous versions comes up with their tags. The versions which used to have tags and have been moved to later versions, show the tags with lighter color tone.
+While looking at the previous versions history, by clicking on the clock icon located at the top panel the previous versions comes up with their tags. The versions which used to have tags and have been moved to later versions, show the tags with lighter color tone.
 
 <img src="/assets/images/fe_10.png">
 
 ---
 
-> While using goto activity(which points to another flow), the tag selection drop down appears in the properties pane(Figure 5). This allows flow developer to choose a specific tagged version to goto and their corresponding variables are used for mapping.
+While using goto activity(which points to another flow), the tag selection drop down appears in the properties pane(Figure 5). This allows flow developer to choose a specific tagged version to goto and their corresponding variables are used for mapping.
 
 
 <img src="/assets/images/fe_11.png">
 
 ---
 
-# Flow Error Handling
+# 2.7 Flow Error Handling
 The error handling feature tries to deal all kinds of errors during the flow execution. Due to the nature of errors, it could be divided into two levels: the activity error and the global error[Global Error Handler].
 
 1. On the activity level, error paths are designed to handle specific problematic situations and it gives the flow designer more freedom on how to properly handle these scenarios
