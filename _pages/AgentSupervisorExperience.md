@@ -134,6 +134,8 @@ Please note, that to proceed to the next section, you will need to use the accou
 
 ![Image1](/assets/images/Agent/AgentDesktopOverview.png)
 
+---
+
 The Agent Desktop is divided into **6 sections**.
 The image above shows the general view after receiving an interaction.
 
@@ -165,7 +167,11 @@ Here is an overview of the sections:
 
 ![agent-desktop](/assets/images/agent/01-image.png)
 
+---
+
 ![agent-desktop](/assets/images/agent/02-image.png)
+
+---
 
 - This is the station Login Screen. Agents may input the number where they need to receive incoming and outdial calls.
 
@@ -184,6 +190,8 @@ Here is an overview of the sections:
 > NOTE: Agents cannot access the Agent Desktop from multiple browsers or multiple tabs of the same browser window. In that case, a warning message will be displayed.
 
 ![agent-desktop](/assets/images/agent/04-image.png)
+
+---
 
 > The video below shows a demo about the agent login process and the available options:
 
@@ -217,6 +225,8 @@ This also has the section where you can view the Idle codes.
 
 ![agent-desktop-State-Idle](/assets/images/agent/Agent_State_Idle.gif)
 
+---
+
 > Note: The Idle codes are customizable and configured under **Webex Control Hub > Contact Center Settings > Idle / Wrap up Codes**
 > These Idle codes can then be customized per Desktop Profile, on a per user level.
 
@@ -227,6 +237,8 @@ This also has the section where you can view the Idle codes.
 The Agent can access the out of box Agent Personal Statistics Reports on the left navigation screen.
 
 ![agent-desktop-Personal-Statistics](/assets/images/agent/Agent_Personal_Statistics.gif)
+
+---
 
 > Note: These Agent Personal Statistics are canned reports out of the box. However, one can configure custom Analyzer Reports for Agents in the Layout if custom reporting views are needed.
 
@@ -342,6 +354,8 @@ A diagnostic must have for Agents is the ability to download error reports to se
 
 ![agent-desktop-Error-Logs](/assets/images/agent/Agent_Error-Logs.gif)
 
+---
+
 > What you will notice when you open the file:
 > The Desktop uses a combination of secure HTTPS as well as Websocket connectivity to stay connected to the backend.
 
@@ -409,9 +423,13 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 
 ![Agent Popover](/assets/images/agent/Agent_Popover.png)
 
+---
+
 > **Click on the Accept Button to take the call**
 
 ![CH-Desktop-Call-In](/assets/images/agent/CH_Desktop_Call_In.gif)
+
+---
 
 > Note: The variables displayed in the incoming popover and on the Desktop can be ordered in a custom manner.
 > This is done on the flow designer on the flow level.
@@ -425,6 +443,8 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
   - Notice the status of the Desktop has changed to **`Engaged`**.
 
 ![CH-Desktop-Call-In-Accepted](/assets/images/agent/CH_Desktop_Call_In_Accepted.gif)
+
+---
 
 > **Note**: While you are engaged for a voice call, you are still marked available on other channels based on your channel capacity. This is the configuration on the Multimedia Profile settings on the Agent Desktop.
 
@@ -605,7 +625,6 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
   - Mark the notification as `Read`.
   - Go to the **User Profile** and check the **Channel Capacity** again, it's different.
 
-(screenshot - GIF)
 
 ## 1.6 Custom Widget Landscape
 
@@ -719,8 +738,6 @@ The following Administration entities have been configured for you.
 
 To verify, navigate to Control Hub Portal > Contact Center Settings
 
-(screenshot - GIF)
-
 | **Entity**           | **Name**                                                               |
 | -------------------- | ---------------------------------------------------------------------- |
 | Agent 1              | <w class = "attendee-class">attendeeID</w>_agent1@mailinator.com       |
@@ -794,6 +811,8 @@ We will review this on Control Hub Settings.
 - This is enabled by setting up a User with the Supervisor License, a Primary Team AND marking the user Contact Center enabled.
 
 ![Supervisor_And_Agent_Role](/assets/images/supervisor/Supervisor_And_Agent_Role.gif)
+
+---
 
 ### Pre-requisites:
 
@@ -872,7 +891,9 @@ We will review this on Control Hub Settings.
 
 ![Supervisor_Modify_Columns](/assets/images/Supervisor/Supervisor_Modify_Columns.gif)
 
+
 ## 2.3: Chat with your agents
+
 
 Collaboration between agents and supervisors can help your Contact Center to be more effective and efficient for your customers and this is why we have enabled Webex messaging features in both Agent and Supervisor desktops.
 
@@ -880,23 +901,32 @@ Collaboration between agents and supervisors can help your Contact Center to be 
 
 ![Supervisor_Message](/assets/images/Supervisor/Supervisor_Message.gif)
 
+---
+
 - Fill the chat window with a message to send to your agent
 
 ![Supervisor_Message_Sent](/assets/images/Supervisor/Supervisor_Message_Sent.gif)
+
+---
 
 - On the agent side, observe the message notification received
 
 ![Supervisor_Message_Sent_Agent](/assets/images/Supervisor/Supervisor_Message_Sent_Agent.gif)
 
+---
+
 - If, as an agent, you want to answer to the supervisor, your will need to click on the **Webex logo** to open the Webex app embedded in the **Agent Desktop**. You can then reply to the supervisor directly.
 
 ![Supervisor_Message_Sent_To_Sup](/assets/images/Supervisor/Supervisor_Message_Sent_To_Sup.gif)
+
+---
 
 - On the supervisor side, observe the message notification received
 
 ![Supervisor_Message_Received_from_Agent](/assets/images/Supervisor/Supervisor_Message_Received_from_Agent.gif)
 
 ## 2.4: Monitor calls
+
 
 - As a supervisor, the **Team Performance Details** page allows you to see all connected agents and decide to monitor calls by clicking on the **Review and Monitor** icon.
 
@@ -932,11 +962,15 @@ Collaboration between agents and supervisors can help your Contact Center to be 
 
 - When you sign in to the Supervisor Desktop, you can - depending or your team assignement - choose either the supervisor role or supervisor AND agent role.
 
-![Lab_4_ESD](/assets/images/Supervisor/Lab4_ESD_14_monitor.png)
+![Supervisor_LoginOptions](/assets/images/Supervisor/Supervisor_LoginOptions.gif)
+
+---
 
 - In the case, the supervisor experience is a bit different as your agent status appears in the header section of the Desktop.
 
 ![Lab_4_ESD](/assets/images/Supervisor/Supervisor_No_Message.gif)
+
+---
 
 - If, as a supervisor, you chose to monitor a call, your status is set to **Engaged** and you cannot take other calls as an agent.
 
@@ -957,6 +991,8 @@ Collaboration between agents and supervisors can help your Contact Center to be 
 
 ![Lab_4_WebexCC_Config_1](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_1.png)
 
+---
+
 - Lets see where this is uploaded.
 - On Webex Control Hub (admin.webex.com) - Go to _DESKTOP EXPERIENCE_ -> _Desktop Layout_
 
@@ -964,9 +1000,9 @@ Collaboration between agents and supervisors can help your Contact Center to be 
 
 ---
 
-- This is where we can upload a new Desktop layout for the Supervisor and also validate the layout.
+- To verify layout Assignments, go to Control Hub _Contact Center > USER MANAGEMENT > Teams_ and search for your Team (Team1 or Team2). You will find the WebexOne_desktopLayout in there.
 
-![Lab_4_WebexCC_Config_3](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_3.png)
+![Supervisor_Teams_Layout](/assets/images/Supervisor/Supervisor_Teams_Layout.gif)
 
 ---
 
@@ -976,61 +1012,46 @@ Collaboration between agents and supervisors can help your Contact Center to be 
 
 ## 2.6: User Profile Settings for Supervisor
 
-- Under **_Provisioning_** -> **_User Profiles_**, find default **_Supervisor Profile_**, and let us take a look at it.
 
-![Lab_4_WebexCC_Config_6](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_6.png)
+- Under **_USER MANAGEMENT_** -> **_User Profiles_**, find default **_Supervisor Profile_**, and let us take a look at it.
 
-- We are able to view the Module Settings and Team settings and Access Rights.
-- This is where we are able to check on the Supervisor settings.
+![Supervisor_userProfile_Verify](/assets/images/Supervisor/Supervisor_userProfile_Verify.gif)
 
-![Lab_4_WebexCC_Config_7](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_7.png)
+---
 
-- Go ahead and create a New User Profile: Name it <attendeeID>\_SupervisorProfile. Make this of type Supervisor.
+- We are able to view Supervisor settings including Access Rights.
 
-- Try to select a subset of module settings, and teams. Here is where you can decide which teams you want to be able to monitor.
+![Supervisor_AccessRights](/assets/images/Supervisor/Supervisor_AccessRights.gif)
 
-![Lab_4_WebexCC_Config_8](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_8.png)
-
-- Scroll to the bottom of the page and save the supervisor profile.
-
-![Lab_4_WebexCC_Config_9](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_9.png)
-
-- Go to **Provisioning\*** -> **_Users_**, find your supervisor user, and Edit the User Profile to point to the new User Profile you just created: attendeeID_supervisorProfile
-
-![Lab_4_WebexCC_Config_10](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_10.png)
-
-- Set the following parameters and save changes:
-
-![Lab_4_WebexCC_Config_11](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_11.png)
+---
 
 # Supervisor Licensing
 
 > In This section, we will review the Supervisor Licensing that creates the supervisor.
 
 - Login to Control Hub using your administrator account.
-- Go to **_Users_**, click on supervisor's account, scroll dow to **_Licenses_** section and press **_Edit Licenses_** button.
+- Go to **_Users_**,
+- Search for your Supervisor
+- Click on supervisor's account, scroll dow to **_Licenses_** section and press **_Edit Licenses_** button.
+- Click again **_Edit Licenses_** button, located bottom right
+- Click **_Contact Center_**
+- View license options (Do not change, please)
 
-![Lab_4_Supervisor_Config_1](/assets/images/Supervisor/DC_Lab_4_Supervisor_Config_1.png)
+![Supervisor_License](/assets/images/Supervisor/Supervisor_License.gif)
 
-- Press **_Edit Licenses_** button on **_Edit services_** page.
-
-![Lab_4_Supervisor_Config_2](/assets/images/Supervisor/DC_Lab_4_Supervisor_Config_2.png)
-
-- Go to **_Contact Center_** tab, tick **_Licenses Agent_** checkbox and assign **_Premium Agent - Supervisor Role_** license. Then save changes.
-
-![Lab_4_Supervisor_Config_3](/assets/images/Supervisor/DC_Lab_4_Supervisor_Config_3.png)
-
-- Check and make sure supervisor license has been assigned. Then click on **_Close_** button to return to the user settings.
-
-![Lab_4_Supervisor_Config_4](/assets/images/Supervisor/DC_Lab_4_Supervisor_Config_4.png)
+---
 
 - Check and make sure supervisor license is displayed in **_Licenses_** section of user seetings on Control Hub.
 
-![Lab_4_Supervisor_Config_5](/assets/images/Supervisor/DC_Lab_4_Supervisor_Config_5.png)
+![Lab_4_Supervisor_Config_5](/assets/images/Supervisor/Supervisor_License_Verify.gif)
 
-- Go to **_Contact Center_** -> **_Settings_** and press **_Synchronize Users_** button to sync all changes from Control Hub to Webex CC Management Portal.
+---
 
-![Lab_4_Supervisor_Config_6](/assets/images/Supervisor/DC_Lab_4_Supervisor_Config_6.png)
+- To Synchronize Users - Go to **_Contact Center_** -> **_TENANT SETTINGS_** > **General** and press **_Synchronize Users_** button in order to synchronize Webex users with Contact Center licenses in order to successfully assign Contact Center user privileges.
+
+![CH_Synchronize](/assets/images/Supervisor/CH_Synchronize.gif)
+
+---
 
 # Send Product Feedback
 
