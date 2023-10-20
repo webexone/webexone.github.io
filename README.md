@@ -1,6 +1,6 @@
 ---
 layout: home
-title: 'Webex Contact Center at Webex One'
+title: "Webex Contact Center at Webex One"
 permalink: /
 cover: /assets/gitbook/images/Home.jpeg
 ---
