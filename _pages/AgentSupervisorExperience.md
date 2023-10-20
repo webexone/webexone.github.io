@@ -27,20 +27,28 @@ In Part 2, we will examine the Webex Contact Center Supervisor Experience and th
 
 # Table of Contents
 
-| Topic                                                                             | Type          | Dificulty    | Time   |
-| --------------------------------------------------------------------------------- | ------------- | ------------ | ------ |
-| [Part 1: Agent Desktop Experience](#part-1-agent-experience)                      | Exploration   | EASY         | 5 min  |
-| [1.1: Make an Inbound Call](#desktop-login-process)                               | Activity      | EASY         | 5 min  |
-| [1.2: Make an Outdial Call]()                                                     | Activity      | EASY         | 5 min  |
-| [1.2: Extend the Agent Desktop Experience](#desktop-administration)               | Activity      | INTERMEDIATE | 10 min |
-| [1.2: Desktop Administration](#desktop-administration)                            | Exploration   | INTERMEDIATE | 10 min |
-| [Part 2: Supervisor Experience](#part-2-supervisor-experience)                    | Exploration   | EASY         | 5 min  |
-| [2.1: Exploring Supervisor Roles](#supervisor-experience)                         | Exploration   | EASY         | 5 min  |
-| [2.2: Team Performance - Team Messaging - Changing State](#supervisor-experience) | Exploration   | EASY         | 10 min |
-| [2.3: Quality Management Recordings](#supervisor-experience)                      | Exploration   | EASY         | 5 min  |
-| [2.4: Supervisor Administration](#supervisor-administration)                      | Practical Lab | INTERMEDIATE | 10 min |
-| [2.5: Supervisor Licensing](#supervisor-licensing)                                | Practical Lab | EASY         | 5 min  |
-| [BONUS: Customizations & Programmability](#custom-desktop)                        | Practical Lab | ADVANCED     | 30 min |
+| Topic                                                              | Type          | Dificulty    | Time   |
+| ------------------------------------------------------------------ | ------------- | ------------ | ------ |
+| [Part 1: Agent Experience](#part-1-agent-experience)               | Exploration   | EASY         | 5 min  |
+| [1.1: Agent Desktop Overview](#desktop-login-process)              | Activity      | EASY         | 5 min  |
+| [1.2: Desktop Login Process]()                                     | Activity      | EASY         | 5 min  |
+| [1.3: Make an Incoming Call](#desktop-administration)              | Activity      | INTERMEDIATE | 10 min |
+| [1.4 Make an Outdial Call](#desktop-administration)                | Exploration   | INTERMEDIATE | 10 min |
+| [1.5: Exploring Profile Settings](#desktop-administration)         | Exploration   | INTERMEDIATE | 10 min |
+| [1.6 Custom Widget Landscape](#desktop-administration)             | Exploration   | INTERMEDIATE | 10 min |
+| [Verify Desktop Administration](#desktop-administration)           | Exploration   | INTERMEDIATE | 10 min |
+| [1.7: Administration Entities](#desktop-administration)            | Exploration   | INTERMEDIATE | 10 min |
+| [Part 2: Supervisor Experience](#part-2-supervisor-experience)     | Exploration   | EASY         | 5 min  |
+| [2.1: Supervisor Desktop Modes](#supervisor-experience)            | Exploration   | EASY         | 5 min  |
+| [2.2: Supervisor Login](#supervisor-experience)                    | Exploration   | EASY         | 10 min |
+| [2.3: Chat with your agents](#supervisor-experience)               | Exploration   | EASY         | 5 min  |
+| [2.4: Monitor calls](#supervisor-administration)                   | Practical Lab | INTERMEDIATE | 10 min |
+| [2.5: Supervisor and Agent flow](#supervisor-licensing)            | Practical Lab | EASY         | 5 min  |
+| [Verify Supervisor Desktop Administration](#supervisor-licensing)  | Practical Lab | EASY         | 5 min  |
+| [2.5: Supervisor and Agent flow](#supervisor-licensing)            | Practical Lab | EASY         | 5 min  |
+| [2.6 Desktop Layout Regions for Supervisor](#supervisor-licensing) | Practical Lab | EASY         | 5 min  |
+| [2.7: User Profile Settings for Supervisor](#supervisor-licensing) | Practical Lab | EASY         | 5 min  |
+| [BONUS: Customizations & Programmability](#custom-desktop)         | Practical Lab | ADVANCED     | 30 min |
 
 # Part 1: Agent Experience
 
@@ -625,7 +633,6 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
   - Mark the notification as `Read`.
   - Go to the **User Profile** and check the **Channel Capacity** again, it's different.
 
-
 ## 1.6 Custom Widget Landscape
 
 > The next section covers the experience you just saw with switching to the new team : Team2
@@ -891,9 +898,7 @@ We will review this on Control Hub Settings.
 
 ![Supervisor_Modify_Columns](/assets/images/Supervisor/Supervisor_Modify_Columns.gif)
 
-
 ## 2.3: Chat with your agents
-
 
 Collaboration between agents and supervisors can help your Contact Center to be more effective and efficient for your customers and this is why we have enabled Webex messaging features in both Agent and Supervisor desktops.
 
@@ -926,7 +931,6 @@ Collaboration between agents and supervisors can help your Contact Center to be 
 ![Supervisor_Message_Received_from_Agent](/assets/images/Supervisor/Supervisor_Message_Received_from_Agent.gif)
 
 ## 2.4: Monitor calls
-
 
 - As a supervisor, the **Team Performance Details** page allows you to see all connected agents and decide to monitor calls by clicking on the **Review and Monitor** icon.
 
@@ -982,7 +986,7 @@ Collaboration between agents and supervisors can help your Contact Center to be 
 
 > **The following section outlines where you can find the main configuration settings for Supervisors, and their Teams, Queues and other segmentation settings**
 
-## 2.5 Desktop Layout Regions for Supervisor
+## 2.6 Desktop Layout Regions for Supervisor
 
 - The Supervisor Layout is enabled for a user via the [Desktop Layout JSON](https://webexone.github.io/assets/files/ESD_default_layout.json.zip) file for supervisor from GitHub.
 - Open the file in any JSON editor, check and make sure it contains **_supervisor_** and **_supervisorAgent_** sections.
@@ -1010,8 +1014,7 @@ Collaboration between agents and supervisors can help your Contact Center to be 
 
 ![Lab_4_WebexCC_Config_4](/assets/images/Supervisor/DC_Lab_4_Supervisor_WebexCC_4.png)
 
-## 2.6: User Profile Settings for Supervisor
-
+## 2.7: User Profile Settings for Supervisor
 
 - Under **_USER MANAGEMENT_** -> **_User Profiles_**, find default **_Supervisor Profile_**, and let us take a look at it.
 
