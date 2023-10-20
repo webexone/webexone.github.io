@@ -37,14 +37,14 @@ Last modified: Wed, 20 Sep 2023
 | [    2.1: Configuring tenant for Call Delivery](#configuring-tenant-for-call-delivery)        | Practical Lab | EASY            | 10 min           |
 | [    2.2: Adding Text-To-Speech to the flow](#adding-text-to-speech-to-the-flow) | Practical Lab | EASY            | 8 min            |
 | [    2.3: Adding Callback functionality to the flows](#adding-text-to-speech-to-the-flow) | Practical Lab | EASY            | 8 min            |
-| [    2.4: Business Hours Configuration](#business_hours_configuration ) | Practical Lab | EASY            | 8 min            |
+| [    2.4: Business Hours Configuration](#business_hours_configuration) | Practical Lab | EASY            | 8 min            |
 | [    2.5: Introduction to Flow Debugger](#introduction-to-flow-debugger)                   | Practical Lab | EASY            | 15 min | 
 | [    2.6: Introduction to Flow Versioning](#introduction-to-flow-versioning)                   | Practical Lab | EASY            | 15 min | 
 | [    2.7: Flow Error Handling](#flow_error_handling)                   | Practical Lab | EASY            | 15 min |
 | [Part 3: Bonus - Experience Management](#bonus---experience-management)                   | Practical Lab | EASY            | 15 min | 
 
 
-## Part 1: Introduction to the new Admin Experience 
+# Part 1: Introduction to the new Admin Experience 
 
 In this Lab, we will go through Admin UI by completing the tasks that are required for the general pre-configuration of a tenant. These tasks are to be undertaken by a customer administrator. By following each of the steps, you would have prepared your tenant to begin configuring different services offered by the platform. At the end of the lab, you should be able to log in to an agent interface with the configured user extension.
 You can do the tasks from the lab guide either on the **Lab Tenant** (you need to request access from the lab support team) or you can do it directly on your **Gold Tenant** / personal tenant.
@@ -348,10 +348,9 @@ xxxx_team2,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
 <p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>
 
 # Part 2: Introduction to Flow Designer
+Flow designer is a simple drag-and-drop user interface (UI) to define the flows. The following video explains the Flow Designer layout, activity library, and terminology used in the Flow Designer.
 
 In this lab, we will configure all of the required elements to deliver a call into a queue.  We will then create a new flow and iterate on it adding functionality and exploring opportunities for improvement.
-
-## Introduction
 
 ### Lab Objective
 
@@ -415,12 +414,8 @@ update()
 
 ---
 
-## Lab Section - Flow Designer
-> Flow designer is a simple drag-and-drop user interface (UI) to define the flows. The following video explains the Flow Designer layout, activity library, and terminology used in the Flow Designer.
-
-![Flow Experience](/assets/images/fe_1.gif)
-
 ## 2.1: Configuring tenant for Call Delivery
+
 
 ⚠️ You can use this link to download the [Audio Files](https://webexcc.github.io/assets/files/lab_wav.zip){:target="\_blank"}. Those files are already pre-uploaded on the Lab Tenant.
 
@@ -469,6 +464,11 @@ update()
     ---
 
 ### Create your first flow
+
+![Flow Experience](/assets/images/fe_1.gif)
+
+---
+
 1. Download the [Flow Template](https://webexcc.github.io/../../../assets/files/flow_template.json){:target="\_blank"}
    > The file will open in a separate window.  
    >
@@ -708,6 +708,7 @@ The subsequent flow execution from BH activity takes the following priority:
 
 
 <img src="/assets/images/fe_16.png">
+
 ---
 
 # 2.5 Introduction to Flow Debugger
