@@ -127,7 +127,7 @@ Please note, that to proceed to the next section, you will need to use the accou
 | Address Book Entry 1 | <w class = "attendee-class">attendeeID</w>\_addressBookEntry1         |
 | Multimedia Profile   | <w class = "attendee-class">attendeeID</w>\_MMP                       |
 
-## 1.1 Agent Desktop Overview
+## 1.1: Agent Desktop Overview
 
 > Desktop multi-language support is based on the language settings on the browser. Currently, we support 29 languages, including:
 > Bulgarian, Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish, Dutch, English (UK), English (US), Finnish, French, German, Hungarian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Serbian, Slovak, Slovenian, Spanish, Swedish, and Turkish.
@@ -151,7 +151,7 @@ Here is an overview of the sections:
 
 6. **Navigation pane**: By default you can find the following icons here: Home, Agent Performance Statistics and Help. However, you can customize it and add some additional icons and widgets.
 
-## 1.2 Desktop Login Process
+## 1.2: Desktop Login Process
 
 - To Login to the Agent Desktop, launch Google Chrome and navigate to the URL: [https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com)
 
@@ -365,7 +365,7 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 
 ---
 
-## 1.3 Make an Incoming Call
+## 1.3: Make an Incoming Call
 
 > In this section, you will will interact as an agent and test an Incoming call. Review the video of the lab section above to understand the different call handling options.
 
@@ -574,7 +574,7 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 
 <br/>
 
-## 1.5 Exploring Profile Settings
+## 1.5: Exploring Profile Settings
 
 > In this section, we will explore what are the available options and settings under the Profile Settings.
 
@@ -713,7 +713,7 @@ Here is a schematic showing how the Agent Desktop configuraton aligns to all the
 
 (schematic - overview)
 
-## 1.7 Administration Entities
+## 1.7: Administration Entities
 
 The following Administration entities have been configured for you.
 
