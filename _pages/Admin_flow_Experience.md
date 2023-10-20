@@ -693,9 +693,11 @@ update()
 # Introduction to Flow Debugger
 > From a UI standpoint, the flow builder UI contains a "Debug" button on the bottom pane. Clicking the button brings up the pane displaying a list of previous interactions of the flow in production. By default, there are only 100 latest interactions displayed, but the user can either input in a specific interaction ID or a date range to filter the interactions displayed.
 
-Once the user selects an interaction, the Interaction Detail pane displays the list of all the activities involved in the interaction along with their inputs/outputs, start times and end times of execution. When the details of the interaction are being viewed, the canvas, the activity properties pane (on the right side), and pane containing the list of available activities (on the left side) become immutable, meaning once a user is in debug mode, the user cannot update the flow itself, only view the data (think read-only mode). The activities that are not involved in the interaction are grayed out (showed with decreased opacity). When an activity is selected from the Interaction Detail pane, the corresponding activity is highlighted on the canvas. When the NewPhoneContact activity is selected in from the Interaction Details in the interaction pane, the corresponding activity is highlighted with an accentuated blue border.
+<img src="/assets/images/fe_12.png">
 
-<img src="/assets/images/fe_6.gif">
+> Once the user selects an interaction, the Interaction Detail pane displays the list of all the activities involved in the interaction along with their inputs/outputs, start times and end times of execution. When the details of the interaction are being viewed, the canvas, the activity properties pane (on the right side), and pane containing the list of available activities (on the left side) become immutable, meaning once a user is in debug mode, the user cannot update the flow itself, only view the data (think read-only mode). The activities that are not involved in the interaction are grayed out (showed with decreased opacity). When an activity is selected from the Interaction Detail pane, the corresponding activity is highlighted on the canvas. When the NewPhoneContact activity is selected in from the Interaction Details in the interaction pane, the corresponding activity is highlighted with an accentuated blue border.
+
+<img src="/assets/images/fe_13.png">
 
 ---
 
@@ -707,17 +709,20 @@ Once the user selects an interaction, the Interaction Detail pane displays the l
 
 > During entry point edit, the tags can be selected as well, here only the tags which are currently in use are shown.
 
-<img src="/assets/images/fe_8.gif">
+<img src="/assets/images/fe_8.png">
 
 >During debugging, the tags filter allows to filter any of the previous or current interactions that had those tags during execution between the time range selected. 
 
-<img src="/assets/images/fe_9.gif">
+<img src="/assets/images/fe_9.png">
 
-While looking at the previous versions history, by clicking on the clock icon located at the top panel(Figure 4) the previous versions comes up with their tags. The versions which used to have tags and have been moved to later versions, show the tags with lighter color tone.
+> While looking at the previous versions history, by clicking on the clock icon located at the top panel the previous versions comes up with their tags. The versions which used to have tags and have been moved to later versions, show the tags with lighter color tone.
 
-While using goto activity(which points to another flow), the tag selection drop down appears in the properties pane(Figure 5). This allows flow developer to choose a specific tagged version to goto and their corresponding variables are used for mapping.
+<img src="/assets/images/fe_10.png">
 
-When the flow is opened, by default, the editing option is off, making it read-only(Figure 6). Once editing is toggled on, the save and publish is enabled for the user so they can edit the flow. While the editing is on, other users are not allowed to edit. This allows users to see current or previous flow versions in read-only mode without making any updates.
+> While using goto activity(which points to another flow), the tag selection drop down appears in the properties pane(Figure 5). This allows flow developer to choose a specific tagged version to goto and their corresponding variables are used for mapping.
+
+<img src="/assets/images/fe_11.png">
+
 
 ---
 
