@@ -96,7 +96,7 @@ Example:
 For this lab, you'll only require access to two web portals:
 
 > Control Hub Administration: **[https://admin.webex.com](https://admin.webex.com){:target="\_blank"}**\
-> Contact Center Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="\_blank"}**\
+> Contact Center Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="\_blank"}**
 
 ### Lab Configuration
 
@@ -141,7 +141,7 @@ Please note, that to proceed to the next section, you will need to use the accou
 > Desktop multi-language support is based on the language settings on the browser. Currently, we support 29 languages, including:
 > Bulgarian, Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish, Dutch, English (UK), English (US), Finnish, French, German, Hungarian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Serbian, Slovak, Slovenian, Spanish, Swedish, and Turkish.
 
-![Image1](/assets/images/Agent/AgentDesktopOverview.png)
+![AgentDesktopOverview](/assets/images/agent/agent_desktop_overview.png)
 
 ---
 
@@ -336,7 +336,7 @@ This is a setting that is enabled for all logged in Agents with the Desktop (Web
 
 Try to speed up actions with keyboard shortcuts available out of box on the Agent Desktop.
 
-You can launch the shortcuts using Ctrl+Alt+F for Windows (or Cmd+Option+F for MAC users)
+You can launch the shortcuts using Ctrl+Alt+F for Windows (or control+option+F for MAC users)
 
 ![agent-desktop-Shortcuts](/assets/images/agent/Agent_Shortcuts.gif)
 
@@ -395,7 +395,7 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 - In order to test properly an incoming call, first we need to make sure that we have all the call handling options enabled
 
 - Login with your administrator user in the **Control Hub**: [https://admin.webex.com](https://admin.webex.com)
-  Navigate to SERVICES > Contact Center > TENANT SETTINGS > Desktop\_
+  Navigate to SERVICES > Contact Center > TENANT SETTINGS > Desktop
   - Make sure that **`End Call`** and **`End Consult`** are enabled
   - You can also configure _Auto Wrapup and RONA timeouts_
 
@@ -412,10 +412,10 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 
 ---
 
-- Navigate to CUSTOMER EXPERIENCE > Queue\_ and view your Queue
+- Navigate to CUSTOMER EXPERIENCE > Queue and view your Queue
   - Make sure **`Permit Monitoring, Pause/Resume`** are Enabled
     - Make sure that these settings are also enabled at tenant level
-  - You can also set the _Recording Pause Duration_. This is the maxiumum duration that an agent can pause the recording
+  - You can also set the _Recording Pause Duration_. This is the maximum duration that an agent can pause the recording
 
 ![CH-Desktop-Queues](/assets/images/agent/CH_Desktop_Queues.gif)
 
@@ -629,10 +629,20 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 
 <br/>
 
-- **CLARIFY** You will see a new notification appears in the **Notification Center**
-  - You can change the **Notification settings** to disable the incoming notifications or the sound.
+- You will see a new notification appears in the **Notification Center**
   - Mark the notification as `Read`.
-  - Go to the **User Profile** and check the **Channel Capacity** again, it's different.
+
+![Agent_NotificationCenter](/assets/images/agent/Agent_NotificationCenter.gif)
+
+---
+
+- You can change the **Notification settings** to disable the incoming notifications or the sound.
+
+![Agent_Switch_Teams_Show](/assets/images/agent/Agent_Notification_Change.gif)
+
+---
+
+<br>
 
 ## 1.6 Custom Widget Landscape
 
@@ -744,7 +754,13 @@ Here is a schematic showing how the Agent Desktop configuraton aligns to all the
 
 The following Administration entities have been configured for you.
 
-To verify, navigate to Control Hub Portal > Contact Center Settings
+To verify, navigate to Control Hub > Contact Center > TENANT SETTINGS
+
+![CH-TENANT SETTINGS](/assets/images/agent/CH-tenantSettings.gif)
+
+---
+
+<br>
 
 | **Entity**           | **Name**                                                               |
 | -------------------- | ---------------------------------------------------------------------- |
@@ -801,7 +817,7 @@ We will review this on Control Hub Settings.
 - Look up your Supervisor User bu going to admin.webex.com > Contact Center > User Management (Category) > Contact Center Users
 - Ensure that the Supervisor user wxcclabs+supvr_ID_your_attendee_ID\_@gmail.com has the `Supervisor Profile` in the `User Profile` field
 
-![Supervisor_UserProfile](/assets/images/supervisor/Supervisor_UserProfile.gif)
+![Supervisor_UserProfile](/assets/images/Supervisor/Supervisor_UserProfile.gif)
 
 ---
 
@@ -818,7 +834,7 @@ We will review this on Control Hub Settings.
 - You can to take calls from the Queue as a supervisor. This is called the **Supervisor and Agent Role**
 - This is enabled by setting up a User with the Supervisor License, a Primary Team AND marking the user Contact Center enabled.
 
-![Supervisor_And_Agent_Role](/assets/images/supervisor/Supervisor_And_Agent_Role.gif)
+![Supervisor_And_Agent_Role](/assets/images/Supervisor/Supervisor_And_Agent_Role.gif)
 
 ---
 
@@ -842,7 +858,9 @@ We will review this on Control Hub Settings.
 
 > **This mode will help you perform midcall monitoring and reporting**
 
-![Supervisor_Login](/assets/images/supervisor/Supervisor_Login.gif)
+<br>
+
+![Supervisor_Login](/assets/images/Supervisor/Supervisor_Login.gif)
 
 ---
 
@@ -850,19 +868,19 @@ We will review this on Control Hub Settings.
 
 1. **Home Page**: Displays a user friendly interface that provides a consolidated view of key contact center metrics and filters. This is the default landing page in the Supervisor Desktop. The administrator can customize the Home Page in the layout JSON file.
 
-![Supervisor_Home](/assets/images/supervisor/Supervisor_Home.png)
+![Supervisor_Home](/assets/images/Supervisor/Supervisor_Home.png)
 
 ---
 
 2. **Task**: Displays all the tasks when you sign in to the Desktop in dual role (supervisor and agent) or as a supervisor, interactions such as voice, chat, email, and social messaging conversations, along with monitoring. The icon displays a badge indicating the number of requests that you have not accepted across various channels.
 
-![Supervisor_Task](/assets/images/supervisor/Supervisor_Task.gif)
+![Supervisor_Task](/assets/images/Supervisor/Supervisor_Task.gif)
 
 ---
 
 3. **Team Performance**: Displays real-time information about an agent and a consolidated view of an agent’s performance as part of the team. You can also monitor and send 1:1 messages to an agent.
 
-![Supervisor_TeamPerformance](/assets/images/supervisor/Supervisor_TeamPerformace.gif)
+![Supervisor_TeamPerformance](/assets/images/Supervisor/Supervisor_TeamPerformace.gif)
 
 ---
 
@@ -892,7 +910,7 @@ We will review this on Control Hub Settings.
 | Contact Status         | The status of the agent in an active call. Example: Connected, Consulting, Conference, or Wrap up                                                                                                                                                                                                                                              |
 | Time in Contact Status | The time spent by an agent in an active call. For example, the time an agent is in conference call.                                                                                                                                                                                                                                            |
 | Total Contact Duration | Total duration of the contact from when it was first connected (including any other state like consult or conference in the same contact). The time elapsed since the agent accepted the request. The connected timer format is hh:mm:ss (for example, 01:10:25).                                                                              |
-| Sign In Time           | The time an agent has signed in to theSupervisor Desktop. The date and time format is dynamic and displays according to location.                                                                                                                                                                                                              |
+| Sign In Time           | The time an agent has signed in to the Supervisor Desktop. The date and time format is dynamic and displays according to location.                                                                                                                                                                                                             |
 | Action                 | You can perform the following actions:• Review and Monitor - Based on the privilege provided by Administrator as part of user profile, you can review and monitor an ongoing agent call silently. • Send1:1 message to Agent – Based on the privilege provided by Administrator as part of user profile, you can send 1:1 message to an agent. |
 
 - you can customize this view to show / hide columns or group information at your convenience.
@@ -941,7 +959,7 @@ Collaboration between agents and supervisors can help your Contact Center to be 
 
 - The following popup will be displayed. Click on **Start Monitoring**. Please note a supervisor can monitor other call types such as callbacks, outdial calls, outbound preview campaign calls.
 
-![Supervisor_Monitor_Accept](/assets/images/supervisor/Supervisor_Monitor_Accept.gif)
+![Supervisor_Monitor_Accept](/assets/images/Supervisor/Supervisor_Monitor_Accept.gif)
 
 ---
 
