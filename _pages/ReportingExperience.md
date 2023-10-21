@@ -120,6 +120,15 @@ Please note, that to proceed to the next section, you will need to use the accou
 
 Note: If you are already logged-in as an Agent as part of other Labs, no action required. 
 
+
+
+| **User Role** | **User email**                                                                | **Endpoint** |
+| ------------- | ----------------------------------------------------------------------------- | ------------- | 
+| Agent         | wxcclabs+agent_<w class="attendee_out">AttendeeID</w>@gmail.com | WebRTC |
+| Supervisor    | wxcclabs+supvr_<w class="attendee_out">AttendeeID</w>@gmail.com | Webex App |
+
+
+
 **Login As Supervisor-Agent:** 
 
 to your agent you can use your Agent Credentials or Supervisor credentials with Role as : "Supervisor and Agent"
@@ -133,30 +142,55 @@ to your agent you can use your Agent Credentials or Supervisor credentials with 
 - Submit
 
 **Login as an Agent:**  
-- Use below link
-	Agent Login Credentials for the Agent Desktop: [desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com).
 
-	> We will use the new feature of Desktop telephony that uses the browser as a device to directly receive calls.
-	
-	- Notice that the voice option defaults to "Desktop".
-	
-	- Select Team1 from the list. Agents can belong to multiple teams, but they can only receive calls of 1 specific team. Your agent is configured for 2 teams.
-	
-	- Check the **Remember My Credentials** box to save your credentials for future sign-ins.
-	
-	- Click Sign in to be connected to telephony and complete the login process.
 
-![agent-desktop](/assets/images/reporting/03-image.png)
+> By following the steps below, you will log in to the Agent Desktop with your credentials and indicate the number (DN) where you want to receive the calls.
 
-> NOTE: Agents cannot access the Agent Desktop from multiple browsers or multiple tabs of the same browser window. In that case, a warning message will be displayed
+> The Lab Tenant is located in the US datacenter. It does not allow outbound international calls. If you have the U.S. numbers you can use that for sign in as an agent or supervisor. Otherwise, please WebRTC for agent and download the Webex App for supervisor according to the steps below.
+{: .block-warning }
 
-![agent-desktop](/assets/images/reporting/04-image.png)
+**Login in the Webex app for PC or Mac**
 
-> The video below shows a demo about the agent login process and the available options:
 
-![agent-desktop](/assets/images/reporting/AgentLogin.gif)
+> In this lab, we will use the Webex app for your PC or Mac for the **supervisor** account.
+{: .block-warning }
+
+- Download Link **[https://www.webex.com/downloads.html](https://www.webex.com/downloads.html){:target="\_blank"}** 
+
+![Webex App](/assets/images/Lab1-AD-1.png)
+
+- Install the application on your PC/Mac.
+
+- Open Webex app and сlick **Sign In**. Specify the supervisor credentials.
+
+
+**Agent Desktop Login**
+
+> **Note**: To log in to the agent desktop, use either a different web browser or a new incognito web page. This will prevent the browser caching issues with admin and agent credentials.
+> 
+{: .block-tip }
+
+- Navigate to **[https://desktop.wxcc-us1.cisco.com/](https://desktop.wxcc-us1.cisco.com/){:target="\_blank"}** in the chrome browser with the incognito mode.
+
+- Enter the agent’s **email ID** 
+
+- Enter the **Password** for the appropriate username.
+
+- In the **_Station Credentials_** pane, select **"Desktop"**.
+
+- Select the team **<w class="attendee_out">Your_Attendee_ID</w>_Team1**.
+
+- Click **_Submit_** button. The browser may ask you to confirm use the microphone from the browser. 
+
+- Make sure that you are successfully logged in to the Agent Desktop.
+
+![Agent Sign In](/assets/images/AG-2.gif)
 
 ---
+
+<p style="text-align:center"><strong>Congratulations, you have completed this lab! You can continue with the next one.</strong></p>
+		
+<p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>
 
 
 # Part 1: Webex Contact Center Analyzer User Interface
