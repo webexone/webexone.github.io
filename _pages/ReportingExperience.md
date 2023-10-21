@@ -145,7 +145,7 @@ to your agent you can use your Agent Credentials or Supervisor credentials with 
 
 ![agent-desktop](/assets/images/reporting/03-image.png)
 
-> NOTE: Agents cannot access the Agent Desktop from multiple browsers or multiple tabs of the same browser window. In that case, a warning message will be displayed.
+> NOTE: Agents cannot access the Agent Desktop from multiple browsers or multiple tabs of the same browser window. In that case, a warning message will be displayed
 
 ![agent-desktop](/assets/images/reporting/04-image.png)
 
