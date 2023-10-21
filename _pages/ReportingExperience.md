@@ -39,7 +39,7 @@ This Lab has been split into four chapters.
 | Topic                                                                                                                                                                    | Type        | Dificulty | Time   |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- | --------- | ------ |
 | [Pre-Requisities](#pre-requisites)                                                                                                                                       | Activity    | EASY      | 5 min  |
-| [Analyzer and Desktop Login Process](#desktop-login-process)                                                                                                                          | Activity    | EASY      | 5 min  |
+| [Analyzer and Desktop Login Process](#Analyzer-Login-Process)                                                                                                                         | Activity    | EASY      | 5 min  |
 | [Part 1: Webex Contact Center Analyzer User Interface](#part-1-webex-contact-center-analyzer-user-interface)                                                             | Exploration | EASY      | 5 min  |
 | [1.1: Analyzer User Interface](#11-analyzer-user-interface)                                                                                                              | Activity    | EASY      | 5 min  |
 | [1.2: NEW Analyzer User Interface](#12-new-analyzer-user-interface)                                                                                                      | Activity    | EASY      | 15 min  |
@@ -106,7 +106,11 @@ Please note, that to proceed to the next section, you will need to use the accou
 | Supervisor 1  | wxcclabs+supvr_ID<w class = "attendee-class">attendeeID</w>@gmail.com |
 | Administrator | wxcclabs+admin_ID<w class = "attendee-class">attendeeID</w>@gmail.com |
 
+<<<<<<< HEAD
 ##  Analyzer and Login Process 
+=======
+# Analyzer  Login Process 
+>>>>>>> origin/ktyagi_Reporting
 
 
 1.  Make sure you are able to login into Administrator Portal -  [admin.webex.com](https://admin.webex.com) using your Supervisor credentials
