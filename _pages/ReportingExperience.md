@@ -251,6 +251,7 @@ This lab is designed to give you basic understanding of Analyzer, user interface
 
 
 
+**Congratulations, you have completed this lab! You can continue with the next one.**
 # Part 2: Contact Center Insights with New Analyzer Stock reports
 
 In this section, we will delve into how various personas within a contact center can leverage the Webex Contact Center Analyzer to capture Key Performance Indicators (KPIs) and glean insights that can measure and enhance customer experience, agent performance, and overall business outcomes. We will explore some of the pre-built stock reports with New Analyzer Interface, which can help you gather these key actionable insights from day one.
@@ -303,6 +304,7 @@ Search for the lable `Contact center Overview` and double click `Contact Center 
 
 ![PerformanceDashboard](/assets/images/reporting/2_1_PerformanceDashboard.png)
 
+**Congratulations, you have completed this lab! You can continue with the next one.**
 ## 2.2 Customer Experience and Queue Performance
 
 **Persona:** CC Supervisors, CC Manager, Business Analyst
@@ -341,6 +343,7 @@ Search for the lable `Contact center Overview` and double click `Contact Center 
 
 **Actions:** For low Callback success rate review the Reason, one of the prime reasons for an unsuccessful callback request is that customers aren’t reachable or busy at callback time. Explore if offering the Callback Retry attempt ([CallbackFailed](https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cust_contact/contact_center/webexcc/SetupandAdministrationGuide_2/b_mp-release-2/wcc-flow-designer.html#Cisco_Concept.dita_2e773682-6129-4fb7-b857-4b56f57103bc)) for the callback would help improving the success rate and tweak it based on further review.
 
+**Congratulations, you have completed this lab! You can continue with the next one.**
 # Part 3: (BONUS) Contact Center Insights with Analyzer custom reports and Dashboards
 
 There are **4 key Data Repositories today**, which store all the customer and Agent related data for the Webex contact Center.
@@ -363,6 +366,8 @@ Before you continue with this exercise follow below:
 ## 3.2 Realtime Agent State
 
 ## 3.3 Realtime Dashboard
+
+**Congratulations, you have completed this lab! You can continue with the next one.**
 
 # Part 4: (BONUS) Data extraction and scheduling Capabilities
 
