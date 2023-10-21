@@ -25,7 +25,7 @@ layout: post
 
 | Topic                                                                                                                                                                    | Type        | Dificulty | Time   |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- | --------- | ------ |
-| [Part 0: Overview of the Reporting Lab](#overview-of-the-reporting-lab)                                                                                                  | Exploration | EASY      | 5 min  |
+| [Part 0: Overview of the Reporting Lab](#overview-of-the-reporting-lab)                                                                                                  | Exploration | EASY      | 10 min  |
 | [Objectives](#objectives)                                                                                                                                                | Activity    | EASY      | 5 min  |
 | [Pre-Requisities](#pre-requisites)                                                                                                                                       | Activity    | EASY      | 5 min  |
 | [Desktop Login Process](#desktop-login-process)                                                                                                                          | Activity    | EASY      | 5 min  |
@@ -37,7 +37,7 @@ layout: post
 | [2.2: Customer Experience and Queue Performance](#22-customer-experience-and-queue-performance)                                                                          | Exploration | EASY      | 5 min  |
 | [2.3: Agent Performance](#23-agent-performance)                                                                                                                          | Exploration | EASY      | 5 min  |
 | [Part 3: (BONUS) Contact Center Insights with Analyzer custom reports and Dashboards](#part-3-bonus-contact-center-insights-with-analyzer-custom-reports-and-dashboards) | Exploration | EASY      | 5 min  |
-| [3.1: Realtime Contact In the Queue](#31-realtime-contact-in-the-queue)                                                                                                  | Exploration | EASY      | 5 min  |
+| [3.1: Realtime Contact In the Queue](#31-realtime-contact-in-the-queue)                                                                                                  | Exploration | EASY      | 10 min  |
 | [3.2: Realtime Agent State](#32-realtime-agent-state)                                                                                                                    | Exploration | EASY      | 5 min  |
 | [3.3: Realtime Dashboard](#33-realtime-dashboard)                                                                                                                        | Exploration | EASY      | 5 min  |
 | [Part 4: (BONUS) Data extraction and scheduling Capabilities](#part-4-bonus-data-extraction-and-scheduling-capabilities)                                                 | Exploration | EASY      | 5 min  |
