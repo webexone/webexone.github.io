@@ -21,30 +21,6 @@ layout: post
   }
 </script>
 
-# Table of Contents
-
-| Topic                                                                                                                                                                    | Type        | Dificulty | Time   |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- | --------- | ------ |
-| [Part 0: Overview of the Reporting Lab](#overview-of-the-reporting-lab)                                                                                                  | Exploration | EASY      | 10 min  |
-| [Objectives](#objectives)                                                                                                                                                | Activity    | EASY      | 5 min  |
-| [Pre-Requisities](#pre-requisites)                                                                                                                                       | Activity    | EASY      | 5 min  |
-| [Desktop Login Process](#desktop-login-process)                                                                                                                          | Activity    | EASY      | 5 min  |
-| [Part 1: Webex Contact Center Analyzer User Interface](#part-1-webex-contact-center-analyzer-user-interface)                                                             | Exploration | EASY      | 5 min  |
-| [1.1: Analyzer User Interface](#11-analyzer-user-interface)                                                                                                              | Activity    | EASY      | 5 min  |
-| [1.2: NEW Analyzer User Interface](#12-new-analyzer-user-interface)                                                                                                      | Activity    | EASY      | 5 min  |
-| [Part 2: Contact Center Insights with New Analyzer Stock reports](#part-2-contact-center-insights-with-new-analyzer-stock-reports)                                       | Exploration | EASY      | 5 min  |
-| [2.1: High-level Contact Center Performance and Usage insights](#21-high-level-contact-center-performance-and-usage-insights)                                            | Exploration | EASY      | 5 min  |
-| [2.2: Customer Experience and Queue Performance](#22-customer-experience-and-queue-performance)                                                                          | Exploration | EASY      | 5 min  |
-| [2.3: Agent Performance](#23-agent-performance)                                                                                                                          | Exploration | EASY      | 5 min  |
-| [Part 3: (BONUS) Contact Center Insights with Analyzer custom reports and Dashboards](#part-3-bonus-contact-center-insights-with-analyzer-custom-reports-and-dashboards) | Exploration | EASY      | 5 min  |
-| [3.1: Realtime Contact In the Queue](#31-realtime-contact-in-the-queue)                                                                                                  | Exploration | EASY      | 10 min  |
-| [3.2: Realtime Agent State](#32-realtime-agent-state)                                                                                                                    | Exploration | EASY      | 5 min  |
-| [3.3: Realtime Dashboard](#33-realtime-dashboard)                                                                                                                        | Exploration | EASY      | 5 min  |
-| [Part 4: (BONUS) Data extraction and scheduling Capabilities](#part-4-bonus-data-extraction-and-scheduling-capabilities)                                                 | Exploration | EASY      | 5 min  |
-| [4.1: Export Data as Excel or CSV](#41-export-data-as-excel-or-csv)                                                                                                      | Exploration | EASY      | 5 min  |
-| [4.2: Visualization Scheduler](#42-visualization-scheduler)                                                                                                              | Exploration | EASY      | 5 min  |
-| [4.3: Search APIs](#43-search-apis)                                                                                                                                      | Exploration | EASY      | 10 min |
-
 # Overview of the Reporting Lab
 
 This lab will provide you with foundational and advanced knowledge of **Webex Contact Center Data and Analytics**. You will learn about the key contact center personas and how Analyzer helps them extract key business and operational KPIs, along with actionable insights, to measure contact center efficiency, agent performance, and customer experience. The lab will guide you through the usage of the **Webex Contact Center Analyzer**, which serves as the main Contact Center Reporting application. You will gain an understanding of **utilizing stock reports and dashboards**, **personalizing your reporting by creating custom reports** and the available options when it comes to **extracting your data**.
@@ -58,6 +34,30 @@ This Lab has been split into four chapters.
 2. In the second section we will look **how key Contact Center persons (Administrators, Supervisors and Contact Center Analysts) can use Analyzer to extract some key Contact Center KPIs and actionable insights around Contact Center Operational Performance, Customer Experience and Agent Performance using the various Stock reports and dashboards.**
 3. In the third section we will walk through how we can **create custom reports and dashboards to extract key Contact Center data insights**.
 4. Last chapter covers key data and reporting capabilities like the **export of reporting data, report scheduling and the available Data APIs** to extract the data.
+# Table of Contents
+
+| Topic                                                                                                                                                                    | Type        | Dificulty | Time   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- | --------- | ------ |
+                                                                                                                                               | 
+| [Pre-Requisities](#pre-requisites)                                                                                                                                       | Activity    | EASY      | 5 min  |
+| [Desktop Login Process](#desktop-login-process)                                                                                                                          | Activity    | EASY      | 5 min  |
+| [Part 1: Webex Contact Center Analyzer User Interface](#part-1-webex-contact-center-analyzer-user-interface)                                                             | Exploration | EASY      | 5 min  |
+| [1.1: Analyzer User Interface](#11-analyzer-user-interface)                                                                                                              | Activity    | EASY      | 5 min  |
+| [1.2: NEW Analyzer User Interface](#12-new-analyzer-user-interface)                                                                                                      | Activity    | EASY      | 15 min  |
+| [Part 2: Contact Center Insights with New Analyzer Stock reports](#part-2-contact-center-insights-with-new-analyzer-stock-reports)                                       | Exploration | EASY      | 20 min  |
+| [2.1: High-level Contact Center Performance and Usage insights](#21-high-level-contact-center-performance-and-usage-insights)                                            | Exploration | EASY      | 5 min  |
+| [2.2: Customer Experience and Queue Performance](#22-customer-experience-and-queue-performance)                                                                          | Exploration | EASY      | 10 min  |
+| [2.3: Agent Performance](#23-agent-performance)                                                                                                                          | Exploration | EASY      | 5 min  |
+| [Part 3: (BONUS) Contact Center Insights with Analyzer custom reports and Dashboards](#part-3-bonus-contact-center-insights-with-analyzer-custom-reports-and-dashboards) | Exploration | EASY      | 5 min  |
+| [3.1: Realtime Contact In the Queue](#31-realtime-contact-in-the-queue)                                                                                                  | Exploration | EASY      | 10 min  |
+| [3.2: Realtime Agent State](#32-realtime-agent-state)                                                                                                                    | Exploration | EASY      | 5 min  |
+| [3.3: Realtime Dashboard](#33-realtime-dashboard)                                                                                                                        | Exploration | EASY      | 5 min  |
+| [Part 4: (BONUS) Data extraction and scheduling Capabilities](#part-4-bonus-data-extraction-and-scheduling-capabilities)                                                 | Exploration | EASY      | 5 min  |
+| [4.1: Export Data as Excel or CSV](#41-export-data-as-excel-or-csv)                                                                                                      | Exploration | EASY      | 5 min  |
+| [4.2: Visualization Scheduler](#42-visualization-scheduler)                                                                                                              | Exploration | EASY      | 5 min  |
+| [4.3: Search APIs](#43-search-apis)                                                                                                                                      | Exploration | EASY      | 10 min |
+
+
 
 ## Pre-Requisites
 
