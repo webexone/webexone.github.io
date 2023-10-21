@@ -342,11 +342,52 @@ Search for the lable `Contact center Overview` and double click `Contact Center 
 **Congratulations, you have completed this lab! You can continue with the next one.**
 # Part 3: (BONUS) Contact Center Insights with Analyzer custom reports
 
-There are **4 key Data Repositories today**, which store all the customer and Agent related data for the Webex contact Center.
 
-![ReposTable](/assets/images/reporting/3_ReposTable.png)
 
-![ReposFlow](/assets/images/reporting/3_ReposFlow.png)
+In this lab, we will create a custom report to monitor the calls waiting in the queue in real-time, along with the available agents and their respective states. Since the option to create a custom report is currently unavailable in the New Analyzer UX, we will be using our current Analyzer interface for this lab.
+
+In Webex Contact Center, there are four primary data repositories that store critical customer and agent-related information. These repositories are structured as follows:
+
+1. **Customer Activity Record**:
+
+- **Description**: This type of record represents individual, atomic steps within the customer's workflow. It captures key moments in the customer journey, providing insights into their interactions with the contact center.
+- **Examples**:
+
+- Customer in IVR or queue, talking to an agent, or on hold.
+- Customer on specific web pages, such as the home page, product page, or checkout page.
+
+3. **Customer Session Record**:
+
+- **Description**: Customer Session Records are more comprehensive, encapsulating the entire customer workflow. They consist of a sequence of customer activities, providing a holistic view of the customer's engagement with the contact center.
+- **Examples**:
+
+- Customer calls the contact center for assistance.
+- Customer visits a website and explores its content.
+- Customer interacts with the website and engages in a chat with an agent.
+- Customer initiates contact by sending an email, and an agent responds.
+
+5. **Agent Activity Record**:
+
+- **Description**: This record type focuses on individual actions within the agent's workflow. It logs every significant step an agent takes, shedding light on their interactions and status throughout their workday.
+- **Examples**:
+
+- Agent's status transitions, such as idle, available, talking, or wrapping up.
+- Agent's offline activities, including dialing, note-taking, and reading emails.
+- Agent's involvement in chats with customers and the subsequent wrap-up process.
+
+7. **Agent Session Record**:
+
+- **Description**: Agent Session Records provide a comprehensive overview of an agent's work. They encompass a sequence of agent activities, offering insights into the agent's handling of tasks and interactions.
+- **Examples**:
+
+- An agent manages a service call, logging an incident or request.
+- An agent initiates an outbound call and schedules a meeting for a customer.
+- An agent engages in chat interactions with customers, providing answers and assistance.
+- An agent reads and responds to customer emails, ensuring effective communication.
+
+These data repositories play a crucial role in capturing, organizing, and analysing the wealth of information generated within the Webex Contact Center, ultimately supporting informed decision-making and enhancing customer and agent experiences.
+
+![CSR](/assets/images/reporting/CSR.png)
 
 In this Lab we would create a custom report to monitor the calls waiting in Queue on realtime bases and Agents available to handle them and in which state they are.
 
