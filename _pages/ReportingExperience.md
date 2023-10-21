@@ -393,10 +393,7 @@ In this Lab we would create a custom report to monitor the calls waiting in Queu
 
 Currently option to create custom report is not available in New Analyzer UX, hence we would use our Current Analyzer Interface for this Lab.
 
-Before you continue with this exercise follow below:
-
-1. Make a Call and select prompted options to get to an agent, with no agent available you would hear a wait music.
-2. Make sure your agent is logged-in and currently in Idle state.
+Note: Before you continue with this exercise follow below make sure your agent is logged-in.
 
 ## 3.1 Create Custom Realtime Agent Report
 
