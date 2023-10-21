@@ -356,7 +356,7 @@ In Webex Contact Center, there are four primary data repositories that store cri
 - Customer in IVR or queue, talking to an agent, or on hold.
 - Customer on specific web pages, such as the home page, product page, or checkout page.
 
-3. **Customer Session Record**:
+2. **Customer Session Record**:
 
 - **Description**: Customer Session Records are more comprehensive, encapsulating the entire customer workflow. They consist of a sequence of customer activities, providing a holistic view of the customer's engagement with the contact center.
 - **Examples**:
@@ -366,7 +366,7 @@ In Webex Contact Center, there are four primary data repositories that store cri
 - Customer interacts with the website and engages in a chat with an agent.
 - Customer initiates contact by sending an email, and an agent responds.
 
-5. **Agent Activity Record**:
+3. **Agent Activity Record**:
 
 - **Description**: This record type focuses on individual actions within the agent's workflow. It logs every significant step an agent takes, shedding light on their interactions and status throughout their workday.
 - **Examples**:
@@ -375,7 +375,7 @@ In Webex Contact Center, there are four primary data repositories that store cri
 - Agent's offline activities, including dialing, note-taking, and reading emails.
 - Agent's involvement in chats with customers and the subsequent wrap-up process.
 
-7. **Agent Session Record**:
+4. **Agent Session Record**:
 
 - **Description**: Agent Session Records provide a comprehensive overview of an agent's work. They encompass a sequence of agent activities, offering insights into the agent's handling of tasks and interactions.
 - **Examples**:
