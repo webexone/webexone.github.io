@@ -27,7 +27,7 @@ This lab will provide you with foundational and advanced knowledge of **Webex Co
 
 ## Objectives
 
-This Lab has been split into four chapters.
+This Lab has been split into four parts.
 
 1. First part of this Lab **introduces you to the current Analyzer User Interface as well as the New Analyzer User Interface (Analyzer UX Refresh).**
    > Note: **Important to point out** that the New Analyzer User Interface is in **Early Access phase** and has access only to Historical Stock Reports.
@@ -105,11 +105,9 @@ Please note, that to proceed to the next section, you will need to use the accou
 | Supervisor 1  | wxcclabs+supvr_ID<w class = "attendee-class">attendeeID</w>@gmail.com |
 | Administrator | wxcclabs+admin_ID<w class = "attendee-class">attendeeID</w>@gmail.com |
 
-<<<<<<< HEAD
-##  Analyzer and Login Process 
-=======
+
 # Analyzer  Login Process 
->>>>>>> origin/ktyagi_Reporting
+ origin/ktyagi_Reporting
 
 
 1.  Make sure you are able to login into Administrator Portal -  [admin.webex.com](https://admin.webex.com) using your Supervisor credentials
