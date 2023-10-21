@@ -29,10 +29,10 @@ This lab will provide you with foundational and advanced knowledge of **Webex Co
 
 This Lab has been split into four chapters.
 
-1. First section **introduces you to the current Analyzer User Interface as well as the New Analyzer User Interface (Analyzer UX Refresh).**
+1. First part of this Lab **introduces you to the current Analyzer User Interface as well as the New Analyzer User Interface (Analyzer UX Refresh).**
    > Note: **Important to point out** that the New Analyzer User Interface is in **Early Access phase** and has access only to Historical Stock Reports.
-2. In the second section we will look **how key Contact Center persons (Administrators, Supervisors and Contact Center Analysts) can use Analyzer to extract some key Contact Center KPIs and actionable insights around Contact Center Operational Performance, Customer Experience and Agent Performance using the various Stock reports and dashboards.**
-3. In the third section we will walk through how we can **create custom reports and dashboards to extract key Contact Center data insights**.
+2. In the second part we will look **how key Contact Center persons (Administrators, Supervisors and Contact Center Analysts) can use Analyzer to extract some key Contact Center KPIs and actionable insights around Contact Center Operational Performance, Customer Experience and Agent Performance using the various Stock reports and dashboards.**
+3. In the third part we will look into some new data insights and walk through how we can **create custom reports and dashboards to extract some real-time  Contact Center data insights**.
 4. Last chapter covers key data and reporting capabilities like the **export of reporting data, report scheduling and the available Data APIs** to extract the data.
 # Table of Contents
 
@@ -62,7 +62,7 @@ This Lab has been split into four chapters.
 
 1. Ensure that you have received your tenant login credentials (Administrator, Supervisor and Agent)from the Lab proctors.
 2. In this Lab, Part 1 and 2 already have historical data created to capture the key insights, hence no need to login Agent or make calls.
-3. In Part 3, we will look into some Realtime data insights for which make sure you can login your supervisor-agent and able to make calls and receive. 
+3. In Part 3, we will look into some Realtime data insights for which make sure you logged-in with your supervisor-agent or Agent and able to make and receive calls. 
 - Agent and Supervisor user accounts are configured and ready for logins.
 - As an agent, you're associated with two teams—designated by your Attendee ID—as "Team1" and "Team2".
 
@@ -113,23 +113,24 @@ Please note, that to proceed to the next section, you will need to use the accou
 2. Once Logged-in Goto --> "Quick Links" --> Click "Analyzer" 
 ![analyzer](/assets/images/reporting/intro_CH.png)
 
-- To Login as an agent to your agent you can use your Agent Credentials or Supervisor credentials with Role as : "Supervisor and Agent"
+3. For Part-3 of the Lab Login as an Supervisor-agent or Agent :
 
-Note: If you already logged-in as an agent no action required. 
+Note: If you are already logged-in as an Agent as part of other Labs, no action required. 
 
-- Login with Supervisor Credentials 
+Login As Supervisor-Agent: 
+to your agent you can use your Agent Credentials or Supervisor credentials with Role as : "Supervisor and Agent"
+
+
+- Login with Supervisor Credentials   [admin.webex.com](https://admin.webex.com)
 - Goto "Quick Links" --> Click "Desktop"
-Or  use below link
-	Agent Login Credentials for the Agent Desktop: [desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com).
-
-
 - Select the Role as : "Supervisor and Agent"
 - Enter the Dialed number provided (If not pre-filled)
 - Team should be pre-populated 
 - Submit
 
-
-- If login with Agent credentials 
+Login as an Agent:  
+- Use below link
+	Agent Login Credentials for the Agent Desktop: [desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com).
 
 	> We will use the new feature of Desktop telephony that uses the browser as a device to directly receive calls.
 	
