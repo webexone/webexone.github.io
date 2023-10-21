@@ -38,7 +38,6 @@ This Lab has been split into four chapters.
 
 | Topic                                                                                                                                                                    | Type        | Dificulty | Time   |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- | --------- | ------ |
-                                                                                                                                               | 
 | [Pre-Requisities](#pre-requisites)                                                                                                                                       | Activity    | EASY      | 5 min  |
 | [Desktop Login Process](#desktop-login-process)                                                                                                                          | Activity    | EASY      | 5 min  |
 | [Part 1: Webex Contact Center Analyzer User Interface](#part-1-webex-contact-center-analyzer-user-interface)                                                             | Exploration | EASY      | 5 min  |
@@ -61,35 +60,23 @@ This Lab has been split into four chapters.
 
 ## Pre-Requisites
 
-1. Ensure that you have received your tenant login credentials from the Lab proctors.
-2. Make sure you are able to login into Administrator Portal & Analyzer.
-3. For this Lab, Part 1 and 2 already have historical data created to capture the key insights.
-4. In Part 3, we will look into some Realtime data insights for which make sure you can login your agent and make a call according to the steps below.
-
-**You Will Need**
-
-1. **One additional device** (like your personal phone) to test inbound calls to the Webex Contact Center. You can use your cell phone for this purpose.
-
-- Administrator credentials for the Control Hub: [admin.webex.com](https://admin.webex.com).
-- Agent Login Credentials for the Agent Desktop: [desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com).
-
-1. The items listed below have been pre-configured for you:
-
+1. Ensure that you have received your tenant login credentials (Administrator, Supervisor and Agent)from the Lab proctors.
+2. In this Lab, Part 1 and 2 already have historical data created to capture the key insights, hence no need to login Agent or make calls.
+3. In Part 3, we will look into some Realtime data insights for which make sure you can login your supervisor-agent and able to make calls and receive. 
 - Agent and Supervisor user accounts are configured and ready for logins.
-- You can access the Agent Desktop via the URL: [https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com).
 - As an agent, you're associated with two teams—designated by your Attendee ID—as "Team1" and "Team2".
 
-Example:
+	Example:
+	
+	> If your attendee ID is 100:
+	>
+	> 100_Team1
+	>
+	> 100_Team2
+	
+	**You Will Need**  **One additional device** (like your personal phone) to test inbound calls to the Webex Contact Center. You can use your cell phone for this purpose.
 
-> If your attendee ID is 100:
->
-> 100_Team1
->
-> 100_Team2
-
-1. Agents will use browsers for voice calls using WebRTC (Web Real-time Communication) endpoints. Additionally, Webex Calling extensions have been assigned to users (both agents and supervisors) to facilitate alternate device experiences. Webex Contact Center agents and supervisors can opt for any mix of these devices, encompassing PSTN endpoints and mobile phones.
-
-2. A preset inbound Voice flow is available for test calls.
+5.  A preset inbound Voice flow is available for test calls.
 
 ## Lab Configuration
 
@@ -119,33 +106,40 @@ Please note, that to proceed to the next section, you will need to use the accou
 | Supervisor 1  | wxcclabs+supvr_ID<w class = "attendee-class">attendeeID</w>@gmail.com |
 | Administrator | wxcclabs+admin_ID<w class = "attendee-class">attendeeID</w>@gmail.com |
 
-## Desktop Login Process
+##  Analyzer  Login Process 
 
-- To Login to the Agent Desktop, launch Google Chrome and navigate to the URL: [https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com).
 
-> **Note: Please use Google Chrome as the browser to take advantage of the all new WebRTC Voice Option.**
+1.  Make sure you are able to login into Administrator Portal -  [admin.webex.com](https://admin.webex.com) using your Supervisor credentials
+2. Once Logged-in Goto --> "Quick Links" --> Click "Analyzer" 
+![[Pasted image 20231020210640.png]]
 
-> Tip: You can also find this link under Control Hub: [admin.webex.com](https://admin.webex.com) > Contact Center > Settings.
+- To Login as an agent to your agent you can use your Agent Credentials or Supervisor credentials with Role as : "Supervisor and Agent"
 
-- Once you're in the login page, enter the agent credentials (username and password).
+Note: If you already logged-in as an agent no action required. 
 
-> In this example, please use the specific login for your attendee ID, as per above.
+- Login with Supervisor Credentials 
+- Goto "Quick Links" --> Click "Desktop"
+Or  use below link
+	Agent Login Credentials for the Agent Desktop: [desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com).
 
-![agent-desktop](/assets/images/reporting/01-image.png)
 
-![agent-desktop](/assets/images/reporting/02-image.png)
+- Select the Role as : "Supervisor and Agent"
+- Enter the Dialed number provided (If not pre-filled)
+- Team should be pre-populated 
+- Submit
 
-- This is the station Login Screen. Agents may input the number where they need to receive incoming and outdial calls.
 
-> We will use the new feature of Desktop telephony that uses the browser as a device to directly receive calls.
+- If login with Agent credentials 
 
-- Notice that the voice option defaults to "Desktop".
-
-- Select Team1 from the list. Agents can belong to multiple teams, but they can only receive calls of 1 specific team. Your agent is configured for 2 teams.
-
-- Check the **Remember My Credentials** box to save your credentials for future sign-ins.
-
-- Click Sign in to be connected to telephony and complete the login process.
+	> We will use the new feature of Desktop telephony that uses the browser as a device to directly receive calls.
+	
+	- Notice that the voice option defaults to "Desktop".
+	
+	- Select Team1 from the list. Agents can belong to multiple teams, but they can only receive calls of 1 specific team. Your agent is configured for 2 teams.
+	
+	- Check the **Remember My Credentials** box to save your credentials for future sign-ins.
+	
+	- Click Sign in to be connected to telephony and complete the login process.
 
 ![agent-desktop](/assets/images/reporting/03-image.png)
 
@@ -159,19 +153,6 @@ Please note, that to proceed to the next section, you will need to use the accou
 
 ---
 
-**NOTE:**
-
-> The login device and DN can be enforced on the Desktop Profile as follows:
-
-- If your administrator configures the default Dial Number (DN), the default DN is prepopulated in the Dial Number and Extension fields.
-- If your administrator restricts the DN to the default DN, you cannot edit the prepopulated DN when signing in to the Agent Desktop.
-
-- Users can choose between Dial Number or Extension or Desktop.
-
-  - Extension: Just in case the agent is using Webex Calling or some other softphone as calling endpoint
-
-  - Dial Number: E.164 format phone number
-    - If you check the **International Dialing Format** box, you can choose the country code based on your geographical location from the drop-down list. You can also enter a country code or country name to filter the list. Dial numbers are validated based on the country code
 
 # Part 1: Webex Contact Center Analyzer User Interface
 
