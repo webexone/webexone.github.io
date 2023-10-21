@@ -358,9 +358,9 @@ In Webex Contact Center, there are four primary data repositories that store cri
 
 2. **Customer Session Record**:
 
-- **Description**: Customer Session Records are more comprehensive, encapsulating the entire customer workflow. They consist of a sequence of customer activities, providing a holistic view of the customer's engagement with the contact center.
-- **Examples**:
+**Description**: Customer Session Records are more comprehensive, encapsulating the entire customer workflow. They consist of a sequence of customer activities, providing a holistic view of the customer's engagement with the contact center.
 
+**Examples**:
 - Customer calls the contact center for assistance.
 - Customer visits a website and explores its content.
 - Customer interacts with the website and engages in a chat with an agent.
@@ -368,18 +368,18 @@ In Webex Contact Center, there are four primary data repositories that store cri
 
 3. **Agent Activity Record**:
 
-- **Description**: This record type focuses on individual actions within the agent's workflow. It logs every significant step an agent takes, shedding light on their interactions and status throughout their workday.
-- **Examples**:
+**Description**: This record type focuses on individual actions within the agent's workflow. It logs every significant step an agent takes, shedding light on their interactions and status throughout their workday.
 
+**Examples**:
 - Agent's status transitions, such as idle, available, talking, or wrapping up.
 - Agent's offline activities, including dialing, note-taking, and reading emails.
 - Agent's involvement in chats with customers and the subsequent wrap-up process.
 
 4. **Agent Session Record**:
 
-- **Description**: Agent Session Records provide a comprehensive overview of an agent's work. They encompass a sequence of agent activities, offering insights into the agent's handling of tasks and interactions.
-- **Examples**:
+**Description**: Agent Session Records provide a comprehensive overview of an agent's work. They encompass a sequence of agent activities, offering insights into the agent's handling of tasks and interactions.
 
+**Examples**:
 - An agent manages a service call, logging an incident or request.
 - An agent initiates an outbound call and schedules a meeting for a customer.
 - An agent engages in chat interactions with customers, providing answers and assistance.
