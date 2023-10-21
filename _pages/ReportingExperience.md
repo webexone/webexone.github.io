@@ -117,7 +117,8 @@ Please note, that to proceed to the next section, you will need to use the accou
 
 Note: If you are already logged-in as an Agent as part of other Labs, no action required. 
 
-Login As Supervisor-Agent: 
+**Login As Supervisor-Agent:** 
+
 to your agent you can use your Agent Credentials or Supervisor credentials with Role as : "Supervisor and Agent"
 
 
@@ -128,7 +129,7 @@ to your agent you can use your Agent Credentials or Supervisor credentials with 
 - Team should be pre-populated 
 - Submit
 
-Login as an Agent:  
+**Login as an Agent:**  
 - Use below link
 	Agent Login Credentials for the Agent Desktop: [desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com).
 
