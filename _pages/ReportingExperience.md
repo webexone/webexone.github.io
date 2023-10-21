@@ -111,7 +111,7 @@ Please note, that to proceed to the next section, you will need to use the accou
 
 1.  Make sure you are able to login into Administrator Portal -  [admin.webex.com](https://admin.webex.com) using your Supervisor credentials
 2. Once Logged-in Goto --> "Quick Links" --> Click "Analyzer" 
-![[intro_CH.png]]
+![analyzer](/assets/images/reporting/intro_CH.png)
 
 - To Login as an agent to your agent you can use your Agent Credentials or Supervisor credentials with Role as : "Supervisor and Agent"
 
