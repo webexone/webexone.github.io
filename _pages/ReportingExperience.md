@@ -160,8 +160,7 @@ Or  use below link
 
 This lab is designed to give you basic understanding of Analyzer, user interface features, access controls and permissions as well as the default dashboards available in the Admin Portal. In the following exercises, the goal is the familiarization with the product, interfaces and terminology.
 
-1. **Login** to the Webex CC Analyzer using your supervisor credentials the Analyzer link above or Cross launch from the Administration portal by clicking on Reporting and Analytics.
-   ![reporting-tab](/assets/images/reporting/1_1_ReportingTab.png)
+1. At this point you should be already logged-in to the Analyzer
 
 2. As you login you may see this pop-up prompting to “Explore New Analyser”.
    $${\color{red}“DO\space NOT\space LAUNCH”\space it\space at\space this\space time\space and\space Click\space `Cancel`.}$$
