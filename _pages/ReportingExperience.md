@@ -47,10 +47,8 @@ This Lab has been split into four parts.
 | [2.1: High-level Contact Center Performance and Usage insights](#21-high-level-contact-center-performance-and-usage-insights)                                            | Exploration | EASY      | 5 min  |
 | [2.2: Customer Experience and Queue Performance](#22-customer-experience-and-queue-performance)                                                                          | Exploration | EASY      | 10 min  |
 | [Part 3: (BONUS) Contact Center Insights with Analyzer custom reports](#part-3-bonus-contact-center-insights-with-analyzer-custom-reports-and-dashboards) | Exploration | EASY      | 5 min  |
-| [3.1: Realtime Contact In the Queue](#31-realtime-contact-in-the-queue)                                                                                                  | Exploration | EASY      | 10 min  |
-| [3.2: Realtime Agent State](#32-realtime-agent-state)                                                                                                                    | Exploration | EASY      | 5 min  |
-| [3.3: Realtime Dashboard](#33-realtime-dashboard)                                                                                                                        | Exploration | EASY      | 5 min  |
-| [Part 4: (BONUS) Data extraction and scheduling Capabilities](#part-4-bonus-data-extraction-and-scheduling-capabilities)                                                 | Exploration | EASY      | 5 min  |
+| [3.1: Create Custom Realtime Agent Report](#3.1-Create-Custom-Realtime-Agent-Report)                                                                                                  | Exploration | EASY      | 10 min  |
+|[Part 4: (BONUS) Data extraction and scheduling Capabilities](#part-4-bonus-data-extraction-and-scheduling-capabilities)                                                 | Exploration | EASY      | 5 min  |
 | [4.1: Export Data as Excel or CSV](#41-export-data-as-excel-or-csv)                                                                                                      | Exploration | EASY      | 5 min  |
 | [4.2: Visualization Scheduler](#42-visualization-scheduler)                                                                                                              | Exploration | EASY      | 5 min  |
 | [4.3: Search APIs](#43-search-apis)                                                                                                                                      | Exploration | EASY      | 10 min |
@@ -359,11 +357,8 @@ Before you continue with this exercise follow below:
 1. Make a Call and select prompted options to get to an agent, with no agent available you would hear a wait music.
 2. Make sure your agent is logged-in and currently in Idle state.
 
-## 3.1 Realtime Contact in the Queue
+## 3.1 Create Custom Realtime Agent Report
 
-## 3.2 Realtime Agent State
-
-## 3.3 Realtime Dashboard
 
 **Congratulations, you have completed this lab! You can continue with the next one.**
 
