@@ -106,7 +106,7 @@ Please note, that to proceed to the next section, you will need to use the accou
 | Supervisor 1  | wxcclabs+supvr_ID<w class = "attendee-class">attendeeID</w>@gmail.com |
 | Administrator | wxcclabs+admin_ID<w class = "attendee-class">attendeeID</w>@gmail.com |
 
-##  Analyzer  Login Process 
+##  Analyzer and Login Process 
 
 
 1.  Make sure you are able to login into Administrator Portal -  [admin.webex.com](https://admin.webex.com) using your Supervisor credentials
