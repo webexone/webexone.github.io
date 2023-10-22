@@ -285,6 +285,9 @@ Search for the lable `Contact center Overview` and double click `Contact Center 
 1. Make a note of: Average service level, Total handle contact, Total abandoned contacts, Average Handle Time.
 2. Switch the Duration to `This Year` notice the change into these KPIs.
 3. Select **Channel Type** and opt for digital channels only: Email, Chat and Social to observe the update KPI’s.
+4. Scroll Down the dashboard to the review "Contact Details in Queue" Report.
+5. On right upper corner of the "Contact Details in Queue"  Chart View 
+6. Observe the historical Queue volume and trending across last 7 days. 
 
 #### **Field Description**
 **Contact Center Overview – Historical** dashboard displays displays contact statistics for a specified duration and time interval. Users can filter data using drop-down lists. The available information includes:
@@ -297,7 +300,7 @@ Search for the lable `Contact center Overview` and double click `Contact Center 
 -  Contact Details in Queue: Shows the details of contacts (voice, email, social, and chat) 
 
 ![OverviewHist](/assets/images/reporting/2_1_OverviewHist.png)
-
+![OverviewHist](/assets/images/reporting/CCOverview2.png)
 
 
 ### Contact Volume Historical Dashboard
@@ -310,7 +313,18 @@ Search for the lable `Contact center Overview` and double click `Contact Center 
 6. This provides you a trending view of contact volume for the year and comparison on monthly basis.
 7. Update **Channel Type** filter to select `Telephony` and `Chat`. Observe the comparison data between these channels over the period of time.
 
-![VolumeTable](/assets/images/reporting/2_1_VolumeTable.png)
+#### **Field Description**
+The parameters in this dashboard include DNIS (Dialed Number), Entry Point Name, Interval, Channel Type, and Contacts.
+
+* DNIS is a service from the phone company delivering a number indicating the digits dialed by the caller. It's used as a row segment, but it doesn't appear for chat contacts.
+
+* The entry point name is the name of a particular entry point, also used as a row segment.
+
+* Interval refers to a time period, specifically the last 7 days in this context.
+
+* Channel Type denotes the media type of contact, like telephony, email, or chat, and it's used as a row segment.
+
+* Finally, Contacts is a parameter that refers to the count of contact session IDs, serving as a unique identifier for each contact.
 
 **Action:** Administrators analyse this data to assess channel preferences, allocate resources effectively, and identify opportunities for improving customer service across different channels.
 
@@ -324,6 +338,7 @@ Search for the lable `Contact center Overview` and double click `Contact Center 
 2. You can try to switch the Duration and Interval to look for the data for longer or shorter period and trend.
 3. Switch to the Table View ![TableView](/assets/images/reporting/2_1_TableView.png) and you would notice much more detailed data insights into each team and agent level.
 4. Further filtering can be done based on Team, Channel and Agent Name, to gather insights around specific agent group.
+
 
 **Action:** Look if the max connected duration is consistently high, it may indicate a need for process improvements or additional agent training. If the average connected duration is longer than desired, it may indicate the need to streamline processes, provide agents with additional resources or tools, or optimize call handling techniques. On the other hand, if the average connected duration is too short, it may indicate rushed interactions or missed opportunities for upselling or cross-selling.
 
