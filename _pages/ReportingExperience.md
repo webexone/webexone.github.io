@@ -275,7 +275,8 @@ In this section, we will delve into how various personas within a contact center
 
 **Business Use Case:** Contact centre administrators play a crucial role in managing and optimizing contact centre operations. To effectively monitor and analyse the performance of the contact centre, it is essential for administrators to capture and track high-level contact centre state and usage data. This data provides valuable insights into various aspects, such as agent productivity, call volumes, customer satisfaction, and system performance. By capturing this information, administrators can make informed decisions, identify areas for improvement, and ensure efficient contact centre operations.
 
-**A. Expected Insights and Actions:** Monthly trending of total inbound and outbound contacts over this year. Secondly, the usage of different communication channels, such as phone calls, emails, live chat, and social media interactions.
+### **A. Expected Insights and Actions:** 
+Monthly trending of total inbound and outbound contacts over this year. Secondly, the usage of different communication channels, such as phone calls, emails, live chat, and social media interactions.
 
 ### Contact Center Overview – Historical
 
@@ -330,7 +331,8 @@ The parameters in this dashboard include DNIS (Dialed Number), Entry Point Name,
 
 ![VolumeDashboard](/assets/images/reporting/2_1_VolumeDashboard.png)
 
-**B. Expected Insights and Actions:** Trend and detailed insight of Agent performance metrics like Max connected duration and Avg Connected duration across Agent Teams as well as Agent level break down optionally. This helps to identify any need of process improvements or additional agent training.
+### **B. Expected Insights and Actions:** 
+Trend and detailed insight of Agent performance metrics like Max connected duration and Avg Connected duration across Agent Teams as well as Agent level break down optionally. This helps to identify any need of process improvements or additional agent training.
 
 ### Agent Performance Dashboard
 
@@ -359,7 +361,8 @@ The parameters in this dashboard include DNIS (Dialed Number), Entry Point Name,
 
 ![VirtualAgentFlow](/assets/images/reporting/2_2_Flow.png)
 
-**A. Expected Insights and Actions:** Understanding the virtual agent's resolution rate, and escalation rate to the Queue.
+### **A. Expected Insights and Actions:** 
+Understanding the virtual agent's resolution rate, and escalation rate to the Queue.
 
 ### IVR & CVA Dialog Flow Report
 
@@ -367,7 +370,8 @@ The parameters in this dashboard include DNIS (Dialed Number), Entry Point Name,
 
 **Actions:** Refining the virtual agent's responses where escalation rate to the Queue is higher, training them on new issues.
 
-**B. Expected Insights and Actions:** Supervisor looking for key performance metrics for their line of business (Queue), Percentage Handled, Abandonment Rate, Avg Abandoned Time and Service Level.
+### **B. Expected Insights and Actions:** 
+Supervisor looking for key performance metrics for their line of business (Queue), Percentage Handled, Abandonment Rate, Avg Abandoned Time and Service Level.
 
 ### CSQ All Fields Report
 
@@ -375,7 +379,8 @@ The parameters in this dashboard include DNIS (Dialed Number), Entry Point Name,
 
 **Actions:** Adjusting staffing levels and/or call routing improvements to manage peak times and low service level. Implement callback options to reduce wait times and abandonment rate.
 
-**C. Expected Insights and Actions:** Offering the callback to the customers when they are in IVR or waiting in the Queue is one of the most efficient ways to improve the customer experience. Capture the callback success rate and reasons for failure.
+### **C. Expected Insights and Actions:** 
+Offering the callback to the customers when they are in IVR or waiting in the Queue is one of the most efficient ways to improve the customer experience. Capture the callback success rate and reasons for failure.
 
 ### Callback Report
 
