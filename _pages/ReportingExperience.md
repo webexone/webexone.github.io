@@ -111,6 +111,7 @@ Please note, that to proceed to the next section, you will need to use the accou
 2. Once Logged-in Goto --> "Quick Links" --> Click "Analyzer" 
 ![analyzer](/assets/images/reporting/intro_CH.png)
 
+![analyzer](/assets/images/reporting/analyzerLogin.gif)
 3. For Part-3 of the Lab Login as an Supervisor-agent or Agent :
 
 Note: If you are already logged-in as an Agent as part of other Labs, no action required. 
@@ -135,6 +136,8 @@ to your agent you can use your Agent Credentials or Supervisor credentials with 
 - Enter the Dialed number provided (If not pre-filled)
 - Team should be pre-populated 
 - Submit
+
+![analyzer](/assets/images/reporting/supervisorlogin.gif)
 
 **Login as an Agent:**  
 
@@ -194,6 +197,8 @@ to your agent you can use your Agent Credentials or Supervisor credentials with 
 
 This lab is designed to give you basic understanding of Analyzer, user interface features, access controls and permissions as well as the default dashboards available in the Admin Portal. In the following exercises, the goal is the familiarization with the product, interfaces and terminology.
 
+![analyzer](/assets/images/reporting/old_ux_intro.gif)
+
 1. At this point you should be already logged-in to the Analyzer
 
 2. As you login you may see this pop-up prompting to “Explore New Analyser”.
@@ -244,7 +249,11 @@ This lab is designed to give you basic understanding of Analyzer, user interface
 
 ## 1.2 NEW Analyzer User Interface
 
+![New Analyzer Login](/assets/images/reporting/login_new_ux.gif)
 
+![New UX Home Page analyzer](/assets/images/reporting/Ux_UI.gif)
+
+![New UX Stock Report UI](/assets/images/reporting/New_UX.gif)
 
 **Congratulations, you have completed this lab! You can continue with the next one.**
 # Part 2: Contact Center Insights with New Analyzer Stock reports
