@@ -385,7 +385,6 @@ Steps:
 
 
 
-
 ![DialogFlowTable](/assets/images/reporting/2_2_DialogFlowTable.png)
 
 ### **B. Expected Insights and Actions:** 
@@ -405,8 +404,13 @@ Steps:
 
 **Actions:** Adjusting staffing levels and/or call routing improvements to manage peak times and low service level. Implement callback options to reduce wait times and abandonment rate.
 
-!![CSQAllfield](/assets/images/reporting/csqallfield1.png)
+
+
+![CSQTable](/assets/images/reporting/CSQallreport2.png)
+
+  ![CSQTable](/assets/images/reporting/2_2_CSQTable.png)
   
+
 ![CSQTable](/assets/images/reporting/2_2_CSQTable.png)
 
 
