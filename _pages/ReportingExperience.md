@@ -408,8 +408,7 @@ Steps:
 
 ![CSQTable](/assets/images/reporting/CSQallreport2.png)
 
-  ![CSQTable](/assets/images/reporting/2_2_CSQTable.png)
-  
+
 
 ![CSQTable](/assets/images/reporting/2_2_CSQTable.png)
 
@@ -423,6 +422,7 @@ The contact center customer can opt to receive a callback from an agent while 
 
 
 ![CSQAllfield](/assets/images/reporting/callback.png)
+
 
 ![CallbackTable](/assets/images/reporting/callback1.png)
 
