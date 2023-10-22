@@ -441,40 +441,41 @@ In Webex Contact Center, there are four primary data repositories that store cri
 
 1. **Customer Activity Record**:
 
-- **Description**: This type of record represents individual, atomic steps within the customer's workflow. It captures key moments in the customer journey, providing insights into their interactions with the contact center.
-- **Examples**:
+	- **Description**: This type of record represents individual, atomic steps within the customer's workflow. It captures key moments in the customer journey, providing insights into their interactions with the contact center.
+	- **Examples**:
+	
+	- Customer in IVR or queue, talking to an agent, or on hold.
+	- Customer on specific web pages, such as the home page, product page, or checkout page.
 
-- Customer in IVR or queue, talking to an agent, or on hold.
-- Customer on specific web pages, such as the home page, product page, or checkout page.
 
 2. **Customer Session Record**:
 
-**Description**: Customer Session Records are more comprehensive, encapsulating the entire customer workflow. They consist of a sequence of customer activities, providing a holistic view of the customer's engagement with the contact center.
-
-**Examples**:
-- Customer calls the contact center for assistance.
-- Customer visits a website and explores its content.
-- Customer interacts with the website and engages in a chat with an agent.
-- Customer initiates contact by sending an email, and an agent responds.
+	**Description**: Customer Session Records are more comprehensive, encapsulating the entire customer workflow. They consist of a sequence of customer activities, providing a holistic view of the customer's engagement with the contact center.
+	
+	**Examples**:
+	- Customer calls the contact center for assistance.
+	- Customer visits a website and explores its content.
+	- Customer interacts with the website and engages in a chat with an agent.
+	- Customer initiates contact by sending an email, and an agent responds.
 
 3. **Agent Activity Record**:
 
-**Description**: This record type focuses on individual actions within the agent's workflow. It logs every significant step an agent takes, shedding light on their interactions and status throughout their workday.
-
-**Examples**:
-- Agent's status transitions, such as idle, available, talking, or wrapping up.
-- Agent's offline activities, including dialing, note-taking, and reading emails.
-- Agent's involvement in chats with customers and the subsequent wrap-up process.
+	**Description**: This record type focuses on individual actions within the agent's workflow. It logs every significant step an agent takes, shedding light on their interactions and status throughout their workday.
+	
+	**Examples**:
+	- Agent's status transitions, such as idle, available, talking, or wrapping up.
+	- Agent's offline activities, including dialing, note-taking, and reading emails.
+	- Agent's involvement in chats with customers and the subsequent wrap-up process.
 
 4. **Agent Session Record**:
 
-**Description**: Agent Session Records provide a comprehensive overview of an agent's work. They encompass a sequence of agent activities, offering insights into the agent's handling of tasks and interactions.
-
-**Examples**:
-- An agent manages a service call, logging an incident or request.
-- An agent initiates an outbound call and schedules a meeting for a customer.
-- An agent engages in chat interactions with customers, providing answers and assistance.
-- An agent reads and responds to customer emails, ensuring effective communication.
+	**Description**: Agent Session Records provide a comprehensive overview of an agent's work. They encompass a sequence of agent activities, offering insights into the agent's handling of tasks and interactions.
+	
+	**Examples**:
+	- An agent manages a service call, logging an incident or request.
+	- An agent initiates an outbound call and schedules a meeting for a customer.
+	- An agent engages in chat interactions with customers, providing answers and assistance.
+	- An agent reads and responds to customer emails, ensuring effective communication.
 
 These data repositories play a crucial role in capturing, organizing, and analysing the wealth of information generated within the Webex Contact Center, ultimately supporting informed decision-making and enhancing customer and agent experiences.
 
