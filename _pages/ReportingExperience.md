@@ -402,7 +402,7 @@ Steps:
 
 **Actions:** Adjusting staffing levels and/or call routing improvements to manage peak times and low service level. Implement callback options to reduce wait times and abandonment rate.
 
-![CSQAllfield](/assets/images/reporting/csqallfield.png)
+![CSQAllfield](/assets/images/reporting/csqallfield1.png)
   
 ![CSQTable](/assets/images/reporting/2_2_CSQTable.png)
 
