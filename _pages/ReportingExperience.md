@@ -32,8 +32,8 @@ This Lab has been split into four parts.
 1. First part of this Lab **introduces you to the current Analyzer User Interface as well as the New Analyzer User Interface (Analyzer UX Refresh).**
    > Note: **Important to point out** that the New Analyzer User Interface is in **Early Access phase** and has access only to Historical Stock Reports.
 2. In the second part we will look **how key Contact Center persons (Administrators, Supervisors and Contact Center Analysts) can use Analyzer to extract some key Contact Center KPIs and actionable insights around Contact Center Operational Performance, Customer Experience and Agent Performance using the various Stock reports and dashboards.**
-3. In the third part we will look into some new data insights and walk through how we can **create custom reports and dashboards to extract some real-time  Contact Center data insights**.
-4. Last chapter covers key data and reporting capabilities like the **export of reporting data, report scheduling and the available Data APIs** to extract the data.
+3. In the third part we will look walk through how we can **create custom reports to extract some real-time  Contact Center data insights**.
+4. In last chapter we will covers key data and reporting capabilities like the **export of reporting data, report scheduling and the available Data APIs** to extract the data.
 # Table of Contents
 
 | Topic                                                                                                                                                                    | Type        | Dificulty | Time   |
@@ -41,24 +41,24 @@ This Lab has been split into four parts.
 | [Pre-Requisities](#pre-requisites)                                                                                                                                       | Activity    | EASY      | 5 min  |
 | [Analyzer and Desktop Login Process](#Analyzer-Login-Process)                                                                                                                         | Activity    | EASY      | 5 min  |
 | [Part 1: Webex Contact Center Analyzer User Interface](#part-1-webex-contact-center-analyzer-user-interface)                                                             | Exploration | EASY      | 15 min  |
-| [1.1: Analyzer User Interface](#11-analyzer-user-interface)                                                                                                              | Exploration    | EASY      | 5 min  |
-| [1.2: NEW Analyzer User Interface](#12-new-analyzer-user-interface)                                                                                                      | Activity    | EASY      | 10 min  |
+| [1.1: Analyzer User Interface](#11-analyzer-user-interface)                                                                                                              | Exploration    | EASY      |   |
+| [1.2: NEW Analyzer User Interface](#12-new-analyzer-user-interface)                                                                                                      | Activity    | EASY      |   |
 | [Part 2: Contact Center Insights with New Analyzer Stock reports](#part-2-contact-center-insights-with-new-analyzer-stock-reports)                                       | Activity | EASY      | 15 min  |
-| [2.1: High-level Contact Center Performance and Usage insights](#21-high-level-contact-center-performance-and-usage-insights)                                            | Activity | EASY      | 5 min  |
-| [2.2: Customer Experience and Queue Performance](#22-customer-experience-and-queue-performance)                                                                          | Activity | INTERMEDIATE      | 10 min  |
+| [2.1: High-level Contact Center Performance and Usage insights](#21-high-level-contact-center-performance-and-usage-insights)                                            | Activity | EASY      |   |
+| [2.2: Customer Experience and Queue Performance](#22-customer-experience-and-queue-performance)                                                                          | Activity | INTERMEDIATE      |   |
 | [Part 3: Contact Center Insights with Analyzer custom reports](#part-3-bonus-contact-center-insights-with-analyzer-custom-reports-and-dashboards) | Activity | INTERMEDIATE      | 15 min  |
-| [3.1: Create Custom Realtime Agent Report](#3.1-Create-Custom-Realtime-Agent-Report)                                                                                                  | Activity | INTERMEDIATE      | 15 min  |
+| [3.1: Create Custom Realtime Agent Report](#3.1-Create-Custom-Realtime-Agent-Report)                                                                                                  | Activity | INTERMEDIATE      |   |
 |[Part 4: (BONUS) Data extraction and scheduling Capabilities](#part-4-bonus-data-extraction-and-scheduling-capabilities)                                                 | Activity | EASY      | 20 min  |
-| [4.1: Export Data as Excel or CSV](#41-export-data-as-excel-or-csv)                                                                                                      | Activity | EASY      | 5 min  |
-| [4.2: Visualization Scheduler](#42-visualization-scheduler)                                                                                                              | Activity | EASY      | 5 min  |
-| [4.3: Search APIs](#43-search-apis)                                                                                                                                      | Activity | INTERMEDIATE      | 10 min |
+| [4.1: Export Data as Excel or CSV](#41-export-data-as-excel-or-csv)                                                                                                      | Activity | EASY      |   |
+| [4.2: Visualization Scheduler](#42-visualization-scheduler)                                                                                                              | Activity | EASY      |   |
+| [4.3: Search APIs](#43-search-apis)                                                                                                                                      | Activity | INTERMEDIATE      |  |
 
 
 ## Pre-Requisites
 
 1. Ensure that you have received your tenant login credentials (Administrator, Supervisor and Agent)from the Lab proctors.
 2. In this Lab, Part 1 and 2 already have historical data created to capture the key insights, hence no need to login Agent or make calls.
-3. In Part 3, we will look into some Realtime data insights for which make sure you logged-in with your supervisor-agent or Agent and able to make and receive calls. 
+3. In Part 3, we will look into some Realtime data insights for which make sure you logged-in with your supervisor-agent or Agent. 
 - Agent and Supervisor user accounts are configured and ready for logins.
 - As an agent, you're associated with two teams—designated by your Attendee ID—as "Team1" and "Team2".
 
@@ -118,16 +118,18 @@ Note: If you are already logged-in as an Agent as part of other Labs, no action 
 
 
 
-| **User Role** | **User email**                                                                | **Endpoint** |
-| ------------- | ----------------------------------------------------------------------------- | ------------- | 
-| Agent         | wxcclabs+agent_<w class="attendee_out">AttendeeID</w>@gmail.com | WebRTC |
-| Supervisor    | wxcclabs+supvr_<w class="attendee_out">AttendeeID</w>@gmail.com | Webex App |
 
 
+You have 2 options to login as an Agent:
+1.  Supervisor credentials with Role as : "Supervisor and Agent"
+2. Use your Agent Credentials 
 
 **Login As Supervisor-Agent:** 
 
-to your agent you can use your Agent Credentials or Supervisor credentials with Role as : "Supervisor and Agent"
+| **User Role** | **User email**                                                                | **Endpoint** |
+| ------------- | ----------------------------------------------------------------------------- | ------------- | 
+| Supervisor    | wxcclabs+supvr_<w class="attendee_out">AttendeeID</w>@gmail.com | Webex App |
+
 
 
 - Login with Supervisor Credentials   [admin.webex.com](https://admin.webex.com)
@@ -139,13 +141,8 @@ to your agent you can use your Agent Credentials or Supervisor credentials with 
 
 ![analyzer](/assets/images/reporting/supervisorlogin.gif)
 
-**Login as an Agent:**  
 
 
-> By following the steps below, you will log in to the Agent Desktop with your credentials and indicate the number (DN) where you want to receive the calls.
-
-> The Lab Tenant is located in the US datacenter. It does not allow outbound international calls. If you have the U.S. numbers you can use that for sign in as an agent or supervisor. Otherwise, please WebRTC for agent and download the Webex App for supervisor according to the steps below.
-{: .block-warning }
 
 **Login in the Webex app for PC or Mac**
 
@@ -163,6 +160,13 @@ to your agent you can use your Agent Credentials or Supervisor credentials with 
 
 
 **Agent Desktop Login**
+
+
+| **User Role** | **User email**                                                                | **Endpoint** |
+| ------------- | ----------------------------------------------------------------------------- | ------------- | 
+| Agent         | wxcclabs+agent_<w class="attendee_out">AttendeeID</w>@gmail.com | WebRTC |
+
+
 
 > **Note**: To log in to the agent desktop, use either a different web browser or a new incognito web page. This will prevent the browser caching issues with admin and agent credentials.
 > 
