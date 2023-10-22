@@ -385,7 +385,6 @@ Steps:
 
 ![DialogFlowTable](/assets/images/reporting/2_2_DialogFlowTable.png)
 
-
 ### **B. Expected Insights and Actions:** 
 Supervisor looking for key performance metrics for their line of business (Queue), Percentage Handled, Abandonment Rate, Avg Abandoned Time and Service Level.
 
