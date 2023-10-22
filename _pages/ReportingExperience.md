@@ -381,7 +381,8 @@ Steps:
 
 **Actions:** Refining the virtual agent's responses where escalation rate to the Queue is higher, training them on new issues.
 
-![[Pasted image 20231022154812.png]]
+![DialogFlowTable](/assets/images/reporting/cvaimage2.png)
+
 
 
 
