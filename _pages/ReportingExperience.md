@@ -373,6 +373,7 @@ This report displays the Self-service operational metrics. Which consist of:
 - Number of abandoned calls in Self-service.
 - Number of IVR calls that were escalated to a queue.
 - Percentage of IVR calls that were escalated to a queue.
+![ivrcvapic](/assets/images/reporting/ivrcva.png)
 
 Steps:
 1. Search for label "selfservice"
@@ -382,6 +383,7 @@ Steps:
 
 
 ![ivrcvapic](/assets/images/reporting/ivrcva.png)
+
 
 ![DialogFlowTable](/assets/images/reporting/2_2_DialogFlowTable.png)
 
