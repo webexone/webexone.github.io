@@ -364,27 +364,62 @@ Trend and detailed insight of Agent performance metrics like Max connected durat
 ### **A. Expected Insights and Actions:** 
 Understanding the virtual agent's resolution rate, and escalation rate to the Queue.
 
+To extract expected insights we can leverage stock report "IVR & CVA Dialog Flow Report" 
 ### IVR & CVA Dialog Flow Report
+
+This report displays the Self-service operational metrics. Which consist of:
+
+- The total number of IVR calls handled by the virtual agent.
+- Number of abandoned calls in Self-service.
+- Number of IVR calls that were escalated to a queue.
+- Percentage of IVR calls that were escalated to a queue.
+
+Steps:
+1. Search for label "selfservice"
+2. Look for "IVR & CVA Dialog flow" Report --> Double click to view it.
+
+**Actions:** Refining the virtual agent's responses where escalation rate to the Queue is higher, training them on new issues.
+
+
+![IVRCVA](/assets/images/reporting/ivrcva.png)
 
 ![DialogFlowTable](/assets/images/reporting/2_2_DialogFlowTable.png)
 
-**Actions:** Refining the virtual agent's responses where escalation rate to the Queue is higher, training them on new issues.
 
 ### **B. Expected Insights and Actions:** 
 Supervisor looking for key performance metrics for their line of business (Queue), Percentage Handled, Abandonment Rate, Avg Abandoned Time and Service Level.
 
 ### CSQ All Fields Report
 
-![CSQTable](/assets/images/reporting/2_2_CSQTable.png)
+
+The CSQ All Fields Report presents the queue-related data such as call statistics, service level, and key fields like Average Queue Time, Average Speed of Answer, Calls Handled, and Calls Abandoned under service level. This report combines the fields of all queue-related reports. 
+
+This report is also part of Transitions reports built in Webex Contact Center to deliver the look and feel of Key Contact Center Express (UCCX) reports to help customers who transitions to Cloud Webex Contact Center. 
+
+Steps:
+1. Search for Label "Transition" 
+2. Look for "CSQ ALL Fields Report" and double click it to view. 
+
 
 **Actions:** Adjusting staffing levels and/or call routing improvements to manage peak times and low service level. Implement callback options to reduce wait times and abandonment rate.
+
+![CSQAllfield](/assets/images/reporting/csqallfield.png)
+  
+![CSQTable](/assets/images/reporting/2_2_CSQTable.png)
+
 
 ### **C. Expected Insights and Actions:** 
 Offering the callback to the customers when they are in IVR or waiting in the Queue is one of the most efficient ways to improve the customer experience. Capture the callback success rate and reasons for failure.
 
 ### Callback Report
 
-![CallbackTable](/assets/images/reporting/2_2_CallbackTable.png)
+The contact center customer can opt to receive a callback from an agent while in IVR or waiting in a queue. The courtesy callback flow is configured by the flow developer.
+
+
+![CSQAllfield](/assets/images/reporting/callback.png)
+
+![CallbackTable](/assets/images/reporting/callback1.png)
+
 
 **Actions:** For low Callback success rate review the Reason, one of the prime reasons for an unsuccessful callback request is that customers aren’t reachable or busy at callback time. Explore if offering the Callback Retry attempt ([CallbackFailed](https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cust_contact/contact_center/webexcc/SetupandAdministrationGuide_2/b_mp-release-2/wcc-flow-designer.html#Cisco_Concept.dita_2e773682-6129-4fb7-b857-4b56f57103bc)) for the callback would help improving the success rate and tweak it based on further review.
 
