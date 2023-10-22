@@ -447,6 +447,7 @@ In Webex Contact Center, there are four primary data repositories that store cri
 	- Customer in IVR or queue, talking to an agent, or on hold.
 	- Customer on specific web pages, such as the home page, product page, or checkout page.
 
+
 2. **Customer Session Record**:
 
 	**Description**: Customer Session Records are more comprehensive, encapsulating the entire customer workflow. They consist of a sequence of customer activities, providing a holistic view of the customer's engagement with the contact center.
