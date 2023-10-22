@@ -336,10 +336,11 @@ Trend and detailed insight of Agent performance metrics like Max connected durat
 
 ### Agent Performance Dashboard
 
-1. By default, you would notice Chart view of the monthly data with “Max connected duration” and “Average connected Duration” with weekly interval.
-2. You can try to switch the Duration and Interval to look for the data for longer or shorter period and trend.
-3. Switch to the Table View ![TableView](/assets/images/reporting/2_1_TableView.png) and you would notice much more detailed data insights into each team and agent level.
-4. Further filtering can be done based on Team, Channel and Agent Name, to gather insights around specific agent group.
+1. Search for "performance" in the search bar. Look for "Agent Performance Dashboard" and double click to view it. 
+2. By default, you would notice Chart view of the monthly data with “Max connected duration” and “Average connected Duration” with weekly interval.
+3. You can try to switch the Duration and Interval to look for the data for longer or shorter period and trend.
+4. Switch to the Table View ![TableView](/assets/images/reporting/2_1_TableView.png) and you would notice much more detailed data insights into each team and agent level.
+5. Further filtering can be done based on Team, Channel and Agent Name, to gather insights around specific agent group.
 
 
 **Action:** Look if the max connected duration is consistently high, it may indicate a need for process improvements or additional agent training. If the average connected duration is longer than desired, it may indicate the need to streamline processes, provide agents with additional resources or tools, or optimize call handling techniques. On the other hand, if the average connected duration is too short, it may indicate rushed interactions or missed opportunities for upselling or cross-selling.
