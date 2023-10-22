@@ -441,11 +441,11 @@ In Webex Contact Center, there are four primary data repositories that store cri
 
 1. **Customer Activity Record**:
 
-	- **Description**: This type of record represents individual, atomic steps within the customer's workflow. It captures key moments in the customer journey, providing insights into their interactions with the contact center.
-	- **Examples**:
-	
-	- Customer in IVR or queue, talking to an agent, or on hold.
-	- Customer on specific web pages, such as the home page, product page, or checkout page.
+- **Description**: This type of record represents individual, atomic steps within the customer's workflow. It captures key moments in the customer journey, providing insights into their interactions with the contact center.
+- **Examples**:
+
+- Customer in IVR or queue, talking to an agent, or on hold.
+- Customer on specific web pages, such as the home page, product page, or checkout page.
 
 
 2. **Customer Session Record**:
