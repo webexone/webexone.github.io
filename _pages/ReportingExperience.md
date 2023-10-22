@@ -253,10 +253,14 @@ This lab is designed to give you basic understanding of Analyzer, user interface
 
 ## 1.2 NEW Analyzer User Interface
 
+
+**NEW Analyzer Login**
 ![New Analyzer Login](/assets/images/reporting/login_new_ux.gif)
 
+**New Analyzer Home Page Interface**
 ![New UX Home Page analyzer](/assets/images/reporting/Ux_UI.gif)
 
+**New Analyzer Stock Report Interface**
 ![New UX Stock Report UI](/assets/images/reporting/New_UX.gif)
 
 **Congratulations, you have completed this lab! You can continue with the next one.**
@@ -275,13 +279,26 @@ In this section, we will delve into how various personas within a contact center
 
 ### Contact Center Overview – Historical
 
+
 Search for the lable `Contact center Overview` and double click `Contact Center Overview – Historical` dashboard.
 
 1. Make a note of: Average service level, Total handle contact, Total abandoned contacts, Average Handle Time.
 2. Switch the Duration to `This Year` notice the change into these KPIs.
 3. Select **Channel Type** and opt for digital channels only: Email, Chat and Social to observe the update KPI’s.
 
+###**Field Description**
+**Contact Center Overview – Historical** dashboard displays displays contact statistics for a specified duration and time interval. Users can filter data using drop-down lists. The available information includes:
+
+- Average Service Level: Shows the percentage of contacts handled within the set service level.
+- Total Contacts Handled: Displays the total number of contacts handled across various communication channels.
+- Total Contacts Abandoned: Shows the total number of contacts that were abandoned.
+- Average Handled Time: Indicates the average time taken to handle a contact.
+- Longest Contact in Queue: Displays the waiting time for the contact with the longest queue time.
+-  Contact Details in Queue: Shows the details of contacts (voice, email, social, and chat) 
+
 ![OverviewHist](/assets/images/reporting/2_1_OverviewHist.png)
+
+
 
 ### Contact Volume Historical Dashboard
 
