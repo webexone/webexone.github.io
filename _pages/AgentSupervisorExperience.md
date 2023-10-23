@@ -805,6 +805,14 @@ Here is a schematic showing how the Agent Desktop configuraton aligns to all the
 
 ![Configuration-Overview](/assets/images/agent/admin1.png)
 
+As you can see, the order of operations is as follows:
+
+- Users need to be configured on Webex Control Hub: admin.webex.com > Users
+- Licenses need to be assigned to Users to make them either an Agent or Supervisor into Webex Contact Center.
+- Webex Contact Center Configuration is required after Webex Control Hub Users are synced over.
+- This is the `Contact Center Enabled > User Profile > Site > Team > Multimedia Profile > Desktop Profile > Skill Profile > Default DN configuration.`
+- Go To admin.webex.com > Contact Center Users to verify this configuration for the Agents and the Supervisors.
+
 ## 1.7: Administration Entities
 
 ![User-Overview](/assets/images/agent/admin2.png)
@@ -834,8 +842,25 @@ To verify, navigate to Control Hub > Contact Center > TENANT SETTINGS
 | Address Book Entry 1 | <w class = "attendee_out">attendeeID</w>\_addressBookEntry1          |
 | Multimedia Profile   | <w class = "attendee_out">attendeeID</w>\_MMP                        |
 
+### Administration Walkthrough
+
 > **NOTE:** All of the above the tenant entities follow the naming convention mentioned specified in the table above. Your attendeeID is provided in the email in the **"Attendee ID"** line.
 > All of this configuration has been done for you.
+
+### Teams
+
+- You were able to change from one team to another using the Profile Settings.
+- You can verify this by going to `admin.webex.com > Contact Center > Teams` and `Contact Center > Contact Center Users > Check the Team Assignment` on the user.
+- This allows you to verify the the `User > Team` association
+
+### Multimedia Profiles
+
+- Navigate to _Control Hub > Provisioning > Teams_ - Click on the Teams: _Team1 and \_Team2 `Edit` - Check \_your User settings_ and make sure that the **Multimedia Profile** is assigned.
+- Note: **User settings have preference over Team setting**, so the Multimedia Profile at User level will be applied.
+
+### Desktop Profiles
+
+- Desktop Profiles is what brings together all the different components of the Desktop Behavior.
 
 ---
 
@@ -872,7 +897,7 @@ We will review this on Control Hub Settings.
 > Control Hub > Contact Center Users > Supervisor User > User Profile: Supervisor Profile
 
 - Look up your Supervisor User bu going to admin.webex.com > Contact Center > User Management (Category) > Contact Center Users
-- Ensure that the Supervisor user wxcclabs+supvr_ID_your_attendee_ID\_@gmail.com has the `Supervisor Profile` in the `User Profile` field
+- Ensure that the Supervisor user wxcclabs+supvr_ID<w class="attendee_out">Your_Attendee_ID</w>@gmail.com has the `Supervisor Profile` in the `User Profile` field
 
 ![Supervisor_UserProfile](/assets/images/Supervisor/Supervisor_UserProfile.gif)
 
