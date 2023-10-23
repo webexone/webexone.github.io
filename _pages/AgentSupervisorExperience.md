@@ -11,7 +11,7 @@ In Part 2, we will examine the Webex Contact Center Supervisor Experience and th
 
 <script>
     function update(){them = Array.from(document.querySelectorAll("input")).reduce((acc, input) => ({...acc, [input.id + "_out"] : input.value}),{});
-	Object.entries(them).forEach((entry) => {
+   Object.entries(them).forEach((entry) => {
     Array.from(document.getElementsByClassName(entry[0])).forEach((element,index) => 
     {
       console.log(document.getElementsByClassName(entry[0])[index].innerHTML); 
@@ -73,7 +73,7 @@ In Part 2, we will examine the Webex Contact Center Supervisor Experience and th
 - Administrator credentials for the Control Hub: [admin.webex.com](https://admin.webex.com).
 - Agent Login Credentials for the Agent Desktop: [desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com).
 
-1. The items listed below have been pre-configured for you:
+2. The items listed below have been pre-configured for you:
 
 - Agent and Supervisor user accounts are configured and ready for logins.
 - You can access the Agent Desktop via the URL: [https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com).
@@ -87,9 +87,9 @@ Example:
 >
 > 100_Team2
 
-1. Agents will use browsers for voice calls using WebRTC (Web Real-time Communication) endpoints. Additionally, Webex Calling extensions have been assigned to users (both agents and supervisors) to facilitate alternate device experiences. Webex Contact Center agents and supervisors can opt for any mix of these devices, encompassing PSTN endpoints and mobile phones.
+3. Agents will use browsers for voice calls using WebRTC (Web Real-time Communication) endpoints. Additionally, Webex Calling extensions have been assigned to users (both agents and supervisors) to facilitate alternate device experiences. Webex Contact Center agents and supervisors can opt for any mix of these devices, encompassing PSTN endpoints and mobile phones.
 
-2. A preset inbound Voice flow is available for test calls.
+4. A preset inbound Voice flow is available for test calls.
 
 ### Quick Links
 
