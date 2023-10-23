@@ -90,7 +90,8 @@ In **Part 2**, we will examine the **Webex Contact Center Supervisor Experience*
 
 (0) **Lab Credentials and Attendee ID** - Provided to you over email.
 
-> Please submit the form below with your Attendee ID. All configuration items in the lab guide will be renamed with that prefix.
+> Please `submit the form below with your Attendee ID`. All configuration items in the lab guide will be renamed with that prefix.
+> {: .block-warning }
 
 <script>
 document.forms["attendee-form"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID" 
@@ -144,6 +145,7 @@ For this lab, you'll only require access to two web portals:
 
 > Control Hub Administration: **[https://admin.webex.com](https://admin.webex.com){:target="\_blank"}**\
 > Contact Center Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="\_blank"}**
+> {: .block-success }
 
 ### Lab Configuration
 
@@ -171,6 +173,7 @@ Please note, that to proceed to the next section, you will need to use the accou
 
 > Desktop multi-language support is based on the language settings on the browser. Currently, we support 29 languages, including:
 > Bulgarian, Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish, Dutch, English (UK), English (US), Finnish, French, German, Hungarian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Serbian, Slovak, Slovenian, Spanish, Swedish, and Turkish.
+> {: .block-success }
 
 ![AgentDesktopOverview](/assets/images/agent/agent_desktop_overview.png)
 
@@ -200,10 +203,12 @@ Here is an overview of the sections:
 > **Note: Please use Google Chrome as the browser to take advantage of the all new WebRTC Voice Option.**
 
 > Tip: You can also find this link under Control Hub: [admin.webex.com](https://admin.webex.com) > Contact Center > Settings
+> {: .block-warning }
 
 - Once you're in the login page, enter the agent credentials (username and password)
 
 > In this example, please use the specific login for your attendee ID
+> {: .block-warning }
 
 ![agent-desktop](/assets/images/agent/01-image.png)
 
@@ -228,6 +233,7 @@ Here is an overview of the sections:
 ![agent-desktop](/assets/images/agent/03-image.png)
 
 > NOTE: Agents cannot access the Agent Desktop from multiple browsers or multiple tabs of the same browser window. In that case, a warning message will be displayed.
+> {: .block-warning }
 
 ![agent-desktop](/assets/images/agent/04-image.png)
 
@@ -242,6 +248,7 @@ Here is an overview of the sections:
 **NOTE:**
 
 > The login device and DN can be enforced on the Desktop Profile as follows
+> {: .block-warning }
 
 - If your administrator configures the default Dial Number (DN), the default DN is prepopulated in the Dial Number and Extension fields.
 - If your administrator restricts the DN to the default DN, you cannot edit the prepopulated DN when signing in to the Agent Desktop.
@@ -268,7 +275,9 @@ This also has the section where you can view the Idle codes.
 ---
 
 > Note: The Idle codes are customizable and configured under **Webex Control Hub > Contact Center Settings > Idle / Wrap up Codes**
-> These Idle codes can then be customized per Desktop Profile, on a per user level.
+> These Idle codes can indeed be customized per Desktop Profile, on a per user level.
+> Desktop Profiles can also be segmented on a Tenant or Site, or even Team level - i.e one Profile per Team
+> {: .block-warning }
 
 ---
 
@@ -280,7 +289,8 @@ The Agent can access the out of box Agent Personal Statistics Reports on the lef
 
 ---
 
-> Note: These Agent Personal Statistics are canned reports out of the box. However, one can configure custom Analyzer Reports for Agents in the Layout if custom reporting views are needed.
+> Note: These Agent Personal Statistics are canned reports out of the box. However, one can configure custom Analyzer Reports for Agents in the Layout if custom reporting views are needed. The Supervisor Desktop Layout allows you to hide/show certain Personal Statistics.
+> {: .block-warning }
 
 ---
 
@@ -340,6 +350,7 @@ The Channel capacity determines how many contacts the Agent can handle at a maxi
 The notification settings under user settings allows you to Enable/Disable the Notifications, Enable Silent Notifications, or Enable/Disable the sound. You can also change the volume of the Chime for the incoming contact.
 
 > Note: These settings persist as long as the browser cache is retained for the user.
+> {: .block-warning }
 
 ![agent-desktop-Notification-Pane](/assets/images/agent/Agent_Notification_Pane.gif)
 
@@ -350,6 +361,7 @@ The notification settings under user settings allows you to Enable/Disable the N
 You can switchover the theme on the Desktop using the Dark mode toggle. This helps with visibility on the eyes in low light conditions and can be a user preference for the theme.
 
 > This is another setting that is preserved with the user's browser cache.
+> {: .block-warning }
 
 ![agent-desktop-Dark-Mode](/assets/images/agent/Agent_Dark_Mode.gif)
 
@@ -382,7 +394,8 @@ Change the state from Idle to Available using the shortcut
 > Try Ctrl + Option + F to bring up the shortcuts
 > Try Ctrl + Option + R to go Ready
 > Try Ctrl + Option + N to go Not Ready by typing an Idle code + Enter
-> ![agent-desktop-State_Change_Shortscut](/assets/images/agent/Agent_State_Change_Shortscut.gif)
+
+![agent-desktop-State_Change_Shortscut](/assets/images/agent/Agent_State_Change_Shortscut.gif)
 
 ---
 
@@ -398,6 +411,8 @@ A diagnostic must have for Agents is the ability to download error reports to se
 
 > What you will notice when you open the file:
 > The Desktop uses a combination of secure HTTPS as well as Websocket connectivity to stay connected to the backend.
+> From a connectivity standpoint, this means that the Agent's Desktop requires network access, latency and bandwidth requirements to facilitate streamlined HTTPS traffic for both pure REST as well as WebSocket payloads.
+> {: .block-warning }
 
 ---
 
@@ -473,6 +488,7 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 
 > Note: The variables displayed in the incoming popover and on the Desktop can be ordered in a custom manner.
 > This is done on the flow designer on the flow level.
+> {: .block-warning }
 
 ![Variable-Order](/assets/images/agent/Agent_VariableOrder.png)
 
@@ -487,6 +503,7 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 ---
 
 > **Note**: While you are engaged for a voice call, you are still marked available on other channels based on your channel capacity. This is the configuration on the Multimedia Profile settings on the Agent Desktop.
+> {: .block-warning }
 
 ---
 
@@ -497,9 +514,10 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
     - End-customer be redirected to a common EP already created
   - **End** the call (this can be done from customer or agent perspective) and select any **Wrap-up code**
 
-> For this part, you will need a third calling device for interacting as aSupervisor
+> For this part, you will need a third calling device for interacting as a Supervisor
 > {: .block-warning }
-> <br/>
+
+ <br/>
 
 - Now, lets create a new Chrome profile so we can login the Supervisor on the same browser
 
@@ -560,13 +578,16 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 - While Logged into the Agent Desktop, look for the Address book.
 - You will see two contacts that are preloaded for you. You can directly make a call to any of those numbers.
 
-> Not choosing an option on the dropdown selects the Default Outdial ANI (Calling Number Mask) of the tenant. This is configured on Control Hub, under the Desktop Settings. admin.webex.com > Contact Center > Desktop Settings > Outdial ANI
+> Not choosing an option on the dropdown selects the Default Outdial ANI (Calling Number Mask) of the tenant. This is configured on Control Hub, under the Desktop Settings.
+> i.e `admin.webex.com > Contact Center > Desktop Settings > Outdial ANI`
+> {: .block-warning }
 
 ![Agent-AddressBook](/assets/images/agent/Agent_AddressBook.gif)
 
 ---
 
-> **Note: These are live numbers published on cisco.com!**
+> **Note: These are live, real numbers published on cisco.com!**
+> {: .block-warning }
 
 - Alternatively, you can select a customized Calling Number mask by selecting the Outdial ANI dropdown. This Outdial ANI dropdown can be configured on the `Outdial ANI` settings in Control Hub.
 
@@ -574,13 +595,16 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 
 ---
 
-> _You will notice that upon clicking the dial button, the Agent is presented with a floating pop-over that displays call varibales and is then connected to the call, and then the remote party is connected - following which the call legs are bridged._
+> You will notice that upon clicking the dial button, the Agent is presented with a floating pop-over that displays call varibales and is then connected to the call, and then the remote party is connected - following which the call legs are bridged.\_
+> {: .block-warning }
 
 ![Agent-Outdial_Call](/assets/images/agent/Agent_Outdial_Call.gif)
 
 ---
 
 > **Note: Outdial also supports pre-dial activities that can be configured on the WebexCC Flow Designer. The Flow Designer has been configured for you with the Custom Caller Associated Data Variables that are visibile upon Outdial**
+> Screenpops for Outdial can also be configured in a similar manner, via Flow Designer.
+> {: .block-warning }
 
 ![CH-Outdial_Flow](/assets/images/agent/CH_Outdial_Flow.gif)
 
