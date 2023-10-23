@@ -138,12 +138,12 @@ You have 2 options to login as an Agent:
 | ------------- | ---------------------------------------------------------------- | ------------ |
 | Supervisor    | wxcclabs+supvr\_<w class="attendee_out">AttendeeID</w>@gmail.com | Webex App    |
 
-- Login with Supervisor Credentials [admin.webex.com](https://admin.webex.com)
-- Go to `Quick Links` --> Click on `Desktop`
-- Select the Role as : `Supervisor and Agent`
+- Login with Supervisor Credentials [admin.webex.com](https://admin.webex.com).
+- Go to `Quick Links` --> Click on `Desktop`.
+- Select the Role as : `Supervisor and Agent`.
 - Enter the Dialed number provided (if it not pre-filled).
 - Team should be pre-populated.
-- Click `Submit`
+- Click `Submit`.
 
 ![analyzer](/assets/images/reporting/supervisorlogin.gif)
 
@@ -194,15 +194,15 @@ This lab is designed to give you basic understanding of Analyzer, user interface
 
 ![analyzer](/assets/images/reporting/old_ux_intro.gif)
 
-1. At this point you should be already logged-in to the Analyzer
+1. At this point you should be already logged-in to Analyzer.
 
 2. As you login you may see this pop-up prompting to “Explore New Analyser”.
-   $${\color{red}“DO\space NOT\space LAUNCH”\space it\space at\space this\space time\space and\space Click\space `Cancel`.}$$
+   $${\color{red}DO\space NOT\space LAUNCH\space it\space at\space this\space time\space and\space Click\space Cancel.}$$
    ![refesh-popup](/assets/images/reporting/1_1_RefreshPopup.png)
 
-3. Navigate around the home screen learning the different features available on this screen.
+3. Navigate around the home screen to learn the different features available on this screen.
 
-   - Make a note of sessions count for the four data repositories:
+   - Make a note of the sessions count for the four data repositories:
      - Customer Session
      - Customer Activity
      - Agent Session
@@ -244,6 +244,11 @@ This lab is designed to give you basic understanding of Analyzer, user interface
 
 ## 1.2 NEW Analyzer User Interface
 
+The New Webex Contact Center Analyzer offers an enhanced and intuitive user interface that enables you to manage stock historical dashboards. It provides faster, more efficient, and focused views of historical analytics for Webex Contact Center, enhancing the integrated experience. The stock historical dashboards offer ready-to-use metrics, allowing you to generate metrics related to entry points, queues, teams, contacts, and agents for strategic decision-making.
+
+> Note that the New Analyzer today does not currently provide custom dashboards. To access custom dashboards, use the existing Analyzer. Extending custom reporting support and adding real-time reports to New Analyzer UX is in our roadmap.
+> {: .block-warning }
+
 **NEW Analyzer Login**
 ![New Analyzer Login](/assets/images/reporting/login_new_ux.gif)
 
@@ -259,22 +264,22 @@ This lab is designed to give you basic understanding of Analyzer, user interface
 
 In this section, we will delve into how various personas within a contact center can leverage the Webex Contact Center Analyzer to capture Key Performance Indicators (KPIs) and glean insights that can measure and enhance customer experience, agent performance, and overall business outcomes. We will explore some of the pre-built stock reports with New Analyzer Interface, which can help you gather these key actionable insights from day one.
 
-## 2.1 High-level Contact Center Performance and Usage insights
+## 2.1 High-level Contact Center Performance and Usage Insights
 
 **Persona:** CC Administrator, Supervisors, CC Manager, Leadership
 **Preferred View Type:** Chart, Trending
 
 **Business Use Case:** Contact centre administrators play a crucial role in managing and optimizing contact centre operations. To effectively monitor and analyse the performance of the contact centre, it is essential for administrators to capture and track high-level contact centre state and usage data. This data provides valuable insights into various aspects, such as agent productivity, call volumes, customer satisfaction, and system performance. By capturing this information, administrators can make informed decisions, identify areas for improvement, and ensure efficient contact centre operations.
 
-### **A. Expected Insights and Actions:**
+### **A. Expected Insights and Actions**
 
 Monthly trending of total inbound and outbound contacts over this year. Secondly, the usage of different communication channels, such as phone calls, emails, live chat, and social media interactions.
 
 ### Contact Center Overview – Historical
 
-Search for the lable `Contact center Overview` and double click `Contact Center Overview – Historical` dashboard.
+Search for the label `Contact Center Overview` and double click on the `Contact Center Overview – Historical` dashboard.
 
-1. Make a note of: Average service level, Total handle contact, Total abandoned contacts, Average Handle Time.
+1. Make a note of the following cards: Average Service Level, Total Handled, Total Abandoned Contacts, Average Handle Time.
 2. Switch the Duration to `This Year` notice the change into these KPIs.
 3. Select **Channel Type** and opt for digital channels only: Email, Chat and Social to observe the update KPI’s.
 4. Scroll Down the dashboard to the review "Contact Details in Queue" Report.
@@ -310,26 +315,22 @@ Search for the lable `Contact center Overview` and double click `Contact Center 
 The parameters in this dashboard include DNIS (Dialed Number), Entry Point Name, Interval, Channel Type, and Contacts.
 
 - DNIS is a service from the phone company delivering a number indicating the digits dialed by the caller. It's used as a row segment, but it doesn't appear for chat contacts.
-
 - The entry point name is the name of a particular entry point, also used as a row segment.
-
 - Interval refers to a time period, specifically the last 7 days in this context.
-
 - Channel Type denotes the media type of contact, like telephony, email, or chat, and it's used as a row segment.
-
 - Finally, Contacts is a parameter that refers to the count of contact session IDs, serving as a unique identifier for each contact.
 
 **Action:** Administrators analyse this data to assess channel preferences, allocate resources effectively, and identify opportunities for improving customer service across different channels.
 
 ![VolumeDashboard](/assets/images/reporting/2_1_VolumeDashboard.png)
 
-### **B. Expected Insights and Actions:**
+### **B. Expected Insights and Actions**
 
-Trend and detailed insight of Agent performance metrics like Max connected duration and Avg Connected duration across Agent Teams as well as Agent level break down optionally. This helps to identify any need of process improvements or additional agent training.
+Trend and detailed insight of Agent performance metrics like `Max Connected Duration` and `Avg Connected Duration` across Agent Teams as well as Agent level break down optionally. This helps to identify any need of process improvements or additional agent training.
 
 ### Agent Performance Dashboard
 
-1. Search for "performance" in the search bar. Look for "Agent Performance Dashboard" and double click to view it.
+1. Search for `performance` in the search bar. Look for `Agent Performance Dashboard` and double click to view it.
 2. By default, you would notice Chart view of the monthly data with “Max connected duration” and “Average connected Duration” with weekly interval.
 3. You can try to switch the Duration and Interval to look for the data for longer or shorter period and trend.
 4. Switch to the Table View ![TableView](/assets/images/reporting/2_1_TableView.png) and you would notice much more detailed data insights into each team and agent level.
@@ -338,8 +339,6 @@ Trend and detailed insight of Agent performance metrics like Max connected durat
 **Action:** Look if the max connected duration is consistently high, it may indicate a need for process improvements or additional agent training. If the average connected duration is longer than desired, it may indicate the need to streamline processes, provide agents with additional resources or tools, or optimize call handling techniques. On the other hand, if the average connected duration is too short, it may indicate rushed interactions or missed opportunities for upselling or cross-selling.
 
 ![PerformanceDashboard](/assets/images/reporting/2_1_PerformanceDashboard.png)
-
-**Congratulations, you have completed this lab! You can continue with the next one.**
 
 ## 2.2 Customer Experience and Queue Performance
 
@@ -372,16 +371,15 @@ This report displays the Self-service operational metrics. Which consist of:
 
 Steps:
 
-1. Search for label "selfservice"
-2. Look for "IVR & CVA Dialog flow" Report --> Double click to view it.
+1. Search for label `selfservice`.
+2. Look for `IVR & CVA Dialog flow` Report --> Double click to view it.
 
 **Actions:** Refining the virtual agent's responses where escalation rate to the Queue is higher, training them on new issues.
 
 ![DialogFlowTable](/assets/images/reporting/cvaimage2.png)
+![IVRCVAFields](/assets/images/reporting/2_2_IVRCVAFields.png)
 
-![DialogFlowTable](/assets/images/reporting/2_2_DialogFlowTable.png)
-
-### **B. Expected Insights and Actions:**
+### **B. Expected Insights and Actions**
 
 Supervisor looking for key performance metrics for their line of business (Queue), Percentage Handled, Abandonment Rate, Avg Abandoned Time and Service Level.
 
@@ -393,8 +391,8 @@ This report is also part of Transitions reports built in Webex Contact Center to
 
 Steps:
 
-1. Search for Label "Transition"
-2. Look for "CSQ ALL Fields Report" and double click it to view.
+1. Search for Label `Transition`.
+2. Look for `CSQ ALL Fields Report` and double click it to view.
 
 **Actions:** Adjusting staffing levels and/or call routing improvements to manage peak times and low service level. Implement callback options to reduce wait times and abandonment rate.
 
@@ -402,7 +400,7 @@ Steps:
 
 ![CSQTable](/assets/images/reporting/2_2_CSQTable.png)
 
-### **C. Expected Insights and Actions:**
+### **C. Expected Insights and Actions**
 
 Offering the callback to the customers when they are in IVR or waiting in the Queue is one of the most efficient ways to improve the customer experience. Capture the callback success rate and reasons for failure.
 
@@ -480,12 +478,16 @@ Note: Before you continue with this exercise follow below make sure your agent i
 
 # Part 4: (BONUS) Data extraction and scheduling Capabilities
 
-Similar to Lab Part-3 advance data extraction and scheduling capabilities are not avalaible in New Analyzer UX and is part of roadmap. Hence for this exercise we would use current Analyzer interface.
+Similar to Lab Part-3, advanced data extraction and scheduling capabilities are not avalaible in New Analyzer UX and are part of the roadmap. Hence, for this exercise, we will use the current Analyzer interface.
 
 ## 4.1 Export Data as Excel or CSV
 
-- Open `Incoming, Short, IVR Time- Entry Point` report in separate browser tab and Export the Data as Excel.
-- Now you can use this data, filter or share as needed.
+Although Analyzer offers a lot of functionalities for users, Contact Center administrators and analysts often need to work with the data offline, modify them via Excel or even share the transformed information with other parties. In this exercise we will see how Analyzer allows users to easily download the report results from within the Analyzer interface.
+
+1. Open `Incoming, Short, IVR Time- Entry Point` report in separate browser tab (or use any other open report in current Analyzer if you prefer).
+2. Click on `Export` on the top and you have the option to `Export as Excel` or `Export as CSV`. Select to export the data as Excel.
+3. File will be downloaded to your computer.
+4. Now you can use this data offline, perform advanced calculations from Excel or share with your colleagues as needed.
 
 ![Export](/assets/images/reporting/4_1_Export.png)
 
@@ -493,11 +495,11 @@ Similar to Lab Part-3 advance data extraction and scheduling capabilities are no
 
 In this exercise we will learn how to schedule visualizations within Analyzer. In Analyzer, you can schedule any historical visualization to be run and sent in a predefined time period to an email address. This is very handy for admins or supervisors who need to see reports on a scheduled daily, weekly or monthly basis.
 
-1. Find the `CSQ All Fields Report`.
+1. Find the report `CSQ All Fields Report`.
 
 ![CSQ](/assets/images/reporting/4_2_CSQ.png)
 
-2. Next, in the right-hand corner of the report, select the three ellipsis and from the dropdown select the option **Schedule Job**.
+2. Next, in the right-hand corner of the report, select the three ellipsis and from the dropdown select the option **Schedule Job**. <br>
    ![ScheduleOptions](/assets/images/reporting/4_2_ScheduleOptions.png)
 
 3. Fill in the schedule information for the scheduled report.
@@ -609,4 +611,4 @@ In this exercise, we are going to use the API to retrieve the LastAgentInteracti
 }
 ```
 
-### Congratulations, you have officially completed the Webex Contact Center Reporting Experience labs!
+## **Congratulations, you have officially completed the Webex Contact Center Reporting Experience labs!**
