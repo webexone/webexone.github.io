@@ -775,6 +775,14 @@ Once the user selects an interaction, the Interaction Detail pane displays the l
 
 ---
 
+
+## 2. Verify the Flow Debugger functionality 
+
+Place a call to the flow and trace the call through the Flow Debugger. 
+
+> **Tip:** Selct `Edit: Off` to open the flow in `Read-Only` mode when using using the debug functionality
+{: .block-warning }
+
 # Part 4: Introduction to Flow Versioning
 Tagging a version of the flow should come up while publishing. There are 3 predefined tags - Live, Dev, Test, and one default Tag - Latest. The tag selection dropdown is visible after publish button is hit. Multiple tags are allowed to be selected. Once selected and published and those tags are associated to that specific version.
 
