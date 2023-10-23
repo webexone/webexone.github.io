@@ -111,11 +111,11 @@ The following Administration entities have been configured for you via [Webex Co
 
 Please note, that to proceed to the next section, you will need to use the accounts shown in the top 3 rows.
 
-| **Entity**    | **Name**                                                              |
-| ------------- | --------------------------------------------------------------------- |
-| Agent 1       | wxcclabs+agent_ID<w class = "attendee-class">AttendeeID</w>@gmail.com |
-| Supervisor 1  | wxcclabs+supvr_ID<w class = "attendee-class">AttendeeID</w>@gmail.com |
-| Administrator | wxcclabs+admin_ID<w class = "attendee-class">AttendeeID</w>@gmail.com |
+| **Entity**    | **Name**                                                            |
+| ------------- | ------------------------------------------------------------------- |
+| Agent 1       | wxcclabs+agent_ID<w class = "attendee_out">AttendeeID</w>@gmail.com |
+| Supervisor 1  | wxcclabs+supvr_ID<w class = "attendee_out">AttendeeID</w>@gmail.com |
+| Administrator | wxcclabs+admin_ID<w class = "attendee_out">AttendeeID</w>@gmail.com |
 
 # Analyzer Login Process
 
