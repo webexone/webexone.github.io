@@ -5,9 +5,11 @@ date: 2023-10-04
 layout: post
 ---
 
-In Part 1, we will explore the Webex Contact Center Agent Experience and the associated administrative toggles for configuring agents in the Webex Contact Center.
+Welcome to the **Webex Contact Center Agent and Supervisor Experience!**
 
-In Part 2, we will examine the Webex Contact Center Supervisor Experience and the associated administrative toggles for configuring supervisors in the Webex Contact Center.
+In **Part 1**, we will explore the **Webex Contact Center Agent Experience** and the associated administrative toggles for configuring agents in the Webex Contact Center.
+
+In **Part 2**, we will examine the **Webex Contact Center Supervisor Experience** and the associated administrative toggles for configuring supervisors in the Webex Contact Center.
 
 <script>
     function update(){them = Array.from(document.querySelectorAll("input")).reduce((acc, input) => ({...acc, [input.id + "_out"] : input.value}),{});
@@ -123,19 +125,19 @@ Please note, that to proceed to the next section, you will need to use the accou
 
 | **Entity**           | **Name**                                                            |
 | -------------------- | ------------------------------------------------------------------- |
-| Agent 1              | wxcclabs+agent_ID<w class = "attendee-out">attendeeID</w>@gmail.com |
-| Supervisor 1         | wxcclabs+supvr_ID<w class = "attendee-out">attendeeID</w>@gmail.com |
-| Administrator        | wxcclabs+admin_ID<w class = "attendee-out">attendeeID</w>@gmail.com |
-| Desktop Profile      | <w class = "attendee-out">attendeeID</w>\_desktopProfile            |
-| Entry Point          | <w class = "attendee-out">attendeeID</w>\_EP                        |
-| Queue                | <w class = "attendee-out">attendeeID</w>\_Q                         |
-| Team 1               | <w class = "attendee-out">attendeeID</w>\_team1                     |
-| Team 2               | <w class = "attendee-out">attendeeID</w>\_team2                     |
-| Outdial ANI          | <w class = "attendee-out">attendeeID</w>\_outdialANI                |
-| Outdial ANI Entry 1  | <w class = "attendee-out">attendeeID</w>\_outdialANIEntry1          |
-| Address Book         | <w class = "attendee-out">attendeeID</w>\_addressBook               |
-| Address Book Entry 1 | <w class = "attendee-out">attendeeID</w>\_addressBookEntry1         |
-| Multimedia Profile   | <w class = "attendee-out">attendeeID</w>\_MMP                       |
+| Agent 1              | wxcclabs+agent_ID<w class = "attendee_out">attendeeID</w>@gmail.com |
+| Supervisor 1         | wxcclabs+supvr_ID<w class = "attendee_out">attendeeID</w>@gmail.com |
+| Administrator        | wxcclabs+admin_ID<w class = "attendee_out">attendeeID</w>@gmail.com |
+| Desktop Profile      | <w class = "attendee_out">attendeeID</w>\_desktopProfile            |
+| Entry Point          | <w class = "attendee_out">attendeeID</w>\_EP                        |
+| Queue                | <w class = "attendee_out">attendeeID</w>\_Q                         |
+| Team 1               | <w class = "attendee_out">attendeeID</w>\_team1                     |
+| Team 2               | <w class = "attendee_out">attendeeID</w>\_team2                     |
+| Outdial ANI          | <w class = "attendee_out">attendeeID</w>\_outdialANI                |
+| Outdial ANI Entry 1  | <w class = "attendee_out">attendeeID</w>\_outdialANIEntry1          |
+| Address Book         | <w class = "attendee_out">attendeeID</w>\_addressBook               |
+| Address Book Entry 1 | <w class = "attendee_out">attendeeID</w>\_addressBookEntry1         |
+| Multimedia Profile   | <w class = "attendee_out">attendeeID</w>\_MMP                       |
 
 ## 1.1: Agent Desktop Overview
 
@@ -767,18 +769,18 @@ To verify, navigate to Control Hub > Contact Center > TENANT SETTINGS
 
 | **Entity**           | **Name**                                                             |
 | -------------------- | -------------------------------------------------------------------- |
-| Agent 1              | <w class = "attendee-out">attendeeID</w>_agent1@mailinator.com       |
-| Supervisor 1         | <w class = "attendee-out">attendeeID</w>\_supervisor1@mailinator.com |
-| Desktop Profile      | <w class = "attendee-out">attendeeID</w>\_desktopProfile             |
-| Entry Point          | <w class = "attendee-out">attendeeID</w>\_EP                         |
-| Queue                | <w class = "attendee-out">attendeeID</w>\_Q                          |
-| Team 1               | <w class = "attendee-out">attendeeID</w>\_team1                      |
-| Team 2               | <w class = "attendee-out">attendeeID</w>\_team2                      |
-| Outdial ANI          | <w class = "attendee-out">attendeeID</w>\_outdialANI                 |
-| Outdial ANI Entry 1  | <w class = "attendee-out">attendeeID</w>\_outdialANIEntry1           |
-| Address Book         | <w class = "attendee-out">attendeeID</w>\_addressBook                |
-| Address Book Entry 1 | <w class = "attendee-out">attendeeID</w>\_addressBookEntry1          |
-| Multimedia Profile   | <w class = "attendee-out">attendeeID</w>\_MMP                        |
+| Agent 1              | <w class = "attendee_out">attendeeID</w>_agent1@mailinator.com       |
+| Supervisor 1         | <w class = "attendee_out">attendeeID</w>\_supervisor1@mailinator.com |
+| Desktop Profile      | <w class = "attendee_out">attendeeID</w>\_desktopProfile             |
+| Entry Point          | <w class = "attendee_out">attendeeID</w>\_EP                         |
+| Queue                | <w class = "attendee_out">attendeeID</w>\_Q                          |
+| Team 1               | <w class = "attendee_out">attendeeID</w>\_team1                      |
+| Team 2               | <w class = "attendee_out">attendeeID</w>\_team2                      |
+| Outdial ANI          | <w class = "attendee_out">attendeeID</w>\_outdialANI                 |
+| Outdial ANI Entry 1  | <w class = "attendee_out">attendeeID</w>\_outdialANIEntry1           |
+| Address Book         | <w class = "attendee_out">attendeeID</w>\_addressBook                |
+| Address Book Entry 1 | <w class = "attendee_out">attendeeID</w>\_addressBookEntry1          |
+| Multimedia Profile   | <w class = "attendee_out">attendeeID</w>\_MMP                        |
 
 > **NOTE:** All of the above the tenant entities follow the naming convention mentioned specified in the table above. Your attendeeID is provided in the email in the **"Attendee ID"** line.
 > All of this configuration has been done for you.
