@@ -70,37 +70,7 @@ In **Part 2**, we will examine the **Webex Contact Center Supervisor Experience*
 
 **You Will Need**
 
-(1) **One additional device** (like your personal phone) to test inbound calls to the Webex Contact Center. You can use your cell phone for this purpose.
-
-- Administrator credentials for the Control Hub: [admin.webex.com](https://admin.webex.com).
-- Agent Login Credentials for the Agent Desktop: [desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com).
-
-(2) The items listed below have been pre-configured for you:
-
-- Agent and Supervisor user accounts are configured and ready for logins.
-- You can access the Agent Desktop via the URL: [https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com).
-- As an agent, you're associated with two teams—designated by your Attendee ID—as "Team1" and "Team2".
-
-Example:
-
-> If your attendee ID is 100:
->
-> 100_Team1
->
-> 100_Team2
-
-(3) Agents will use browsers for voice calls using WebRTC (Web Real-time Communication) endpoints. Additionally, Webex Calling extensions have been assigned to users (both agents and supervisors) to facilitate alternate device experiences. Webex Contact Center agents and supervisors can opt for any mix of these devices, encompassing PSTN endpoints and mobile phones.
-
-(4) A preset inbound Voice flow is available for test calls.
-
-### Quick Links
-
-For this lab, you'll only require access to two web portals:
-
-> Control Hub Administration: **[https://admin.webex.com](https://admin.webex.com){:target="\_blank"}**\
-> Contact Center Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="\_blank"}**
-
-### Lab Configuration
+(0) **Lab Credentials and Attendee ID** - Provided to you over email.
 
 > Please submit the form below with your Attendee ID. All configuration items in the lab guide will be renamed with that prefix.
 
@@ -118,6 +88,46 @@ update()
 document.forms["attendee-form"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID"
 update()
 </script>
+
+<br/>
+
+(1) **One additional device** (like your personal phone) to test inbound calls to the Webex Contact Center. You can use your cell phone for this purpose.
+
+- Administrator credentials for the Control Hub: [admin.webex.com](https://admin.webex.com).
+- Agent Login Credentials for the Agent Desktop: [desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com).
+
+(2) **Webex App** Installed and Logged in. Provided your `Supervisor Login ID` - use the **Webex App** to login your **Supervisor User.**
+
+- This user is in the format:
+
+> **wxcclabs+supvr_ID<w class = "attendee_out">attendeeID</w>@@gmail.com**
+
+(3) The items listed below have been pre-configured for you:
+
+- Agent and Supervisor user accounts are configured and ready for logins.
+- You can access the Agent Desktop via the URL: [https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com).
+- As an agent, you're associated with two teams—designated by your Attendee ID—as "Team1" and "Team2".
+
+Example:
+
+> If your attendee ID is 100:
+>
+> 100_Team1
+>
+> 100_Team2
+
+(4) Agents will use browsers for voice calls using WebRTC (Web Real-time Communication) endpoints. Additionally, Webex Calling extensions have been assigned to users (both agents and supervisors) to facilitate alternate device experiences. Webex Contact Center agents and supervisors can opt for any mix of these devices, encompassing PSTN endpoints and mobile phones.
+
+(4) A preset inbound Voice flow is available for test calls.
+
+### Quick Links
+
+For this lab, you'll only require access to two web portals:
+
+> Control Hub Administration: **[https://admin.webex.com](https://admin.webex.com){:target="\_blank"}**\
+> Contact Center Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="\_blank"}**
+
+### Lab Configuration
 
 The following Administration entities have been configured for you via [Webex Control Hub](https://admin.webex.com){:target="\_blank"}
 
