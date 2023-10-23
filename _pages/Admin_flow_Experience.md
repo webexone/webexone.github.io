@@ -712,6 +712,48 @@ The subsequent flow execution from BH activity takes the following priority:
 
 <img src="/assets/images/fe_16.png">
 
+### 1. Create a Business Hours Schedule 
+
+- Login with admin credentials to Control Hub by accessing [https://admin.webex.com](https://admin.webex.com){:target="\_blank"}.
+
+- In the left pane navigate to **_Contact Center_** card.
+
+- Scroll down in the left navigation panel to the **_CUSTOMER EXPERIENCE_** section and click on **_Business Hours_**.
+
+<img src="/assets/images/fe_17.png">
+
+---
+
+- Click on `Working Hours` button and select **_Create Working Hours_**
+
+<img src="/assets/images/fe_18.png">
+
+---
+
+- Add a `Name`, `Timezone` and `Shift` to your schedule 
+
+<img src="/assets/images/fe_19.png">
+
+---
+
+- Select `Save` at the bottom
+
+- To add a holiday schedule, click on **_Business Hours_** and select `Holiday Lists`
+
+- Select `Create Holiday List` and enter the list of holidays. 
+
+<img src="/assets/images/fe_20.png">
+
+---
+
+- Now you can Go back to `Working Hours` button and select **_Create Working Hours_** and select the `Holiday Lists` created under `Additional Settings`
+
+<img src="/assets/images/fe_21.png">
+
+---
+
+- Similar steps can be followed to create `Override` schedule 
+
 ---
 
 # Part 3: Introduction to Flow Debugger
