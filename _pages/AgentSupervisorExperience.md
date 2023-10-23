@@ -11,30 +11,38 @@ In **Part 1**, we will explore the **Webex Contact Center Agent Experience** and
 
 In **Part 2**, we will examine the **Webex Contact Center Supervisor Experience** and the associated administrative toggles for configuring supervisors in the Webex Contact Center.
 
+> Feel free to review the table of contents below.
+>
+> Jump to any section using the live navigation on the right!
+
 <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.forms['attendee-form'];
+    if (form) {
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
 
-    function update()
-    {
-      them = Array.from(document.querySelectorAll("input")).reduce((acc, input) => 
-      ({...acc, [input.id + "_out"] : input.value}),{});
-   Object.entries(them).forEach((entry) => {
-    Array.from(document.getElementsByClassName(entry[0])).forEach((element,index) => 
-    {
+        const inputs = Array.from(form.querySelectorAll('input'));
+        const values = inputs.reduce((acc, input) => {
+          acc[input.id + '_out'] = input.value;
+          return acc;
+        }, {});
 
- console.log(document.getElementsByClassName(entry[0])[index].innerHTML); 
- let attendeeId= document.getElementsByClassName(entry[0])[index].innerHTML;
-      if(Number(attendeeId) > 99){
-        attendeeId = entry[1];
-      }
-      else{ attendeeId = '0' + entry[1];}
-    })})
+        Object.entries(values).forEach(([id, value]) => {
+          const elements = document.getElementsByClassName(id);
+          Array.from(elements).forEach(element => {
+            console.log(element.innerHTML);
+            element.innerHTML = value;
+          });
+        });
 
-  event.preventDefault()
-   if(document.forms["attendee-form"][1].value != "Your Attendee ID"){
-    localStorage.setItem("attendeeID",document.forms["attendee-form"][1].value)
-  }  
-  }
-
+        const attendeeIDInput = form.elements['attendeeID'];
+        if (attendeeIDInput && attendeeIDInput.value !== 'Your Attendee ID') {
+          localStorage.setItem('attendeeID', attendeeIDInput.value);
+        }
+      });
+    }
+  });
 </script>
 
 # Table of Contents
@@ -74,9 +82,9 @@ In **Part 2**, we will examine the **Webex Contact Center Supervisor Experience*
 
 ### Pre-Requisites
 
-> Note: To complete the initial section of the lab, all Desktop Administration configurations are already set up. This ensures you can experience a fully equipped desktop. For insights on what was configured, please refer to the Desktop Administration Experience later in this lab.
+> Note: The initial section of the lab is a walkthrough, the **Desktop has been configured for you**. This ensures you can experience a fully configured Agent desktop. For more insights on Desktop Administration and Configuration toggles available, please refer to the `Verify Desktop Administration` section in the lab.
 
-> We'll delve into each Administrative element in the following **Desktop Administration** sections that covers `configuration and administrative tasks`.
+> We'll delve into each Administrative element in the following **Verify Desktop Administration** section that covers `Configuration and Administrative tasks`.
 
 **You Will Need**
 
@@ -154,9 +162,9 @@ Please note, that to proceed to the next section, you will need to use the accou
 | Team 1               | <w class = "attendee_out">attendeeID</w>\_team1                     |
 | Team 2               | <w class = "attendee_out">attendeeID</w>\_team2                     |
 | Outdial ANI          | <w class = "attendee_out">attendeeID</w>\_outdialANI                |
-| Outdial ANI Entry 1  | <w class = "attendee_out">attendeeID</w>\_outdialANIEntry1          |
+| Outdial ANI Entry 1  | WebexOneOutdial ANI                                                 |
 | Address Book         | <w class = "attendee_out">attendeeID</w>\_addressBook               |
-| Address Book Entry 1 | <w class = "attendee_out">attendeeID</w>\_addressBookEntry1         |
+| Address Book Entry 1 | WebexOne Addressbook Entry                                          |
 | Multimedia Profile   | <w class = "attendee_out">attendeeID</w>\_MMP                       |
 
 ## 1.1: Agent Desktop Overview
