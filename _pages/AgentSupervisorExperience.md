@@ -11,7 +11,7 @@ In Part 2, we will examine the Webex Contact Center Supervisor Experience and th
 
 <script>
     function update(){them = Array.from(document.querySelectorAll("input")).reduce((acc, input) => ({...acc, [input.id + "_out"] : input.value}),{});
-	Object.entries(them).forEach((entry) => {
+   Object.entries(them).forEach((entry) => {
     Array.from(document.getElementsByClassName(entry[0])).forEach((element,index) => 
     {
       console.log(document.getElementsByClassName(entry[0])[index].innerHTML); 
