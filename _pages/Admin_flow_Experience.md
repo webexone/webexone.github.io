@@ -4,9 +4,6 @@ author: Bhushan Suresh
 date: 2023-10-15
 layout: post
 ---
-```
-Last modified: Wed, 20 Sep 2023
-```
 
 <script>
     function update(){them = Array.from(document.querySelectorAll("input")).reduce((acc, input) => ({...acc, [input.id + "_out"] : input.value}),{});
@@ -38,11 +35,12 @@ Last modified: Wed, 20 Sep 2023
 | [    2.2: Adding Text-To-Speech to the flow](#22-adding-text-to-speech-to-the-flow) | Activity | EASY            | 8 min            |
 | [    2.3: Adding Callback functionality to the flows](#23-adding-callback-functionality-to-the-flows) | Activity | EASY            | 8 min            |
 | [    2.4: Business Hours Configuration](#24-business-hours-configuration) | Exploration | EASY            | 8 min            |
-| [Part 3: Introduction to Flow Debugger](#part-3-introduction-to-flow-debugger)                   | Exploration | EASY            | 15 min | 
+| [Part 3: Introduction to Flow Debugger](#part-3-introduction-to-flow-debugger)                   | Activity | EASY            | 15 min | 
 | [Part 4: Introduction to Flow Versioning](#part-4-introduction-to-flow-versioning)                   | Exploration | EASY            | 15 min | 
-| [Part 5: Flow Error Handling](#part-5-flow-error-handling)                   | Practical Lab | EASY            | 15 min |
-| [Part 6: Workflow in Outdial Entry Point](#part-6-introduction-to-the-new-admin-experience)                   | Exploration | EASY            | 15 min |
-| [Bonus: Experience Management](#bonus-experience-management)                   | Practical Lab | EASY            | 15 min | 
+| [Part 5: Flow Error Handling](#part-5-flow-error-handling)                   | Exploration | EASY            | 15 min |
+| [Part 6: Workflow in Outdial Entry Point](#part-6-introduction-to-the-new-admin-experience)                   | Activity | EASY            | 15 min |
+| [Bonus: Experience Management](#bonus-experience-management)                   | Exploration | EASY            | 15 min |
+| [Bonus: Other Flow Enhancements](#bonus-other-flow-enhancments)                   | Exploration | EASY            | 5 min |
 
 
 # Part 1: Introduction to the new Admin Experience 
@@ -599,6 +597,8 @@ update()
    >
    > ---
 8. Place a test call to your EP DN
+
+> [Google Text-To-Speech Configuration](https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/217425-configure-google-text-to-speech-for-webe.html){:target="\_blank"}
 
 ## 2.3: Adding Callback functionality to the flows
 <img src="/assets/images/fe_5.png">
