@@ -865,27 +865,19 @@ We will review this on Control Hub Settings.
 
 ![Supervisor_Login](/assets/images/Supervisor/Supervisor_Login.gif)
 
----
-
 - When you sign in to the **Supervisor Desktop**, the appearance depends on how the Webex Contact Center administrator has configured the desktop layout. The **Supervisor Desktop** display size must be greater than 500 x 500 pixels (width x height). You must set your web browser zoom to 100% for the best experience with the Supervisor Desktop. With this lab layout you get :
 
 1. **Home Page**: Displays a user friendly interface that provides a consolidated view of key contact center metrics and filters. This is the default landing page in the Supervisor Desktop. The administrator can customize the Home Page in the layout JSON file.
 
 ![Supervisor_Home](/assets/images/Supervisor/Supervisor_Home.png)
 
----
-
 2. **Task**: Displays all the tasks when you sign in to the Desktop in dual role (supervisor and agent) or as a supervisor, interactions such as voice, chat, email, and social messaging conversations, along with monitoring. The icon displays a badge indicating the number of requests that you have not accepted across various channels.
 
 ![Supervisor_Task](/assets/images/Supervisor/Supervisor_Task.gif)
 
----
-
 3. **Team Performance**: Displays real-time information about an agent and a consolidated view of an agent’s performance as part of the team. You can also monitor and send 1:1 messages to an agent.
 
 ![Supervisor_TeamPerformance](/assets/images/Supervisor/Supervisor_TeamPerformace.gif)
-
----
 
 > Note: **Supervisor Desktop** supports localization in 30 languages. The following are the supported languages:
 > Bulgarian, Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish, Dutch, English (UK), English (US),Finnish,French, German, Hungarian, Italian,Japanese, Korean, Norwegian,Polish,Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Serbian, Slovak, Slovenian, Spanish, Swedish, Turkish, and Ukrainian.
