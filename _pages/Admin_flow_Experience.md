@@ -41,7 +41,7 @@ Last modified: Wed, 20 Sep 2023
 | [Part 3: Introduction to Flow Debugger](#part-3-introduction-to-flow-debugger)                   | Exploration | EASY            | 15 min | 
 | [Part 4: Introduction to Flow Versioning](#part-4-introduction-to-flow-versioning)                   | Exploration | EASY            | 15 min | 
 | [Part 5: Flow Error Handling](#part-5-flow-error-handling)                   | Practical Lab | EASY            | 15 min |
-| [Part 6: Workflow in Outdial Entry Point](#part-6-workflow-in--outdial-entry-point)                   | Exploration | EASY            | 15 min |
+| [Part 6: Workflow in Outdial Entry Point](#part-6-introduction-to-the-new-admin-experience)                   | Exploration | EASY            | 15 min |
 | [Bonus: Experience Management](#bonus-experience-management)                   | Practical Lab | EASY            | 15 min | 
 
 
@@ -885,7 +885,7 @@ Place an outbound call as an agent from Agent Desktop
 
 ### Unsupported Flow Activities 
 
-Below core activities are not supported for the outdail voice contacts. If we configure these in flow, these activities will fail with Unsupported flow activity reason.
+Below activities are not supported for the outdail voice contacts. If we configure these in flow, these activities will fail: 
 
 - Queue Contact Activity
 - QueueToAgent Activity
@@ -896,7 +896,7 @@ Below core activities are not supported for the outdail voice contacts. If we co
 
 ### Supported Flow Activities 
 
-Below Activities can we used in flow for outdail voice contacts. 
+Below activities can we used in flow for outdial voice contacts. 
 
 - HTTP Request
 - Condition
@@ -1106,7 +1106,25 @@ In this lab, we will configure all the required elements to collect and view end
 
 ---
 
+# Bonus: Other Flow Enhancments
 
+## 1. Flow Search 
+
+The entry point for the Search feature is the newly added <input> located towards top right of flow designer. This list will update to include up to five matching results. 
+
+For shortcut to search please select:  `Ctrl` `K`
+
+<img src="/assets/images/fe_29.png">
+
+---
+
+## 2. Flow Aesthetic Improvements
+
+This feature provides support to Curved Links, Configure link color, Activity border color, Link selection color, activity border color, Link thickness and Activity border thickness. 
+
+<img src="/assets/images/fe_30.png">
+
+---
 
 
 
