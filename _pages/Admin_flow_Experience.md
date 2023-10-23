@@ -16,7 +16,7 @@ layout: post
 
   event.preventDefault()
   if(document.forms["IVRdeets"][1].value != "Your Attendee ID"){
-    localStorage.setItem("attendeeID",document.forms["IVRdeets"][1].value)
+    localStorage.setItem("AttendeeID",document.forms["IVRdeets"][1].value)
   }  
   }
 </script>
@@ -93,7 +93,7 @@ You can do the tasks from the lab guide either on the **Lab Tenant** (you need t
 </form>
 
 <script>
-document.forms["IVRdeets"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID"
+document.forms["IVRdeets"][1].value = localStorage.getItem("AttendeeID") || "Your Attendee ID"
 
 
 update()
@@ -404,7 +404,7 @@ In this lab, we will configure all of the required elements to deliver a call in
 
 <script>
 document.forms["IVRdeets"][0].value = localStorage.getItem("EPDN") || "Your EP DN"
-document.forms["IVRdeets"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID" 
+document.forms["IVRdeets"][1].value = localStorage.getItem("AttendeeID") || "Your Attendee ID" 
 document.forms["IVRdeets"][2].value = localStorage.getItem("agentEmail") || "Agent Email"
 document.forms["IVRdeets"][3].value = localStorage.getItem("supervisorEXT") || "Supervisor Extension"
 update()
