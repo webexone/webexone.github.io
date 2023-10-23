@@ -70,7 +70,7 @@ You can do the tasks from the lab guide either on the **Lab Tenant** (you need t
 
 
 
-> The overall aim of admin consolidation is to provide a single pane of glass (SPOG) experience for administrators so that admins need not have frequent context switch by having to traverse different applications. The following video outlines the new features of a new admin experience. This introduces, the new left navigation panel for Webex Contact Center in Control Hub as well as other configuration settings which were migrated from the Management Portal.
+> The overall aim of admin consolidation is to provide a single pane of glass (SPOG) experience for administrators so that admins need not have frequent context switch by having to traverse different applications. The following steps outlines the new features of a new admin experience. This introduces, the new left navigation panel for Webex Contact Center in Control Hub as well as other configuration settings which were migrated from the Management Portal.
 
 ![Admin_Experience](/assets/images/AE_image1.png)
 
@@ -175,8 +175,6 @@ update()
 - Login with admin credentials to Control Hub by accessing [https://admin.webex.com](https://admin.webex.com){:target="\_blank"}.
 
 - In the left pane navigate to **_Contact Center_** card.
-
-- Click **_Settings_** in the upper menu.
 
 - Scroll down in the left navigation panel to the **_DESKTOP EXPERIENCE_** section and click on **_Multimedia Profiles_**.
 
@@ -300,7 +298,9 @@ xxxx_team2,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
 
 > By following the steps below, you will log in to the Agent Desktop with your credentials and indicate the number (DN) where you want to receive the calls.
 
-> The Lab Tenant is located in the US datacenter. It does not allow outbound international calls. If you have the U.S. numbers you can use that for sign in as an agent or supervisor. Otherwise, please WebRTC for agent and download the Webex App for supervisor according to the steps below.
+> **Note: Please use Google Chrome as the browser to take advantage of the all new WebRTC Voice Option.**
+
+> The Lab Tenant is located in the US datacenter. It does not allow outbound international calls. If you have the U.S. numbers you can use that for sign in as an agent or supervisor. Otherwise, please use WebRTC for agent and download the Webex App for supervisor according to the steps below.
 {: .block-warning }
 
 ### 1. Download and Login in the Webex app for PC or Mac
@@ -465,9 +465,6 @@ update()
 
 ### Create your first flow
 
-![Flow Experience](/assets/images/fe_1.gif)
-
----
 
 1. Download the [Flow Template](https://webexcc.github.io/../../../assets/files/flow_template.json){:target="\_blank"}
    > The file will open in a separate window.  
@@ -527,7 +524,10 @@ update()
 ### Create your Entry Point
 
 1. Click on Provisioning > Entry Points/Queues > Entry point
-2. Click Create new Entry point [Show Me](https://webexcc.github.io/../../../assets/images/IVR/openEP.gif){:target="\_blank"}
+2. Click Create new Entry point 
+    > 
+    ><img src="assets/images/IVR/openEP.gif">
+    >
     > Name your Entry Point EP_<w class="attendee_out">AttendeeID</w>
     >
     > Description: optional
@@ -597,7 +597,7 @@ update()
 8. Place a test call to your EP DN
 
 ## 2.3: Adding Callback functionality to the flows
-<img src="/assets/images/fe_5.png"
+<img src="/assets/images/fe_5.png">
 1. Create new flow variables:
    > Name: CallerANI
    >> Type: String
