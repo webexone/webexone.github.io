@@ -28,19 +28,20 @@ Last modified: Wed, 20 Sep 2023
 
 | Topic                                                                                 | Lab Type           | Difficulty Level | Estimated length |
 | ------------------------------------------------------------------------------------- | ------------------ | ---------------- | ---------------- |
-| [Part 1: Introduction to the new Admin Experience](#part-1-introduction-to-the-new-admin-experience) | Watch & Understand | EASY             | 10 min           |
-| [    1.1: Control Hub User Management Tasks](#11-control-hub-user-management-tasks)               | Practical Lab      | EASY             | 10 min           |
-| [    1.2: Contact Center User Configuration](#12-contact-center-user-configuration)               | Practical Lab      | EASY             | 10 min            |
-| [    1.3: Bulk Operations](#13-bulk-operations)                                                   | Practical Lab      | EASY             | 5 min            |
-| [    1.4: Access to the Agent Desktop](#14-access-to-the-agent-desktop)                           | Practical Lab      | EASY             | 10 min           |
-| [Part 2: Introduction to Flow Designer](#part-2-introduction-to-flow-designer) | Watch & Understand | EASY    | 10 min|  
-| [    2.1: Configuring tenant for Call Delivery](#21-configuring-tenant-for-call-delivery)        | Practical Lab | EASY            | 10 min           |
-| [    2.2: Adding Text-To-Speech to the flow](#22-adding-text-to-speech-to-the-flow) | Practical Lab | EASY            | 8 min            |
-| [    2.3: Adding Callback functionality to the flows](#23-adding-callback-functionality-to-the-flows) | Practical Lab | EASY            | 8 min            |
-| [    2.4: Business Hours Configuration](#24-business-hours-configuration) | Practical Lab | EASY            | 8 min            |
-| [Part 3: Introduction to Flow Debugger](#part-3-introduction-to-flow-debugger)                   | Practical Lab | EASY            | 15 min | 
-| [Part 4: Introduction to Flow Versioning](#part-4-introduction-to-flow-versioning)                   | Practical Lab | EASY            | 15 min | 
+| [Part 1: Introduction to the new Admin Experience](#part-1-introduction-to-the-new-admin-experience) | Exploration | EASY             | 10 min           |
+| [    1.1: Control Hub User Management Tasks](#11-control-hub-user-management-tasks)               | Activity      | EASY             | 10 min           |
+| [    1.2: Contact Center User Configuration](#12-contact-center-user-configuration)               | Activity      | EASY             | 10 min            |
+| [    1.3: Bulk Operations](#13-bulk-operations)                                                   | Activity     | EASY             | 5 min            |
+| [    1.4: Access to the Agent Desktop](#14-access-to-the-agent-desktop)                           | Activity      | EASY             | 10 min           |
+| [Part 2: Introduction to Flow Designer](#part-2-introduction-to-flow-designer) | Exploration | EASY    | 10 min|  
+| [    2.1: Configuring tenant for Call Delivery](#21-configuring-tenant-for-call-delivery)        | Activity | EASY            | 10 min           |
+| [    2.2: Adding Text-To-Speech to the flow](#22-adding-text-to-speech-to-the-flow) | Activity | EASY            | 8 min            |
+| [    2.3: Adding Callback functionality to the flows](#23-adding-callback-functionality-to-the-flows) | Activity | EASY            | 8 min            |
+| [    2.4: Business Hours Configuration](#24-business-hours-configuration) | Exploration | EASY            | 8 min            |
+| [Part 3: Introduction to Flow Debugger](#part-3-introduction-to-flow-debugger)                   | Exploration | EASY            | 15 min | 
+| [Part 4: Introduction to Flow Versioning](#part-4-introduction-to-flow-versioning)                   | Exploration | EASY            | 15 min | 
 | [Part 5: Flow Error Handling](#part-5-flow-error-handling)                   | Practical Lab | EASY            | 15 min |
+| [Part 6: Workflow in Outdial Entry Point](#part-6-workflow-in--outdial-entry-point)                   | Exploration | EASY            | 15 min |
 | [Bonus: Experience Management](#bonus-experience-management)                   | Practical Lab | EASY            | 15 min | 
 
 
@@ -833,6 +834,77 @@ Activity Level Error Handling
 
 
 <img src="/assets/images/fe_15.png">
+
+---
+
+# Part 6: Introduction to the new Admin Experience 
+
+The intend of this feature is to get workflow support for Outbound
+
+With this feature, we will get the the option to give the flow, Music on Hold and outbound queue in outdail entry point page on portal. if we don't provide the flow,moh and outdail queue details to the entry point then by default the configurations present will be taken for the call execution which is without flow
+
+## 6.1: Create an Outbound flow
+
+1. Download the [Outbound Flow Template](https://webexcc.github.io/../../../assets/files/WebexOne_OutdialFlow.json){:target="\_blank"}
+
+2. Follow the similar steps provided in `Section 2.1` to import and publish the flow
+
+3. Within the flow, navigate to Event Flows notice that the Screen pops configured for the AgentOffered event
+
+<img src="/assets/images/fe_27.png">
+
+---
+
+## 6.2: Create an Outdial Entry Point
+
+1. Click on Provisioning > Entry Points/Queues > Outdial Entry point
+
+2. Enter the `Name`, `Flow`, `Music On Hold`, `Outdial Queue`
+
+<img src="/assets/images/fe_26.png">
+
+### Update the Desktop profile 
+
+- Navigate to **_Contact Center Users_** under the **_DESKTOP MANAGEMENT_**.
+
+- Select the Agent profile assigned to the user under **_Desktop Profile_**
+
+- Select **_Dial plans_** and under **_Outdial Entry Point_**, enter the outdial entry point created in the above step 
+
+<img src="/assets/images/fe_28.png">
+
+
+## 6.3: Verify the configuration 
+
+Place an outbound call as an agent from Agent Desktop 
+
+> **Note:** The `Outdial queue` selected as part of the outdail entry point is currently purely for reporing purposes. 
+{: .block-warning }
+
+## 6.4: Caveats 
+
+### Unsupported Flow Activities 
+
+Below core activities are not supported for the outdail voice contacts. If we configure these in flow, these activities will fail with Unsupported flow activity reason.
+
+- Queue Contact Activity
+- QueueToAgent Activity
+- Callback Activity
+- Get Queue Info Activity
+- Advanced Queue Info Activity
+- Blind Transfer Activity
+
+### Supported Flow Activities 
+
+Below Activities can we used in flow for outdail voice contacts. 
+
+- HTTP Request
+- Condition
+- Parse
+- Set Variable
+- Business Hours
+- EndFlow
+- Screen PopUp
 
 ---
 
