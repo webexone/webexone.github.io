@@ -12,12 +12,21 @@ In **Part 1**, we will explore the **Webex Contact Center Agent Experience** and
 In **Part 2**, we will examine the **Webex Contact Center Supervisor Experience** and the associated administrative toggles for configuring supervisors in the Webex Contact Center.
 
 <script>
-    function update(){them = Array.from(document.querySelectorAll("input")).reduce((acc, input) => ({...acc, [input.id + "_out"] : input.value}),{});
+
+    function update()
+    {
+      them = Array.from(document.querySelectorAll("input")).reduce((acc, input) => 
+      ({...acc, [input.id + "_out"] : input.value}),{});
    Object.entries(them).forEach((entry) => {
     Array.from(document.getElementsByClassName(entry[0])).forEach((element,index) => 
     {
-      console.log(document.getElementsByClassName(entry[0])[index].innerHTML); 
-      document.getElementsByClassName(entry[0])[index].innerHTML = entry[1];
+
+ console.log(document.getElementsByClassName(entry[0])[index].innerHTML); 
+ let attendeeId= document.getElementsByClassName(entry[0])[index].innerHTML;
+      if(Number(attendeeId) > 99){
+        attendeeId = entry[1];
+      }
+      else{ attendeeId = '0' + entry[1];}
     })})
 
   event.preventDefault()
@@ -25,6 +34,7 @@ In **Part 2**, we will examine the **Webex Contact Center Supervisor Experience*
     localStorage.setItem("attendeeID",document.forms["attendee-form"][1].value)
   }  
   }
+
 </script>
 
 # Table of Contents
