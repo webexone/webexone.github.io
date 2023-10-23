@@ -16,7 +16,7 @@ In **Part 2**, we will examine the **Webex Contact Center Supervisor Experience*
 > Jump to any section using the live navigation on the right!
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
+  document.addEventListener('DOMContentLoaded', function update () {
     const form = document.forms['attendee-form'];
     if (form) {
       form.addEventListener('submit', function (event) {
