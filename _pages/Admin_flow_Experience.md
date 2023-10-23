@@ -465,7 +465,7 @@ update()
 ### Create your first flow
 
 
-1. Download the [Flow Template](https://webexcc.github.io/../../../assets/files/flow_template.json){:target="\_blank"}
+1. Download the [Flow Template](https://webexone.github.io/../../../assets/files/flow_template.json){:target="\_blank"}
    > The file will open in a separate window.  
    >
    > If using Firefox, Select the save option.
