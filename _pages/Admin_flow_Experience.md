@@ -15,9 +15,18 @@ layout: post
     })})
 
   event.preventDefault()
-  if(document.forms["IVRdeets"][1].value != "Your Attendee ID"){
-    localStorage.setItem("AttendeeID",document.forms["IVRdeets"][1].value)
+  if(document.forms["IVRdeets"][0].value != "Your EP DN"){
+    localStorage.setItem("EPDN",document.forms["IVRdeets"][0].value)
+  }
+   if(document.forms["IVRdeets"][1].value != "Your Attendee ID"){
+    localStorage.setItem("attendeeID",document.forms["IVRdeets"][1].value)
   }  
+  if(document.forms["IVRdeets"][2].value != "Agent Email"){
+    localStorage.setItem("agentEmail",document.forms["IVRdeets"][2].value)
+  } 
+  if(document.forms["IVRdeets"][3].value != "Supervisor Extension"){
+    localStorage.setItem("supervisorEXT",document.forms["IVRdeets"][3].value)
+  }
   }
 </script>
 
@@ -93,7 +102,7 @@ You can do the tasks from the lab guide either on the **Lab Tenant** (you need t
 </form>
 
 <script>
-document.forms["IVRdeets"][1].value = localStorage.getItem("AttendeeID") || "Your Attendee ID"
+document.forms["IVRdeets"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID"
 
 
 update()
