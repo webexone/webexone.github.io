@@ -39,7 +39,7 @@ Last modified: Wed, 20 Sep 2023
 | [    2.3: Adding Callback functionality to the flows](#adding-text-to-speech-to-the-flow) | Practical Lab | EASY            | 8 min            |
 | [    2.4: Business Hours Configuration](#business_hours_configuration) | Practical Lab | EASY            | 8 min            |
 | [Part 3: Introduction to Flow Debugger](#introduction-to-flow-debugger)                   | Practical Lab | EASY            | 15 min | 
-| [Part 4:: Introduction to Flow Versioning](#introduction-to-flow-versioning)                   | Practical Lab | EASY            | 15 min | 
+| [Part 4: Introduction to Flow Versioning](#introduction-to-flow-versioning)                   | Practical Lab | EASY            | 15 min | 
 | [Part 5: Flow Error Handling](#flow_error_handling)                   | Practical Lab | EASY            | 15 min |
 | [Bonus: Experience Management](#bonus---experience-management)                   | Practical Lab | EASY            | 15 min | 
 
@@ -788,7 +788,7 @@ Activity Level Error Handling
 | [Configure Post Interaction Digital Survey](#configure-post-interaction-digital-survey) | Practical Lab | EASY | 10 min |
 
 
-## Overview of the lab
+### Overview of the lab
 In this lab, we will configure all the required elements to collect and view end-customer feedback using the new Experience Management.
 
 
@@ -822,16 +822,12 @@ In this lab, we will configure all the required elements to collect and view end
 
   ---
 
-## Introduction to Experience Management Post Interaction and Post Call Surveys
+## 1. Introduction to Experience Management Post Interaction and Post Call Surveys
 > Experience Management is a next-gen tool that facilitates post interaction surveys and outcomes. It allows you to track and measure customer satisfaction using anchor metrics like Net Promoter Score (NPS), Customer Effort Score (CES), and Customer Satisfaction (CSAT). Webex Contact Center brings in an integration of Experience Management for its post call survey interactive voice response (PCS IVR) and digital channels.
-
-<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/0049a028-85b6-4b56-90f7-1fc696201ea3" width="100%" height="100%" title="Introduction to Experience Management" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
-</div>
 
 
 ### Lab Section
-## Configure Post Call IVR Survey
+## 2. Configure Post Call IVR Survey
 
 ### Create a survey
 1. Click on Contact Center under Services from Control Hub 
@@ -953,7 +949,7 @@ In this lab, we will configure all the required elements to collect and view end
    
 ---
 
-## Provide a survey response
+## 3. Provide a survey response
 
 > **NOTE:** Refer to the section Basic Features in Lab 3 - Agent Desktop if you are unfamiliar with testing an incoming call
 {: .block-warning }
@@ -966,7 +962,7 @@ In this lab, we will configure all the required elements to collect and view end
 
 
 ---
-## Download and validate the survey response
+## 4. Download and validate the survey response
 
 1. Navigate to the Surveys page on Control Hub
 2. Click on the download button on the far right of your survey
