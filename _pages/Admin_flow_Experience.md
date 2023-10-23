@@ -28,20 +28,20 @@ Last modified: Wed, 20 Sep 2023
 
 | Topic                                                                                 | Lab Type           | Difficulty Level | Estimated length |
 | ------------------------------------------------------------------------------------- | ------------------ | ---------------- | ---------------- |
-| [Part 1: Introduction to the new Admin Experience](#introduction-to-the-new-admin-experience) | Watch & Understand | EASY             | 10 min           |
-| [    1.1: Control Hub User Management Tasks](#control-hub-user-management-tasks)               | Practical Lab      | EASY             | 10 min           |
-| [    1.2: Contact Center User Configuration](#contact-center-user-configuration)               | Practical Lab      | EASY             | 10 min            |
-| [    1.3: Bulk Operations](#bulk-operations)                                                   | Practical Lab      | EASY             | 5 min            |
-| [    1.4: Access to the Agent Desktop](#access-to-the-agent-desktop)                           | Practical Lab      | EASY             | 10 min           |
-| [Part 2: Introduction to Flow Designer](#introduction-to-flow-designer) | Watch & Understand | EASY    | 10 min|  
-| [    2.1: Configuring tenant for Call Delivery](#configuring-tenant-for-call-delivery)        | Practical Lab | EASY            | 10 min           |
-| [    2.2: Adding Text-To-Speech to the flow](#adding-text-to-speech-to-the-flow) | Practical Lab | EASY            | 8 min            |
-| [    2.3: Adding Callback functionality to the flows](#adding-text-to-speech-to-the-flow) | Practical Lab | EASY            | 8 min            |
-| [    2.4: Business Hours Configuration](#business_hours_configuration) | Practical Lab | EASY            | 8 min            |
-| [Part 3: Introduction to Flow Debugger](#introduction-to-flow-debugger)                   | Practical Lab | EASY            | 15 min | 
-| [Part 4: Introduction to Flow Versioning](#introduction-to-flow-versioning)                   | Practical Lab | EASY            | 15 min | 
-| [Part 5: Flow Error Handling](#flow_error_handling)                   | Practical Lab | EASY            | 15 min |
-| [Bonus: Experience Management](#bonus---experience-management)                   | Practical Lab | EASY            | 15 min | 
+| [Part 1: Introduction to the new Admin Experience](#part-1-introduction-to-the-new-admin-experience) | Watch & Understand | EASY             | 10 min           |
+| [    1.1: Control Hub User Management Tasks](#11-control-hub-user-management-tasks)               | Practical Lab      | EASY             | 10 min           |
+| [    1.2: Contact Center User Configuration](#12-contact-center-user-configuration)               | Practical Lab      | EASY             | 10 min            |
+| [    1.3: Bulk Operations](#13-bulk-operations)                                                   | Practical Lab      | EASY             | 5 min            |
+| [    1.4: Access to the Agent Desktop](#14-access-to-the-agent-desktop)                           | Practical Lab      | EASY             | 10 min           |
+| [Part 2: Introduction to Flow Designer](#part-2-introduction-to-flow-designer) | Watch & Understand | EASY    | 10 min|  
+| [    2.1: Configuring tenant for Call Delivery](#21-configuring-tenant-for-call-delivery)        | Practical Lab | EASY            | 10 min           |
+| [    2.2: Adding Text-To-Speech to the flow](#22-adding-text-to-speech-to-the-flow) | Practical Lab | EASY            | 8 min            |
+| [    2.3: Adding Callback functionality to the flows](#23-adding-callback-functionality-to-the-flows) | Practical Lab | EASY            | 8 min            |
+| [    2.4: Business Hours Configuration](#24-business-hours-configuration) | Practical Lab | EASY            | 8 min            |
+| [Part 3: Introduction to Flow Debugger](#part-3-introduction-to-flow-debugger)                   | Practical Lab | EASY            | 15 min | 
+| [Part 4: Introduction to Flow Versioning](#part-4-introduction-to-flow-versioning)                   | Practical Lab | EASY            | 15 min | 
+| [Part 5: Flow Error Handling](#part-5-flow-error-handling)                   | Practical Lab | EASY            | 15 min |
+| [Bonus: Experience Management](#bonus-experience-management)                   | Practical Lab | EASY            | 15 min | 
 
 
 # Part 1: Introduction to the new Admin Experience 
@@ -526,7 +526,7 @@ update()
 1. Click on Provisioning > Entry Points/Queues > Entry point
 2. Click Create new Entry point 
     > 
-    ><img src="assets/images/IVR/openEP.gif">
+    > <img src="assets/images/IVR/openEP.gif">
     >
     > Name your Entry Point EP_<w class="attendee_out">AttendeeID</w>
     >
@@ -546,7 +546,10 @@ update()
 
 ### Create your Entry Point mapping
 
-1. Click on Provisioning > Entry Point Mapping [Show Me](https://webexcc.github.io/../../../assets/images/IVR/openEPmap.gif){:target="\_blank"}
+1. Click on Provisioning > Entry Point Mapping
+    >
+    > <img src="assets/images/IVR/openEPmap.gif">
+    > 
 2. Click new mapping
     > In location, select "Office"
     >
