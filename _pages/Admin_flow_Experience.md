@@ -123,8 +123,8 @@ update()
 
 | **User Role** | **User email**                                                                | **Endpoint** |
 | ------------- | ----------------------------------------------------------------------------- | ------------- | 
-| Agent         | wxcclabs+agent_<w class="attendee_out">AttendeeID</w>@gmail.com | WebRTC |
-| Supervisor    | wxcclabs+supvr_<w class="attendee_out">AttendeeID</w>@gmail.com | Webex App |
+| Agent         | wxcclabs+agent_<w class="attendee_out">attendeeID</w>@gmail.com | WebRTC |
+| Supervisor    | wxcclabs+supvr_<w class="attendee_out">attendeeID</w>@gmail.com | Webex App |
 
 
 - Login to the [Control Hub](https://admin.webex.com){:target="\_blank"} with the admin account.
