@@ -722,19 +722,16 @@ The subsequent flow execution from BH activity takes the following priority:
 
 <img src="/assets/images/fe_17.png">
 
----
 
 - Click on `Working Hours` button and select **_Create Working Hours_**
 
-<img src="/assets/images/fe_18.png">
+<img src="/assets/images/fe_23.png">
 
----
 
 - Add a `Name`, `Timezone` and `Shift` to your schedule 
 
 <img src="/assets/images/fe_19.png">
 
----
 
 - Select `Save` at the bottom
 
@@ -744,15 +741,22 @@ The subsequent flow execution from BH activity takes the following priority:
 
 <img src="/assets/images/fe_20.png">
 
----
 
 - Now you can Go back to `Working Hours` button and select **_Create Working Hours_** and select the `Holiday Lists` created under `Additional Settings`
 
 <img src="/assets/images/fe_21.png">
 
----
 
 - Similar steps can be followed to create `Override` schedule 
+
+### 2. Verify the Configuration
+
+Verify the Business Hours configuration by using this on the flow 
+
+> **Tip:** Use the `Reference List` section within `Working Hours` to check the Entity Name the schedule is referenced by 
+{: .block-warning }
+
+<img src="/assets/images/fe_25.png">
 
 ---
 
