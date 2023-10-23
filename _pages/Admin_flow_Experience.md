@@ -598,7 +598,7 @@ update()
    > ---
 8. Place a test call to your EP DN
 
-> [Google Text-To-Speech Configuration](https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/217425-configure-google-text-to-speech-for-webe.html){:target="\_blank"}
+> Complete configuration steps: [Google Text-To-Speech Configuration](https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/217425-configure-google-text-to-speech-for-webe.html){:target="\_blank"}
 
 ## 2.3: Adding Callback functionality to the flows
 <img src="/assets/images/fe_5.png">
