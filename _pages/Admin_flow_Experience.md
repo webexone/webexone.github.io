@@ -776,7 +776,7 @@ Once the user selects an interaction, the Interaction Detail pane displays the l
 ---
 
 
-## 2. Verify the Flow Debugger functionality 
+## 3.2: Verify the Flow Debugger functionality 
 
 Place a call to the flow and trace the call through the Flow Debugger. 
 
