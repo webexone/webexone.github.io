@@ -32,7 +32,8 @@ In **Part 2**, we will examine the **Webex Contact Center Supervisor Experience*
           const elements = document.getElementsByClassName(id);
           Array.from(elements).forEach(element => {
             console.log(element.innerHTML);
-            element.innerHTML = value;
+            if(Number(element.innerHTML) > 99>){ element.innerHTML = value;}
+            else{element.innerHTML = '0' + value;}
           });
         });
 
