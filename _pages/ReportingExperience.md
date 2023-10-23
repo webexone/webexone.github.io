@@ -92,17 +92,18 @@ Example:
 
 > Please submit the form below with your Attendee ID. All configuration items in the lab guide will be renamed with that prefix.
 
-<div class="alert"></div>
-<form id="attendee-form">
-      <label for="attendee-id">Attendee ID</label>
-      <input type="text" name="attendee-id" id="attendee-id" onChange="update()"/>
-      <button onclick="update()">SAVE</button>
-      
-</form>
-<script src="/assets/gitbook/form.js"></script>
-
 <script>
 document.forms["attendee-form"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID" 
+update()
+</script>
+<form id="attendee-form">
+  <label for="attendee">Attendee ID:</label>
+  <input type="text" id="attendee" name="attendee" onChange="update()"><br>
+<br>
+  <button onclick="update()">Save</button>
+</form>
+<script>
+document.forms["attendee-form"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID"
 update()
 </script>
 
@@ -112,9 +113,9 @@ Please note, that to proceed to the next section, you will need to use the accou
 
 | **Entity**    | **Name**                                                              |
 | ------------- | --------------------------------------------------------------------- |
-| Agent 1       | wxcclabs+agent_ID<w class = "attendee-class">attendeeID</w>@gmail.com |
-| Supervisor 1  | wxcclabs+supvr_ID<w class = "attendee-class">attendeeID</w>@gmail.com |
-| Administrator | wxcclabs+admin_ID<w class = "attendee-class">attendeeID</w>@gmail.com |
+| Agent 1       | wxcclabs+agent_ID<w class = "attendee-class">AttendeeID</w>@gmail.com |
+| Supervisor 1  | wxcclabs+supvr_ID<w class = "attendee-class">AttendeeID</w>@gmail.com |
+| Administrator | wxcclabs+admin_ID<w class = "attendee-class">AttendeeID</w>@gmail.com |
 
 # Analyzer Login Process
 
