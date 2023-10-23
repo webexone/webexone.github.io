@@ -29,13 +29,13 @@ This lab will provide you with foundational and advanced knowledge of **Webex Co
 
 This Lab has been split into four parts.
 
-1. First part of this Lab **introduces you to the current Analyzer User Interface as well as the New Analyzer User Interface (Analyzer UX Refresh).**
+1. First part of this Lab **introduces** you to the **current Analyzer User Interface** as well as the **New Analyzer User Interface (Analyzer UX Refresh).**
 
    > Note: **Important to point out** that the New Analyzer User Interface is in **Early Access phase** and has access only to Historical Stock Reports.
    > {: .block-warning }
 
-2. In the second part we will look **how key Contact Center personas (Administrators, Supervisors and Contact Center Analysts) can use Analyzer to extract some key Contact Center KPIs and actionable insights around Contact Center Operational Performance, Customer Experience and Agent Performance using the various Stock reports and dashboards.**
-3. In the third part we will walk through how we can **create custom reports to extract key Contact Center data insights**.
+2. In the second part we will look how **key Contact Center personas (Administrators, Supervisors and Contact Center Analysts) can use Analyzer** to extract some key Contact Center KPIs and actionable insights around **Contact Center Operational Performance, Customer Experience and Agent Performance** using the various **Stock** reports and dashboards.
+3. In the third part we will walk through how we can **create custom reports** to extract key Contact Center data insights.
 4. Last chapter covers key data and reporting capabilities like the **export of reporting data, report scheduling and the available Data APIs** to extract the data.
 
 # Table of Contents
@@ -62,7 +62,7 @@ This Lab has been split into four parts.
 1. Ensure that you have received your tenant login credentials (Administrator, Supervisor and Agent) from the Lab proctors.
 2. Make sure you are able to login into [Admin Portal](https://admin.webex.com) & [Analyzer](https://analyzer-v2.wxcc-us1.cisco.com/analyzer/home).
 3. In this Lab, Part 1 and 2 already have historical data created to capture the key insights, hence no need to login Agent or make calls to complete those parts.
-4. In Part 3, we will look into some Realtime data insights for which make sure you logged-in with your supervisor-agent or Agent.
+4. In Part 3, we will look into some Realtime data insights for which make sure you are logged-in with your Supervisor-Agent or Agent.
 
 ### You Will Need
 
@@ -73,7 +73,7 @@ This Lab has been split into four parts.
 
 2. The items listed below have been pre-configured for you:
    - Agent and Supervisor user accounts are configured and ready for login.
-   - You can access the Agent Desktop via the URL: https://desktop.wxcc-us1.cisco.com.
+   - You can access the Agent Desktop via the URL: [https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com).
    - As an agent, you're associated with two teams —designated by your Attendee ID— as "Team1" and "Team2".
 
 Example:
@@ -90,7 +90,7 @@ Example:
 
 ## Lab Configuration
 
-> Please submit the form below with your Attendee ID. All configuration items in the lab guide will be renamed with that prefix.
+> Please submit the form below with your Attendee ID in 3 digits long format (e.g. if your attendee ID is 51, please enter 051). All configuration items in the lab guide will be renamed with that prefix.
 
 <script>
 document.forms["attendee-form"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID" 
@@ -107,9 +107,9 @@ document.forms["attendee-form"][1].value = localStorage.getItem("attendeeID") ||
 update()
 </script>
 
-The following Administration entities have been configured for you via [Webex Control Hub](https://admin.webex.com){:target="\_blank"}
+The following Administration entities have been configured for you via [Webex Control Hub](https://admin.webex.com){:target="\_blank"}.
 
-Please note, that to proceed to the next section, you will need to use the accounts shown in the top 3 rows.
+Please note, that to proceed to the next section, you will need to use the accounts shown below.
 
 | **Entity**    | **Name**                                                            |
 | ------------- | ------------------------------------------------------------------- |
@@ -119,7 +119,7 @@ Please note, that to proceed to the next section, you will need to use the accou
 
 # Analyzer Login Process
 
-1.  Make sure you are able to login into Administrator Portal ([admin.webex.com](https://admin.webex.com)() using your Supervisor credentials.
+1.  Make sure you are able to login into Administrator Portal ([admin.webex.com](https://admin.webex.com) using your Supervisor credentials.
 2.  Once logged-in, go to `Quick Links` on the right and click on `Analyzer`.
     ![analyzer](/assets/images/reporting/intro_CH.png)
     ![analyzer](/assets/images/reporting/analyzerLogin.gif)
@@ -135,14 +135,16 @@ You have 2 options to login as an Agent:
 
 ### Login As Supervisor-Agent
 
-| **User Role** | **User email**                                                   | **Endpoint** |
-| ------------- | ---------------------------------------------------------------- | ------------ |
-| Supervisor    | wxcclabs+supvr\_<w class="attendee_out">AttendeeID</w>@gmail.com | Webex App    |
+> Note: Currently supervisors can not login via Desktop/WebRTC. If you want to test a login with WebRTC, make sure to sign in as an agent, as per the steps on the next chapter.
+
+| **User Role** | **User email**                                                   | **Endpoint**        |
+| ------------- | ---------------------------------------------------------------- | ------------------- |
+| Supervisor    | wxcclabs+supvr\_<w class="attendee_out">AttendeeID</w>@gmail.com | Webex App/Extension |
 
 - Login with Supervisor Credentials [admin.webex.com](https://admin.webex.com).
 - Go to `Quick Links` --> Click on `Desktop`.
 - Select the Role as : `Supervisor and Agent`.
-- Enter the Dialed number provided (if it not pre-filled).
+- Enter the Dialed number provided (if it is not pre-filled).
 - Team should be pre-populated.
 - Click `Submit`.
 
@@ -150,7 +152,7 @@ You have 2 options to login as an Agent:
 
 ### Login in the Webex app for PC or Mac
 
-> In this lab, we will use the Webex app for your PC or Mac for the **supervisor** account.
+> In this lab, we can use the Webex app for PC or Mac to login to the Desktop with the **supervisor** account.
 > {: .block-warning }
 
 - Download Link: **[https://www.webex.com/downloads.html](https://www.webex.com/downloads.html){:target="\_blank"}**
@@ -159,19 +161,19 @@ You have 2 options to login as an Agent:
 
 - Install the application on your PC/Mac.
 
-- Open Webex app and сlick **Sign In**. Specify the supervisor credentials.
+- Open Webex app and сlick **Sign In**. Enter the provided supervisor credentials.
 
 ### Agent Desktop Login
 
-| **User Role** | **User email**                                                   | **Endpoint** |
-| ------------- | ---------------------------------------------------------------- | ------------ |
-| Agent         | wxcclabs+agent\_<w class="attendee_out">AttendeeID</w>@gmail.com | WebRTC       |
+| **User Role** | **User email**                                                   | **Endpoint**   |
+| ------------- | ---------------------------------------------------------------- | -------------- |
+| Agent         | wxcclabs+agent\_<w class="attendee_out">AttendeeID</w>@gmail.com | WebRTC/Desktop |
 
 > **Note**: To log in to the agent desktop, use either a different web browser or a new incognito web page. This will prevent the browser caching issues with admin and agent credentials.
 >
 > {: .block-tip }
 
-- Navigate to **[https://desktop.wxcc-us1.cisco.com/](https://desktop.wxcc-us1.cisco.com/){:target="\_blank"}** in the chrome browser with the incognito mode.
+- Navigate to **[Desktop](https://desktop.wxcc-us1.cisco.com/){:target="\_blank"}** in the chrome browser with the incognito mode.
 
 - Enter the agent’s **email ID**.
 
@@ -181,7 +183,7 @@ You have 2 options to login as an Agent:
 
 - Select the team **<w class="attendee_out">Your_Attendee_ID</w>\_Team1**.
 
-- Click the **_Submit_** button. The browser may ask you to confirm use the microphone from the browser.
+- Click the **_Submit_** button. The browser may ask you to confirm the use the microphone from the browser.
 
 - Make sure that you are successfully logged in to the Agent Desktop.
 
@@ -191,13 +193,13 @@ You have 2 options to login as an Agent:
 
 ## 1.1 Analyzer User Interface
 
-This lab is designed to give you basic understanding of Analyzer, user interface features, access controls and permissions as well as the default dashboards available in the Admin Portal. In the following exercises, the goal is the familiarization with the product, interfaces and terminology.
+This lab is designed to give you **basic understanding of Analyzer, user interface features** as well as the default dashboards available in the Admin Portal. In the following exercises, the goal is the **familiarization** with the product, interfaces and terminology.
 
 ![analyzer](/assets/images/reporting/old_ux_intro.gif)
 
-1. At this point you should be already logged-in to Analyzer.
+1. At this point, you should be already logged-in to Analyzer. If not, use the steps above to login to [Analyzer](https://analyzer-v2.wxcc-us1.cisco.com/analyzer/home).
 
-2. As you login you may see this pop-up prompting to “Explore New Analyser”.
+2. As you login, you may see this pop-up prompting to “Explore New Analyser”.
    $${\color{red}DO\space NOT\space LAUNCH\space it\space at\space this\space time\space and\space Click\space Cancel.}$$
    ![refesh-popup](/assets/images/reporting/1_1_RefreshPopup.png)
 
@@ -222,12 +224,12 @@ This lab is designed to give you basic understanding of Analyzer, user interface
 
 6. Then, navigate to the following path: <br>
    ![Path](/assets/images/reporting/1_1_path.png) <br>
-   Click ![ListView](/assets/images/reporting/1_1_ListView.png) to change the view to List view.
+   Click ![ListView](/assets/images/reporting/1_1_ListView.png) to change the view to `List` view.
    ![List](/assets/images/reporting/1_1_List.png)
 
-   - Here you can sort the reports based on a specific header by clicking on it.
-   - Notice the **Temporal Scope**, which can be either **Realtime, Compound** or **Historical**. (all of these will be **realtime**)
-   - ID is <ins>unique</ins> for every report and a report can also be searched by its ID.
+   - Here you can sort the reports based on a specific header by clicking on the header.
+   - Notice the **Temporal Scope**, which can be either **Realtime, Compound** or **Historical**.
+   - ID is <ins>unique</ins> for every report and a report can also be searched by its `ID` besides the name.
 
 7. Click the ![Dots](/assets/images/reporting/1_1_dots.png) icon next to the report and then click on **Details**. <br>
    ![Details](/assets/images/reporting/1_1_Details.png) <br>
@@ -240,97 +242,98 @@ This lab is designed to give you basic understanding of Analyzer, user interface
 
    - This provides you with an online version of the [Analyzer User Guide](https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cust_contact/contact_center/webexcc/Analyzer_2/b_analyzeronloinehelp/_b_analyzeronloinehelp_chapter_01.html), a great document that provides information about all the available <ins>stock reports</ins>, <ins>variables</ins> as well as <ins>functionalities</ins> of Analyzer.
 
-9. Click on **Tenant Time zone** option on the header. Set it to the time-zone in which you want to Run Visualizations (**Tenant or Browser**).
+9. Click on **Tenant Time zone** option on the header. Set it to the time-zone in which you want to Run Visualizations (You have two possible options: **Tenant or Browser**).
    ![TimeZone](/assets/images/reporting/1_1_Timezone.png)
 
 ## 1.2 NEW Analyzer User Interface
 
-The New Webex Contact Center Analyzer offers an enhanced and intuitive user interface that enables you to manage stock historical dashboards. It provides faster, more efficient, and focused views of historical analytics for Webex Contact Center, enhancing the integrated experience. The stock historical dashboards offer ready-to-use metrics, allowing you to generate metrics related to entry points, queues, teams, contacts, and agents for strategic decision-making.
+The **New Webex Contact Center Analyzer (Analyzer UX Refresh)** offers an enhanced and intuitive user interface that enables you to manage stock historical dashboards. It provides faster, more efficient, and focused views of historical analytics for Webex Contact Center, enhancing the integrated experience. The stock historical dashboards offer ready-to-use metrics, allowing you to generate metrics related to entry points, queues, teams, contacts, and agents for strategic decision-making.
 
-> Note that the New Analyzer today does not currently provide custom dashboards. To access custom dashboards, use the existing Analyzer. Extending custom reporting support and adding real-time reports to New Analyzer UX is in our roadmap.
+> Note: The New Analyzer today does not currently provide custom dashboards. To access custom dashboards, you can use the existing Analyzer. Extending custom reporting support and adding real-time reports to New Analyzer UX is in our roadmap.
 > {: .block-warning }
 
 1. Login into the **New Analyzer**:
+
    - Click `Try Now` on the current Analyzer page.
      ![TryNow](/assets/images/reporting/1_2_TryNow.png)
      - New Analyzer will be cross-launched.
-     - It may ask you to enter your supervisor user name again.
-     - You can also navigate between the new Analyzer and existing Analyzer using the browser tab.
+     - It may ask you to enter your supervisor username again.
+     - You can also navigate between the new Analyzer and existing Analyzer using the browser tabs.
 
-![NewLogin](/assets//images/reporting/1_2_login_new_ux.gif)
+   ![NewLogin](/assets//images/reporting/1_2_login_new_ux.gif)
 
-You can see a new home page with centralized dashboards and reports. You'll see a new search bar to search through the various dashboards.
+   You can see a new home page with centralized dashboards and reports. You'll see a new search bar to search through the various dashboards.
 
-![New UX Home Page analyzer](/assets/images/reporting/1_2_UX_UI.gif)
+   ![New UX Home Page analyzer](/assets/images/reporting/1_2_UX_UI.gif)
 
-2. Report Tabs: Reports and Dashboards are grouped under following Tabs :
+2. Report Tabs: Reports and Dashboards are grouped under following `Tabs`:
 
    - **All:** Lists all the dashboards and reports.
-   - **Recent:** Lists the most recent dashboards that you visit.
-   - **Favorite:** Lists the dashboards that you mark as favorite.
+   - **Recent:** Lists the most recent dashboards that you viewed.
+   - **Favorite:** Lists the dashboards that you have marked as favorite.
    - **Stock:** Lists the predefined stock historical dashboards provided by Cisco.
 
-   Click on each Tab and make a **note of number of reports** in each Tab.
+   Click on each Tab and make a **note of the number of reports** in each Tab.
 
    ![Tabs](/assets//images/reporting/1_2_Tabs.png)
 
 3. Click on `star` icon next to the `Abandoned Call Detail Activity Report` to mark it as your **Favorite**.
 
-![Favourite](/assets//images/reporting/1_2_Favourite.png)
+   ![Favourite](/assets//images/reporting/1_2_Favourite.png)
 
-This allow you to access your favorite dashboards easily under the dedicated `Favorite` tab.
+   This allows you to access your favorite dashboards easily under the dedicated `Favorite` tab.
 
-4. Next, view the `Agent Call Summary Report`, for this double-click on the dashboard name or select **View** under the **Actions** tab.
+4. Next, view the `Agent Call Summary Report`, for this **double-click** on the dashboard name or select **View** under the **Actions** tab.
 
-![View](/assets//images/reporting/1_2_View.png)
-![New UX Stock Report UI](/assets/images/reporting/1_2_New_UX.gif)
+   ![View](/assets//images/reporting/1_2_View.png)
+   ![New UX Stock Report UI](/assets/images/reporting/1_2_New_UX.gif)
 
-5. Next, review again the count of the reports in each tab and also if your **recently executed** report and **Favorite** marked reports are visible under the respective tabs.
+5. Next, review again the count of the reports in each tab and also if your **recently executed** report and **favorite marked** reports are visible under the respective tabs.
 
-![Tabs](/assets//images/reporting/1_2_Tabs.png)
+   ![Tabs](/assets//images/reporting/1_2_Tabs.png)
 
 6. Use the `Sort By` drop-down menu to filter stock dashboards by options such as **Name, Created By,** and **Last Edited By**. This enables easy organization and navigation based on your preferred sorting criteria.
 
-![LastEditedBy](/assets//images/reporting/1_2_LastEditedBy.png)
+   ![LastEditedBy](/assets//images/reporting/1_2_LastEditedBy.png)
 
 7. Switch to **Card View** by cliking ![CardIcon](/assets//images/reporting/1_2_CardIcon.png).
 
-![CardView](/assets//images/reporting/1_2_CardView.png)
+   ![CardView](/assets//images/reporting/1_2_CardView.png)
 
-The **List View** is the default view and allows easy navigation and quick access to the entire collection of stock dashboards.
+   The **List View** is the default view and allows easy navigation and quick access to the entire collection of stock dashboards.
 
-The **Card View** provides a compact and visual representation of the stock dashboards, displaying snapshots of 15 dashboards in a single view.
+   The **Card View** provides a compact and visual representation of the stock dashboards, displaying snapshots of 15 dashboards in a single view.
 
 8. Next, switch back to the List view and make a note of the `Labels` column.
 
-We've replaced folder-based navigation with labels. The predefined labels help you find and sort stock historical dashboards. The labels are color-coded to enhance the user experience. You can search for dashboards using labels.
+   We've replaced folder-based navigation with `labels`. The **predefined labels** help you find and sort stock historical dashboards. The labels are color-coded to enhance the user experience. You can search for dashboards using labels.
 
-- All stock reports by default marked with label `Stock`.
-  ![Labels](/assets//images/reporting/1_2_Labels.png)
+   - All stock reports by default are marked with label `Stock`. <br>
+     ![Labels](/assets//images/reporting/1_2_Labels.png)
 
-9. Next, use the search box to find a stock dashboard using different criteria or comma separated words. For this example, search the word `transition`.
+9. Next, use the search box to find a stock dashboard using different criteria or comma separated words. For this example, search the word `transition`. <br>
    ![TransitionSearch](/assets//images/reporting/1_2_TransitionSearch.png)
 
-This would list all the **Transition reports**, which are built for easy reporting insights for customers migrated from UCCX but also useful for any customer
+   This would list all the **Transition reports**, which are built for easy reporting insights for customers migrated from UCCX but also useful for any customer.
 
-![TransitionReports](/assets//images/reporting/1_2_TransitionReports.png)
+   ![TransitionReports](/assets//images/reporting/1_2_TransitionReports.png)
 
-Customize your search selecting criteria such as **Name, Labels, Created By,** or **Last Edited By** from the drop-down menu.
+   Customize your search selecting criteria such as **Name, Labels, Created By,** or **Last Edited By** from the drop-down menu.
 
 10. Next, click on the user profile icon on the top right of the user interface provides user information. The time zone settings and dark mode options are available in the user profile settings.
 
     - **Time Zone**
 
-    By default, the new Analyzer shows the tenant time zone. You can update the browser settings if necessary. Scheduled jobs always run in the tenant time zone.
+      By default, the new Analyzer shows the tenant time zone. You can update the browser settings if necessary. <ins>Scheduled jobs always run in the tenant time zone.</ins>
 
     - **Dark Mode**
 
-    You have the option to switch between dark and light screen modes to suit your viewing experience.
+      You have the option to switch between dark and light screen modes to suit your viewing experience.
 
 11. Next, let's take a look at **key functions** for a stock report. Go to the `Agent Call Summary Report`, which you viewed in **step #3**.
 
 12. By default, data is displayed in `Table View` for `Last week`. Change it to `This month` and click **Apply**.
-    What you see here is Agent summary data for all the agents for this month.
+    What you see here is the Agent summary data for all the agents for this month.
 
     > Note: In the Table view of a dashboard, Analyzer supports a maximum of 100 columns and up to 100,000 rows.
 
@@ -340,17 +343,17 @@ Customize your search selecting criteria such as **Name, Labels, Created By,** o
 
     You can **pin columns** or **move columns** of a dashboard to the right and left of the table based on your requirements.
 
-    - On the dashboard, on the `Total Onbound` column, click the hamburger menu next to the column header.
+    - On the dashboard, on the `Total Onbound` column, click the hamburger menu next to the column header. <br>
       ![Hamburger](/assets//images/reporting/1_2_Hamburger.png)
-    - Go to `Pin Column` and click `Pin Left`.
-      ![PinLeft](/assets//images/reporting/1_2_PinLeft.png)
-      This would move the **Total Inbound** column to the left of the table.
+    - Go to `Pin Column` and click `Pin Left`. <br>
+      ![PinLeft](/assets//images/reporting/1_2_PinLeft.png) <br>
+      This would move the **Total Inbound** column to the left of the table. <br>
       ![MovedLeft](/assets//images/reporting/1_2_MovedLeft.png)
 
 15. **Autosize Column**
 
-    Next, let's autosize all the column as data in some column is not clearly visible because of last textual size. To do so:
-    On the dashboard column, click the hamburger menu next to the column header.
+    Next, let's autosize all the columns as data in some columns is not clearly visible because of last textual size. To do so:
+    On the dashboard column, click the **hamburger** menu next to the column header.
 
     1. Click `Autosize This Column`.
     2. For all columns, click `Autosize All Columns`.
@@ -361,7 +364,7 @@ Customize your search selecting criteria such as **Name, Labels, Created By,** o
 
 16. **Advanced Filtering**
 
-    We already saw how you can use predefined filters on the reports. Beyond that you can also filter the data data for other coloums in the reports.
+    We already saw how you can use predefined filters on the reports. Beyond that, you can also filter the data data for other columns in the reports.
     In the current `Agent Call summary` report, let's filter the data to identify any agents which handled low number of calls.
 
     For this, click on Hamburger sign ![HambSign](/assets//images/reporting/1_2_HambSign.png) next to the `Total Inbound` Column --> Click on the Filter ![FilterSign](/assets//images/reporting/1_2_FilterSign.png) option and select **“0”** and **“1”**. Data will be updated immediately (No need to click Apply).
@@ -374,13 +377,14 @@ Customize your search selecting criteria such as **Name, Labels, Created By,** o
 
     ![ColumnView](/assets//images/reporting/1_2_ColumnView.png)
 
-18. Switch the view of the report to `Chart` from the `Table` by clicking ![ChartIcon](/assets//images/reporting/1_2_ChartIcon.png) on top right corner of the report.
+18. Switch the view of the report from `Table` to `Chart` by clicking ![ChartIcon](/assets//images/reporting/1_2_ChartIcon.png) on top right corner of the report.
 
-![ChartView](/assets//images/reporting/1_2_ChartView.png)
+    ![ChartView](/assets//images/reporting/1_2_ChartView.png)
 
-You would notice a graphical view of the data for `Total Inbound Contact` each agent handled during this month along with a trend line.
+    You would notice a graphical view of the data for the number of `Total Inbound Contact` each agent handled during this month along with a trend line.
 
-**Trend Line**
+#### Trend Line
+
 In **Chart** view, the new Analyzer introduces `Trend Line`, which is a visual representation of trends with data points. When viewing a dashboard, the presence of a trend line allows users to quickly identify and understand the underlying trend or pattern within the data.
 
 ![TrendLine](/assets//images/reporting/1_2_TrendLine.png)
