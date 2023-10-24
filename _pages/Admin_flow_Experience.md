@@ -775,7 +775,7 @@ Once the user selects an interaction, the Interaction Detail pane displays the l
 
 Place a call to the flow and trace the call through the Flow Debugger.
 
-> **Tip:** Selct `Edit: Off` to open the flow in `Read-Only` mode when using using the debug functionality
+> **Tip:** Selct **`**Edit: Off`** to open the flow in **`Read-Only`** mode when using using the debug functionality
 > {: .block-warning }
 
 # Part 4: Introduction to Flow Versioning
@@ -804,7 +804,7 @@ While looking at the previous versions history, by clicking on the clock icon lo
 
 ---
 
-While using goto activity(which points to another flow), the tag selection drop down appears in the properties pane(Figure 5). This allows flow developer to choose a specific tagged version to goto and their corresponding variables are used for mapping.
+While using goto activity(which points to another flow), the tag selection drop down appears in the properties pane. This allows flow developer to choose a specific tagged version to goto and their corresponding variables are used for mapping.
 
 <img src="/assets/images/fe_11.png">
 
