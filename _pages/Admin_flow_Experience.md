@@ -45,7 +45,7 @@ layout: post
 # Part 1: Introduction to the new Admin Experience
 
 In this Lab, we will go through Admin UI by completing the tasks that are required for the general pre-configuration of a tenant. These tasks are to be undertaken by a customer administrator. By following each of the steps, you would have prepared your tenant to begin configuring different services offered by the platform. At the end of the lab, you should be able to log in to an agent interface with the configured user extension.
-You can do the tasks from the lab guide either on the **Lab Tenant** (you need to request access from the lab support team) or you can do it directly on your **Gold Tenant** / personal tenant.
+You can do the tasks from the lab guide either on the **Lab Tenant** (you need to request access from the lab support team).
 
 ### Introduction
 
@@ -76,8 +76,6 @@ You can do the tasks from the lab guide either on the **Lab Tenant** (you need t
 
 ### 1. Define your Attendee ID and Other parameters
 
-> Please **SKIP task #1** if you are doing the labs on the **Gold Tenant**. The task below is only for the **Lab Tenant** option where you have received an email with the Lab tenant credentials. In a such case, please copy and paste the Attendee ID number from the email into the corresponding field (Example: IDXXX).
-> {: .block-tip }
 
 <script>
 document.forms["attendee-form"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID" 
@@ -85,25 +83,35 @@ update()
 </script>
 
 <form id="attendee-form">
-  <label for="attendee">Attendee ID:</label>
-  <input type="text" id="attendee" name="attendee" onChange="update()"><br>
+  <label for="attendeeID">Attendee ID:</label>
+  <input type="text" id="attendeeID" name="attendee" onChange="update()"><br>
 <br>
   <button onclick="update()">Save</button>
 </form>
 
 ### 2. Add agent and supervisor users and set the calling extensions
 
-> We don't recommend using the @maildrop.cc or @mailinator.com accounts on your **Gold Tenant** due to security reasons. An attacker can easily gain access to your tenant and execute the outbound calls.
-> {: .block-warning }
+The following Administration entities have been configured for you via [Webex Control Hub](https://admin.webex.com){:target="\_blank"}.
 
-> - As a result of the task below you should add two new users (agent and supervisor) to the Control Hub and assign Webex CC Agent and Supervisor licenses.
-> - Please **SKIP task #2** if you are working with the **Lab Tenant**. This tenant is integrated with SSO where the agents and supervisors have been pre-created according to the table below.
->   {: .block-tip }
+Please note, that to proceed to the next section, you will need to use the accounts shown below.
 
-| **User Role** | **User email**                                                   | **Endpoint** |
-| ------------- | ---------------------------------------------------------------- | ------------ |
-| Agent         | wxcclabs+agent\_<w class="attendee_out">AttendeeID</w>@gmail.com | WebRTC       |
-| Supervisor    | wxcclabs+supvr\_<w class="attendee_out">AttendeeID</w>@gmail.com | Webex App    |
+
+| **Entity**           | **Name**                                                            |
+| -------------------- | ------------------------------------------------------------------- |
+| Agent 1              | wxcclabs+agent_ID<w class = "attendee_out">attendeeID</w>@gmail.com |
+| Supervisor 1         | wxcclabs+supvr_ID<w class = "attendee_out">attendeeID</w>@gmail.com |
+| Administrator        | wxcclabs+admin_ID<w class = "attendee_out">attendeeID</w>@gmail.com |
+| Desktop Profile      | <w class = "attendee_out">attendeeID</w>\_desktopProfile            |
+| Entry Point          | <w class = "attendee_out">attendeeID</w>\_EP                        |
+| Queue                | <w class = "attendee_out">attendeeID</w>\_Q                         |
+| Team 1               | <w class = "attendee_out">attendeeID</w>\_team1                     |
+| Team 2               | <w class = "attendee_out">attendeeID</w>\_team2                     |
+| Outdial ANI          | <w class = "attendee_out">attendeeID</w>\_outdialANI                |
+| Outdial ANI Entry 1  | WebexOneOutdial ANI                                                 |
+| Address Book         | <w class = "attendee_out">attendeeID</w>\_addressBook               |
+| Address Book Entry 1 | WebexOne Addressbook Entry                                          |
+| Multimedia Profile   | <w class = "attendee_out">attendeeID</w>\_MMP                       |
+
 
 - Login to the [Control Hub](https://admin.webex.com){:target="\_blank"} with the admin account.
 
@@ -284,8 +292,6 @@ xxxx_team2,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
 
 ### 1. Download and Login in the Webex app for PC or Mac
 
-> Please **SKIP task #1** if you are doing the labs on the **Gold Tenant**.
-
 > For the **Lab Tenant** you would need Webex app for placing calls to Entry Point and sign in as supervisor. Alternatively, if you have the US number, you can use it as an supervisor's extension. This tenant does not allow numbers outside of the United States. In this lab, we will use the Webex app for your PC or Mac for the **supervisor** account.
 > {: .block-warning }
 
@@ -361,36 +367,6 @@ In this lab, we will configure all of the required elements to deliver a call in
 ---
 
 ### Fill in the form with the details provided and agent email address you created in the previous lab, then click "Update Directions"
-
-> Please skip the task if you are doing the labs on the Gold Tenant. The task below is only for the Lab Tenant option where you have received an email with the Lab tenant credentials. In a such case, please copy and paste the data from the email into the corresponding fields.
-> {: .block-tip }
-
-<form id="IVRdeets">
-  
-  <label for="DN">EP DN you were assigned:</label><br>
-  <input type="tel" id="DN" name="DN" onChange="update()"><br>
-  
-  <label for="attendee">Attendee ID:</label><br>
-  <input type="text" id="attendee" name="attendee" onChange="update()"><br>
-  
-  <label for="agent">Agent Email Address:</label><br>
-  <input type="email" id="agent" name="agent" onChange="update()"><br>
-
-<label for="supervisorEXT">Supervisor Extension:</label><br>
-<input type="number" id="agent" name="supervisorEXT" onChange="update()"><br>
-<br>
-
-<button onclick="update()">Update Directions</button>
-
-</form>
-
-<script>
-document.forms["IVRdeets"][0].value = localStorage.getItem("EPDN") || "Your EP DN"
-document.forms["IVRdeets"][1].value = localStorage.getItem("AttendeeID") || "Your Attendee ID" 
-document.forms["IVRdeets"][2].value = localStorage.getItem("agentEmail") || "Agent Email"
-document.forms["IVRdeets"][3].value = localStorage.getItem("supervisorEXT") || "Supervisor Extension"
-update()
-</script>
 
 ---
 
@@ -559,9 +535,9 @@ update()
 
 <img src="/assets/images/fe_4.gif">
 1. Select the PlayMessage node 
-2. Enable Text-to-speech toggle 
+2. Enable **_Text-to-speech_** toggle 
 3. Select the Connector  
-4. Select Output voice as en-US-Stantard-A 
+4. Select Output voice as **_en-US-Standard-A_** 
 5. Select Add Text-to-Speech Message 
 6. Enter a message 
 7. Validate and Publish the flow:   
@@ -811,7 +787,7 @@ The error handling feature tries to deal all kinds of errors during the flow exe
 
 ---
 
-# Part 6: Introduction to the new Admin Experience
+# Part 6: Workflow in Outdial Entry Point
 
 The intend of this feature is to get workflow support for Outbound
 
