@@ -7,7 +7,7 @@ layout: post
 
 <script>
     function update(){them = Array.from(document.querySelectorAll("input")).reduce((acc, input) => ({...acc, [input.id + "_out"] : input.value}),{});
-	Object.entries(them).forEach((entry) => {
+   Object.entries(them).forEach((entry) => {
     Array.from(document.getElementsByClassName(entry[0])).forEach((element,index) => 
     {
       console.log(document.getElementsByClassName(entry[0])[index].innerHTML); 
@@ -15,18 +15,9 @@ layout: post
     })})
 
   event.preventDefault()
-  if(document.forms["IVRdeets"][0].value != "Your EP DN"){
-    localStorage.setItem("EPDN",document.forms["IVRdeets"][0].value)
-  }
-   if(document.forms["IVRdeets"][1].value != "Your Attendee ID"){
-    localStorage.setItem("attendeeID",document.forms["IVRdeets"][1].value)
+   if(document.forms["attendee-form"][1].value != "Your_Attendee_ID"){
+    localStorage.setItem("attendeeID",document.forms["attendee-form"][1].value)
   }  
-  if(document.forms["IVRdeets"][2].value != "Agent Email"){
-    localStorage.setItem("agentEmail",document.forms["IVRdeets"][2].value)
-  } 
-  if(document.forms["IVRdeets"][3].value != "Supervisor Extension"){
-    localStorage.setItem("supervisorEXT",document.forms["IVRdeets"][3].value)
-  }
   }
 </script>
 
@@ -88,21 +79,18 @@ You can do the tasks from the lab guide either on the **Lab Tenant** (you need t
 > Please **SKIP task #1** if you are doing the labs on the **Gold Tenant**. The task below is only for the **Lab Tenant** option where you have received an email with the Lab tenant credentials. In a such case, please copy and paste the Attendee ID number from the email into the corresponding field (Example: IDXXX).
 > {: .block-tip }
 
-<form id="IVRdeets">
-
-<label for="attendee">Attendee ID:</label>
-<input type="text" id="attendee" name="attendee" onChange="update()"><br>
-
-<br>
-
-<button onclick="update()">Save</button>
-
-</form>
-
 <script>
-document.forms["IVRdeets"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID"
-
-
+document.forms["attendee-form"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID" 
+update()
+</script>
+<form id="attendee-form">
+  <label for="attendee">Attendee ID:</label>
+  <input type="text" id="attendee" name="attendee" onChange="update()"><br>
+<br>
+  <button onclick="update()">Save</button>
+</form>
+<script>
+document.forms["attendee-form"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID"
 update()
 </script>
 
@@ -179,7 +167,7 @@ update()
 
 - Click on `Create Multimedia Profile` button.
 
-- Input Name as **<w class="attendee_out">Your_Attendee_ID</w>\_MMP**.
+- Input Name as **<w class="attendee_out">attendeeId</w>\_MMP**.
 
 - In the Media Details section, leave the **Blended** mode and input `1` for **_Voice_**, `3` for **_Chat_**, `3` for **_Email_**, `3` for **_Social_**, and click **_Create_** button in the lower right corner.
 
@@ -187,7 +175,7 @@ update()
 
 - Navigate to **_USER MANAGEMENT_** in the left navigation panel and select **_Sites_**.
 
-- Click on `Create Site` button and provide the Name as **<w class="attendee_out">Your_Attendee_ID</w>\_Site**.
+- Click on `Create Site` button and provide the Name as **<w class="attendee_out">attendeeId</w>\_Site**.
 
 - Select your MMP in the **_Multimedia profile_** drop down list and hit **_Create_**.
 
@@ -197,7 +185,7 @@ update()
 
 - Click on `Create Team`.
 
-- Input _Name_ as **<w class="attendee_out">Your_Attendee_ID</w>\_Team1**.
+- Input _Name_ as **<w class="attendee_out">attendeeId</w>\_Team1**.
 
 - Select your site from the **_Parent Site_** drop-down.
 
@@ -263,14 +251,14 @@ Bulk Operations are available for the following configuration object types:
 
 - Once the task is **Completed** click on **_Download export file_** button under the **Action** and open the csv file in the notepad.
 
-- The first line is the headers, it is mandatory to have it during the import process. Remove all lines from the CSV file except the first line with headers and the line with **<w class="attendee_out">Your_Attendee_ID</w>\_Team1**.
+- The first line is the headers, it is mandatory to have it during the import process. Remove all lines from the CSV file except the first line with headers and the line with **<w class="attendee_out">attendeeId</w>\_Team1**.
 
 ```csv
 NAME,SITE,TYPE,MULTIMEDIA PROFILE,SKILL PROFILE,DN,CAPACITY,DESKTOP LAYOUT
 xxxx_team1,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
 ```
 
-- Rename the Team1 to **<w class="attendee_out">Your_Attendee_ID</w>\_Team2** and save the file. You should have only 2 rows in the file.
+- Rename the Team1 to **<w class="attendee_out">attendeeId</w>\_Team2** and save the file. You should have only 2 rows in the file.
   Example:
 
 ```csv
@@ -284,9 +272,9 @@ xxxx_team2,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
 
 - Click **Next** button and wait the results. The status should be shown as **Completed**.
 
-- Go to the Management Portal, click on **_Provisioning_** -> **_Team_** and verify that the **<w class="attendee_out">Your_Attendee_ID</w>\_Team2** is created.
+- Go to the Management Portal, click on **_Provisioning_** -> **_Team_** and verify that the **<w class="attendee_out">attendeeId</w>\_Team2** is created.
 
-- In the Management Portal directly associate the **<w class="attendee_out">Your_Attendee_ID</w>\_Team2** with your agent and supervisor by adding your users to that team (**Advanced Settings -> Agents**).
+- In the Management Portal directly associate the **<w class="attendee_out">attendeeId</w>\_Team2** with your agent and supervisor by adding your users to that team (**Advanced Settings -> Agents**).
 
 ## 1.4: Access to the Agent Desktop
 
@@ -326,7 +314,7 @@ xxxx_team2,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
 
 - In the **_Station Credentials_** pane, select **"Desktop"**.
 
-- Select the team **<w class="attendee_out">Your_Attendee_ID</w>\_Team1**.
+- Select the team **<w class="attendee_out">attendeeId</w>\_Team1**.
 
 - Click **_Submit_** button. The browser may ask you to confirm use the microphone from the browser.
 
@@ -432,13 +420,13 @@ update()
    >
    > > Click Add Group
    > >
-   > > Select <w class="attendee_out">Your_Attendee_ID</w>\_Team1
+   > > Select <w class="attendee_out">attendeeId</w>\_Team1
    > >
    > > Save Group
    > >
    > > Create second group
    > >
-   > > Select <w class="attendee_out">Your_Attendee_ID</w>\_Team2
+   > > Select <w class="attendee_out">attendeeId</w>\_Team2
    > >
    > > After: 60 Seconds in queue
    > >

@@ -30,10 +30,15 @@ In **Part 2**, we will examine the **Webex Contact Center Supervisor Experience*
 
         Object.entries(values).forEach(([id, value]) => {
           const elements = document.getElementsByClassName(id);
+
           Array.from(elements).forEach(element => {
+            
             console.log(element.innerHTML);
-            if(Number(element.innerHTML) > 99>){ element.innerHTML = value;}
-            else{element.innerHTML = '0' + value;}
+            if(Number(element.innerHTML) > 99){ element.innerHTML = value;}
+             console.log(`Got a 99+ attendee: ${element.innerHTML}`);
+            else{
+               console.log(`Got a sub 99 attendee: ${element.innerHTML}`);
+               element.innerHTML = `0${value}`;}
           });
         });
 
@@ -95,18 +100,19 @@ In **Part 2**, we will examine the **Webex Contact Center Supervisor Experience*
 > {: .block-warning }
 
 <script>
-document.forms["attendee-form"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID" 
-update()
-</script>
-<form id="attendee-form">
-  <label for="attendeeID">Attendee ID:</label>
-  <input type="text" id="attendeeID" name="attendee" onChange="update()"><br>
-<br>
-  <button onclick="update()">Save</button>
-</form>
-<script>
-document.forms["attendee-form"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID"
-update()
+    function update(){them = Array.from(document.querySelectorAll("input")).reduce((acc, input) => ({...acc, [input.id + "_out"] : input.value}),{});
+   Object.entries(them).forEach((entry) => {
+    Array.from(document.getElementsByClassName(entry[0])).forEach((element,index) => 
+    {
+      console.log(document.getElementsByClassName(entry[0])[index].innerHTML); 
+      document.getElementsByClassName(entry[0])[index].innerHTML = entry[1];
+    })})
+
+  event.preventDefault()
+   if(document.forms["attendee-form"][1].value != "Your_Attendee_ID"){
+    localStorage.setItem("attendeeID",document.forms["attendee-form"][1].value)
+  }  
+  }
 </script>
 
 <br/>
