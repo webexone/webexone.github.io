@@ -119,13 +119,22 @@ The following Administration entities have been configured for you via [Webex Co
 
 Please note, that to proceed to the next section, you will need to use the accounts shown below.
 
-> **wxcclabs+supvr_ID<w class = "attendee_out">attendeeID</w>@@gmail.com**
 
-| **User Role** | **User email**                                                   | **Endpoint** |
-| ------------- | ---------------------------------------------------------------- | ------------ |
-| Agent         | wxcclabs+agent_ID<w class = "attendee_out">attendeeID</w>@gmail.com| WebRTC       |
-| Supervisor    | wxcclabs+supvr_ID<w class = "attendee_out">attendeeID</w>@gmail.com | Webex App    |
-Administrator | wxcclabs+admin_ID<w class = "attendee_out">AttendeeID</w>@gmail.com |
+| **Entity**           | **Name**                                                            |
+| -------------------- | ------------------------------------------------------------------- |
+| Agent 1              | wxcclabs+agent_ID<w class = "attendee_out">attendeeID</w>@gmail.com |
+| Supervisor 1         | wxcclabs+supvr_ID<w class = "attendee_out">attendeeID</w>@gmail.com |
+| Administrator        | wxcclabs+admin_ID<w class = "attendee_out">attendeeID</w>@gmail.com |
+| Desktop Profile      | <w class = "attendee_out">attendeeID</w>\_desktopProfile            |
+| Entry Point          | <w class = "attendee_out">attendeeID</w>\_EP                        |
+| Queue                | <w class = "attendee_out">attendeeID</w>\_Q                         |
+| Team 1               | <w class = "attendee_out">attendeeID</w>\_team1                     |
+| Team 2               | <w class = "attendee_out">attendeeID</w>\_team2                     |
+| Outdial ANI          | <w class = "attendee_out">attendeeID</w>\_outdialANI                |
+| Outdial ANI Entry 1  | WebexOneOutdial ANI                                                 |
+| Address Book         | <w class = "attendee_out">attendeeID</w>\_addressBook               |
+| Address Book Entry 1 | WebexOne Addressbook Entry                                          |
+| Multimedia Profile   | <w class = "attendee_out">attendeeID</w>\_MMP                       |
 
 
 - Login to the [Control Hub](https://admin.webex.com){:target="\_blank"} with the admin account.
