@@ -833,7 +833,7 @@ The error handling feature tries to deal all kinds of errors during the flow exe
 
 ---
 
-# Part 6: Introduction to the new Admin Experience
+# Part 6: Workflow in Outdial Entry Point
 
 The intend of this feature is to get workflow support for Outbound
 
