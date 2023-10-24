@@ -108,28 +108,17 @@ update()
 > We don't recommend using the @maildrop.cc or @mailinator.com accounts on your **Gold Tenant** due to security reasons. An attacker can easily gain access to your tenant and execute the outbound calls.
 > {: .block-warning }
 
-<<<<<<< HEAD
-> - As a result of the task below you should add two new users (agent and supervisor) to the Control Hub and assign Webex CC Agent and Supervisor licenses. 
-> - Please **SKIP task #2** if you are working with the **Lab Tenant**. This tenant is integrated with SSO where the agents and supervisors have been pre-created according to the table below. 
-{: .block-tip }
+The following Administration entities have been configured for you via [Webex Control Hub](https://admin.webex.com){:target="\_blank"}.
 
+Please note, that to proceed to the next section, you will need to use the accounts shown below.
 
-
-
-| **User Role** | **User email**                                                                | **Endpoint** |
-| ------------- | ----------------------------------------------------------------------------- | ------------- | 
-| Agent         | wxcclabs+agent_<w class="attendee_out">AttendeeID</w>@gmail.com | WebRTC |
-| Supervisor    | wxcclabs+supvr_<w class="attendee_out">AttendeeID</w>@gmail.com | Webex App |
-=======
-> - As a result of the task below you should add two new users (agent and supervisor) to the Control Hub and assign Webex CC Agent and Supervisor licenses.
-> - Please **SKIP task #2** if you are working with the **Lab Tenant**. This tenant is integrated with SSO where the agents and supervisors have been pre-created according to the table below.
->   {: .block-tip }
->>>>>>> aac7372e892de65b41bc436126ffb5ed41c796f0
 
 | **User Role** | **User email**                                                   | **Endpoint** |
 | ------------- | ---------------------------------------------------------------- | ------------ |
-| Agent         | wxcclabs+agent\_<w class="attendee_out">AttendeeID</w>@gmail.com | WebRTC       |
-| Supervisor    | wxcclabs+supvr\_<w class="attendee_out">AttendeeID</w>@gmail.com | Webex App    |
+| Agent         | wxcclabs+agent_ID<w class = "attendee_out">AttendeeID</w>@gmail.com| WebRTC       |
+| Supervisor    | wxcclabs+supvr_ID<w class = "attendee_out">AttendeeID</w>@gmail.com | Webex App    |
+Administrator | wxcclabs+admin_ID<w class = "attendee_out">AttendeeID</w>@gmail.com |
+
 
 - Login to the [Control Hub](https://admin.webex.com){:target="\_blank"} with the admin account.
 
