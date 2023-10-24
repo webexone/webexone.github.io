@@ -38,7 +38,7 @@ In **Part 2**, we will examine the **Webex Contact Center Supervisor Experience*
              }
             else{
                console.log(`Got a sub 99 attendee: ${element.innerHTML}`);
-               if(element.includes('gmail.com'))
+               if(element.innerHTML.includes('gmail.com'))
                {
                 element.innerHTML = `0${value}`;
                 }
