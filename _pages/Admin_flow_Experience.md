@@ -91,9 +91,6 @@ You can do the tasks from the lab guide either on the **Lab Tenant** (you need t
 
 ### 1. Define your Attendee ID and Other parameters
 
-> Please **SKIP task #1** if you are doing the labs on the **Gold Tenant**. The task below is only for the **Lab Tenant** option where you have received an email with the Lab tenant credentials. In a such case, please copy and paste the Attendee ID number from the email into the corresponding field (Example: IDXXX).
-> {: .block-tip }
-
 <script>
 d<script>
 document.forms["attendee-form"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID" 
@@ -313,8 +310,6 @@ xxxx_team2,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
 
 ### 1. Download and Login in the Webex app for PC or Mac
 
-> Please **SKIP task #1** if you are doing the labs on the **Gold Tenant**.
-
 > For the **Lab Tenant** you would need Webex app for placing calls to Entry Point and sign in as supervisor. Alternatively, if you have the US number, you can use it as an supervisor's extension. This tenant does not allow numbers outside of the United States. In this lab, we will use the Webex app for your PC or Mac for the **supervisor** account.
 > {: .block-warning }
 
@@ -391,8 +386,6 @@ In this lab, we will configure all of the required elements to deliver a call in
 
 ### Fill in the form with the details provided and agent email address you created in the previous lab, then click "Update Directions"
 
-> Please skip the task if you are doing the labs on the Gold Tenant. The task below is only for the Lab Tenant option where you have received an email with the Lab tenant credentials. In a such case, please copy and paste the data from the email into the corresponding fields.
-> {: .block-tip }
 
 <form id="IVRdeets">
   
