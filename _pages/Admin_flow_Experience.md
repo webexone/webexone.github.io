@@ -60,7 +60,7 @@ layout: post
 # Part 1: Introduction to the new Admin Experience
 
 In this Lab, we will go through Admin UI by completing the tasks that are required for the general pre-configuration of a tenant. These tasks are to be undertaken by a customer administrator. By following each of the steps, you would have prepared your tenant to begin configuring different services offered by the platform. At the end of the lab, you should be able to log in to an agent interface with the configured user extension.
-You can do the tasks from the lab guide either on the **Lab Tenant** (you need to request access from the lab support team) or you can do it directly on your **Gold Tenant** / personal tenant.
+You can do the tasks from the lab guide either on the **Lab Tenant** (you need to request access from the lab support team).
 
 ### Introduction
 
@@ -111,9 +111,6 @@ update()
 </script>
 
 ### 2. Add agent and supervisor users and set the calling extensions
-
-> We don't recommend using the @maildrop.cc or @mailinator.com accounts on your **Gold Tenant** due to security reasons. An attacker can easily gain access to your tenant and execute the outbound calls.
-> {: .block-warning }
 
 The following Administration entities have been configured for you via [Webex Control Hub](https://admin.webex.com){:target="\_blank"}.
 
@@ -591,9 +588,9 @@ update()
 
 <img src="/assets/images/fe_4.gif">
 1. Select the PlayMessage node 
-2. Enable Text-to-speech toggle 
+2. Enable **_Text-to-speech_** toggle 
 3. Select the Connector  
-4. Select Output voice as en-US-Stantard-A 
+4. Select Output voice as **_en-US-Standard-A_** 
 5. Select Add Text-to-Speech Message 
 6. Enter a message 
 7. Validate and Publish the flow:   
