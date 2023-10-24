@@ -5,24 +5,45 @@ date: 2023-10-04
 layout: post
 ---
 
-In Part 1, we will explore the Webex Contact Center Agent Experience and the associated administrative toggles for configuring agents in the Webex Contact Center.
+Welcome to the **Webex Contact Center Agent and Supervisor Experience!**
 
-In Part 2, we will examine the Webex Contact Center Supervisor Experience and the associated administrative toggles for configuring supervisors in the Webex Contact Center.
+In **Part 1**, we will explore the **Webex Contact Center Agent Experience** and the associated administrative toggles for configuring agents in the Webex Contact Center.
+
+In **Part 2**, we will examine the **Webex Contact Center Supervisor Experience** and the associated administrative toggles for configuring supervisors in the Webex Contact Center.
+
+> Feel free to review the table of contents below.
+>
+> Jump to any section using the live navigation on the right!
 
 <script>
-    function update(){them = Array.from(document.querySelectorAll("input")).reduce((acc, input) => ({...acc, [input.id + "_out"] : input.value}),{});
-	Object.entries(them).forEach((entry) => {
-    Array.from(document.getElementsByClassName(entry[0])).forEach((element,index) => 
-    {
-      console.log(document.getElementsByClassName(entry[0])[index].innerHTML); 
-      document.getElementsByClassName(entry[0])[index].innerHTML = entry[1];
-    })})
+ function update () {
+    const form = document.forms['attendee-form'];
+    if (form) {
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
 
-  event.preventDefault()
-   if(document.forms["attendee-form"][1].value != "Your Attendee ID"){
-    localStorage.setItem("attendeeID",document.forms["attendee-form"][1].value)
-  }  
-  }
+        const inputs = Array.from(form.querySelectorAll('input'));
+        const values = inputs.reduce((acc, input) => {
+          acc[input.id + '_out'] = input.value;
+          return acc;
+        }, {});
+
+        Object.entries(values).forEach(([id, value]) => {
+          const elements = document.getElementsByClassName(id);
+          Array.from(elements).forEach(element => {
+            console.log(element.innerHTML);
+            if(Number(element.innerHTML) > 99>){ element.innerHTML = value;}
+            else{element.innerHTML = '0' + value;}
+          });
+        });
+
+        const attendeeIDInput = form.elements['attendeeID'];
+        if (attendeeIDInput && attendeeIDInput.value !== 'Your Attendee ID') {
+          localStorage.setItem('attendeeID', attendeeIDInput.value);
+        }
+      });
+    }
+  };
 </script>
 
 # Table of Contents
@@ -62,18 +83,46 @@ In Part 2, we will examine the Webex Contact Center Supervisor Experience and th
 
 ### Pre-Requisites
 
-> Note: To complete the initial section of the lab, all Desktop Administration configurations are already set up. This ensures you can experience a fully equipped desktop. For insights on what was configured, please refer to the Desktop Administration Experience later in this lab.
+> Note: The initial section of the lab is a walkthrough, the **Desktop has been configured for you**. This ensures you can experience a fully configured Agent desktop. For more insights on Desktop Administration and Configuration toggles available, please refer to the `Verify Desktop Administration` section in the lab.
 
-> We'll delve into each Administrative element in the following **Desktop Administration** sections that covers `configuration and administrative tasks`.
+> We'll delve into each Administrative element in the following **Verify Desktop Administration** section that covers `Configuration and Administrative tasks`.
 
 **You Will Need**
 
-1. **One additional device** (like your personal phone) to test inbound calls to the Webex Contact Center. You can use your cell phone for this purpose.
+(0) **Lab Credentials and Attendee ID** - Provided to you over email.
+
+> Please `submit the form below with your Attendee ID`. All configuration items in the lab guide will be renamed with that prefix.
+> {: .block-warning }
+
+<script>
+document.forms["attendee-form"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID" 
+update()
+</script>
+<form id="attendee-form">
+  <label for="attendee">Attendee ID:</label>
+  <input type="text" id="attendee" name="attendee" onChange="update()"><br>
+<br>
+  <button onclick="update()">Save</button>
+</form>
+<script>
+document.forms["attendee-form"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID"
+update()
+</script>
+
+<br/>
+
+(1) **One additional device** (like your personal phone) to test inbound calls to the Webex Contact Center. You can use your cell phone for this purpose.
 
 - Administrator credentials for the Control Hub: [admin.webex.com](https://admin.webex.com).
 - Agent Login Credentials for the Agent Desktop: [desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com).
 
-1. The items listed below have been pre-configured for you:
+(2) **Webex App** Installed and Logged in. Provided your `Supervisor Login ID` - use the **Webex App** to login your **Supervisor User.**
+
+- This user is in the format:
+
+> **wxcclabs+supvr_ID<w class = "attendee_out">attendeeID</w>@@gmail.com**
+
+(3) The items listed below have been pre-configured for you:
 
 - Agent and Supervisor user accounts are configured and ready for logins.
 - You can access the Agent Desktop via the URL: [https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com).
@@ -87,9 +136,9 @@ Example:
 >
 > 100_Team2
 
-1. Agents will use browsers for voice calls using WebRTC (Web Real-time Communication) endpoints. Additionally, Webex Calling extensions have been assigned to users (both agents and supervisors) to facilitate alternate device experiences. Webex Contact Center agents and supervisors can opt for any mix of these devices, encompassing PSTN endpoints and mobile phones.
+(4) Agents will use browsers for voice calls using WebRTC (Web Real-time Communication) endpoints. Additionally, Webex Calling extensions have been assigned to users (both agents and supervisors) to facilitate alternate device experiences. Webex Contact Center agents and supervisors can opt for any mix of these devices, encompassing PSTN endpoints and mobile phones.
 
-2. A preset inbound Voice flow is available for test calls.
+(4) A preset inbound Voice flow is available for test calls.
 
 ### Quick Links
 
@@ -97,49 +146,35 @@ For this lab, you'll only require access to two web portals:
 
 > Control Hub Administration: **[https://admin.webex.com](https://admin.webex.com){:target="\_blank"}**\
 > Contact Center Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="\_blank"}**
+> {: .block-success }
 
 ### Lab Configuration
-
-> Please submit the form below with your Attendee ID. All configuration items in the lab guide will be renamed with that prefix.
-
-<div class="alert"></div>
-<form id="attendee-form">
-      <label for="attendee-id">Attendee ID</label>
-      <input type="text" name="attendee-id" id="attendee-id" onChange="update()"/>
-      <button onclick="update()">SAVE</button>
-      
-</form>
-<script src="/assets/gitbook/form.js"></script>
-
-<script>
-document.forms["attendee-form"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID" 
-update()
-</script>
 
 The following Administration entities have been configured for you via [Webex Control Hub](https://admin.webex.com){:target="\_blank"}
 
 Please note, that to proceed to the next section, you will need to use the accounts shown in the top 3 rows.
 
-| **Entity**           | **Name**                                                              |
-| -------------------- | --------------------------------------------------------------------- |
-| Agent 1              | wxcclabs+agent_ID<w class = "attendee-class">attendeeID</w>@gmail.com |
-| Supervisor 1         | wxcclabs+supvr_ID<w class = "attendee-class">attendeeID</w>@gmail.com |
-| Administrator        | wxcclabs+admin_ID<w class = "attendee-class">attendeeID</w>@gmail.com |
-| Desktop Profile      | <w class = "attendee-class">attendeeID</w>\_desktopProfile            |
-| Entry Point          | <w class = "attendee-class">attendeeID</w>\_EP                        |
-| Queue                | <w class = "attendee-class">attendeeID</w>\_Q                         |
-| Team 1               | <w class = "attendee-class">attendeeID</w>\_team1                     |
-| Team 2               | <w class = "attendee-class">attendeeID</w>\_team2                     |
-| Outdial ANI          | <w class = "attendee-class">attendeeID</w>\_outdialANI                |
-| Outdial ANI Entry 1  | <w class = "attendee-class">attendeeID</w>\_outdialANIEntry1          |
-| Address Book         | <w class = "attendee-class">attendeeID</w>\_addressBook               |
-| Address Book Entry 1 | <w class = "attendee-class">attendeeID</w>\_addressBookEntry1         |
-| Multimedia Profile   | <w class = "attendee-class">attendeeID</w>\_MMP                       |
+| **Entity**           | **Name**                                                            |
+| -------------------- | ------------------------------------------------------------------- |
+| Agent 1              | wxcclabs+agent_ID<w class = "attendee_out">attendeeID</w>@gmail.com |
+| Supervisor 1         | wxcclabs+supvr_ID<w class = "attendee_out">attendeeID</w>@gmail.com |
+| Administrator        | wxcclabs+admin_ID<w class = "attendee_out">attendeeID</w>@gmail.com |
+| Desktop Profile      | <w class = "attendee_out">attendeeID</w>\_desktopProfile            |
+| Entry Point          | <w class = "attendee_out">attendeeID</w>\_EP                        |
+| Queue                | <w class = "attendee_out">attendeeID</w>\_Q                         |
+| Team 1               | <w class = "attendee_out">attendeeID</w>\_team1                     |
+| Team 2               | <w class = "attendee_out">attendeeID</w>\_team2                     |
+| Outdial ANI          | <w class = "attendee_out">attendeeID</w>\_outdialANI                |
+| Outdial ANI Entry 1  | WebexOneOutdial ANI                                                 |
+| Address Book         | <w class = "attendee_out">attendeeID</w>\_addressBook               |
+| Address Book Entry 1 | WebexOne Addressbook Entry                                          |
+| Multimedia Profile   | <w class = "attendee_out">attendeeID</w>\_MMP                       |
 
 ## 1.1: Agent Desktop Overview
 
 > Desktop multi-language support is based on the language settings on the browser. Currently, we support 29 languages, including:
 > Bulgarian, Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish, Dutch, English (UK), English (US), Finnish, French, German, Hungarian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Serbian, Slovak, Slovenian, Spanish, Swedish, and Turkish.
+> {: .block-success }
 
 ![AgentDesktopOverview](/assets/images/agent/agent_desktop_overview.png)
 
@@ -169,10 +204,12 @@ Here is an overview of the sections:
 > **Note: Please use Google Chrome as the browser to take advantage of the all new WebRTC Voice Option.**
 
 > Tip: You can also find this link under Control Hub: [admin.webex.com](https://admin.webex.com) > Contact Center > Settings
+> {: .block-warning }
 
 - Once you're in the login page, enter the agent credentials (username and password)
 
 > In this example, please use the specific login for your attendee ID
+> {: .block-warning }
 
 ![agent-desktop](/assets/images/agent/01-image.png)
 
@@ -197,6 +234,7 @@ Here is an overview of the sections:
 ![agent-desktop](/assets/images/agent/03-image.png)
 
 > NOTE: Agents cannot access the Agent Desktop from multiple browsers or multiple tabs of the same browser window. In that case, a warning message will be displayed.
+> {: .block-warning }
 
 ![agent-desktop](/assets/images/agent/04-image.png)
 
@@ -211,6 +249,7 @@ Here is an overview of the sections:
 **NOTE:**
 
 > The login device and DN can be enforced on the Desktop Profile as follows
+> {: .block-warning }
 
 - If your administrator configures the default Dial Number (DN), the default DN is prepopulated in the Dial Number and Extension fields.
 - If your administrator restricts the DN to the default DN, you cannot edit the prepopulated DN when signing in to the Agent Desktop.
@@ -237,7 +276,9 @@ This also has the section where you can view the Idle codes.
 ---
 
 > Note: The Idle codes are customizable and configured under **Webex Control Hub > Contact Center Settings > Idle / Wrap up Codes**
-> These Idle codes can then be customized per Desktop Profile, on a per user level.
+> These Idle codes can indeed be customized per Desktop Profile, on a per user level.
+> Desktop Profiles can also be segmented on a Tenant or Site, or even Team level - i.e one Profile per Team
+> {: .block-warning }
 
 ---
 
@@ -249,7 +290,8 @@ The Agent can access the out of box Agent Personal Statistics Reports on the lef
 
 ---
 
-> Note: These Agent Personal Statistics are canned reports out of the box. However, one can configure custom Analyzer Reports for Agents in the Layout if custom reporting views are needed.
+> Note: These Agent Personal Statistics are canned reports out of the box. However, one can configure custom Analyzer Reports for Agents in the Layout if custom reporting views are needed. The Supervisor Desktop Layout allows you to hide/show certain Personal Statistics.
+> {: .block-warning }
 
 ---
 
@@ -309,6 +351,7 @@ The Channel capacity determines how many contacts the Agent can handle at a maxi
 The notification settings under user settings allows you to Enable/Disable the Notifications, Enable Silent Notifications, or Enable/Disable the sound. You can also change the volume of the Chime for the incoming contact.
 
 > Note: These settings persist as long as the browser cache is retained for the user.
+> {: .block-warning }
 
 ![agent-desktop-Notification-Pane](/assets/images/agent/Agent_Notification_Pane.gif)
 
@@ -319,6 +362,7 @@ The notification settings under user settings allows you to Enable/Disable the N
 You can switchover the theme on the Desktop using the Dark mode toggle. This helps with visibility on the eyes in low light conditions and can be a user preference for the theme.
 
 > This is another setting that is preserved with the user's browser cache.
+> {: .block-warning }
 
 ![agent-desktop-Dark-Mode](/assets/images/agent/Agent_Dark_Mode.gif)
 
@@ -351,7 +395,8 @@ Change the state from Idle to Available using the shortcut
 > Try Ctrl + Option + F to bring up the shortcuts
 > Try Ctrl + Option + R to go Ready
 > Try Ctrl + Option + N to go Not Ready by typing an Idle code + Enter
-> ![agent-desktop-State_Change_Shortscut](/assets/images/agent/Agent_State_Change_Shortscut.gif)
+
+![agent-desktop-State_Change_Shortscut](/assets/images/agent/Agent_State_Change_Shortscut.gif)
 
 ---
 
@@ -367,6 +412,8 @@ A diagnostic must have for Agents is the ability to download error reports to se
 
 > What you will notice when you open the file:
 > The Desktop uses a combination of secure HTTPS as well as Websocket connectivity to stay connected to the backend.
+> From a connectivity standpoint, this means that the Agent's Desktop requires network access, latency and bandwidth requirements to facilitate streamlined HTTPS traffic for both pure REST as well as WebSocket payloads.
+> {: .block-warning }
 
 ---
 
@@ -442,6 +489,7 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 
 > Note: The variables displayed in the incoming popover and on the Desktop can be ordered in a custom manner.
 > This is done on the flow designer on the flow level.
+> {: .block-warning }
 
 ![Variable-Order](/assets/images/agent/Agent_VariableOrder.png)
 
@@ -456,6 +504,7 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 ---
 
 > **Note**: While you are engaged for a voice call, you are still marked available on other channels based on your channel capacity. This is the configuration on the Multimedia Profile settings on the Agent Desktop.
+> {: .block-warning }
 
 ---
 
@@ -466,9 +515,10 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
     - End-customer be redirected to a common EP already created
   - **End** the call (this can be done from customer or agent perspective) and select any **Wrap-up code**
 
-> For this part, you will need a third calling device for interacting as aSupervisor
+> For this part, you will need a third calling device for interacting as a Supervisor
 > {: .block-warning }
-> <br/>
+
+ <br/>
 
 - Now, lets create a new Chrome profile so we can login the Supervisor on the same browser
 
@@ -529,13 +579,16 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 - While Logged into the Agent Desktop, look for the Address book.
 - You will see two contacts that are preloaded for you. You can directly make a call to any of those numbers.
 
-> Not choosing an option on the dropdown selects the Default Outdial ANI (Calling Number Mask) of the tenant. This is configured on Control Hub, under the Desktop Settings. admin.webex.com > Contact Center > Desktop Settings > Outdial ANI
+> Not choosing an option on the dropdown selects the Default Outdial ANI (Calling Number Mask) of the tenant. This is configured on Control Hub, under the Desktop Settings.
+> i.e `admin.webex.com > Contact Center > Desktop Settings > Outdial ANI`
+> {: .block-warning }
 
 ![Agent-AddressBook](/assets/images/agent/Agent_AddressBook.gif)
 
 ---
 
-> **Note: These are live numbers published on cisco.com!**
+> **Note: These are live, real numbers published on cisco.com!**
+> {: .block-warning }
 
 - Alternatively, you can select a customized Calling Number mask by selecting the Outdial ANI dropdown. This Outdial ANI dropdown can be configured on the `Outdial ANI` settings in Control Hub.
 
@@ -543,13 +596,16 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 
 ---
 
-> _You will notice that upon clicking the dial button, the Agent is presented with a floating pop-over that displays call varibales and is then connected to the call, and then the remote party is connected - following which the call legs are bridged._
+> You will notice that upon clicking the dial button, the Agent is presented with a floating pop-over that displays call varibales and is then connected to the call, and then the remote party is connected - following which the call legs are bridged.\_
+> {: .block-warning }
 
 ![Agent-Outdial_Call](/assets/images/agent/Agent_Outdial_Call.gif)
 
 ---
 
 > **Note: Outdial also supports pre-dial activities that can be configured on the WebexCC Flow Designer. The Flow Designer has been configured for you with the Custom Caller Associated Data Variables that are visibile upon Outdial**
+> Screenpops for Outdial can also be configured in a similar manner, via Flow Designer.
+> {: .block-warning }
 
 ![CH-Outdial_Flow](/assets/images/agent/CH_Outdial_Flow.gif)
 
@@ -750,6 +806,14 @@ Here is a schematic showing how the Agent Desktop configuraton aligns to all the
 
 ![Configuration-Overview](/assets/images/agent/admin1.png)
 
+As you can see, the order of operations is as follows:
+
+- Users need to be configured on Webex Control Hub: admin.webex.com > Users
+- Licenses need to be assigned to Users to make them either an Agent or Supervisor into Webex Contact Center.
+- Webex Contact Center Configuration is required after Webex Control Hub Users are synced over.
+- This is the `Contact Center Enabled > User Profile > Site > Team > Multimedia Profile > Desktop Profile > Skill Profile > Default DN configuration.`
+- Go To admin.webex.com > Contact Center Users to verify this configuration for the Agents and the Supervisors.
+
 ## 1.7: Administration Entities
 
 ![User-Overview](/assets/images/agent/admin2.png)
@@ -764,23 +828,40 @@ To verify, navigate to Control Hub > Contact Center > TENANT SETTINGS
 
 <br>
 
-| **Entity**           | **Name**                                                               |
-| -------------------- | ---------------------------------------------------------------------- |
-| Agent 1              | <w class = "attendee-class">attendeeID</w>_agent1@mailinator.com       |
-| Supervisor 1         | <w class = "attendee-class">attendeeID</w>\_supervisor1@mailinator.com |
-| Desktop Profile      | <w class = "attendee-class">attendeeID</w>\_desktopProfile             |
-| Entry Point          | <w class = "attendee-class">attendeeID</w>\_EP                         |
-| Queue                | <w class = "attendee-class">attendeeID</w>\_Q                          |
-| Team 1               | <w class = "attendee-class">attendeeID</w>\_team1                      |
-| Team 2               | <w class = "attendee-class">attendeeID</w>\_team2                      |
-| Outdial ANI          | <w class = "attendee-class">attendeeID</w>\_outdialANI                 |
-| Outdial ANI Entry 1  | <w class = "attendee-class">attendeeID</w>\_outdialANIEntry1           |
-| Address Book         | <w class = "attendee-class">attendeeID</w>\_addressBook                |
-| Address Book Entry 1 | <w class = "attendee-class">attendeeID</w>\_addressBookEntry1          |
-| Multimedia Profile   | <w class = "attendee-class">attendeeID</w>\_MMP                        |
+| **Entity**           | **Name**                                                             |
+| -------------------- | -------------------------------------------------------------------- |
+| Agent 1              | <w class = "attendee_out">attendeeID</w>_agent1@mailinator.com       |
+| Supervisor 1         | <w class = "attendee_out">attendeeID</w>\_supervisor1@mailinator.com |
+| Desktop Profile      | <w class = "attendee_out">attendeeID</w>\_desktopProfile             |
+| Entry Point          | <w class = "attendee_out">attendeeID</w>\_EP                         |
+| Queue                | <w class = "attendee_out">attendeeID</w>\_Q                          |
+| Team 1               | <w class = "attendee_out">attendeeID</w>\_team1                      |
+| Team 2               | <w class = "attendee_out">attendeeID</w>\_team2                      |
+| Outdial ANI          | <w class = "attendee_out">attendeeID</w>\_outdialANI                 |
+| Outdial ANI Entry 1  | <w class = "attendee_out">attendeeID</w>\_outdialANIEntry1           |
+| Address Book         | <w class = "attendee_out">attendeeID</w>\_addressBook                |
+| Address Book Entry 1 | <w class = "attendee_out">attendeeID</w>\_addressBookEntry1          |
+| Multimedia Profile   | <w class = "attendee_out">attendeeID</w>\_MMP                        |
+
+### Administration Walkthrough
 
 > **NOTE:** All of the above the tenant entities follow the naming convention mentioned specified in the table above. Your attendeeID is provided in the email in the **"Attendee ID"** line.
 > All of this configuration has been done for you.
+
+### Teams
+
+- You were able to change from one team to another using the Profile Settings.
+- You can verify this by going to `admin.webex.com > Contact Center > Teams` and `Contact Center > Contact Center Users > Check the Team Assignment` on the user.
+- This allows you to verify the the `User > Team` association
+
+### Multimedia Profiles
+
+- Navigate to _Control Hub > Provisioning > Teams_ - Click on the Teams: _Team1 and \_Team2 `Edit` - Check \_your User settings_ and make sure that the **Multimedia Profile** is assigned.
+- Note: **User settings have preference over Team setting**, so the Multimedia Profile at User level will be applied.
+
+### Desktop Profiles
+
+- Desktop Profiles is what brings together all the different components of the Desktop Behavior.
 
 ---
 
@@ -817,7 +898,7 @@ We will review this on Control Hub Settings.
 > Control Hub > Contact Center Users > Supervisor User > User Profile: Supervisor Profile
 
 - Look up your Supervisor User bu going to admin.webex.com > Contact Center > User Management (Category) > Contact Center Users
-- Ensure that the Supervisor user wxcclabs+supvr_ID_your_attendee_ID\_@gmail.com has the `Supervisor Profile` in the `User Profile` field
+- Ensure that the Supervisor user wxcclabs+supvr_ID<w class="attendee_out">Your_Attendee_ID</w>@gmail.com has the `Supervisor Profile` in the `User Profile` field
 
 ![Supervisor_UserProfile](/assets/images/Supervisor/Supervisor_UserProfile.gif)
 
@@ -864,27 +945,19 @@ We will review this on Control Hub Settings.
 
 ![Supervisor_Login](/assets/images/Supervisor/Supervisor_Login.gif)
 
----
-
 - When you sign in to the **Supervisor Desktop**, the appearance depends on how the Webex Contact Center administrator has configured the desktop layout. The **Supervisor Desktop** display size must be greater than 500 x 500 pixels (width x height). You must set your web browser zoom to 100% for the best experience with the Supervisor Desktop. With this lab layout you get :
 
 1. **Home Page**: Displays a user friendly interface that provides a consolidated view of key contact center metrics and filters. This is the default landing page in the Supervisor Desktop. The administrator can customize the Home Page in the layout JSON file.
 
 ![Supervisor_Home](/assets/images/Supervisor/Supervisor_Home.png)
 
----
-
 2. **Task**: Displays all the tasks when you sign in to the Desktop in dual role (supervisor and agent) or as a supervisor, interactions such as voice, chat, email, and social messaging conversations, along with monitoring. The icon displays a badge indicating the number of requests that you have not accepted across various channels.
 
 ![Supervisor_Task](/assets/images/Supervisor/Supervisor_Task.gif)
 
----
-
 3. **Team Performance**: Displays real-time information about an agent and a consolidated view of an agent’s performance as part of the team. You can also monitor and send 1:1 messages to an agent.
 
 ![Supervisor_TeamPerformance](/assets/images/Supervisor/Supervisor_TeamPerformace.gif)
-
----
 
 > Note: **Supervisor Desktop** supports localization in 30 languages. The following are the supported languages:
 > Bulgarian, Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish, Dutch, English (UK), English (US),Finnish,French, German, Hungarian, Italian,Japanese, Korean, Norwegian,Polish,Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Serbian, Slovak, Slovenian, Spanish, Swedish, Turkish, and Ukrainian.
