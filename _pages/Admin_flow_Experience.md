@@ -171,11 +171,11 @@ Please note, that to proceed to the next section, you will need to use the accou
 
 ![Admin_Experience](/assets/images/admin_exp_1.gif)
 
-| **Entity**          | **Name**                                            |
-| ------------------- | --------------------------------------------------- |
-| Multimedia Profiles | <w class="attendee_out">Your_Attendee_ID</w>\_MMP   |
-| Site                | <w class="attendee_out">Your_Attendee_ID</w>\_Site  |
-| Team1               | <w class="attendee_out">Your_Attendee_ID</w>\_Team1 |
+| **Entity**          | **Name**                                      |
+| ------------------- | --------------------------------------------- |
+| Multimedia Profiles | <w class="attendee_out">attendeeID</w>\_MMP   |
+| Site                | <w class="attendee_out">attendeeID</w>\_Site  |
+| Team1               | <w class="attendee_out">attendeeID</w>\_Team1 |
 
 > **NOTE:** If you are using the **Lab Tenant** the **Attendee ID** should be used as a name prefix for all your configurations.
 > {: .block-tip }

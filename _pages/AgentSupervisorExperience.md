@@ -38,7 +38,7 @@ In **Part 2**, we will examine the **Webex Contact Center Supervisor Experience*
         });
 
         const attendeeIDInput = form.elements['attendeeID'];
-        if (attendeeIDInput && attendeeIDInput.value !== 'Your Attendee ID') {
+        if (attendeeIDInput && attendeeIDInput.value !== 'Your_Attendee_ID') {
           localStorage.setItem('attendeeID', attendeeIDInput.value);
         }
       });
@@ -99,8 +99,8 @@ document.forms["attendee-form"][1].value = localStorage.getItem("attendeeID") ||
 update()
 </script>
 <form id="attendee-form">
-  <label for="attendee">Attendee ID:</label>
-  <input type="text" id="attendee" name="attendee" onChange="update()"><br>
+  <label for="attendeeID">Attendee ID:</label>
+  <input type="text" id="attendeeID" name="attendee" onChange="update()"><br>
 <br>
   <button onclick="update()">Save</button>
 </form>
