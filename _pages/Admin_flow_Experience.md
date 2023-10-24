@@ -83,16 +83,13 @@ You can do the tasks from the lab guide either on the **Lab Tenant** (you need t
 document.forms["attendee-form"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID" 
 update()
 </script>
+
 <form id="attendee-form">
   <label for="attendee">Attendee ID:</label>
   <input type="text" id="attendee" name="attendee" onChange="update()"><br>
 <br>
   <button onclick="update()">Save</button>
 </form>
-<script>
-document.forms["attendee-form"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID"
-update()
-</script>
 
 ### 2. Add agent and supervisor users and set the calling extensions
 

@@ -32,7 +32,7 @@ In **Part 2**, we will examine the **Webex Contact Center Supervisor Experience*
           const elements = document.getElementsByClassName(id);
 
           Array.from(elements).forEach(element => {
-            
+
             console.log(element.innerHTML);
             if(Number(element.innerHTML) > 99){ element.innerHTML = value;}
              console.log(`Got a 99+ attendee: ${element.innerHTML}`);
@@ -69,7 +69,7 @@ In **Part 2**, we will examine the **Webex Contact Center Supervisor Experience*
 | [2.2: Supervisor Login](#22-supervisor-login)                                          | Activity         | EASY         | 5 min  |
 | [2.3: Chat with your agents](#23-chat-with-your-agents)                                | Activity         | INTERMEDIATE | 5 min  |
 | [2.4: Monitor calls](#24-monitor-calls)                                                | Activity         | INTERMEDIATE | 5 min  |
-| [2.5: Supervisor and Agent flow](#25-supervisor-and-agent-flow)                        | Activity         | EASY         | 5 min  |
+| [2.5: Supervisor and Agent role](#25-supervisor-and-agent-role)                        | Activity         | EASY         | 5 min  |
 | [Verify Supervisor Desktop Administration](#verify-supervisor-desktop-administration)  | Exploration      | EASY         | 5 min  |
 | [2.6 Desktop Layout Regions for Supervisor](#26-desktop-layout-regions-for-supervisor) | Exploration      | INTERMEDIATE | 5 min  |
 | [2.7: User Profile Settings for Supervisor](#27-user-profile-settings-for-supervisor)  | Activity         | INTERMEDIATE | 5 min  |
@@ -144,7 +144,7 @@ Example:
 
 (4) Agents will use browsers for voice calls using WebRTC (Web Real-time Communication) endpoints. Additionally, Webex Calling extensions have been assigned to users (both agents and supervisors) to facilitate alternate device experiences. Webex Contact Center agents and supervisors can opt for any mix of these devices, encompassing PSTN endpoints and mobile phones.
 
-(4) A preset inbound Voice flow is available for test calls.
+(5) A preset inbound Voice flow is available for test calls.
 
 ### Quick Links
 
@@ -1062,7 +1062,7 @@ Collaboration between agents and supervisors can help your Contact Center to be 
 
 ---
 
-## 2.5: Supervisor and Agent flow
+## 2.5: Supervisor and Agent role
 
 - When you sign in to the Supervisor Desktop, you can - depending or your team assignement - choose either the supervisor role or supervisor AND agent role.
 
