@@ -120,57 +120,46 @@ Example:
 > **Note: Agents will use WebRTC endpoints (Desktop Telephony)** > **Supervisors will use Webex Calling App (as Telephony Device)**
 > {: .block-warning }
 
-### 1. Define your Attendee ID and Other parameters
-
-<script>
-document.forms["attendee-form"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID" 
-update()
-</script>
-
-<form id="attendee-form">
-  <label for="attendeeID">Attendee ID:</label>
-  <input type="text" id="attendeeID" name="attendee" onChange="update()"><br>
-<br>
-  <button onclick="update()">Save</button>
-</form>
-
-### 2. Add agent and supervisor users and set the calling extensions
+### 1. Verify the configuration parameters
 
 The following Administration entities have been configured for you via [Webex Control Hub](https://admin.webex.com){:target="\_blank"}.
 
 Please note, that to proceed to the next section, you will need to use the accounts shown below.
 
-| **Entity**           | **Name**                                                            |
-| -------------------- | ------------------------------------------------------------------- |
-| Agent 1              | wxcclabs+agent_ID<w class = "attendee_out">attendeeID</w>@gmail.com |
-| Supervisor 1         | wxcclabs+supvr_ID<w class = "attendee_out">attendeeID</w>@gmail.com |
-| Administrator        | wxcclabs+admin_ID<w class = "attendee_out">attendeeID</w>@gmail.com |
-| Desktop Profile      | <w class = "attendee_out">attendeeID</w>\_desktopProfile            |
-| Entry Point          | <w class = "attendee_out">attendeeID</w>\_EP                        |
-| Queue                | <w class = "attendee_out">attendeeID</w>\_Q                         |
-| Team 1               | <w class = "attendee_out">attendeeID</w>\_team1                     |
-| Team 2               | <w class = "attendee_out">attendeeID</w>\_team2                     |
-| Outdial ANI          | <w class = "attendee_out">attendeeID</w>\_outdialANI                |
-| Outdial ANI Entry 1  | WebexOneOutdial ANI                                                 |
-| Address Book         | <w class = "attendee_out">attendeeID</w>\_addressBook               |
-| Address Book Entry 1 | WebexOne Addressbook Entry                                          |
-| Multimedia Profile   | <w class = "attendee_out">attendeeID</w>\_MMP                       |
+| **Entity**         | **Name**                                                            |
+| ------------------ | ------------------------------------------------------------------- |
+| Administrator      | wxcclabs+admin_ID<w class = "attendee_out">attendeeID</w>@gmail.com |
+| Agent 1            | wxcclabs+agent_ID<w class = "attendee_out">attendeeID</w>@gmail.com |
+| Supervisor 1       | wxcclabs+supvr_ID<w class = "attendee_out">attendeeID</w>@gmail.com |
+| Desktop Profile    | WebexOne Desktop Profile                                            |
+| Entry Point        | <w class = "attendee_out">attendeeID</w>\_EP                        |
+| Queue              | <w class = "attendee_out">attendeeID</w>\_Q                         |
+| Team 1             | <w class = "attendee_out">attendeeID</w>\_team1                     |
+| Team 2             | <w class = "attendee_out">attendeeID</w>\_team2                     |
+| Site               | <w class = "attendee_out">attendeeID</w>\_Site                      |
+| Multimedia Profile | <w class = "attendee_out">attendeeID</w>\_MMP                       |
+| Outdial ANI        | WebexOneOutdial ANI                                                 |
+| Address Book       | WebexOne Address Book                                               |
+| Inbound Flow       | QtoA_WebexOne_InboundFlow                                           |
+| Outbound Flow      | WebexOne_OutdialFlow                                                |
+
+### 2. Verify agents, supervisors and telephony settings
 
 - Login to the [Control Hub](https://admin.webex.com){:target="\_blank"} with the admin account.
 
-- In the left navigation pane go to **_Users_** under **Management**.
+- In the left navigation pane go to **_Contact Center Users_** under **Management**.
 
 - Click on **_Manage Users_** button.
 
 - Select **_Manually add users_**.
 
-- Set the agent's **First name**, **Last name** and input the **Email addresses** of the agent.
+- Check the agent's **First name**, **Last name** and input the **Email addresses** of the agent.
 
 - Click on `+` sign and add the supervisor in the same way.
 
 - For consistency, verify that the **Email addresses** are same as in the table above and click **_Next_**.
 
-- In **Step 2: Assign license for users** select **_Webex Calling (Professional)_** & **_Contact Center (Premium Agent)_**.
+- Next **Assign license for users** and select **_Webex Calling (Professional)_** & **_Contact Center (Premium Agent)_**.
 
 - On the next page, make sure that the **_Location_** is selected under **_Assign Numbers_**. The correct value should be already selected by default.
 
@@ -192,7 +181,7 @@ Please note, that to proceed to the next section, you will need to use the accou
 
 ## 1.2: Contact Center User Configuration
 
-> The following video outlines how to create a Site, Team, and Multimedia Profile that will be assigned to the Contact Center users. We will also learn how to navigate to the Webex Contact Center admin section and how to associate customer-created Site, Team, and Multi-Media Profile with new users.
+> The following section outlines how to verify the Site, Team, and Multimedia Profile that will be assigned to the Contact Center users. We will also learn how to navigate to the Webex Contact Center admin section and how to associate newly created Sites, Teams, and Multimedia Profiles with new users.
 
 ![Admin_Experience](/assets/images/admin_exp_1.gif)
 
@@ -202,10 +191,10 @@ Please note, that to proceed to the next section, you will need to use the accou
 | Site                | <w class="attendee_out">attendeeID</w>\_Site  |
 | Team1               | <w class="attendee_out">attendeeID</w>\_Team1 |
 
-> **NOTE:** If you are using the **Lab Tenant** the **Attendee ID** should be used as a name prefix for all your configurations.
+> **NOTE:** Here, the configuration is created with your **Attendee ID** and should be used as the prefix for all your configurations.
 > {: .block-tip }
 
-### 1. Create new Multimedia Profile
+### 1. Verify the Multimedia Profile
 
 - Login with admin credentials to Control Hub by accessing [https://admin.webex.com](https://admin.webex.com){:target="\_blank"}.
 
@@ -219,7 +208,7 @@ Please note, that to proceed to the next section, you will need to use the accou
 
 - In the Media Details section, leave the **Blended** mode and input `1` for **_Voice_**, `3` for **_Chat_**, `3` for **_Email_**, `3` for **_Social_**, and click **_Create_** button in the lower right corner.
 
-### 2. Create new Site
+### 2. Verify the Site
 
 - Navigate to **_USER MANAGEMENT_** in the left navigation panel and select **_Sites_**.
 
@@ -227,11 +216,11 @@ Please note, that to proceed to the next section, you will need to use the accou
 
 - Select your MMP in the **_Multimedia profile_** drop down list and hit **_Create_**.
 
-### 3. Create new Team
+### 3. Verify the Teams
 
 - Navigate to **_Teams_** under the **_USER MANAGEMENT_**.
 
-- Click on `Create Team`.
+- Click on the `Create Team`.
 
 - Input _Name_ as **<w class="attendee_out">attendeeId</w>\_Team1**.
 
@@ -243,9 +232,9 @@ Please note, that to proceed to the next section, you will need to use the accou
 
 - Left as a default value **_Global Layout_** in the **_Desktop layout_** drop-down and click on **_Create_** button.
 
-### 4. Activate the Contact Center Settings for the users
+### 4. Activating the Contact Center Settings for users
 
-- Navigate to **_Contact Center Users_** under the **_USER MANAGEMENT_**.
+- On Webex Control Hub, navigate to **_Contact Center Users_** under the **_USER MANAGEMENT_**.
 
 - Find your and select the agent, to launch the **_Edit_** view for a particular User configuration.
 
@@ -265,7 +254,7 @@ Please note, that to proceed to the next section, you will need to use the accou
 
 ## 1.3: Bulk Operations
 
-> In this section you will learn how to use the Bulk Configuration in Control Hub by creating a second team. As an administrator, you can use Bulk Operations to create, modify, import, or export configuration objects in Webex Contact Center. This feature provides greater speed and efficiency to deploy and configure Webex Contact Center systems.
+> In this section you will learn how to use the Bulk Configuration in Control Hub by creating a third team. As an administrator, you can use Bulk Operations to create, modify, import, or export configuration objects in Webex Contact Center. This feature provides greater speed and efficiency to deploy and configure Webex Contact Center systems.
 
 Bulk Operations are available for the following configuration object types:
 
@@ -281,7 +270,7 @@ Bulk Operations are available for the following configuration object types:
 | User Profiles       | Audio Files          |
 | Work Types          | Global Variable      |
 
-### Create the second Team
+### Create the third Team
 
 - Go to the Control Hub by accessing [https://admin.webex.com](https://admin.webex.com){:target="\_blank"}.
 
@@ -299,11 +288,11 @@ Bulk Operations are available for the following configuration object types:
 
 - Once the task is **Completed** click on **_Download export file_** button under the **Action** and open the csv file in the notepad.
 
-- The first line is the headers, it is mandatory to have it during the import process. Remove all lines from the CSV file except the first line with headers and the line with **<w class="attendee_out">attendeeId</w>\_Team1**.
+- The first line is the headers, it is mandatory to have it during the import process. Remove all lines from the CSV file except the first line with headers and the line with **<w class="attendee_out">attendeeId</w>\_Team3**.
 
 ```csv
 NAME,SITE,TYPE,MULTIMEDIA PROFILE,SKILL PROFILE,DN,CAPACITY,DESKTOP LAYOUT
-xxxx_team1,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
+###_Team1,###_Site,AGENT,###_MMP,,,,Default Desktop Layout
 ```
 
 - Rename the Team1 to **<w class="attendee_out">attendeeId</w>\_Team2** and save the file. You should have only 2 rows in the file.
@@ -311,7 +300,7 @@ xxxx_team1,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
 
 ```csv
 NAME,SITE,TYPE,MULTIMEDIA PROFILE,SKILL PROFILE,DN,CAPACITY,DESKTOP LAYOUT
-xxxx_team2,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
+###_Team3,###_Site,AGENT,###_MMP,,,,Default Desktop Layout
 ```
 
 - Go back to the **Bulk Operations** menu and click **_Create Bulk Operations_** button again.
@@ -320,22 +309,20 @@ xxxx_team2,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
 
 - Click **Next** button and wait the results. The status should be shown as **Completed**.
 
-- Go to the Management Portal, click on **_Provisioning_** -> **_Team_** and verify that the **<w class="attendee_out">attendeeId</w>\_Team2** is created.
+- Go to the Management Portal, click on **_Provisioning_** -> **_Team_** and verify that the **<w class="attendee_out">attendeeId</w>\_Team3** is created.
 
-- In the Management Portal directly associate the **<w class="attendee_out">attendeeId</w>\_Team2** with your agent and supervisor by adding your users to that team (**Advanced Settings -> Agents**).
+- In the Management Portal directly associate the **<w class="attendee_out">attendeeId</w>\_Team3** with your agent and supervisor by adding your users to that team (**Advanced Settings -> Agents**).
 
 ## 1.4: Access to the Agent Desktop
 
-> By following the steps below, you will log in to the Agent Desktop with your credentials and indicate the number (DN) where you want to receive the calls.
+> We will now log in to the Agent Desktop with your credentials and use Desktop (WebRTC) as the telephony device.
 
 > **Note: Please use Google Chrome as the browser to take advantage of the all new WebRTC Voice Option.**
-
-> The Lab Tenant is located in the US datacenter. It does not allow outbound international calls. If you have the U.S. numbers you can use that for sign in as an agent or supervisor. Otherwise, please use WebRTC for agent and download the Webex App for supervisor according to the steps below.
 > {: .block-warning }
 
 ### 1. Download and Login in the Webex app for PC or Mac
 
-> For the **Lab Tenant** you would need Webex app for placing calls to Entry Point and sign in as supervisor. Alternatively, if you have the US number, you can use it as an supervisor's extension. This tenant does not allow numbers outside of the United States. In this lab, we will use the Webex app for your PC or Mac for the **supervisor** account.
+> For the supervisor user, **Lab Tenant** you would need Webex app for placing calls to Entry Point and sign in as supervisor.
 > {: .block-warning }
 
 - Download the Webex app from **[https://www.webex.com/downloads.html](https://www.webex.com/downloads.html){:target="\_blank"}**.
@@ -348,11 +335,22 @@ xxxx_team2,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
 
 ### 2. Agent Desktop Login
 
-> **Note**: To log in to the agent desktop, use either a different web browser or a new incognito web page. This will prevent the browser caching issues with admin and agent credentials.
-> Depending on your tenant's location the agent ULR link can be different. The example below is for the tenant in the US datacenter.
+> **Note**: To log in to the agent desktop, we will use Chrome profiles so that we can use the same browser for Admins, Agents and Supervisors without clearing the cache.
 > {: .block-tip }
 
-- Navigate to **[https://desktop.wxcc-us1.cisco.com/](https://desktop.wxcc-us1.cisco.com/){:target="\_blank"}** in the chrome browser with the incognito mode.
+- Here is how you create a Chrome profile so you can login the Agent on the same browser
+
+  - Select `Profiles` on Chrome
+  - Select `Add Profile`
+  - Select `continue without an account`
+  - Give it a name .i.e `supervisor`
+  - Click `done`
+
+![CH-Desktop-Call-In-Accepted](/assets/images/agent/Chrome-Create-Profile.gif)
+
+---
+
+- After you create a new Chrome Profile, navigate to **[https://desktop.wxcc-us1.cisco.com/](https://desktop.wxcc-us1.cisco.com/){:target="\_blank"}** in the chrome browser with the incognito mode.
 
 - Enter the agent’s **email ID** which you created in the previous task.
 
@@ -368,48 +366,17 @@ xxxx_team2,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
 
 ![Agent Sign In](/assets/images/AG-2.gif)
 
----
-
-<p style="text-align:center"><strong>Congratulations, you have completed this lab! You can continue with the next one.</strong></p>
-		
-<p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>
-
 # Part 2: Introduction to Flow Designer
 
 Flow designer is a simple drag-and-drop user interface (UI) to define the flows. The following video explains the Flow Designer layout, activity library, and terminology used in the Flow Designer.
 
 In this lab, we will configure all of the required elements to deliver a call into a queue. We will then create a new flow and iterate on it adding functionality and exploring opportunities for improvement.
 
-### Lab Objective
+### Objective
 
-- Configure Entry Point, Entry Point Mapping, Routing Strategy, and Queue
-- Create a basic flow
-- Add functionality to the flow by making small changes
-
-  ***
-
-### Pre-requisites
-
-- Complete Lab 1 "Admin Experience"
-
-  - You have the administrator's access to the Tenant Management Portal.
-  - Agent and Supervisor users created and configured
-  - You have agent's access to the Agent Desktop
-  - You have the supervisor's access to the Tenant Management Portal.
-  - Agent is part of 2 Teams.
-  - Webex Calling extensions are assigned to a WxCC users (agent and supervisor).
-
-    ***
-
-### Quick Links
-
-> Control Hub: **[https://admin.webex.com](https://admin.webex.com){:target="\_blank"}**\
-> Portal: **[https://portal.wxcc-us1.cisco.com/](https://portal.wxcc-us1.cisco.com/){:target="\_blank"}**\
-> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="\_blank"}**\
-
----
-
-### Fill in the form with the details provided and agent email address you created in the previous lab, then click "Update Directions"
+- Looking at the configuration of Entry Points (Channels), Entry Point Mapping, Routing Strategy, and Queue
+- Verifying the basic flow
+- Verify functionality to the flow by looking at various use cases.
 
 ---
 
