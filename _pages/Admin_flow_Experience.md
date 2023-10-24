@@ -7,7 +7,7 @@ layout: post
 
 <script>
     function update(){them = Array.from(document.querySelectorAll("input")).reduce((acc, input) => ({...acc, [input.id + "_out"] : input.value}),{});
-	Object.entries(them).forEach((entry) => {
+   Object.entries(them).forEach((entry) => {
     Array.from(document.getElementsByClassName(entry[0])).forEach((element,index) => 
     {
       console.log(document.getElementsByClassName(entry[0])[index].innerHTML); 
@@ -15,18 +15,9 @@ layout: post
     })})
 
   event.preventDefault()
-  if(document.forms["IVRdeets"][0].value != "Your EP DN"){
-    localStorage.setItem("EPDN",document.forms["IVRdeets"][0].value)
-  }
-   if(document.forms["IVRdeets"][1].value != "Your Attendee ID"){
-    localStorage.setItem("attendeeID",document.forms["IVRdeets"][1].value)
+   if(document.forms["attendee-form"][1].value != "Your Attendee ID"){
+    localStorage.setItem("attendeeID",document.forms["attendee-form"][1].value)
   }  
-  if(document.forms["IVRdeets"][2].value != "Agent Email"){
-    localStorage.setItem("agentEmail",document.forms["IVRdeets"][2].value)
-  } 
-  if(document.forms["IVRdeets"][3].value != "Supervisor Extension"){
-    localStorage.setItem("supervisorEXT",document.forms["IVRdeets"][3].value)
-  }
   }
 </script>
 
