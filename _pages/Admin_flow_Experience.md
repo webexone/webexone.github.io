@@ -598,7 +598,10 @@ In this lab, we will configure all of the required elements to deliver a call in
    > ---
 8. Place a test call to your EP DN
 
-> Complete configuration steps: [Google Text-To-Speech Configuration](https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/217425-configure-google-text-to-speech-for-webe.html){:target="\_blank"}
+
+> **Tip:** Please refer the article [Google Text-To-Speech Configuration](https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/217425-configure-google-text-to-speech-for-webe.html){:target="\_blank"} for complete configuration steps
+> {: .block-warning }
+
 
 ## 2.3: Adding Callback functionality to the flows
 
