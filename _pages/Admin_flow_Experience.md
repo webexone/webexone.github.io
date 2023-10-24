@@ -82,7 +82,7 @@ You can do the tasks from the lab guide either on the **Lab Tenant** (you need t
 
 (0) **Lab Credentials and Attendee ID** - Provided to you over email.
 
-> Please `submit the form below with your Attendee ID`. All configuration items in the lab guide will be renamed with that prefix.
+> Please **`submit the form below with your Attendee ID`**. All configuration items in the lab guide will be renamed with that prefix.
 > {: .block-warning }
 
 <script>
@@ -181,7 +181,7 @@ Please note, that to proceed to the next section, you will need to use the accou
 
 - Check the agent's **First name**, **Last name** and input the **Email addresses** of the agent.
 
-- Click on `+` sign and add the supervisor in the same way.
+- Click on **`+`** sign and add the supervisor in the same way.
 
 - For consistency, verify that the **Email addresses** are same as in the table above and click **_Next_**.
 
@@ -191,7 +191,7 @@ Please note, that to proceed to the next section, you will need to use the accou
 
 - The **_Phone Number_** left as **None**.
 
-- On the same page, Enter the correct `Extension` under **_Assign Numbers_**. The correct Extensions should be provided to you with the admin credentials.
+- On the same page, Enter the correct **`Extension`** under **_Assign Numbers_**. The correct Extensions should be provided to you with the admin credentials.
 
 - In step **Step 4: Review** verify the data and Click **_Add users_**.
 
@@ -228,17 +228,17 @@ Please note, that to proceed to the next section, you will need to use the accou
 
 - Scroll down in the left navigation panel to the **_DESKTOP EXPERIENCE_** section and click on **_Multimedia Profiles_**.
 
-- Click on `Create Multimedia Profile` button.
+- Click on **`Create Multimedia Profile`** button.
 
 - Input Name as **<w class="attendee_out">attendeeId</w>\_MMP**.
 
-- In the Media Details section, leave the **Blended** mode and input `1` for **_Voice_**, `3` for **_Chat_**, `3` for **_Email_**, `3` for **_Social_**, and click **_Create_** button in the lower right corner.
+- In the Media Details section, leave the **Blended** mode and input **`1`** for **_Voice_**, **`3`** for **_Chat_**, **`3`** for **_Email_**, **`3`** for **_Social_**, and click **_Create_** button in the lower right corner.
 
 ### 2. Verify the Site
 
 - Navigate to **_USER MANAGEMENT_** in the left navigation panel and select **_Sites_**.
 
-- Click on `Create Site` button and provide the Name as **<w class="attendee_out">attendeeId</w>\_Site**.
+- Click on **`Create Site`** button and provide the Name as **<w class="attendee_out">attendeeId</w>\_Site**.
 
 - Select your MMP in the **_Multimedia profile_** drop down list and hit **_Create_**.
 
@@ -246,13 +246,13 @@ Please note, that to proceed to the next section, you will need to use the accou
 
 - Navigate to **_Teams_** under the **_USER MANAGEMENT_**.
 
-- Click on the `Create Team`.
+- Click on the **`Create Team`**.
 
 - Input _Name_ as **<w class="attendee_out">attendeeId</w>\_Team1**.
 
 - Select your site from the **_Parent Site_** drop-down.
 
-- Select the **_team type_** `Agent Based`.
+- Select the **_team type_** **`Agent Based`**.
 
 - Select your **_Multimedia profile_**.
 
@@ -274,7 +274,7 @@ Please note, that to proceed to the next section, you will need to use the accou
 
 - Choose the **_Multimedia Profile_** and hit **_Save_**.
 
-- In the User's table make sure that the agent is now shown with the **_Contact Center Enabled_** flag as `Yes` and **_Status_** as `Active`.
+- In the User's table make sure that the agent is now shown with the **_Contact Center Enabled_** flag as **`Yes`** and **_Status_** as **`Active`**.
 
 - Repeat the steps above for the supervisor.
 
@@ -365,11 +365,11 @@ NAME,SITE,TYPE,MULTIMEDIA PROFILE,SKILL PROFILE,DN,CAPACITY,DESKTOP LAYOUT
 
 - Here is how you create a Chrome profile so you can login the Agent on the same browser
 
-  - Select `Profiles` on Chrome
-  - Select `Add Profile`
-  - Select `continue without an account`
-  - Give it a name .i.e `supervisor`
-  - Click `done`
+  - Select **`Profiles`** on Chrome
+  - Select **`Add Profile`**
+  - Select **`continue without an account`**
+  - Give it a name .i.e **`supervisor`**
+  - Click **`done`**
 
 ![CH-Desktop-Call-In-Accepted](/assets/images/agent/Chrome-Create-Profile.gif)
 
@@ -548,15 +548,15 @@ In this lab, we will configure all of the required elements to deliver a call in
    
    <img src="assets/images/fe_31.png">
    >
-   > Go to **_Support Number_** and verify the below: 
+   > - Go to **_Support Number_** and verify the below: 
    > 
-   >  `Webex calling location` is set as `US`
+   > - **`Webex calling location`** is set as **`US`**
    >
-   > `Support Number ` is set to the the EP-DN assigned to you 
+   > - **`Support Number`** is set to the the EP-DN assigned to you 
    >
-   > `PSTN Region` as `Default` 
+   > - **`PSTN Region`** as **`Default`** 
    >
-   > Click Save
+   > Click **`Save`**
    >
    > ***
 
@@ -609,20 +609,6 @@ In this lab, we will configure all of the required elements to deliver a call in
    >>
    >> No default value
    >
-   > ---
-   >
-   > Name: rDigit
-   >> Type: string
-   >>
-   >> No default value
-   >
-   > ---
-   >
-   > Name: sPosition
-   >> Type: Integer
-   >>
-   >> Default Value: 0
-   >>
    ---
 2. Add a new Menu node
     > Activity Label: Menu_Callback
@@ -724,38 +710,41 @@ The subsequent flow execution from BH activity takes the following priority:
 
 <img src="/assets/images/fe_17.png">
 
-- Click on `Working Hours` button and select **_Create Working Hours_**
+- Click on **`Working Hours`** button and select **_Create Working Hours_**
 
 <img src="/assets/images/fe_23.png">
 
-- Add a `Name`, `Timezone` and `Shift` to your schedule
+- Add a **`Name`**, **`Timezone`** and **`Shift`** to your schedule
 
 <img src="/assets/images/fe_19.png">
 
-- Select `Save` at the bottom
+- Select **`Save`** at the bottom
 
-- To add a holiday schedule, click on **_Business Hours_** and select `Holiday Lists`
+- To add a holiday schedule, click on **_Business Hours_** and select **`Holiday Lists`**
 
-- Select `Create Holiday List` and enter the list of holidays.
+- Select **`Create Holiday List`** and enter the list of holidays.
 
 <img src="/assets/images/fe_20.png">
 
-- Now you can Go back to `Working Hours` button and select **_Create Working Hours_** and select the `Holiday Lists` created under `Additional Settings`
+- Now you can Go back to **`Working Hours`** button and select **_Create Working Hours_** and select the **`Holiday Lists`** created under **`Additional Settings`**
 
 <img src="/assets/images/fe_21.png">
 
-- Similar steps can be followed to create `Override` schedule
+- Similar steps can be followed to create **`Override`** schedule
 
 ### 2. Verify the Configuration
 
 Verify the Business Hours configuration by using this on the flow
 
-> **Tip:** Use the `Reference List` section within `Working Hours` to check the Entity Name the schedule is referenced by
+> **Tip:** Use the **`Reference List`** section within **`Working Hours`** to check the Entity Name the schedule is referenced by
 > {: .block-warning }
 
 <img src="/assets/images/fe_25.png">
 
 ---
+
+
+## Lab Activity 
 
 # Part 3: Introduction to Flow Debugger
 
@@ -775,7 +764,7 @@ Once the user selects an interaction, the Interaction Detail pane displays the l
 
 Place a call to the flow and trace the call through the Flow Debugger.
 
-> **Tip:** Selct **`**Edit: Off`** to open the flow in **`Read-Only`** mode when using using the debug functionality
+> **Tip:** Selct **`Edit: Off`** to open the flow in **`Read-Only`** mode when using using the debug functionality
 > {: .block-warning }
 
 # Part 4: Introduction to Flow Versioning
@@ -839,7 +828,7 @@ With this feature, we will get the the option to give the flow, Music on Hold an
 
 1. Download the [Outbound Flow Template](https://webexone.github.io/../../../assets/files/WebexOne_OutdialFlow.json){:target="\_blank"}
 
-2. Follow the similar steps provided in `Section 2.1` to import and publish the flow
+2. Follow the similar steps provided in **`Section 2.1`** to import and publish the flow
 
 3. Within the flow, navigate to Event Flows notice that the Screen pops configured for the AgentOffered event
 
@@ -851,7 +840,7 @@ With this feature, we will get the the option to give the flow, Music on Hold an
 
 1. Click on Provisioning > Entry Points/Queues > Outdial Entry point
 
-2. Enter the `Name`, `Flow`, `Music On Hold`, `Outdial Queue`
+2. Enter the **`Name`**, **`Flow`**, **`Music On Hold`**, **`Outdial Queue`**
 
 <img src="/assets/images/fe_26.png">
 
@@ -869,7 +858,7 @@ With this feature, we will get the the option to give the flow, Music on Hold an
 
 Place an outbound call as an agent from Agent Desktop
 
-> **Note:** The `Outdial queue` selected as part of the outdail entry point is currently purely for reporing purposes.
+> **Note:** The **`Outdial queue`** selected as part of the outdail entry point is currently purely for reporing purposes.
 > {: .block-warning }
 
 ## 6.4: Caveats
@@ -1096,7 +1085,7 @@ In this lab, we will configure all the required elements to collect and view end
 
 The entry point for the Search feature is the newly added <input> located towards top right of flow designer. This list will update to include up to five matching results.
 
-For shortcut to search please select: `Ctrl` `K`
+For shortcut to search please select: **`Ctrl`** **`K`**
 
 <img src="/assets/images/fe_29.png">
 
