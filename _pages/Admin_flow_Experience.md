@@ -307,7 +307,7 @@ Bulk Operations are available for the following configuration object types:
 
 - Click **_Create Bulk Operations_** button in the right upper corner.
 
-![Bulk Menue](/assets/images/Bulk-1.gif)
+![Bulk Menu](/assets/images/Bulk-1.gif)
 
 - In Step 1 select the configuration object **_Team_** in the drop-down list.
 
@@ -412,9 +412,10 @@ In this lab, we will configure all of the required elements to deliver a call in
 
 ### Create a queue
 
-1. Click on Provisioning > Entry Points/Queues > Queue
-   > <img src="/assets/images/IVR/openQueue.gif">
-   ***
+1. On Webex Control Hub, navigate to **_Queues_** under the **_CUSTOMER Experience_** tab and create a queue: **<w class="attendee_out">attendeeId</w>\_EP**
+
+<img src="/assets/images/fe_33.png">
+
 2. Click New Queue
 
    > Name your queue:  <w class = "attendee_out">attendeeID</w>\_Q 
@@ -523,7 +524,7 @@ In this lab, we will configure all of the required elements to deliver a call in
 
 2. Verify the Entry Point configuration
    >
-   <img src="assets/images/fe_32.gif">
+   > <img src="assets/images/fe_32.png">
    >
    > Name your Entry Point EP\_<w class="attendee_out">AttendeeID</w>
    >
@@ -547,7 +548,7 @@ In this lab, we will configure all of the required elements to deliver a call in
 
 1. On Webex Control Hub, navigate to **_Channels_** under the **_CUSTOMER MANAGEMENT_** tab,
    
-   <img src="assets/images/fe_31.png">
+   > <img src="assets/images/fe_31.png">
    >
    > - Go to **_Support Number_** and verify the below: 
    > 
@@ -747,7 +748,7 @@ Verify the Business Hours configuration by using this on the flow
 
 ---
 
-##  
+##  Bringing it all together: Advance Flow configuration 
 
 # Part 3: Introduction to Flow Debugger
 
