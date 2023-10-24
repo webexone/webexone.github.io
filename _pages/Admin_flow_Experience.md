@@ -88,21 +88,18 @@ You can do the tasks from the lab guide either on the **Lab Tenant** (you need t
 > Please **SKIP task #1** if you are doing the labs on the **Gold Tenant**. The task below is only for the **Lab Tenant** option where you have received an email with the Lab tenant credentials. In a such case, please copy and paste the Attendee ID number from the email into the corresponding field (Example: IDXXX).
 > {: .block-tip }
 
-<form id="IVRdeets">
-
-<label for="attendee">Attendee ID:</label>
-<input type="text" id="attendee" name="attendee" onChange="update()"><br>
-
-<br>
-
-<button onclick="update()">Save</button>
-
-</form>
-
 <script>
-document.forms["IVRdeets"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID"
-
-
+document.forms["attendee-form"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID" 
+update()
+</script>
+<form id="attendee-form">
+  <label for="attendee">Attendee ID:</label>
+  <input type="text" id="attendee" name="attendee" onChange="update()"><br>
+<br>
+  <button onclick="update()">Save</button>
+</form>
+<script>
+document.forms["attendee-form"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID"
 update()
 </script>
 
@@ -111,9 +108,23 @@ update()
 > We don't recommend using the @maildrop.cc or @mailinator.com accounts on your **Gold Tenant** due to security reasons. An attacker can easily gain access to your tenant and execute the outbound calls.
 > {: .block-warning }
 
+<<<<<<< HEAD
+> - As a result of the task below you should add two new users (agent and supervisor) to the Control Hub and assign Webex CC Agent and Supervisor licenses. 
+> - Please **SKIP task #2** if you are working with the **Lab Tenant**. This tenant is integrated with SSO where the agents and supervisors have been pre-created according to the table below. 
+{: .block-tip }
+
+
+
+
+| **User Role** | **User email**                                                                | **Endpoint** |
+| ------------- | ----------------------------------------------------------------------------- | ------------- | 
+| Agent         | wxcclabs+agent_<w class="attendee_out">AttendeeID</w>@gmail.com | WebRTC |
+| Supervisor    | wxcclabs+supvr_<w class="attendee_out">AttendeeID</w>@gmail.com | Webex App |
+=======
 > - As a result of the task below you should add two new users (agent and supervisor) to the Control Hub and assign Webex CC Agent and Supervisor licenses.
 > - Please **SKIP task #2** if you are working with the **Lab Tenant**. This tenant is integrated with SSO where the agents and supervisors have been pre-created according to the table below.
 >   {: .block-tip }
+>>>>>>> aac7372e892de65b41bc436126ffb5ed41c796f0
 
 | **User Role** | **User email**                                                   | **Endpoint** |
 | ------------- | ---------------------------------------------------------------- | ------------ |
