@@ -119,6 +119,7 @@ The following Administration entities have been configured for you via [Webex Co
 
 Please note, that to proceed to the next section, you will need to use the accounts shown below.
 
+> **wxcclabs+supvr_ID<w class = "attendee_out">attendeeID</w>@@gmail.com**
 
 | **User Role** | **User email**                                                   | **Endpoint** |
 | ------------- | ---------------------------------------------------------------- | ------------ |
