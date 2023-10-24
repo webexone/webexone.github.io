@@ -158,12 +158,13 @@ Please note, that to proceed to the next section, you will need to use the accou
 | Agent 1            | wxcclabs+agent_ID<w class = "attendee_out">attendeeID</w>@gmail.com |
 | Supervisor 1       | wxcclabs+supvr_ID<w class = "attendee_out">attendeeID</w>@gmail.com |
 | Desktop Profile    | WebexOne Desktop Profile                                            |
-| Entry Point        | <w class = "attendee_out">attendeeID</w>\_EP                        |
+| Inbound EP         | <w class = "attendee_out">attendeeID</w>\_EP                        |
 | Queue              | <w class = "attendee_out">attendeeID</w>\_Q                         |
 | Team 1             | <w class = "attendee_out">attendeeID</w>\_team1                     |
 | Team 2             | <w class = "attendee_out">attendeeID</w>\_team2                     |
 | Site               | <w class = "attendee_out">attendeeID</w>\_Site                      |
 | Multimedia Profile | <w class = "attendee_out">attendeeID</w>\_MMP                       |
+| Outdial EP         | WebexOne_Outdial_EP                                                 |
 | Outdial ANI        | WebexOneOutdial ANI                                                 |
 | Address Book       | WebexOne Address Book                                               |
 | Inbound Flow       | QtoA_WebexOne_InboundFlow                                           |
@@ -516,7 +517,7 @@ In this lab, we will configure all of the required elements to deliver a call in
 
    ***
 
-### Create your Entry Point
+### Verify your Entry Point
 
 1. On Webex Control Hub, navigate to **_Channels_** under the **_CUSTOMER MANAGEMENT_** tab and verify that the **<w class="attendee_out">attendeeId</w>\_EP** is created.
 
@@ -542,7 +543,7 @@ In this lab, we will configure all of the required elements to deliver a call in
 
 
 
-### Create your Entry Point mapping
+### Verify your Entry Point mapping
 
 1. On Webex Control Hub, navigate to **_Channels_** under the **_CUSTOMER MANAGEMENT_** tab,
    
@@ -746,8 +747,7 @@ Verify the Business Hours configuration by using this on the flow
 
 ---
 
-
-## Lab Activity 
+##  
 
 # Part 3: Introduction to Flow Debugger
 
@@ -839,11 +839,11 @@ With this feature, we will get the the option to give the flow, Music on Hold an
 
 ---
 
-## 6.2: Create an Outdial Entry Point
+## 6.2: Verify your Outdial Entry Point
 
-1. Click on Provisioning > Entry Points/Queues > Outdial Entry point
+1. On Webex Control Hub, navigate to **_Channels_** under the **_CUSTOMER MANAGEMENT_** tab and verify that the **WebexOne_Outdial_EP** is created.
 
-2. Enter the **`Name`**, **`Flow`**, **`Music On Hold`**, **`Outdial Queue`**
+2. Verify the **`Name`**, **`Flow`**, **`Music On Hold`**, **`Outdial Queue`**
 
 <img src="/assets/images/fe_26.png">
 
