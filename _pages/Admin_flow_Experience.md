@@ -522,9 +522,9 @@ In this lab, we will configure all of the required elements to deliver a call in
 
 1. On Webex Control Hub, navigate to **_Channels_** under the **_CUSTOMER MANAGEMENT_** tab and verify that the **<w class="attendee_out">attendeeId</w>\_EP** is created.
 
+<img src="/assets/images/fe_32.png">
+
 2. Verify the Entry Point configuration
-   >
-   > <img src="assets/images/fe_32.png">
    >
    > Name your Entry Point EP\_<w class="attendee_out">AttendeeID</w>
    >
@@ -546,9 +546,10 @@ In this lab, we will configure all of the required elements to deliver a call in
 
 ### Verify your Entry Point mapping
 
-1. On Webex Control Hub, navigate to **_Channels_** under the **_CUSTOMER MANAGEMENT_** tab,
+ On Webex Control Hub, navigate to **_Channels_** under the **_CUSTOMER MANAGEMENT_** tab: 
+
+ <img src="/assets/images/fe_31.png">
    
-   > <img src="assets/images/fe_31.png">
    >
    > - Go to **_Support Number_** and verify the below: 
    > 
