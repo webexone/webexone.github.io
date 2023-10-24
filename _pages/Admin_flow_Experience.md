@@ -335,9 +335,8 @@ NAME,SITE,TYPE,MULTIMEDIA PROFILE,SKILL PROFILE,DN,CAPACITY,DESKTOP LAYOUT
 
 - Click **Next** button and wait the results. The status should be shown as **Completed**.
 
-- Go to the Management Portal, click on **_Provisioning_** -> **_Team_** and verify that the **<w class="attendee_out">attendeeId</w>\_Team3** is created.
+- On Webex Control Hub, navigate to **_Teams_** under the **_USER MANAGEMENT_** tab and verify that the **<w class="attendee_out">attendeeId</w>\_Team3** is created.
 
-- In the Management Portal directly associate the **<w class="attendee_out">attendeeId</w>\_Team3** with your agent and supervisor by adding your users to that team (**Advanced Settings -> Agents**).
 
 ## 1.4: Access to the Agent Desktop
 
@@ -394,7 +393,7 @@ NAME,SITE,TYPE,MULTIMEDIA PROFILE,SKILL PROFILE,DN,CAPACITY,DESKTOP LAYOUT
 
 # Part 2: Introduction to Flow Designer
 
-Flow designer is a simple drag-and-drop user interface (UI) to define the flows. The following video explains the Flow Designer layout, activity library, and terminology used in the Flow Designer.
+Flow designer is a simple drag-and-drop user interface (UI) to define the flows. The following steps explain the Flow Designer layout, activity library, and terminology used in the Flow Designer.
 
 In this lab, we will configure all of the required elements to deliver a call into a queue. We will then create a new flow and iterate on it adding functionality and exploring opportunities for improvement.
 
@@ -417,7 +416,7 @@ In this lab, we will configure all of the required elements to deliver a call in
    ***
 2. Click New Queue
 
-   > Name your queue Q\_<w class="attendee_out">AttendeeID</w>
+   > Name your queue:  <w class = "attendee_out">attendeeID</w>\_Q 
    >
    > Description: optional
    >
@@ -491,7 +490,7 @@ In this lab, we will configure all of the required elements to deliver a call in
    >
    > > Select Static Queue
    > >
-   > > Queue: 001_VoiceQueue
+   > > Queue: <w class = "attendee_out">attendeeID</w>\_Q 
    >
    > ***
    >
@@ -519,9 +518,11 @@ In this lab, we will configure all of the required elements to deliver a call in
 
 ### Create your Entry Point
 
-1. Click on Provisioning > Entry Points/Queues > Entry point
-2. Click Create new Entry point
-   > <img src="assets/images/IVR/openEP.gif">
+1. On Webex Control Hub, navigate to **_Channels_** under the **_CUSTOMER MANAGEMENT_** tab and verify that the **<w class="attendee_out">attendeeId</w>\_EP** is created.
+
+2. Verify the Entry Point configuration
+   >
+   <img src="assets/images/fe_32.gif">
    >
    > Name your Entry Point EP\_<w class="attendee_out">AttendeeID</w>
    >
@@ -531,7 +532,7 @@ In this lab, we will configure all of the required elements to deliver a call in
    >
    > Service Level Threshold: 60
    >
-   > Flow: <w class="attendee_out">AttendeeID</w>\_TechSummit
+   > Flow: Flow_template
    >
    > Music on Hold: defaultmusic_on_hold.wav
    >
@@ -539,16 +540,21 @@ In this lab, we will configure all of the required elements to deliver a call in
    >
    > ***
 
+
+
 ### Create your Entry Point mapping
 
-1. Click on Provisioning > Entry Point Mapping
-   > <img src="assets/images/IVR/openEPmap.gif">
-2. Click new mapping
-   > In location, select "Office"
+1. On Webex Control Hub, navigate to **_Channels_** under the **_CUSTOMER MANAGEMENT_** tab,
+   
+   <img src="assets/images/fe_31.png">
    >
-   > In Available Numbers select <w class= "DN_out" >Your EP DN</w>
+   > Go to **_Support Number_** and verify the below: 
+   > 
+   >  `Webex calling location` is set as `US`
    >
-   > In Entry point select EP\_<w class="attendee_out">AttendeeID
+   > `Support Number ` is set to the the EP-DN assigned to you 
+   >
+   > `PSTN Region` as `Default` 
    >
    > Click Save
    >
@@ -831,7 +837,7 @@ With this feature, we will get the the option to give the flow, Music on Hold an
 
 ## 6.1: Create an Outbound flow
 
-1. Download the [Outbound Flow Template](https://webexcc.github.io/../../../assets/files/WebexOne_OutdialFlow.json){:target="\_blank"}
+1. Download the [Outbound Flow Template](https://webexone.github.io/../../../assets/files/WebexOne_OutdialFlow.json){:target="\_blank"}
 
 2. Follow the similar steps provided in `Section 2.1` to import and publish the flow
 
