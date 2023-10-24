@@ -540,6 +540,8 @@ In this lab, we will configure all of the required elements to deliver a call in
    >
    > Flow: Flow_template
    >
+   > Version Label: Live 
+   >
    > Music on Hold: defaultmusic_on_hold.wav
    >
    > Click Save
@@ -550,7 +552,7 @@ In this lab, we will configure all of the required elements to deliver a call in
 
 ### Verify your Entry Point mapping
 
- On Webex Control Hub, navigate to **_Channels_** under the **_CUSTOMER MANAGEMENT_** tab: 
+ On Webex Control Hub, navigate to **_Channels_** under the **_CUSTOMER EXPERIENCE_** tab: 
 
  <img src="/assets/images/fe_31.png">
    
@@ -569,7 +571,8 @@ In this lab, we will configure all of the required elements to deliver a call in
 
 ### Test your configuration
 
-1. Call your assigned EP-DN from 
+1. Call your assigned EP-DN:
+
    > You should hear the greeting message and then the music in queue
    >
    > Go available in the agent desktop
@@ -753,15 +756,15 @@ Verify the Business Hours configuration by using this on the flow
 
 ---
 
-##  2.6: Bringing it all together: Advanced Flow configuration 
+##  2.6: Bringing It Together: Advanced Flow configuration 
 
 ### Update your Entry Point
 
 1. On Webex Control Hub, navigate to **_Channels_** under the **_CUSTOMER EXPERIENCE_** tab and update the flow assigned to the **<w class="attendee_out">attendeeId</w>\_EP** to the below.
 
-- Select flow **QtoA_WebexOne_InboundFlow**
+> - Select flow **QtoA_WebexOne_InboundFlow**
 
-2. Place a call to your your assigned EP-DN from 
+2. Place a call to your your assigned EP-DN:  
    > You should hear the greeting message and then the music in queue
    >
    > Go available in the agent desktop
@@ -867,9 +870,9 @@ With this feature, we will get the the option to give the flow, Music on Hold an
 
 ## 6.2: Verify your Outdial Entry Point
 
-1. On Webex Control Hub, navigate to **_Channels_** under the **_CUSTOMER MANAGEMENT_** tab and verify that the **WebexOne_Outdial_EP** is created.
+1. On Webex Control Hub, navigate to **_Channels_** under the **_CUSTOMER EXPERIENCE_** tab and verify that the **WebexOne_Outdial_EP** is created.
 
-2. Verify the **`Name`**, **`Flow`**, **`Music On Hold`**, **`Outdial Queue`**
+2. Verify the **`Name`**, **`Flow`**, **`Music On Hold`**, **`Outdial Queue`** and **`Version Label`**
 
 <img src="/assets/images/fe_26.png">
 
