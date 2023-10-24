@@ -102,20 +102,15 @@ In **Part 2**, we will examine the **Webex Contact Center Supervisor Experience*
 > {: .block-warning }
 
 <script>
-    function update(){them = Array.from(document.querySelectorAll("input")).reduce((acc, input) => ({...acc, [input.id + "_out"] : input.value}),{});
-   Object.entries(them).forEach((entry) => {
-    Array.from(document.getElementsByClassName(entry[0])).forEach((element,index) => 
-    {
-      console.log(document.getElementsByClassName(entry[0])[index].innerHTML); 
-      document.getElementsByClassName(entry[0])[index].innerHTML = entry[1];
-    })})
+document.forms["attendee-form"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID" 
 
-  event.preventDefault()
-   if(document.forms["attendee-form"][1].value != "Your_Attendee_ID"){
-    localStorage.setItem("attendeeID",document.forms["attendee-form"][1].value)
-  }  
-  }
 </script>
+<form id="attendee-form">
+  <label for="attendee">Attendee ID:</label>
+  <input type="text" id="attendee" name="attendee" onChange="update()"><br>
+<br>
+  <button onclick="update()">Save</button>
+</form>
 
 <br/>
 
