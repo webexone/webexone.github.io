@@ -6,34 +6,19 @@ layout: post
 ---
 
 <script>
- function update () {
-    const form = document.forms['attendee-form'];
-    if (form) {
-      form.addEventListener('submit', function (event) {
-        event.preventDefault();
+    function update(){them = Array.from(document.querySelectorAll("input")).reduce((acc, input) => ({...acc, [input.id + "_out"] : input.value}),{});
+   Object.entries(them).forEach((entry) => {
+    Array.from(document.getElementsByClassName(entry[0])).forEach((element,index) => 
+    {
+      console.log(document.getElementsByClassName(entry[0])[index].innerHTML); 
+      document.getElementsByClassName(entry[0])[index].innerHTML = entry[1];
+    })})
 
-        const inputs = Array.from(form.querySelectorAll('input'));
-        const values = inputs.reduce((acc, input) => {
-          acc[input.id + '_out'] = input.value;
-          return acc;
-        }, {});
-
-        Object.entries(values).forEach(([id, value]) => {
-          const elements = document.getElementsByClassName(id);
-          Array.from(elements).forEach(element => {
-            console.log(element.innerHTML);
-            if(Number(element.innerHTML) > 99>){ element.innerHTML = value;}
-            else{element.innerHTML = '0' + value;}
-          });
-        });
-
-        const attendeeIDInput = form.elements['attendeeID'];
-        if (attendeeIDInput && attendeeIDInput.value !== 'Your Attendee ID') {
-          localStorage.setItem('attendeeID', attendeeIDInput.value);
-        }
-      });
-    }
-  };
+  event.preventDefault()
+   if(document.forms["attendee-form"][1].value != "Your_Attendee_ID"){
+    localStorage.setItem("attendeeID",document.forms["attendee-form"][1].value)
+  }  
+  }
 </script>
 
 # Table of Contents
@@ -91,21 +76,18 @@ You can do the tasks from the lab guide either on the **Lab Tenant** (you need t
 
 ### 1. Define your Attendee ID and Other parameters
 
+
 <script>
-d<script>
 document.forms["attendee-form"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID" 
 update()
 </script>
+
 <form id="attendee-form">
-  <label for="attendee">Attendee ID:</label>
-  <input type="text" id="attendee" name="attendee" onChange="update()"><br>
+  <label for="attendeeID">Attendee ID:</label>
+  <input type="text" id="attendeeID" name="attendee" onChange="update()"><br>
 <br>
   <button onclick="update()">Save</button>
 </form>
-<script>
-document.forms["attendee-form"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID"
-update()
-</script>
 
 ### 2. Add agent and supervisor users and set the calling extensions
 
@@ -190,7 +172,7 @@ Please note, that to proceed to the next section, you will need to use the accou
 
 - Click on `Create Multimedia Profile` button.
 
-- Input Name as **<w class="attendee_out">Your_Attendee_ID</w>\_MMP**.
+- Input Name as **<w class="attendee_out">attendeeId</w>\_MMP**.
 
 - In the Media Details section, leave the **Blended** mode and input `1` for **_Voice_**, `3` for **_Chat_**, `3` for **_Email_**, `3` for **_Social_**, and click **_Create_** button in the lower right corner.
 
@@ -198,7 +180,7 @@ Please note, that to proceed to the next section, you will need to use the accou
 
 - Navigate to **_USER MANAGEMENT_** in the left navigation panel and select **_Sites_**.
 
-- Click on `Create Site` button and provide the Name as **<w class="attendee_out">Your_Attendee_ID</w>\_Site**.
+- Click on `Create Site` button and provide the Name as **<w class="attendee_out">attendeeId</w>\_Site**.
 
 - Select your MMP in the **_Multimedia profile_** drop down list and hit **_Create_**.
 
@@ -208,7 +190,7 @@ Please note, that to proceed to the next section, you will need to use the accou
 
 - Click on `Create Team`.
 
-- Input _Name_ as **<w class="attendee_out">Your_Attendee_ID</w>\_Team1**.
+- Input _Name_ as **<w class="attendee_out">attendeeId</w>\_Team1**.
 
 - Select your site from the **_Parent Site_** drop-down.
 
@@ -274,14 +256,14 @@ Bulk Operations are available for the following configuration object types:
 
 - Once the task is **Completed** click on **_Download export file_** button under the **Action** and open the csv file in the notepad.
 
-- The first line is the headers, it is mandatory to have it during the import process. Remove all lines from the CSV file except the first line with headers and the line with **<w class="attendee_out">Your_Attendee_ID</w>\_Team1**.
+- The first line is the headers, it is mandatory to have it during the import process. Remove all lines from the CSV file except the first line with headers and the line with **<w class="attendee_out">attendeeId</w>\_Team1**.
 
 ```csv
 NAME,SITE,TYPE,MULTIMEDIA PROFILE,SKILL PROFILE,DN,CAPACITY,DESKTOP LAYOUT
 xxxx_team1,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
 ```
 
-- Rename the Team1 to **<w class="attendee_out">Your_Attendee_ID</w>\_Team2** and save the file. You should have only 2 rows in the file.
+- Rename the Team1 to **<w class="attendee_out">attendeeId</w>\_Team2** and save the file. You should have only 2 rows in the file.
   Example:
 
 ```csv
@@ -295,9 +277,9 @@ xxxx_team2,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
 
 - Click **Next** button and wait the results. The status should be shown as **Completed**.
 
-- Go to the Management Portal, click on **_Provisioning_** -> **_Team_** and verify that the **<w class="attendee_out">Your_Attendee_ID</w>\_Team2** is created.
+- Go to the Management Portal, click on **_Provisioning_** -> **_Team_** and verify that the **<w class="attendee_out">attendeeId</w>\_Team2** is created.
 
-- In the Management Portal directly associate the **<w class="attendee_out">Your_Attendee_ID</w>\_Team2** with your agent and supervisor by adding your users to that team (**Advanced Settings -> Agents**).
+- In the Management Portal directly associate the **<w class="attendee_out">attendeeId</w>\_Team2** with your agent and supervisor by adding your users to that team (**Advanced Settings -> Agents**).
 
 ## 1.4: Access to the Agent Desktop
 
@@ -335,7 +317,7 @@ xxxx_team2,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
 
 - In the **_Station Credentials_** pane, select **"Desktop"**.
 
-- Select the team **<w class="attendee_out">Your_Attendee_ID</w>\_Team1**.
+- Select the team **<w class="attendee_out">attendeeId</w>\_Team1**.
 
 - Click **_Submit_** button. The browser may ask you to confirm use the microphone from the browser.
 
@@ -386,34 +368,6 @@ In this lab, we will configure all of the required elements to deliver a call in
 
 ### Fill in the form with the details provided and agent email address you created in the previous lab, then click "Update Directions"
 
-
-<form id="IVRdeets">
-  
-  <label for="DN">EP DN you were assigned:</label><br>
-  <input type="tel" id="DN" name="DN" onChange="update()"><br>
-  
-  <label for="attendee">Attendee ID:</label><br>
-  <input type="text" id="attendee" name="attendee" onChange="update()"><br>
-  
-  <label for="agent">Agent Email Address:</label><br>
-  <input type="email" id="agent" name="agent" onChange="update()"><br>
-
-<label for="supervisorEXT">Supervisor Extension:</label><br>
-<input type="number" id="agent" name="supervisorEXT" onChange="update()"><br>
-<br>
-
-<button onclick="update()">Update Directions</button>
-
-</form>
-
-<script>
-document.forms["IVRdeets"][0].value = localStorage.getItem("EPDN") || "Your EP DN"
-document.forms["IVRdeets"][1].value = localStorage.getItem("AttendeeID") || "Your Attendee ID" 
-document.forms["IVRdeets"][2].value = localStorage.getItem("agentEmail") || "Agent Email"
-document.forms["IVRdeets"][3].value = localStorage.getItem("supervisorEXT") || "Supervisor Extension"
-update()
-</script>
-
 ---
 
 ## 2.1: Configuring tenant for Call Delivery
@@ -439,13 +393,13 @@ update()
    >
    > > Click Add Group
    > >
-   > > Select <w class="attendee_out">Your_Attendee_ID</w>\_Team1
+   > > Select <w class="attendee_out">attendeeId</w>\_Team1
    > >
    > > Save Group
    > >
    > > Create second group
    > >
-   > > Select <w class="attendee_out">Your_Attendee_ID</w>\_Team2
+   > > Select <w class="attendee_out">attendeeId</w>\_Team2
    > >
    > > After: 60 Seconds in queue
    > >
