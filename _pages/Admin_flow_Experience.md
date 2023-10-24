@@ -61,6 +61,7 @@ layout: post
 | [ 2.2: Adding Text-To-Speech to the flow](#22-adding-text-to-speech-to-the-flow)                     | Activity    | EASY             | 8 min            |
 | [ 2.3: Adding Callback functionality to the flows](#23-adding-callback-functionality-to-the-flows)   | Activity    | EASY             | 8 min            |
 | [ 2.4: Business Hours Configuration](#24-business-hours-configuration)                               | Exploration | EASY             | 8 min            |
+| [ 2.6: Bringing it all together: Advanced Flow configuration ](#24-business-hours-configuration)                               | Exploration | EASY             | 8 min            |
 | [Part 3: Introduction to Flow Debugger](#part-3-introduction-to-flow-debugger)                       | Activity    | EASY             | 15 min           |
 | [Part 4: Introduction to Flow Versioning](#part-4-introduction-to-flow-versioning)                   | Exploration | EASY             | 15 min           |
 | [Part 5: Flow Error Handling](#part-5-flow-error-handling)                                           | Exploration | EASY             | 15 min           |
@@ -406,6 +407,9 @@ In this lab, we will configure all of the required elements to deliver a call in
 
 ---
 
+**Note:** If you have prior experience with creating flows, please navigate to step 2:.
+{: .block-warning }
+
 ## 2.1: Configuring tenant for Call Delivery
 
 ⚠️ You can use this link to download the [Audio Files](https://webexcc.github.io/assets/files/lab_wav.zip){:target="\_blank"}. Those files are already pre-uploaded on the Lab Tenant.
@@ -559,13 +563,13 @@ In this lab, we will configure all of the required elements to deliver a call in
    >
    > - **`PSTN Region`** as **`Default`** 
    >
-   > Click **`Save`**
+   > - Click **`Save`**
    >
    > ***
 
 ### Test your configuration
 
-1. Call <w class= "DN_out" >Your EP DN</w> from your supervisor extension
+1. Call your assigned EP-DN from 
    > You should hear the greeting message and then the music in queue
    >
    > Go available in the agent desktop
@@ -749,7 +753,27 @@ Verify the Business Hours configuration by using this on the flow
 
 ---
 
-##  Bringing it all together: Advance Flow configuration 
+##  2.6: Bringing it all together: Advanced Flow configuration 
+
+### Update your Entry Point
+
+1. On Webex Control Hub, navigate to **_Channels_** under the **_CUSTOMER EXPERIENCE_** tab and update the flow assigned to the **<w class="attendee_out">attendeeId</w>\_EP** to the below.
+
+- Select flow **QtoA_WebexOne_InboundFlow**
+
+2. Place a call to your your assigned EP-DN from 
+   > You should hear the greeting message and then the music in queue
+   >
+   > Go available in the agent desktop
+   >
+   > > The call should be delivered to your agent extension
+   >
+   > End the call, Wrap-up, and Go unavailable
+   >
+   > ***
+
+3. Open the flow **QtoA_WebexOne_InboundFlow** and review the flow configuration  
+
 
 # Part 3: Introduction to Flow Debugger
 
