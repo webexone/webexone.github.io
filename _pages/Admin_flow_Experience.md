@@ -6,19 +6,34 @@ layout: post
 ---
 
 <script>
-    function update(){them = Array.from(document.querySelectorAll("input")).reduce((acc, input) => ({...acc, [input.id + "_out"] : input.value}),{});
-   Object.entries(them).forEach((entry) => {
-    Array.from(document.getElementsByClassName(entry[0])).forEach((element,index) => 
-    {
-      console.log(document.getElementsByClassName(entry[0])[index].innerHTML); 
-      document.getElementsByClassName(entry[0])[index].innerHTML = entry[1];
-    })})
+ function update () {
+    const form = document.forms['attendee-form'];
+    if (form) {
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
 
-  event.preventDefault()
-   if(document.forms["attendee-form"][1].value != "Your Attendee ID"){
-    localStorage.setItem("attendeeID",document.forms["attendee-form"][1].value)
-  }  
-  }
+        const inputs = Array.from(form.querySelectorAll('input'));
+        const values = inputs.reduce((acc, input) => {
+          acc[input.id + '_out'] = input.value;
+          return acc;
+        }, {});
+
+        Object.entries(values).forEach(([id, value]) => {
+          const elements = document.getElementsByClassName(id);
+          Array.from(elements).forEach(element => {
+            console.log(element.innerHTML);
+            if(Number(element.innerHTML) > 99>){ element.innerHTML = value;}
+            else{element.innerHTML = '0' + value;}
+          });
+        });
+
+        const attendeeIDInput = form.elements['attendeeID'];
+        if (attendeeIDInput && attendeeIDInput.value !== 'Your Attendee ID') {
+          localStorage.setItem('attendeeID', attendeeIDInput.value);
+        }
+      });
+    }
+  };
 </script>
 
 # Table of Contents
@@ -80,6 +95,7 @@ You can do the tasks from the lab guide either on the **Lab Tenant** (you need t
 > {: .block-tip }
 
 <script>
+d<script>
 document.forms["attendee-form"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID" 
 update()
 </script>
@@ -106,8 +122,8 @@ Please note, that to proceed to the next section, you will need to use the accou
 
 | **User Role** | **User email**                                                   | **Endpoint** |
 | ------------- | ---------------------------------------------------------------- | ------------ |
-| Agent         | wxcclabs+agent_ID<w class = "attendee_out">AttendeeID</w>@gmail.com| WebRTC       |
-| Supervisor    | wxcclabs+supvr_ID<w class = "attendee_out">AttendeeID</w>@gmail.com | Webex App    |
+| Agent         | wxcclabs+agent_ID<w class = "attendee_out">attendeeID</w>@gmail.com| WebRTC       |
+| Supervisor    | wxcclabs+supvr_ID<w class = "attendee_out">attendeeID</w>@gmail.com | Webex App    |
 Administrator | wxcclabs+admin_ID<w class = "attendee_out">AttendeeID</w>@gmail.com |
 
 
