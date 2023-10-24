@@ -47,17 +47,56 @@ layout: post
 In this Lab, we will go through Admin UI by completing the tasks that are required for the general pre-configuration of a tenant. These tasks are to be undertaken by a customer administrator. By following each of the steps, you would have prepared your tenant to begin configuring different services offered by the platform. At the end of the lab, you should be able to log in to an agent interface with the configured user extension.
 You can do the tasks from the lab guide either on the **Lab Tenant** (you need to request access from the lab support team).
 
-### Introduction
-
-### Lab Objective
+### Objective
 
 - This lab is designed to help you do the initial setup and configuration of the tenant.
 - The lab contains multiple exercises on Control Hub (Admin Portal) to make you comfortable with the Webex Contact Center application.
 
 ### Pre-requisites
 
-- You have Admin access to Control Hub
-- You have the PSTN number (dialed number) registered on the Control Hub
+(0) **Lab Credentials and Attendee ID** - Provided to you over email.
+
+> Please `submit the form below with your Attendee ID`. All configuration items in the lab guide will be renamed with that prefix.
+> {: .block-warning }
+
+<script>
+document.forms["attendee-form"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID" 
+</script>
+<form id="attendee-form">
+  <label for="attendee">Attendee ID:</label>
+  <input type="text" id="attendee" name="attendee" onChange="update()"><br>
+<br>
+  <button onclick="update()">Save</button>
+</form>
+
+<br/>
+
+(2) Administrator access to Control Hub
+
+Your Administrator ID is in the format
+**wxcclabs+admin_ID<w class = "attendee_out">attendeeID</w>@gmail.com**
+
+(3) PSTN number (dialed number) registered on the Control Hub
+
+> This is sent over email as the DN (Dialed Number)
+
+(4) The items listed below have been pre-configured for you:
+
+- Agent and Supervisor user accounts are configured and ready for logins.
+- You can access the Agent Desktop via the URL: [https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com).
+- As an agent, you're associated with two teams—designated by your Attendee ID—as "Team1" and "Team2".
+
+Example:
+
+> If your attendee ID is 100:
+>
+> 100_Team1
+>
+> 100_Team2
+
+(5) Agents will use browsers for voice calls using WebRTC (Web Real-time Communication) endpoints. Additionally, Webex Calling extensions have been assigned to users (both agents and supervisors) to facilitate alternate device experiences. Webex Contact Center agents and supervisors can opt for any mix of these devices, encompassing PSTN endpoints and mobile phones.
+
+(6) A preset inbound Voice flow is available for test calls.
 
 ### Quick Links
 
@@ -66,16 +105,22 @@ You can do the tasks from the lab guide either on the **Lab Tenant** (you need t
 
 ### Lab Section
 
-> The overall aim of admin consolidation is to provide a single pane of glass (SPOG) experience for administrators so that admins need not have frequent context switch by having to traverse different applications. The following steps outlines the new features of a new admin experience. This introduces, the new left navigation panel for Webex Contact Center in Control Hub as well as other configuration settings which were migrated from the Management Portal.
+> The overall aim of admin consolidation is to provide a single pane of glass (SPOG) experience for administrators so that admins need not have frequent context switch by having to traverse different applications.
+>
+> The following steps outlines the new features of a new admin experience.
+>
+> This introduces the new left navigation panel for Webex Contact Center in Control Hub as well as other configuration settings which were migrated from the Management Portal.
 
 ![Admin_Experience](/assets/images/AE_image1.png)
 
 ## 1.1: Control Hub User Management Tasks
 
-> The following video outlines the process to manage different types of users to the Customer tenant. Following the steps, you will add new users and set the Calling extension. While adding the user, we will see how to select user roles.
+> The following section describes the process of managing different types of users. You will use the steps to add new users and verify the Calling extensions for Supervisors. While adding the user, we will see how to select user roles.
+
+> **Note: Agents will use WebRTC endpoints (Desktop Telephony)** > **Supervisors will use Webex Calling App (as Telephony Device)**
+> {: .block-warning }
 
 ### 1. Define your Attendee ID and Other parameters
-
 
 <script>
 document.forms["attendee-form"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID" 
@@ -95,7 +140,6 @@ The following Administration entities have been configured for you via [Webex Co
 
 Please note, that to proceed to the next section, you will need to use the accounts shown below.
 
-
 | **Entity**           | **Name**                                                            |
 | -------------------- | ------------------------------------------------------------------- |
 | Agent 1              | wxcclabs+agent_ID<w class = "attendee_out">attendeeID</w>@gmail.com |
@@ -111,7 +155,6 @@ Please note, that to proceed to the next section, you will need to use the accou
 | Address Book         | <w class = "attendee_out">attendeeID</w>\_addressBook               |
 | Address Book Entry 1 | WebexOne Addressbook Entry                                          |
 | Multimedia Profile   | <w class = "attendee_out">attendeeID</w>\_MMP                       |
-
 
 - Login to the [Control Hub](https://admin.webex.com){:target="\_blank"} with the admin account.
 
