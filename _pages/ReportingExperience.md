@@ -15,7 +15,7 @@ layout: post
     })})
 
   event.preventDefault()
-   if(document.forms["attendee-form"][1].value != "Your Attendee ID"){
+   if(document.forms["attendee-form"][1].value != "Your_Attendee_ID"){
     localStorage.setItem("attendeeID",document.forms["attendee-form"][1].value)
   }  
   }
