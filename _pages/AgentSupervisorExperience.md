@@ -34,13 +34,19 @@ In **Part 2**, we will examine the **Webex Contact Center Supervisor Experience*
           Array.from(elements).forEach(element => {
 
             console.log(element.innerHTML);
-            if(Number(element.innerHTML) > 99){ 
+            if(Number(element.innerHTML) > 99 ){ 
                console.log(`Got a 99+ attendee: ${element.innerHTML}`);
                element.innerHTML = value;
              }
             else{
                console.log(`Got a sub 99 attendee: ${element.innerHTML}`);
-               element.innerHTML = `0${value}`;}
+               if(element.includes('gmail.com')){
+                  element.innerHTML = `0${value}`;}
+               }
+               else{
+                element.innerHTML = value;
+               }
+              
           });
         });
         
