@@ -59,6 +59,19 @@ This Lab has been split into four parts.
 
 ## Pre-Requisites
 
+### Create Chrome Profiles
+
+- For the lab, create new Chrome profiles so that you can login the Administrators, Agents and Supervisors using the same Browser.
+
+  - Select `Profiles` on Chrome
+  - Select `Add Profile`
+  - Select `continue without an account`
+  - Give it a name .i.e `Admin`
+  - Click `done`
+  - Create 2 more profiles for `Supervisor` and `Agent`
+
+![CH-Desktop-Call-In-Accepted](/assets/images/agent/Chrome-Create-Profile.gif)
+
 1. Ensure that you have received your tenant login credentials (Administrator, Supervisor and Agent) from the Lab proctors.
 2. Make sure you are able to login into [Admin Portal](https://admin.webex.com) & [Analyzer](https://analyzer-v2.wxcc-us1.cisco.com/analyzer/home).
 3. In this Lab, Part 1 and 2 already have historical data created to capture the key insights, hence no need to login Agent or make calls to complete those parts.
