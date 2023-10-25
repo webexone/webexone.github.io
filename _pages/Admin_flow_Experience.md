@@ -278,14 +278,14 @@ Bulk Operations are available for the following configuration object types:
 
 - Once the task is **Completed** click on **_Download export file_** button under the **Action** and open the csv file in the notepad.
 
-- The first line is the headers, it is mandatory to have it during the import process. Remove all lines from the CSV file except the first line with headers and the line with **<w class="attendee_out">attendeeId</w>\_Team3**.
+- The first line is the headers, it is mandatory to have it during the import process. Remove all lines from the CSV file except the first line with headers and the second line with the team.
 
 ```csv
 NAME,SITE,TYPE,MULTIMEDIA PROFILE,SKILL PROFILE,DN,CAPACITY,DESKTOP LAYOUT
-###_Team1,###_Site,AGENT,###_MMP,,,,Default Desktop Layout
+###Proctor_Team,###_Site,AGENT,###_MMP,,,,Default Desktop Layout
 ```
 
-- Rename the Team1 to **<w class="attendee_out">attendeeId</w>\_Team3** and save the file. You should have only 2 rows in the file.
+- Rename the Proctor_Team to **<w class="attendee_out">attendeeId</w>\_Team3** and save the file. You should have only 2 rows in the file.
   Example:
 
 ```csv
