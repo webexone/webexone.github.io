@@ -61,7 +61,7 @@ layout: post
 | [ 2.2: Adding Text-To-Speech to the flow](#22-adding-text-to-speech-to-the-flow)                     | Activity    | EASY             | 8 min            |
 | [ 2.3: Adding Callback functionality to the flows](#23-adding-callback-functionality-to-the-flows)   | Activity    | EASY             | 8 min            |
 | [ 2.4: Business Hours Configuration](#24-business-hours-configuration)                               | Exploration | EASY             | 8 min            |
-| [ 2.6: Bringing it all together: Advanced Flow configuration ](#24-business-hours-configuration)                               | Exploration | EASY             | 8 min            |
+| [ 2.6: Bringing It Together: Advanced Flow configuration ](#26-bringing-it-together-advanced-flow-configuration)                               | Exploration | EASY             | 8 min            |
 | [Part 3: Introduction to Flow Debugger](#part-3-introduction-to-flow-debugger)                       | Activity    | EASY             | 15 min           |
 | [Part 4: Introduction to Flow Versioning](#part-4-introduction-to-flow-versioning)                   | Exploration | EASY             | 15 min           |
 | [Part 5: Flow Error Handling](#part-5-flow-error-handling)                                           | Exploration | EASY             | 15 min           |
@@ -760,11 +760,11 @@ Verify the Business Hours configuration by using this on the flow
 
 ### Update your Entry Point
 
-1. On Webex Control Hub, navigate to **_Channels_** under the **_CUSTOMER EXPERIENCE_** tab and update the flow assigned to the **<w class="attendee_out">attendeeId</w>\_EP** to the below.
+On Webex Control Hub, navigate to **_Channels_** under the **_CUSTOMER EXPERIENCE_** tab and update the flow assigned to the **<w class="attendee_out">attendeeId</w>\_EP** to the below.
 
 > - Select flow **QtoA_WebexOne_InboundFlow**
 
-2. Place a call to your your assigned EP-DN:  
+1. Place a call to your your assigned EP-DN:  
    > You should hear the greeting message and then the music in queue
    >
    > Go available in the agent desktop
@@ -775,7 +775,7 @@ Verify the Business Hours configuration by using this on the flow
    >
    > ***
 
-3. Open the flow **QtoA_WebexOne_InboundFlow** and review the flow configuration  
+2. Open the flow **QtoA_WebexOne_InboundFlow** and review the flow configuration  
 
 
 # Part 3: Introduction to Flow Debugger
