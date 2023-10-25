@@ -661,66 +661,18 @@ Place a call to the flow and trace the call through the Flow Debugger.
 > **Tip:** Selct **`Edit: Off`** to open the flow in **`Read-Only`** mode when using using the debug functionality
 > {: .block-warning }
 
-# Part 4: Introduction to Flow Versioning
 
-Tagging a version of the flow should come up while publishing. There are 3 predefined tags - Live, Dev, Test, and one default Tag - Latest. The tag selection dropdown is visible after publish button is hit. Multiple tags are allowed to be selected. Once selected and published and those tags are associated to that specific version.
-
-<img src="/assets/images/fe_7.png">
-
----
-
-During entry point edit, the tags can be selected as well, here only the tags which are currently in use are shown.
-
-<img src="/assets/images/fe_8.png">
-
----
-
-During debugging, the tags filter allows to filter any of the previous or current interactions that had those tags during execution between the time range selected.
-
-<img src="/assets/images/fe_9.png">
-
----
-
-While looking at the previous versions history, by clicking on the clock icon located at the top panel the previous versions comes up with their tags. The versions which used to have tags and have been moved to later versions, show the tags with lighter color tone.
-
-<img src="/assets/images/fe_10.png">
-
----
-
-While using goto activity(which points to another flow), the tag selection drop down appears in the properties pane. This allows flow developer to choose a specific tagged version to goto and their corresponding variables are used for mapping.
-
-<img src="/assets/images/fe_11.png">
-
----
-
-# Part 5: Flow Error Handling
-
-The error handling feature tries to deal all kinds of errors during the flow execution. Due to the nature of errors, it could be divided into two levels: the activity error and the global error[Global Error Handler].
-
-1. On the activity level, error paths are designed to handle specific problematic situations and it gives the flow designer more freedom on how to properly handle these scenarios
-2. For errors that are not captured by the activity error nodes, the global error handler would come into play and process the errors.
-
-<img src="/assets/images/fe_14.png">
-
-## Activity Level Error Handling
-
-> Defined Errors: These are the errors which are already known to flow designers or the activity owner while creating a flow. They are managed by themselves by adding the error node to the activity.
-
-> Undefined Error: Undefined errors are a way to handle unexpected system conditions.
-
-<img src="/assets/images/fe_15.png">
-
----
-
-# Part 6: Workflow in Outdial Entry Point
+# Part 3: Workflow in Outdial Entry Point
 
 The intend of this feature is to get workflow support for Outbound
 
 With this feature, we will get the the option to give the flow, Music on Hold and outbound queue in outdail entry point page on portal. if we don't provide the flow,moh and outdail queue details to the entry point then by default the configurations present will be taken for the call execution which is without flow
 
-## 6.1: Create an Outbound flow
+## 3.1: Verify the Outbound flow
 
-1. Download the [Outbound Flow Template](https://webexone.github.io/../../../assets/files/WebexOne_OutdialFlow.json){:target="\_blank"}
+1. On Webex Control Hub, navigate to **_Flows_** under the **_CUSTOMER EXPERIENCE_** tab, search for the below flow:
+
+- **WebexOne_OutdialFlow**
 
 2. Follow the similar steps provided in **`Section 2.1`** to import and publish the flow
 
@@ -730,7 +682,7 @@ With this feature, we will get the the option to give the flow, Music on Hold an
 
 ---
 
-## 6.2: Verify your Outdial Entry Point
+## 3.2: Verify your Outdial Entry Point
 
 1. On Webex Control Hub, navigate to **_Channels_** under the **_CUSTOMER EXPERIENCE_** tab and verify that the **WebexOne_Outdial_EP** is created.
 
@@ -748,14 +700,14 @@ With this feature, we will get the the option to give the flow, Music on Hold an
 
 <img src="/assets/images/fe_28.png">
 
-## 6.3: Verify the configuration
+## 3.3: Verify the configuration
 
 Place an outbound call as an agent from Agent Desktop
 
 > **Note:** The **`Outdial queue`** selected as part of the outdail entry point is currently purely for reporing purposes.
 > {: .block-warning }
 
-## 6.4: Caveats
+## 3.4: Caveats
 
 ### Unsupported Flow Activities
 
@@ -996,3 +948,55 @@ This feature provides support to Curved Links, Configure link color, Activity bo
 <p style="text-align:center"><strong>Congratulations, you have completed this lab! You can continue with the next one.</strong></p>
 		
 <p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>
+
+# Part 4: Introduction to Flow Versioning
+
+Tagging a version of the flow should come up while publishing. There are 3 predefined tags - Live, Dev, Test, and one default Tag - Latest. The tag selection dropdown is visible after publish button is hit. Multiple tags are allowed to be selected. Once selected and published and those tags are associated to that specific version.
+
+<img src="/assets/images/fe_7.png">
+
+---
+
+During entry point edit, the tags can be selected as well, here only the tags which are currently in use are shown.
+
+<img src="/assets/images/fe_8.png">
+
+---
+
+During debugging, the tags filter allows to filter any of the previous or current interactions that had those tags during execution between the time range selected.
+
+<img src="/assets/images/fe_9.png">
+
+---
+
+While looking at the previous versions history, by clicking on the clock icon located at the top panel the previous versions comes up with their tags. The versions which used to have tags and have been moved to later versions, show the tags with lighter color tone.
+
+<img src="/assets/images/fe_10.png">
+
+---
+
+While using goto activity(which points to another flow), the tag selection drop down appears in the properties pane. This allows flow developer to choose a specific tagged version to goto and their corresponding variables are used for mapping.
+
+<img src="/assets/images/fe_11.png">
+
+---
+
+## Flow Error Handling
+
+The error handling feature tries to deal all kinds of errors during the flow execution. Due to the nature of errors, it could be divided into two levels: the activity error and the global error[Global Error Handler].
+
+1. On the activity level, error paths are designed to handle specific problematic situations and it gives the flow designer more freedom on how to properly handle these scenarios
+2. For errors that are not captured by the activity error nodes, the global error handler would come into play and process the errors.
+
+<img src="/assets/images/fe_14.png">
+
+## Activity Level Error Handling
+
+> Defined Errors: These are the errors which are already known to flow designers or the activity owner while creating a flow. They are managed by themselves by adding the error node to the activity.
+
+> Undefined Error: Undefined errors are a way to handle unexpected system conditions.
+
+<img src="/assets/images/fe_15.png">
+
+---
+
