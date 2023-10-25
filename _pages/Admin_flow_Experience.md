@@ -58,10 +58,8 @@ layout: post
 | [ 1.4: Access to the Agent Desktop](#14-access-to-the-agent-desktop)                                 | Activity    | EASY             | 10 min           |
 | [Part 2: Introduction to Flow Designer](#part-2-introduction-to-flow-designer)                       | Exploration | EASY             | 10 min           |
 | [ 2.1: Configuring tenant for Call Delivery](#21-configuring-tenant-for-call-delivery)               | Activity    | EASY             | 10 min           |
-| [ 2.2: Adding Text-To-Speech to the flow](#22-adding-text-to-speech-to-the-flow)                     | Activity    | EASY             | 8 min            |
-| [ 2.3: Adding Callback functionality to the flows](#23-adding-callback-functionality-to-the-flows)   | Activity    | EASY             | 8 min            |
-| [ 2.4: Business Hours Configuration](#24-business-hours-configuration)                               | Exploration | EASY             | 8 min            |
-| [ 2.6: Bringing It Together: Advanced Flow configuration ](#26-bringing-it-together-advanced-flow-configuration)                               | Exploration | EASY             | 8 min            |
+| [ 2.2: Adding Callback functionality to the flows](#23-adding-callback-functionality-to-the-flows)   | Activity    | EASY             | 8 min            |
+| [ 2.3: Business Hours Configuration](#24-business-hours-configuration)                               | Exploration | EASY             | 8 min            |
 | [Part 3: Introduction to Flow Debugger](#part-3-introduction-to-flow-debugger)                       | Activity    | EASY             | 15 min           |
 | [Part 4: Introduction to Flow Versioning](#part-4-introduction-to-flow-versioning)                   | Exploration | EASY             | 15 min           |
 | [Part 5: Flow Error Handling](#part-5-flow-error-handling)                                           | Exploration | EASY             | 15 min           |
@@ -582,7 +580,7 @@ On Webex Control Hub, navigate to **_Flows_** under the **_CUSTOMER EXPERIENCE_*
 
 ---
 
-## 2.4: Business Hours Configuration
+## 2.3: Business Hours Configuration
 
 Business hours(BH) is a feature that lets you define the operational hours of contact center. In addition to that, we can also add holidays, or event driven interventions like extended working hours during festival seasons. This feature is an upgrade over routing strategy.
 
@@ -641,28 +639,6 @@ Verify the Business Hours configuration by using this on the flow
 <img src="/assets/images/fe_25.png">
 
 ---
-
-##  2.6: Bringing It Together: Advanced Flow configuration 
-
-### Update your Entry Point
-
-On Webex Control Hub, navigate to **_Channels_** under the **_CUSTOMER EXPERIENCE_** tab, select and update the **`Routing Flow`** assigned to the **<w class="attendee_out">attendeeId</w>\_EP** to the below flow
-
-- Select flow **QtoA_WebexOne_InboundFlow**
-
-1. Place a call to your your assigned EP-DN:  
-   > You should hear the greeting message and then you would be asked to enter your 3 digit Attendee ID
-   >
-   > Go available on the agent desktop
-   >
-   > > The call should be delivered to your agent extension
-   >
-   > End the call, Wrap-up, and Go unavailable
-   >
-   > ***
-
-2. Navigate to the flow **QtoA_WebexOne_InboundFlow** to review the flow configuration  
-
 
 # Part 3: Introduction to Flow Debugger
 
