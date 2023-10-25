@@ -58,8 +58,8 @@ layout: post
 | [ 1.4: Access to the Agent Desktop](#14-access-to-the-agent-desktop)                                 | Activity    | EASY             | 10 min           |
 | [Part 2: Introduction to Flow Designer](#part-2-introduction-to-flow-designer)                       | Exploration | EASY             | 10 min           |
 | [ 2.1: Configuring tenant for Call Delivery](#21-configuring-tenant-for-call-delivery)               | Activity    | EASY             | 10 min           |
-| [ 2.2: Adding Callback functionality to the flows](#23-adding-callback-functionality-to-the-flows)   | Activity    | EASY             | 8 min            |
-| [ 2.3: Business Hours Configuration](#24-business-hours-configuration)                               | Exploration | EASY             | 8 min            |
+| [ 2.2: Adding Callback functionality to the flows](#22-adding-callback-functionality-to-the-flows)   | Activity    | EASY             | 8 min            |
+| [ 2.3: Business Hours Configuration](#23-business-hours-configuration)                               | Exploration | EASY             | 8 min            |
 | [Part 3: Introduction to Flow Debugger](#part-3-introduction-to-flow-debugger)                       | Activity    | EASY             | 15 min           |
 | [Part 4: Introduction to Flow Versioning](#part-4-introduction-to-flow-versioning)                   | Exploration | EASY             | 15 min           |
 | [Part 5: Flow Error Handling](#part-5-flow-error-handling)                                           | Exploration | EASY             | 15 min           |
@@ -173,37 +173,16 @@ Please note, that to proceed to the next section, you will need to use the accou
 
 - Login to the [Control Hub](https://admin.webex.com){:target="\_blank"} with the admin account.
 
-- In the left navigation pane go to **_Contact Center Users_** under **Management**.
+- In the left navigation pane go to **_Contact Center Users_** under **Management** and verify the below users: 
 
-- Click on **_Manage Users_** button.
 
-- Select **_Manually add users_**.
+| **Entity**         | **Name**                                                            |
+| ------------------ | ------------------------------------------------------------------- |
+| Administrator      | wxcclabs+admin_ID<w class = "attendee_out">attendeeID</w>@gmail.com |
+| Agent 1            | wxcclabs+agent_ID<w class = "attendee_out">attendeeID</w>@gmail.com |
+| Supervisor 1       | wxcclabs+supvr_ID<w class = "attendee_out">attendeeID</w>@gmail.com |
 
-- Check the agent's **First name**, **Last name** and input the **Email addresses** of the agent.
-
-- Click on **`+`** sign and add the supervisor in the same way.
-
-- For consistency, verify that the **Email addresses** are same as in the table above and click **_Next_**.
-
-- Next **Assign license for users** and select **_Webex Calling (Professional)_** & **_Contact Center (Premium Agent)_**.
-
-- On the next page, make sure that the **_Location_** is selected under **_Assign Numbers_**. The correct value should be already selected by default.
-
-- The **_Phone Number_** left as **None**.
-
-- On the same page, Enter the correct **`Extension`** under **_Assign Numbers_**. The correct Extensions should be provided to you with the admin credentials.
-
-- In step **Step 4: Review** verify the data and Click **_Add users_**.
-
-- On the next page, you should get confirmation **"2 users added"**. Confirm the same by pressing **_Close_**.
-
-- Now select the supervisor user and modify his role to **_Premium Agent - Supervisor Role_** by clicking the **_Edit Licenses_** button in the **_Licenses_** section.
-
-- Click **_Save_** and **_Close_** to confirm the changes.
-
-- Validate the users by going to the email account. Open the Control Hub validation email and follow the **Cisco Webex** instructions to activate the both accounts.
-
-- Refresh the **_Users_** page in the Control Hub, make sure that both users are in **Active** status.
+- Verify the assigned licenses to these users 
 
 ## 1.2: Contact Center User Configuration
 
@@ -228,19 +207,15 @@ Please note, that to proceed to the next section, you will need to use the accou
 
 - Scroll down in the left navigation panel to the **_DESKTOP EXPERIENCE_** section and click on **_Multimedia Profiles_**.
 
-- Click on **`Create Multimedia Profile`** button.
+- Search for your MMP **<w class="attendee_out">attendeeId</w>\_MMP**
 
-- Input Name as **<w class="attendee_out">attendeeId</w>\_MMP**.
-
-- In the Media Details section, leave the **Blended** mode and input **`1`** for **_Voice_**, **`3`** for **_Chat_**, **`3`** for **_Email_**, **`3`** for **_Social_**, and click **_Create_** button in the lower right corner.
+- In the Media Details section, verify the **Blended** mode is selected and input **`1`** for **_Voice_**, **`3`** for **_Chat_**, **`3`** for **_Email_**, **`3`** for **_Social_** 
 
 ### 2. Verify the Site
 
 - Navigate to **_USER MANAGEMENT_** in the left navigation panel and select **_Sites_**.
 
-- Click on **`Create Site`** button and provide the Name as **<w class="attendee_out">attendeeId</w>\_Site**.
-
-- Select your MMP in the **_Multimedia profile_** drop down list and hit **_Create_**.
+- Search for your **<w class="attendee_out">attendeeId</w>\_Site** and veriy your MMP profile is selected
 
 ### 3. Verify the Teams
 
@@ -248,35 +223,15 @@ Please note, that to proceed to the next section, you will need to use the accou
 
 - Click on the **`Create Team`**.
 
-- Input _Name_ as **<w class="attendee_out">attendeeId</w>\_Team1**.
+- Search for your **<w class="attendee_out">attendeeId</w>\_Team1**.
 
-- Select your site from the **_Parent Site_** drop-down.
+- Verify the **_Parent Site_** is selected as your assigned site 
 
-- Select the **_team type_** **`Agent Based`**.
+- Verify the **_team type_** **`Agent Based`**.
 
-- Select your **_Multimedia profile_**.
+- Verify your **_Multimedia profile_**.
 
-- Left as a default value **_Global Layout_** in the **_Desktop layout_** drop-down and click on **_Create_** button.
-
-### 4. Activating the Contact Center Settings for users
-
-- On Webex Control Hub, navigate to **_Contact Center Users_** under the **_USER MANAGEMENT_**.
-
-- Find your and select the agent, to launch the **_Edit_** view for a particular User configuration.
-
-- Click on **_Contact Center Enabled_** toggle to move it to **_On_**.
-
-- In the **_Agent Settings_** section, select your site in the **_Site_** drop-down.
-
-- Click the **_Teams_** area and select your team
-
-- Select the default **_Agent-Profile_** in the **_Desktop Profile_** drop-down list.
-
-- Choose the **_Multimedia Profile_** and hit **_Save_**.
-
-- In the User's table make sure that the agent is now shown with the **_Contact Center Enabled_** flag as **`Yes`** and **_Status_** as **`Active`**.
-
-- Repeat the steps above for the supervisor.
+- Verify the default value **_Global Layout_** is the **_Desktop layout_** 
 
 ## 1.3: Bulk Operations
 
@@ -502,7 +457,7 @@ On Webex Control Hub, navigate to **_Flows_** under the **_CUSTOMER EXPERIENCE_*
 
 - **QtoA_WebexOne_InboundFlow**
 
-1. Verify the below flow variable is crated:
+1. Verify the below flow variable is created:
    > Name: CallerANI
    >> Type: String
    >>
