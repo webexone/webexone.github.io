@@ -61,7 +61,7 @@ layout: post
 | [ 2.2: Adding Callback functionality to the flows](#23-adding-callback-functionality-to-the-flows)   | Activity    | EASY             | 8 min            |
 | [ 2.3: Business Hours Configuration](#24-business-hours-configuration)                               | Exploration | EASY             | 8 min            |
 | [Part 3: Introduction to Flow Debugger](#part-3-introduction-to-flow-debugger)                       | Activity    | EASY             | 15 min           |
-| [Part 3: Workflow in Outdial Entry Point](#part-3-introduction-to-the-new-admin-experience)          | Activity    | EASY             | 15 min           |
+| [Part 4: Workflow in Outdial Entry Point](#part-4-introduction-to-the-new-admin-experience)          | Activity    | EASY             | 15 min           |
 | [Bonus: Experience Management](#bonus-experience-management)                                         | Exploration | EASY             | 15 min           |
 | [Bonus: Other Flow Enhancements](#bonus-other-flow-enhancments)                                      | Exploration | EASY             | 5 min            |
 
