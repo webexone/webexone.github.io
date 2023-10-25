@@ -285,7 +285,7 @@ NAME,SITE,TYPE,MULTIMEDIA PROFILE,SKILL PROFILE,DN,CAPACITY,DESKTOP LAYOUT
 ###_Team1,###_Site,AGENT,###_MMP,,,,Default Desktop Layout
 ```
 
-- Rename the Team1 to **<w class="attendee_out">attendeeId</w>\_Team2** and save the file. You should have only 2 rows in the file.
+- Rename the Team1 to **<w class="attendee_out">attendeeId</w>\_Team3** and save the file. You should have only 2 rows in the file.
   Example:
 
 ```csv
