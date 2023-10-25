@@ -61,9 +61,7 @@ layout: post
 | [ 2.2: Adding Callback functionality to the flows](#22-adding-callback-functionality-to-the-flows)   | Activity    | EASY             | 8 min            |
 | [ 2.3: Business Hours Configuration](#23-business-hours-configuration)                               | Exploration | EASY             | 8 min            |
 | [Part 3: Introduction to Flow Debugger](#part-3-introduction-to-flow-debugger)                       | Activity    | EASY             | 15 min           |
-| [Part 4: Introduction to Flow Versioning](#part-4-introduction-to-flow-versioning)                   | Exploration | EASY             | 15 min           |
-| [Part 5: Flow Error Handling](#part-5-flow-error-handling)                                           | Exploration | EASY             | 15 min           |
-| [Part 6: Workflow in Outdial Entry Point](#part-6-introduction-to-the-new-admin-experience)          | Activity    | EASY             | 15 min           |
+| [Part 4: Workflow in Outdial Entry Point](#part-4-introduction-to-the-new-admin-experience)          | Activity    | EASY             | 15 min           |
 | [Bonus: Experience Management](#bonus-experience-management)                                         | Exploration | EASY             | 15 min           |
 | [Bonus: Other Flow Enhancements](#bonus-other-flow-enhancments)                                      | Exploration | EASY             | 5 min            |
 
@@ -95,6 +93,19 @@ document.forms["attendee-form"][1].value = localStorage.getItem("attendeeID") ||
 </form>
 
 <br/>
+
+### Create Chrome Profiles
+
+- For the lab, create new Chrome profiles so that you can login the Administrators, Agents and Supervisors using the same Browser.
+
+  - Select `Profiles` on Chrome
+  - Select `Add Profile`
+  - Select `continue without an account`
+  - Give it a name .i.e `Admin`
+  - Click `done`
+  - Create 2 more profiles for `Supervisor` and `Agent`
+
+![CH-Desktop-Call-In-Accepted](/assets/images/agent/Chrome-Create-Profile.gif)
 
 (2) Administrator access to Control Hub
 
@@ -292,7 +303,6 @@ NAME,SITE,TYPE,MULTIMEDIA PROFILE,SKILL PROFILE,DN,CAPACITY,DESKTOP LAYOUT
 
 - On Webex Control Hub, navigate to **_Teams_** under the **_USER MANAGEMENT_** tab and verify that the **<w class="attendee_out">attendeeId</w>\_Team3** is created.
 
-
 ## 1.4: Access to the Agent Desktop
 
 > We will now log in to the Agent Desktop with your credentials and use Desktop (WebRTC) as the telephony device.
@@ -360,7 +370,7 @@ In this lab, we will configure all of the required elements to deliver a call in
 
 ---
 
-**Note:** If you have prior experience with creating flows, please navigate to step [2.6: Bringing It Together: Advanced Flow configuration ](#26-bringing-it-together-advanced-flow-configuration) 
+**Note:** If you have prior experience with creating flows, please navigate to step [2.6: Bringing It Together: Advanced Flow configuration ](#26-bringing-it-together-advanced-flow-configuration)
 {: .block-warning }
 
 ## 2.1: Configuring tenant for Call Delivery
@@ -371,7 +381,7 @@ On Webex Control Hub, navigate to **_Flows_** under the **_CUSTOMER EXPERIENCE_*
 
 - **QtoA_WebexOne_InboundFlow**
 
-Select to open the flow and review the flow configuration 
+Select to open the flow and review the flow configuration
 
 > **Note:** There are no changes that need to be made to the flow and you can proceed with the next step
 > {: .block-warning }
@@ -383,7 +393,7 @@ Select to open the flow and review the flow configuration
 2. Verify **_Text-to-speech_** toggle is enabled
 3. The Connector linked to the flow  
 4. Verify Output voice is set as **_en-US-Standard-A_** 
-5. Verify the **`Text-to-Speech Message`** 
+5. Verify the **`Text-to-Speech Message`**
 
 > **Tip:** Please refer the article [Google Text-To-Speech Configuration](https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/217425-configure-google-text-to-speech-for-webe.html){:target="\_blank"} for complete configuration steps
 > {: .block-warning }
@@ -395,7 +405,6 @@ Select to open the flow and review the flow configuration
 <img src="/assets/images/fe_32.png">
 
 2. Verify the Entry Point configuration
-   >
    > Name your Entry Point EP\_<w class="attendee_out">AttendeeID</w>
    >
    > Description: optional
@@ -406,7 +415,7 @@ Select to open the flow and review the flow configuration
    >
    > Flow: Flow_template
    >
-   > Version Label: Live 
+   > Version Label: Live
    >
    > Music on Hold: defaultmusic_on_hold.wav
    >
@@ -414,11 +423,9 @@ Select to open the flow and review the flow configuration
    >
    > ***
 
-
-
 ### Verify your Entry Point mapping
 
- On Webex Control Hub, navigate to **_Channels_** under the **_CUSTOMER EXPERIENCE_** tab: 
+On Webex Control Hub, navigate to **_Channels_** under the **_CUSTOMER EXPERIENCE_** tab:
 
  <img src="/assets/images/fe_31.png">
    
@@ -439,7 +446,7 @@ Select to open the flow and review the flow configuration
 
 1. Call your assigned EP-DN:
 
-   > You should hear the greeting message asking for your attendee ID. 
+   > You should hear the greeting message asking for your attendee ID.
    >
    > Enter your 3 digit attendee ID. Example: 051
    >
@@ -459,34 +466,33 @@ On Webex Control Hub, navigate to **_Flows_** under the **_CUSTOMER EXPERIENCE_*
 
 1. Verify the below flow variable is created:
    > Name: CallerANI
-   >> Type: String
-   >>
-   >> No default value
    >
-   ---
+   > > Type: String
+   > >
+   > > No default value
+   ***
 2. Verify a new Menu node
-    > Activity Label: Menu_Callback
-    >
-    > Prompt: Text-to-Speech is enabled
-    >
-    > Make Prompt Interruptible: True
-    >
-    > Digit Number: 1 Link Description: confirm number
-    >
-    > Digit Number: 2 Link Description: change number
-    >
-    > Connect No-Input Timeout to the front of the Menu node
-    >
-    > Connect Unmatched Entry to the front of the Menu node
-    >
-    > ---
+   > Activity Label: Menu_Callback
+   >
+   > Prompt: Text-to-Speech is enabled
+   >
+   > Make Prompt Interruptible: True
+   >
+   > Digit Number: 1 Link Description: confirm number
+   >
+   > Digit Number: 2 Link Description: change number
+   >
+   > Connect No-Input Timeout to the front of the Menu node
+   >
+   > Connect Unmatched Entry to the front of the Menu node
+   >
+   > ***
 3. Verify the Set Variable node
    > Activity Label: callbackANI_set
    >
    > Select Variable: CallerANI
    >
    > Set to Value: \{\{NewPhoneContact.ANI \| slice (NewPhoneContact.ANI.length -10,NewPhoneContact.ANI.length)\}\}
-   >
 4. Verify the Collect Digits node
    > Activity Label: **newNumber**
    >
@@ -502,7 +508,7 @@ On Webex Control Hub, navigate to **_Flows_** under the **_CUSTOMER EXPERIENCE_*
    >
    > Connect Unmatched Entry to the front of the newNumber node
    >
-   > ---
+   > ***
 5. Verify the Set Variable Node
    > Activity Label: **newCB**
    >
@@ -510,28 +516,28 @@ On Webex Control Hub, navigate to **_Flows_** under the **_CUSTOMER EXPERIENCE_*
    >
    > Set Value: \{\{newNumber.DigitsEntered\}\}
    >
-   > ---
-6. Verify connection between **newNumber** node and **newCB** node 
-7. Verify the Callback node 
-   > Activity Label: Callback_node
+   > ***
+6. Verify connection between **newNumber** node and **newCB** node
+7. Verify the Callback node
+   > Activity Label: **Callback_node**
    >
    > Callback Dial Number: CallerANI
    >
-   > Static ANI: Any ANI you like but this DN needs to be mapped to an EP or select the default outdial ANI
+   > Static ANI: Select the default outdial ANI as +14402308010
    >
-   > ---
-8. Verify the PlayMusic node  
+   > ***
+8. Verify the PlayMusic node **Callback_confirm**
    > Activity Label: Callback_confirm
    >
    > Static Audio File
    >
    > Music file: callback_confirm_English.wav
    >
-   > ---
-8. Verify the PlayMusic is connected to the Disconnect Contact node
+   > ***
+9. Verify the PlayMusic is connected to the Disconnect Contact node
    > Activity Label: Disconnect_contact
    >
-   > ---
+   > ***
 
 ---
 
@@ -616,66 +622,17 @@ Place a call to the flow and trace the call through the Flow Debugger.
 > **Tip:** Selct **`Edit: Off`** to open the flow in **`Read-Only`** mode when using using the debug functionality
 > {: .block-warning }
 
-# Part 4: Introduction to Flow Versioning
-
-Tagging a version of the flow should come up while publishing. There are 3 predefined tags - Live, Dev, Test, and one default Tag - Latest. The tag selection dropdown is visible after publish button is hit. Multiple tags are allowed to be selected. Once selected and published and those tags are associated to that specific version.
-
-<img src="/assets/images/fe_7.png">
-
----
-
-During entry point edit, the tags can be selected as well, here only the tags which are currently in use are shown.
-
-<img src="/assets/images/fe_8.png">
-
----
-
-During debugging, the tags filter allows to filter any of the previous or current interactions that had those tags during execution between the time range selected.
-
-<img src="/assets/images/fe_9.png">
-
----
-
-While looking at the previous versions history, by clicking on the clock icon located at the top panel the previous versions comes up with their tags. The versions which used to have tags and have been moved to later versions, show the tags with lighter color tone.
-
-<img src="/assets/images/fe_10.png">
-
----
-
-While using goto activity(which points to another flow), the tag selection drop down appears in the properties pane. This allows flow developer to choose a specific tagged version to goto and their corresponding variables are used for mapping.
-
-<img src="/assets/images/fe_11.png">
-
----
-
-# Part 5: Flow Error Handling
-
-The error handling feature tries to deal all kinds of errors during the flow execution. Due to the nature of errors, it could be divided into two levels: the activity error and the global error[Global Error Handler].
-
-1. On the activity level, error paths are designed to handle specific problematic situations and it gives the flow designer more freedom on how to properly handle these scenarios
-2. For errors that are not captured by the activity error nodes, the global error handler would come into play and process the errors.
-
-<img src="/assets/images/fe_14.png">
-
-## Activity Level Error Handling
-
-> Defined Errors: These are the errors which are already known to flow designers or the activity owner while creating a flow. They are managed by themselves by adding the error node to the activity.
-
-> Undefined Error: Undefined errors are a way to handle unexpected system conditions.
-
-<img src="/assets/images/fe_15.png">
-
----
-
-# Part 6: Workflow in Outdial Entry Point
+# Part 3: Workflow in Outdial Entry Point
 
 The intend of this feature is to get workflow support for Outbound
 
 With this feature, we will get the the option to give the flow, Music on Hold and outbound queue in outdail entry point page on portal. if we don't provide the flow,moh and outdail queue details to the entry point then by default the configurations present will be taken for the call execution which is without flow
 
-## 6.1: Create an Outbound flow
+## 3.1: Verify the Outbound flow
 
-1. Download the [Outbound Flow Template](https://webexone.github.io/../../../assets/files/WebexOne_OutdialFlow.json){:target="\_blank"}
+1. On Webex Control Hub, navigate to **_Flows_** under the **_CUSTOMER EXPERIENCE_** tab, search for the below flow:
+
+- **WebexOne_OutdialFlow**
 
 2. Follow the similar steps provided in **`Section 2.1`** to import and publish the flow
 
@@ -685,7 +642,7 @@ With this feature, we will get the the option to give the flow, Music on Hold an
 
 ---
 
-## 6.2: Verify your Outdial Entry Point
+## 3.2: Verify your Outdial Entry Point
 
 1. On Webex Control Hub, navigate to **_Channels_** under the **_CUSTOMER EXPERIENCE_** tab and verify that the **WebexOne_Outdial_EP** is created.
 
@@ -703,14 +660,14 @@ With this feature, we will get the the option to give the flow, Music on Hold an
 
 <img src="/assets/images/fe_28.png">
 
-## 6.3: Verify the configuration
+## 3.3: Verify the configuration
 
 Place an outbound call as an agent from Agent Desktop
 
 > **Note:** The **`Outdial queue`** selected as part of the outdail entry point is currently purely for reporing purposes.
 > {: .block-warning }
 
-## 6.4: Caveats
+## 3.4: Caveats
 
 ### Unsupported Flow Activities
 
@@ -951,3 +908,54 @@ This feature provides support to Curved Links, Configure link color, Activity bo
 <p style="text-align:center"><strong>Congratulations, you have completed this lab! You can continue with the next one.</strong></p>
 		
 <p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>
+
+## 3: Introduction to Flow Versioning
+
+Tagging a version of the flow should come up while publishing. There are 3 predefined tags - Live, Dev, Test, and one default Tag - Latest. The tag selection dropdown is visible after publish button is hit. Multiple tags are allowed to be selected. Once selected and published and those tags are associated to that specific version.
+
+<img src="/assets/images/fe_7.png">
+
+---
+
+During entry point edit, the tags can be selected as well, here only the tags which are currently in use are shown.
+
+<img src="/assets/images/fe_8.png">
+
+---
+
+During debugging, the tags filter allows to filter any of the previous or current interactions that had those tags during execution between the time range selected.
+
+<img src="/assets/images/fe_9.png">
+
+---
+
+While looking at the previous versions history, by clicking on the clock icon located at the top panel the previous versions comes up with their tags. The versions which used to have tags and have been moved to later versions, show the tags with lighter color tone.
+
+<img src="/assets/images/fe_10.png">
+
+---
+
+While using goto activity(which points to another flow), the tag selection drop down appears in the properties pane. This allows flow developer to choose a specific tagged version to goto and their corresponding variables are used for mapping.
+
+<img src="/assets/images/fe_11.png">
+
+---
+
+## 4. Flow Error Handling
+
+The error handling feature tries to deal all kinds of errors during the flow execution. Due to the nature of errors, it could be divided into two levels: the activity error and the global error[Global Error Handler].
+
+1. On the activity level, error paths are designed to handle specific problematic situations and it gives the flow designer more freedom on how to properly handle these scenarios
+2. For errors that are not captured by the activity error nodes, the global error handler would come into play and process the errors.
+
+<img src="/assets/images/fe_14.png">
+
+### Activity Level Error Handling
+
+> Defined Errors: These are the errors which are already known to flow designers or the activity owner while creating a flow. They are managed by themselves by adding the error node to the activity.
+
+> Undefined Error: Undefined errors are a way to handle unexpected system conditions.
+
+<img src="/assets/images/fe_15.png">
+
+---
