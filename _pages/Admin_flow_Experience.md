@@ -61,9 +61,7 @@ layout: post
 | [ 2.2: Adding Callback functionality to the flows](#23-adding-callback-functionality-to-the-flows)   | Activity    | EASY             | 8 min            |
 | [ 2.3: Business Hours Configuration](#24-business-hours-configuration)                               | Exploration | EASY             | 8 min            |
 | [Part 3: Introduction to Flow Debugger](#part-3-introduction-to-flow-debugger)                       | Activity    | EASY             | 15 min           |
-| [Part 4: Introduction to Flow Versioning](#part-4-introduction-to-flow-versioning)                   | Exploration | EASY             | 15 min           |
-| [Part 5: Flow Error Handling](#part-5-flow-error-handling)                                           | Exploration | EASY             | 15 min           |
-| [Part 6: Workflow in Outdial Entry Point](#part-6-introduction-to-the-new-admin-experience)          | Activity    | EASY             | 15 min           |
+| [Part 3: Workflow in Outdial Entry Point](#part-3-introduction-to-the-new-admin-experience)          | Activity    | EASY             | 15 min           |
 | [Bonus: Experience Management](#bonus-experience-management)                                         | Exploration | EASY             | 15 min           |
 | [Bonus: Other Flow Enhancements](#bonus-other-flow-enhancments)                                      | Exploration | EASY             | 5 min            |
 
@@ -949,7 +947,7 @@ This feature provides support to Curved Links, Configure link color, Activity bo
 		
 <p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>
 
-# Part 4: Introduction to Flow Versioning
+## 3: Introduction to Flow Versioning
 
 Tagging a version of the flow should come up while publishing. There are 3 predefined tags - Live, Dev, Test, and one default Tag - Latest. The tag selection dropdown is visible after publish button is hit. Multiple tags are allowed to be selected. Once selected and published and those tags are associated to that specific version.
 
@@ -981,7 +979,7 @@ While using goto activity(which points to another flow), the tag selection drop 
 
 ---
 
-## Flow Error Handling
+## 4. Flow Error Handling
 
 The error handling feature tries to deal all kinds of errors during the flow execution. Due to the nature of errors, it could be divided into two levels: the activity error and the global error[Global Error Handler].
 
@@ -990,7 +988,7 @@ The error handling feature tries to deal all kinds of errors during the flow exe
 
 <img src="/assets/images/fe_14.png">
 
-## Activity Level Error Handling
+### Activity Level Error Handling
 
 > Defined Errors: These are the errors which are already known to flow designers or the activity owner while creating a flow. They are managed by themselves by adding the error node to the activity.
 
