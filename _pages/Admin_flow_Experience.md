@@ -58,10 +58,8 @@ layout: post
 | [ 1.4: Access to the Agent Desktop](#14-access-to-the-agent-desktop)                                 | Activity    | EASY             | 10 min           |
 | [Part 2: Introduction to Flow Designer](#part-2-introduction-to-flow-designer)                       | Exploration | EASY             | 10 min           |
 | [ 2.1: Configuring tenant for Call Delivery](#21-configuring-tenant-for-call-delivery)               | Activity    | EASY             | 10 min           |
-| [ 2.2: Adding Text-To-Speech to the flow](#22-adding-text-to-speech-to-the-flow)                     | Activity    | EASY             | 8 min            |
-| [ 2.3: Adding Callback functionality to the flows](#23-adding-callback-functionality-to-the-flows)   | Activity    | EASY             | 8 min            |
-| [ 2.4: Business Hours Configuration](#24-business-hours-configuration)                               | Exploration | EASY             | 8 min            |
-| [ 2.6: Bringing It Together: Advanced Flow configuration ](#26-bringing-it-together-advanced-flow-configuration)                               | Exploration | EASY             | 8 min            |
+| [ 2.2: Adding Callback functionality to the flows](#23-adding-callback-functionality-to-the-flows)   | Activity    | EASY             | 8 min            |
+| [ 2.3: Business Hours Configuration](#24-business-hours-configuration)                               | Exploration | EASY             | 8 min            |
 | [Part 3: Introduction to Flow Debugger](#part-3-introduction-to-flow-debugger)                       | Activity    | EASY             | 15 min           |
 | [Part 4: Introduction to Flow Versioning](#part-4-introduction-to-flow-versioning)                   | Exploration | EASY             | 15 min           |
 | [Part 5: Flow Error Handling](#part-5-flow-error-handling)                                           | Exploration | EASY             | 15 min           |
@@ -412,115 +410,28 @@ In this lab, we will configure all of the required elements to deliver a call in
 
 ## 2.1: Configuring tenant for Call Delivery
 
-⚠️ You can use this link to download the [Audio Files](https://webexcc.github.io/assets/files/lab_wav.zip){:target="\_blank"}. Those files are already pre-uploaded on the Lab Tenant.
+### Verify your flow
 
-### Create a queue
+On Webex Control Hub, navigate to **_Flows_** under the **_CUSTOMER EXPERIENCE_** tab, search for the below flow
 
-1. On Webex Control Hub, navigate to **_Queues_** under the **_CUSTOMER Experience_** tab and create a queue: **<w class="attendee_out">attendeeId</w>\_EP**
+- **QtoA_WebexOne_InboundFlow**
 
-<img src="/assets/images/fe_33.png">
+Select to open the flow and review the flow configuration 
 
-2. Click New Queue
+> **Note:** There are no changes that need to be made to the flow and you can proceed with the next step
+> {: .block-warning }
 
-   > Name your queue:  <w class = "attendee_out">attendeeID</w>\_Q 
-   >
-   > Description: optional
-   >
-   > Channel Type: Telephony
-   >
-   > Queue Routing Type: Longest Available Agent
-   >
-   > Call Distribution:
-   >
-   > > Click Add Group
-   > >
-   > > Select <w class="attendee_out">attendeeId</w>\_Team1
-   > >
-   > > Save Group
-   > >
-   > > Create second group
-   > >
-   > > Select <w class="attendee_out">attendeeId</w>\_Team2
-   > >
-   > > After: 60 Seconds in queue
-   > >
-   > > Add Group as: Last
-   > >
-   > > Save Group
-   > >
-   > > Click Close
-   >
-   > ***
-   >
-   > Service Level Threshold: 60
-   >
-   > Maximum Time in Queue: 600
-   >
-   > Default Music in Queue: defaultmusic_on_hold.wav
-   >
-   > Save
+### Verify Text-To-Speech configuration on the flow
 
-   ***
+<img src="/assets/images/fe_4.gif">
+1. Select the node **attendee** node on the flow  
+2. Verify **_Text-to-speech_** toggle is enabled
+3. The Connector linked to the flow  
+4. Verify Output voice is set as **_en-US-Standard-A_** 
+5. Verify the **`Text-to-Speech Message`** 
 
-### Create your first flow
-
-1. Download the [Flow Template](https://webexone.github.io/../../../assets/files/flow_template.json){:target="\_blank"}
-
-   > The file will open in a separate window.
-   >
-   > If using Firefox, Select the save option.
-   >
-   > <img src="/assets/images/IVR/saveJson.gif">
-   >
-   > If using Chrome or Edge, right click and select save.
-   >
-   > <img src="/assets/images/IVR/saveJsonChrome.gif" width="243">
-
-   ***
-
-2. Click Flows > Manage Flows > Import flows > Select flow_template
-
-   > <img src="/assets/images/fe_2.gif">
-
-3. Click the newly imported flow_template and this will Open the flow
-
-   > <img src="/assets/images/fe_3.gif">
-   >
-   > Click on the Play Message node
-   >
-   > > Audio File: 0_English.wav
-   >
-   > ***
-   >
-   > Click on the Queue Contact node
-   >
-   > > Select Static Queue
-   > >
-   > > Queue: <w class = "attendee_out">attendeeID</w>\_Q 
-   >
-   > ***
-   >
-   > Click on the Play Music node
-   >
-   > > Select Static Audio File
-   > >
-   > > Music File: defaultmusic_on_hold.wav
-   >
-   > ***
-   >
-   > Click the Validation switch to turn on validation
-   >
-   > Click Publish Flow
-   >
-   > Add a Publish Note of your choosing
-   >
-   > Click Publish Flow
-   >
-   > Click Return to Flow
-   >
-   > Turn off Validation
-
-   ***
+> **Tip:** Please refer the article [Google Text-To-Speech Configuration](https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/217425-configure-google-text-to-speech-for-webe.html){:target="\_blank"} for complete configuration steps
+> {: .block-warning }
 
 ### Verify your Entry Point
 
@@ -573,9 +484,11 @@ In this lab, we will configure all of the required elements to deliver a call in
 
 1. Call your assigned EP-DN:
 
-   > You should hear the greeting message and then the music in queue
+   > You should hear the greeting message asking for your attendee ID. 
    >
-   > Go available in the agent desktop
+   > Enter your 3 digit attendee ID. Example: 051
+   >
+   > Go available on the agent desktop
    >
    > > The call should be delivered to your agent extension
    >
@@ -583,50 +496,23 @@ In this lab, we will configure all of the required elements to deliver a call in
    >
    > ***
 
-## 2.2: Adding Text-To-Speech to the flow
+## 2.2: Adding Callback functionality to the flows
 
-<img src="/assets/images/fe_4.gif">
-1. Select the PlayMessage node 
-2. Enable **_Text-to-speech_** toggle 
-3. Select the Connector  
-4. Select Output voice as **_en-US-Standard-A_** 
-5. Select Add Text-to-Speech Message 
-6. Enter a message 
-7. Validate and Publish the flow:   
-   > Click the Validation switch to turn on validation
-   >
-   > Click Publish Flow
-   > 
-   > Add a Publish Note of your choosing
-   >
-   > Click Publish Flow
-   >
-   > Click Return to Flow
-   > 
-   > Turn off Validation 
-   >
-   > ---
-8. Place a test call to your EP DN
+On Webex Control Hub, navigate to **_Flows_** under the **_CUSTOMER EXPERIENCE_** tab, search for the below flow
 
+- **QtoA_WebexOne_InboundFlow**
 
-> **Tip:** Please refer the article [Google Text-To-Speech Configuration](https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/217425-configure-google-text-to-speech-for-webe.html){:target="\_blank"} for complete configuration steps
-> {: .block-warning }
-
-
-## 2.3: Adding Callback functionality to the flows
-
-<img src="/assets/images/fe_5.png">
-1. Create new flow variables:
+1. Verify the below flow variable is crated:
    > Name: CallerANI
    >> Type: String
    >>
    >> No default value
    >
    ---
-2. Add a new Menu node
+2. Verify a new Menu node
     > Activity Label: Menu_Callback
     >
-    > Prompt: Enable Text-to-Speech. Follow the previous lab and enter the message required for this lab 
+    > Prompt: Text-to-Speech is enabled
     >
     > Make Prompt Interruptible: True
     >
@@ -639,17 +525,17 @@ In this lab, we will configure all of the required elements to deliver a call in
     > Connect Unmatched Entry to the front of the Menu node
     >
     > ---
-3. Add a Set Variable node
+3. Verify the Set Variable node
    > Activity Label: callbackANI_set
    >
    > Select Variable: CallerANI
    >
    > Set to Value: \{\{NewPhoneContact.ANI \| slice (NewPhoneContact.ANI.length -10,NewPhoneContact.ANI.length)\}\}
    >
-4. Add a Collect Digits node
-   > Activity Label: newNumber 
+4. Verify the Collect Digits node
+   > Activity Label: **newNumber**
    >
-   > Audio File: new_number_English.wav
+   > Prompt: Text-to-Speech is enabled
    >
    > Make Prompt Interruptible: True
    >
@@ -662,16 +548,16 @@ In this lab, we will configure all of the required elements to deliver a call in
    > Connect Unmatched Entry to the front of the newNumber node
    >
    > ---
-5. Add a Set Variable Node
-   > Activity Label: newCB
+5. Verify the Set Variable Node
+   > Activity Label: **newCB**
    >
    > Variable: CallerANI
    >
    > Set Value: \{\{newNumber.DigitsEntered\}\}
    >
    > ---
-6. Connect newNumber to newCB
-7. Drag and Drop a Callback node 
+6. Verify connection between **newNumber** node and **newCB** node 
+7. Verify the Callback node 
    > Activity Label: Callback_node
    >
    > Callback Dial Number: CallerANI
@@ -679,7 +565,7 @@ In this lab, we will configure all of the required elements to deliver a call in
    > Static ANI: Any ANI you like but this DN needs to be mapped to an EP or select the default outdial ANI
    >
    > ---
-8. Drag and Drop a PlayMusic node  
+8. Verify the PlayMusic node  
    > Activity Label: Callback_confirm
    >
    > Static Audio File
@@ -687,14 +573,14 @@ In this lab, we will configure all of the required elements to deliver a call in
    > Music file: callback_confirm_English.wav
    >
    > ---
-8. Drag and Drop a Disconnect Contact node
+8. Verify the PlayMusic is connected to the Disconnect Contact node
    > Activity Label: Disconnect_contact
    >
    > ---
 
 ---
 
-## 2.4: Business Hours Configuration
+## 2.3: Business Hours Configuration
 
 Business hours(BH) is a feature that lets you define the operational hours of contact center. In addition to that, we can also add holidays, or event driven interventions like extended working hours during festival seasons. This feature is an upgrade over routing strategy.
 
@@ -723,23 +609,21 @@ The subsequent flow execution from BH activity takes the following priority:
 
 <img src="/assets/images/fe_17.png">
 
-- Click on **`Working Hours`** button and select **_Create Working Hours_**
+- Click on **`Working Hours`** button and select **WebexOne_Business_Hours**
 
 <img src="/assets/images/fe_23.png">
 
-- Add a **`Name`**, **`Timezone`** and **`Shift`** to your schedule
+- Verify the **`Name`**, **`Timezone`** and **`Shift`** of the schedule
 
 <img src="/assets/images/fe_19.png">
 
-- Select **`Save`** at the bottom
+- Verify the holiday schedule, click on **_Business Hours_** and select **`Holiday Lists`**
 
-- To add a holiday schedule, click on **_Business Hours_** and select **`Holiday Lists`**
-
-- Select **`Create Holiday List`** and enter the list of holidays.
+- Select **US Holidays**
 
 <img src="/assets/images/fe_20.png">
 
-- Now you can Go back to **`Working Hours`** button and select **_Create Working Hours_** and select the **`Holiday Lists`** created under **`Additional Settings`**
+- Now you can Go back to **`Working Hours`** button and select **WebexOne_Business_Hours** and verify the **US Holidays** is selected under **`Holiday Lists`**
 
 <img src="/assets/images/fe_21.png">
 
@@ -755,28 +639,6 @@ Verify the Business Hours configuration by using this on the flow
 <img src="/assets/images/fe_25.png">
 
 ---
-
-##  2.6: Bringing It Together: Advanced Flow configuration 
-
-### Update your Entry Point
-
-On Webex Control Hub, navigate to **_Channels_** under the **_CUSTOMER EXPERIENCE_** tab and update the flow assigned to the **<w class="attendee_out">attendeeId</w>\_EP** to the below.
-
-- Select flow **QtoA_WebexOne_InboundFlow**
-
-1. Place a call to your your assigned EP-DN:  
-   > You should hear the greeting message and then you would be asked to enter your 3 digit Attendee ID
-   >
-   > Go available on the agent desktop
-   >
-   > > The call should be delivered to your agent extension
-   >
-   > End the call, Wrap-up, and Go unavailable
-   >
-   > ***
-
-2. Navigate to the flow **QtoA_WebexOne_InboundFlow** to review the flow configuration  
-
 
 # Part 3: Introduction to Flow Debugger
 
