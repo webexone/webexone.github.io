@@ -407,7 +407,7 @@ In this lab, we will configure all of the required elements to deliver a call in
 
 ---
 
-**Note:** If you have prior experience with creating flows, please navigate to step 2:.
+**Note:** If you have prior experience with creating flows, please navigate to step [2.6: Bringing It Together: Advanced Flow configuration ](#26-bringing-it-together-advanced-flow-configuration) 
 {: .block-warning }
 
 ## 2.1: Configuring tenant for Call Delivery
@@ -762,12 +762,12 @@ Verify the Business Hours configuration by using this on the flow
 
 On Webex Control Hub, navigate to **_Channels_** under the **_CUSTOMER EXPERIENCE_** tab and update the flow assigned to the **<w class="attendee_out">attendeeId</w>\_EP** to the below.
 
-> - Select flow **QtoA_WebexOne_InboundFlow**
+- Select flow **QtoA_WebexOne_InboundFlow**
 
 1. Place a call to your your assigned EP-DN:  
-   > You should hear the greeting message and then the music in queue
+   > You should hear the greeting message and then you would be asked to enter your 3 digit Attendee ID
    >
-   > Go available in the agent desktop
+   > Go available on the agent desktop
    >
    > > The call should be delivered to your agent extension
    >
@@ -775,7 +775,7 @@ On Webex Control Hub, navigate to **_Channels_** under the **_CUSTOMER EXPERIENC
    >
    > ***
 
-2. Open the flow **QtoA_WebexOne_InboundFlow** and review the flow configuration  
+2. Navigate to the flow **QtoA_WebexOne_InboundFlow** to review the flow configuration  
 
 
 # Part 3: Introduction to Flow Debugger
