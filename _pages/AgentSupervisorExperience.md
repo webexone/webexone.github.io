@@ -479,7 +479,7 @@ The help documentation has been enhanced with Webex Help Center. Agents will now
 
 ---
 
-- Navigate to CUSTOMER EXPERIENCE > Queue and view your Queue
+- Navigate to CUSTOMER EXPERIENCE > Queue and view the `WebexOne_InboundQueue`
   - Make sure **`Permit Monitoring, Pause/Resume`** are Enabled
     - Make sure that these settings are also enabled at tenant level
   - You can also set the _Recording Pause Duration_. This is the maximum duration that an agent can pause the recording
