@@ -118,6 +118,19 @@ document.forms["attendee-form"][1].value = localStorage.getItem("attendeeID") ||
 
 <br/>
 
+### Create Chrome Profiles
+
+- For the lab, create new Chrome profiles so that you can login the Administrators, Agents and Supervisors using the same Browser.
+
+  - Select `Profiles` on Chrome
+  - Select `Add Profile`
+  - Select `continue without an account`
+  - Give it a name .i.e `Admin`
+  - Click `done`
+  - Create 2 more profiles for `Supervisor` and `Agent`
+
+![CH-Desktop-Call-In-Accepted](/assets/images/agent/Chrome-Create-Profile.gif)
+
 (1) **One additional device** (like your personal phone) to test inbound calls to the Webex Contact Center. You can use your cell phone for this purpose.
 
 - Administrator credentials for the Control Hub: [admin.webex.com](https://admin.webex.com).

@@ -94,6 +94,19 @@ document.forms["attendee-form"][1].value = localStorage.getItem("attendeeID") ||
 
 <br/>
 
+### Create Chrome Profiles
+
+- For the lab, create new Chrome profiles so that you can login the Administrators, Agents and Supervisors using the same Browser.
+
+  - Select `Profiles` on Chrome
+  - Select `Add Profile`
+  - Select `continue without an account`
+  - Give it a name .i.e `Admin`
+  - Click `done`
+  - Create 2 more profiles for `Supervisor` and `Agent`
+
+![CH-Desktop-Call-In-Accepted](/assets/images/agent/Chrome-Create-Profile.gif)
+
 (2) Administrator access to Control Hub
 
 Your Administrator ID is in the format
@@ -335,7 +348,6 @@ NAME,SITE,TYPE,MULTIMEDIA PROFILE,SKILL PROFILE,DN,CAPACITY,DESKTOP LAYOUT
 
 - On Webex Control Hub, navigate to **_Teams_** under the **_USER MANAGEMENT_** tab and verify that the **<w class="attendee_out">attendeeId</w>\_Team3** is created.
 
-
 ## 1.4: Access to the Agent Desktop
 
 > We will now log in to the Agent Desktop with your credentials and use Desktop (WebRTC) as the telephony device.
@@ -403,7 +415,7 @@ In this lab, we will configure all of the required elements to deliver a call in
 
 ---
 
-**Note:** If you have prior experience with creating flows, please navigate to step [2.6: Bringing It Together: Advanced Flow configuration ](#26-bringing-it-together-advanced-flow-configuration) 
+**Note:** If you have prior experience with creating flows, please navigate to step [2.6: Bringing It Together: Advanced Flow configuration ](#26-bringing-it-together-advanced-flow-configuration)
 {: .block-warning }
 
 ## 2.1: Configuring tenant for Call Delivery
@@ -414,7 +426,7 @@ On Webex Control Hub, navigate to **_Flows_** under the **_CUSTOMER EXPERIENCE_*
 
 - **QtoA_WebexOne_InboundFlow**
 
-Select to open the flow and review the flow configuration 
+Select to open the flow and review the flow configuration
 
 > **Note:** There are no changes that need to be made to the flow and you can proceed with the next step
 > {: .block-warning }
@@ -426,7 +438,7 @@ Select to open the flow and review the flow configuration
 2. Verify **_Text-to-speech_** toggle is enabled
 3. The Connector linked to the flow  
 4. Verify Output voice is set as **_en-US-Standard-A_** 
-5. Verify the **`Text-to-Speech Message`** 
+5. Verify the **`Text-to-Speech Message`**
 
 > **Tip:** Please refer the article [Google Text-To-Speech Configuration](https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/217425-configure-google-text-to-speech-for-webe.html){:target="\_blank"} for complete configuration steps
 > {: .block-warning }
@@ -438,7 +450,6 @@ Select to open the flow and review the flow configuration
 <img src="/assets/images/fe_32.png">
 
 2. Verify the Entry Point configuration
-   >
    > Name your Entry Point EP\_<w class="attendee_out">AttendeeID</w>
    >
    > Description: optional
@@ -449,7 +460,7 @@ Select to open the flow and review the flow configuration
    >
    > Flow: Flow_template
    >
-   > Version Label: Live 
+   > Version Label: Live
    >
    > Music on Hold: defaultmusic_on_hold.wav
    >
@@ -457,11 +468,9 @@ Select to open the flow and review the flow configuration
    >
    > ***
 
-
-
 ### Verify your Entry Point mapping
 
- On Webex Control Hub, navigate to **_Channels_** under the **_CUSTOMER EXPERIENCE_** tab: 
+On Webex Control Hub, navigate to **_Channels_** under the **_CUSTOMER EXPERIENCE_** tab:
 
  <img src="/assets/images/fe_31.png">
    
@@ -482,7 +491,7 @@ Select to open the flow and review the flow configuration
 
 1. Call your assigned EP-DN:
 
-   > You should hear the greeting message asking for your attendee ID. 
+   > You should hear the greeting message asking for your attendee ID.
    >
    > Enter your 3 digit attendee ID. Example: 051
    >
@@ -502,34 +511,33 @@ On Webex Control Hub, navigate to **_Flows_** under the **_CUSTOMER EXPERIENCE_*
 
 1. Verify the below flow variable is crated:
    > Name: CallerANI
-   >> Type: String
-   >>
-   >> No default value
    >
-   ---
+   > > Type: String
+   > >
+   > > No default value
+   ***
 2. Verify a new Menu node
-    > Activity Label: Menu_Callback
-    >
-    > Prompt: Text-to-Speech is enabled
-    >
-    > Make Prompt Interruptible: True
-    >
-    > Digit Number: 1 Link Description: confirm number
-    >
-    > Digit Number: 2 Link Description: change number
-    >
-    > Connect No-Input Timeout to the front of the Menu node
-    >
-    > Connect Unmatched Entry to the front of the Menu node
-    >
-    > ---
+   > Activity Label: Menu_Callback
+   >
+   > Prompt: Text-to-Speech is enabled
+   >
+   > Make Prompt Interruptible: True
+   >
+   > Digit Number: 1 Link Description: confirm number
+   >
+   > Digit Number: 2 Link Description: change number
+   >
+   > Connect No-Input Timeout to the front of the Menu node
+   >
+   > Connect Unmatched Entry to the front of the Menu node
+   >
+   > ***
 3. Verify the Set Variable node
    > Activity Label: callbackANI_set
    >
    > Select Variable: CallerANI
    >
    > Set to Value: \{\{NewPhoneContact.ANI \| slice (NewPhoneContact.ANI.length -10,NewPhoneContact.ANI.length)\}\}
-   >
 4. Verify the Collect Digits node
    > Activity Label: **newNumber**
    >
@@ -545,7 +553,7 @@ On Webex Control Hub, navigate to **_Flows_** under the **_CUSTOMER EXPERIENCE_*
    >
    > Connect Unmatched Entry to the front of the newNumber node
    >
-   > ---
+   > ***
 5. Verify the Set Variable Node
    > Activity Label: **newCB**
    >
@@ -553,16 +561,16 @@ On Webex Control Hub, navigate to **_Flows_** under the **_CUSTOMER EXPERIENCE_*
    >
    > Set Value: \{\{newNumber.DigitsEntered\}\}
    >
-   > ---
-6. Verify connection between **newNumber** node and **newCB** node 
-7. Verify the Callback node 
+   > ***
+6. Verify connection between **newNumber** node and **newCB** node
+7. Verify the Callback node
    > Activity Label: **Callback_node**
    >
    > Callback Dial Number: CallerANI
    >
    > Static ANI: Select the default outdial ANI as +14402308010
    >
-   > ---
+   > ***
 8. Verify the PlayMusic node **Callback_confirm**
    > Activity Label: Callback_confirm
    >
@@ -570,11 +578,11 @@ On Webex Control Hub, navigate to **_Flows_** under the **_CUSTOMER EXPERIENCE_*
    >
    > Music file: callback_confirm_English.wav
    >
-   > ---
-8. Verify the PlayMusic is connected to the Disconnect Contact node
+   > ***
+9. Verify the PlayMusic is connected to the Disconnect Contact node
    > Activity Label: Disconnect_contact
    >
-   > ---
+   > ***
 
 ---
 
@@ -658,7 +666,6 @@ Place a call to the flow and trace the call through the Flow Debugger.
 
 > **Tip:** Selct **`Edit: Off`** to open the flow in **`Read-Only`** mode when using using the debug functionality
 > {: .block-warning }
-
 
 # Part 3: Workflow in Outdial Entry Point
 
@@ -997,4 +1004,3 @@ The error handling feature tries to deal all kinds of errors during the flow exe
 <img src="/assets/images/fe_15.png">
 
 ---
-
