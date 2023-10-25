@@ -13,7 +13,7 @@ layout: post
 | [Extend the Agent Desktop Experience](#desktop-administration) | Practical Lab      | EASY      | 15 min |
 | [Desktop Administration](#desktop-administration)              | Exploration        | EASY      | 15 min |
 
-# Bonus: Advanced Desktop Customizations
+## Bonus: Advanced Desktop Customizations
 
 The next section covers advanced customizations elements on the Agent Desktop and showcases the HOW in terms of customizing the desktop.
 Refer to the sections to understand how the desktop layout was configured.

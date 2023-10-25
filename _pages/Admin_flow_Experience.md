@@ -746,46 +746,45 @@ In this lab, we will configure all the required elements to collect and view end
 
 1. Click on Contact Center under Services from Control Hub
    > <img src="/assets/images/EM/contactCenter.gif" width="200">
-2. Under Contact Center, click on Surveys
+2. Under Contact Center, under "Customer Experience" section > click on "Surveys"
    > <img src="/assets/images/EM/survey.gif" width="200">
 3. Click the "Create new survey" button on the top-right corner of the Survey page
-   > Select Survey type as IVR
-   >
-   > > <img src="/assets/images/EM/surveyType.gif">
-   > >
-   > > Provide a name for your survey appended with your Attendee ID
-   > > <img src="/assets/images/EM/surveyName.gif">
-   > >
-   > > Choose the additional languages for the survey from the drop-down (optional)
-   > > <img src="/assets/images/EM/languageSupport.png">
-   > >
-   > > Click on Next
-4. Add audio files to the Welcome and Thank you notes ([Audio Files](https://webexcc.github.io/assets/files/Survey_wav.zip){:target="\_blank"})
-   > Click on the pencil icon to the right
-   >
-   > >  <img src="/assets/images/EM/welcomeThankyou.gif">
-   > >
-   > > Select Choose a file when the note expands, pick the audio file (Welcome.wav) and upload
-   > > <img src="/assets/images/EM/uploadWelcome.gif">
-   > >
-   > > Repeat steps for Thank you note (Thankyou.wav)
-5. Add a question to your survey
-   > Select the NPS question from the drop-down by clicking + Add a question
-   >
-   > > <img src="/assets/images/EM/addNPS.gif" width="200">
-   > >
-   > > Choose the corresponding audio file, nps.wav for the NPS question and upload ([Audio Files](https://webexcc.github.io/assets/files/Survey_wav.zip){:target="\_blank"})
-   > > <img src="/assets/images/EM/uploadNPS.gif">
-   > >
-   > > Under Question to show on reporting type the column name as "NPS Score"
-   > > <img src="/assets/images/EM/NPSReporting.gif">
-6. Update Error handling settings (optional)
-   > Upload audio files for Invalid Input and Timeout by clicking on Choose a file under each section
-   >
-   > Set the maximum number of invalid inputs and timeouts allowed from the drop-down
-   >
-   > Choose an audio file for exceeding maximum tries
-7. Save the survey from the bottom right corner
+
+**Use the name "Post_Call_Survey" ensure there are no spaces.**
+
+> Select Survey type as IVR
+>
+> > <img src="/assets/images/EM/surveyType.gif">
+> >
+> > Provide a name for your survey appended with your Attendee ID
+> > <img src="/assets/images/EM/surveyName.gif">
+> >
+> > Choose the additional languages for the survey from the drop-down (optional)
+> > <img src="/assets/images/EM/languageSupport.png">
+> >
+> > Click on Next 4. Add audio files to the Welcome and Thank you notes ([Audio Files](https://webexcc.github.io/assets/files/Survey_wav.zip){:target="\_blank"})
+> > Click on the pencil icon to the right
+>
+> >  <img src="/assets/images/EM/welcomeThankyou.gif">
+> >
+> > Select Choose a file when the note expands, pick the audio file (Welcome.wav) and upload
+> > <img src="/assets/images/EM/uploadWelcome.gif">
+> >
+> > Repeat steps for Thank you note (Thankyou.wav) 5. Add a question to your survey
+> > Select the NPS question from the drop-down by clicking + Add a question
+>
+> > <img src="/assets/images/EM/addNPS.gif" width="200">
+> >
+> > Choose the corresponding audio file, nps.wav for the NPS question and upload ([Audio Files](https://webexcc.github.io/assets/files/Survey_wav.zip){:target="\_blank"})
+> > <img src="/assets/images/EM/uploadNPS.gif">
+> >
+> > Under Question to show on reporting type the column name as "NPS Score"
+> > <img src="/assets/images/EM/NPSReporting.gif"> 6. Update Error handling settings (optional)
+> > Upload audio files for Invalid Input and Timeout by clicking on Choose a file under each section
+>
+> Set the maximum number of invalid inputs and timeouts allowed from the drop-down
+>
+> Choose an audio file for exceeding maximum tries 7. Save the survey from the bottom right corner
 
 ---
 
