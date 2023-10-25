@@ -232,8 +232,6 @@ Please note, that to proceed to the next section, you will need to use the accou
 
 - Navigate to **_Teams_** under the **_USER MANAGEMENT_**.
 
-- Click on the **`Create Team`**.
-
 - Search for your **<w class="attendee_out">attendeeId</w>\_Team1**.
 
 - Verify the **_Parent Site_** is selected as your assigned site 
