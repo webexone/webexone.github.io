@@ -760,7 +760,7 @@ Verify the Business Hours configuration by using this on the flow
 
 ### Update your Entry Point
 
-On Webex Control Hub, navigate to **_Channels_** under the **_CUSTOMER EXPERIENCE_** tab and update the flow assigned to the **<w class="attendee_out">attendeeId</w>\_EP** to the below.
+On Webex Control Hub, navigate to **_Channels_** under the **_CUSTOMER EXPERIENCE_** tab, select and update the **`Routing Flow`** assigned to the **<w class="attendee_out">attendeeId</w>\_EP** to the below flow
 
 - Select flow **QtoA_WebexOne_InboundFlow**
 
